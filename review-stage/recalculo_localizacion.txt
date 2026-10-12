@@ -1,0 +1,80 @@
+== Conteos ==
+filas SCLY-like: 67 (algales 66, humana 1)
+especies algales: 56
+                      secuencias  especies
+linaje                                    
+Bacillariophyta               19        14
+Chlorophyta                   34        31
+Cryptophyceae                  2         1
+Dinophyceae                    4         4
+Haptophyta                     4         3
+Streptophyta (algas)           2         2
+Xanthophyceae                  1         1
+algales con N-terminal fiable: 60
+
+== DeepLoc, etiquetas completas (algales fiables) ==
+Localizations
+Cytoplasm                          24
+Mitochondrion                      15
+Cytoplasm|Mitochondrion            13
+Mitochondrion|Plastid               3
+Plastid                             2
+Cytoplasm|Mitochondrion|Plastid     2
+Extracellular                       1
+con 'Plastid' en la etiqueta: 7
+P(plástido) > 0,5: 13 / 60
+linaje
+Bacillariophyta          1/18
+Chlorophyta             10/31
+Cryptophyceae             0/2
+Dinophyceae               0/2
+Haptophyta                1/4
+Streptophyta (algas)      1/2
+Xanthophyceae             0/1
+
+Medianas: {'Cytoplasm': np.float64(0.65), 'Mitochondrion': np.float64(0.64), 'Plastid': np.float64(0.14), 'Endoplasmic reticulum': np.float64(0.17)}
+TargetP: {'OTHER': 47, 'SP': 5, 'mTP': 4, 'cTP': 4}
+TargetP SP por linaje: {'Bacillariophyta': 3, 'Haptophyta': 1, 'Streptophyta (algas)': 1}
+SignalP Eukarya sin SP: 59 / 60; n_TM>0: 0
+
+== Secuencias con P(plástido) > 0,5 ==
+        id                              especie               linaje  Plastid  Mitochondrion targetp      cTP       SP
+A0AAX4PFB6             Chloropicon roscoffensis          Chlorophyta   0.9565         0.3467   OTHER 0.149421 0.000597
+A0AAW1R1Z0              Elliptochloris bilobata          Chlorophyta   0.9289         0.5533     cTP 0.698088 0.001914
+A0AAE0LE91           Cymbomonas tetramitiformis          Chlorophyta   0.8645         0.6424     cTP 0.563610 0.000120
+A0A090M4Q8                   Ostreococcus tauri          Chlorophyta   0.7817         0.7228   OTHER 0.004371 0.002784
+A0A8J5X355                   Diacronema lutheri           Haptophyta   0.7683         0.6550      SP 0.086219 0.597514
+    C1MNN5 Micromonas pusilla (strain CCMP1545)          Chlorophyta   0.7565         0.6779   OTHER 0.000517 0.009778
+A0A250WXK3               Chlamydomonas eustigma          Chlorophyta   0.7379         0.7880   OTHER 0.034182 0.002869
+    K8F9J9                 Bathycoccus prasinos          Chlorophyta   0.6224         0.7142   OTHER 0.002856 0.006756
+A0A830HW14               Pycnococcus provasolii          Chlorophyta   0.5716         0.5898   OTHER 0.003324 0.002790
+A0A448ZAZ1        Pseudo-nitzschia multistriata      Bacillariophyta   0.5490         0.8783   OTHER 0.104824 0.001857
+    C1EHB0                   Micromonas commoda          Chlorophyta   0.5308         0.5718   OTHER 0.000056 0.000114
+A0A2K3DJ46            Chlamydomonas reinhardtii          Chlorophyta   0.5228         0.6351   OTHER 0.000091 0.001642
+A0A1Y1HX28                 Klebsormidium nitens Streptophyta (algas)   0.5142         0.6402   OTHER 0.000001 0.000148
+
+== Panel de control ==
+        id                   especie Localizations  Plastid  Mitochondrion  Cytoplasm targetp
+ NFS2_PABB   Scenedesmus sp. PABB004       Plastid   0.9169         0.5512     0.1992   OTHER
+ NFS1_PABB   Scenedesmus sp. PABB004     Cytoplasm   0.0994         0.4508     0.8439   OTHER
+    Q93WX6      Arabidopsis thaliana       Plastid   0.9922         0.2151     0.1250     cTP
+    O49543      Arabidopsis thaliana Mitochondrion   0.2259         0.9166     0.1921     mTP
+A0A2K3D4F5 Chlamydomonas reinhardtii Mitochondrion   0.3352         0.9302     0.2857     mTP
+A0A2K3E3W0 Chlamydomonas reinhardtii Mitochondrion   0.0661         0.9481     0.2360     mTP
+
+== Bucle catalítico (14 posiciones) ==
+secuencias con bucle: 66 (incluye humana: True)
+1 {'A': 51, 'C': 14, 'F': 1}
+2 {'S': 63, 'A': 1, 'G': 1}
+3 {'A': 61, 'S': 2, 'T': 1}
+4 {'G': 66}
+5 {'A': 49, 'S': 17}
+6 {'A': 64, 'S': 2}
+7 {'C': 66}
+8 {'H': 66}
+9 {'S': 54, 'A': 5, 'T': 5}
+10 {'S': 26, 'G': 18, 'D': 6}
+11 {'G': 27, 'D': 7, 'S': 6}
+12 {'G': 21, 'A': 18, 'S': 8}
+13 {'S': 15, 'A': 12, 'G': 10}
+14 {'V': 16, 'S': 14, 'G': 8}
