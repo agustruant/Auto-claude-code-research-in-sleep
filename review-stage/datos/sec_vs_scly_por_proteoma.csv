@@ -1,0 +1,120 @@
+﻿proteoma,especie,linaje,SCLY_like,PSTK,SEPSECS,SEPHS2,EEFSEC,n_marcadores,Sec_estricto,SCLY
+UP000001058_3068,Volvox carteri f. nagariensis,Chlorophyta,1,False,True,False,False,1,False,True
+UP000001568_436017,Ostreococcus lucimarinus (strain CCE9901),Chlorophyta,1,True,True,True,True,4,True,True
+UP000001876_564608,Micromonas pusilla (strain CCMP1545),Chlorophyta,1,True,True,True,True,4,True,True
+UP000002009_296587,Micromonas commoda,Chlorophyta,1,True,True,False,True,3,True,True
+UP000006906_3055,Chlamydomonas reinhardtii,Chlorophyta,1,True,True,False,True,3,True,True
+UP000007264_574566,Coccomyxa subellipsoidea (strain C-169),Chlorophyta,0,True,True,False,True,3,True,False
+UP000008141_554065,Chlorella variabilis,Chlorophyta,1,True,True,False,True,3,True,True
+UP000009170_70448,Ostreococcus tauri,Chlorophyta,1,False,True,False,True,2,False,True
+UP000028924_3075,Auxenochlorella protothecoides,Chlorophyta,0,False,False,False,False,0,False,False
+UP000054498_145388,Monoraphidium neglectum,Chlorophyta,0,False,True,False,True,2,False,False
+UP000075714_33097,Gonium pectorale,Chlorophyta,1,False,True,False,True,2,False,True
+UP000198341_41875,Bathycoccus prasinos,Chlorophyta,1,False,True,True,True,3,False,True
+UP000232323_1157962,Chlamydomonas eustigma,Chlorophyta,1,True,True,True,True,4,True,True
+UP000236333_47790,Tetrabaena socialis,Chlorophyta,0,False,True,False,False,1,False,False
+UP000239649_554055,Micractinium conductrix,Chlorophyta,1,False,True,False,True,2,False,True
+UP000239899_3076,Chlorella sorokiniana,Chlorophyta,1,False,True,False,True,2,False,True
+UP000247498_307507,Raphidocelis subcapitata,Chlorophyta,0,True,True,True,True,4,True,False
+UP000256970_3088,Tetradesmus obliquus,Chlorophyta,1,True,True,True,True,4,True,True
+UP000316726_1764295,Chloropicon primus,Chlorophyta,1,True,True,False,True,3,True,True
+UP000612055_47281,Edaphochlamys debaryana,Chlorophyta,1,True,True,False,True,3,True,True
+UP000613740_2026947,Chlamydomonas schloesseri,Chlorophyta,1,False,True,False,True,2,False,True
+UP000650467_51695,Chlamydomonas incerta,Chlorophyta,1,True,True,False,True,3,True,True
+UP000660262_41880,Pycnococcus provasolii,Chlorophyta,1,False,True,False,True,2,False,True
+UP000708148_121088,Ostreobium quekettii,Chlorophyta,1,False,False,False,True,1,False,True
+UP000747110_1737510,Volvox reticuliferus,Chlorophyta,1,True,False,False,True,2,False,True
+UP000747399_51714,Volvox africanus,Chlorophyta,0,False,False,False,False,0,False,False
+UP000815325_3046,Dunaliella salina,Chlorophyta,1,True,True,False,True,3,True,True
+UP001054857_47775,Astrephomene gubernaculifera,Chlorophyta,0,False,True,False,True,2,False,False
+UP001055712_3077,Chlorella vulgaris,Chlorophyta,1,True,True,False,True,3,True,True
+UP001165080_330485,Pleodorina starrii,Chlorophyta,1,True,True,False,True,3,True,True
+UP001165090_51714,Volvox africanus,Chlorophyta,0,True,True,False,True,3,True,False
+UP001205105_2649997,Chlorella ohadii,Chlorophyta,1,False,True,False,True,2,False,True
+UP001244341_3088,Tetradesmus obliquus,Chlorophyta,1,True,True,False,True,3,True,True
+UP001255856_3111,Prototheca wickerhamii,Chlorophyta,0,False,False,False,False,0,False,False
+UP001314263_1274662,Coccomyxa viridis,Chlorophyta,0,True,True,False,True,3,True,False
+UP001438707_904363,Apatococcus lobatus,Chlorophyta,0,True,True,False,True,3,True,False
+UP001445335_381761,Elliptochloris bilobata,Chlorophyta,1,False,True,True,True,3,False,True
+UP001465755_706552,Symbiochloris irregularis,Chlorophyta,0,True,True,False,True,3,True,False
+UP001472866_1461544,Chloropicon roscoffensis,Chlorophyta,2,True,True,False,True,3,True,True
+UP001485043_2026836,Apatococcus fuscideae,Chlorophyta,0,False,True,False,False,1,False,False
+UP001489004_41462,[Myrmecia] bisecta,Chlorophyta,1,True,True,False,True,3,True,True
+UP001491310_248742,Coccomyxa subellipsoidea,Chlorophyta,0,True,True,False,True,3,True,False
+UP001497392_1274662,Coccomyxa viridis,Chlorophyta,0,True,True,False,True,3,True,False
+UP001658960_3077,Chlorella vulgaris,Chlorophyta,1,False,True,True,True,3,False,True
+UP001701531_2728915,Micractinium tetrahymenae,Chlorophyta,1,True,True,True,True,4,True,True
+UP001730840_1965095,Coccomyxa elongata,Chlorophyta,0,True,True,False,True,3,True,False
+UP000485058_44745,Haematococcus lacustris,Chlorophyta,1,False,True,False,True,2,False,True
+UP001190700_36881,Cymbomonas tetramitiformis,Chlorophyta,1,True,True,True,True,4,True,True
+UP000007014_280699,Cyanidioschyzon merolae (strain NIES-3377 / 10D),Rhodophyta,0,False,True,True,True,3,False,False
+UP000012073_2769,Chondrus crispus,Rhodophyta,0,False,False,False,False,0,False,False
+UP000030680_130081,Galdieria sulphuraria,Rhodophyta,0,False,True,True,True,3,False,False
+UP000218209_2786,Porphyra umbilicalis,Rhodophyta,0,False,False,False,False,0,False,False
+UP000247409_448386,Gracilariopsis chorda,Rhodophyta,0,False,False,False,False,0,False,False
+UP000324585_35688,Porphyridium purpureum,Rhodophyta,0,False,True,True,True,3,False,False
+UP000530660_2690220,Cyanidiococcus yangmingshanensis,Rhodophyta,0,False,True,True,False,2,False,False
+UP000798662_2788,Pyropia yezoensis,Rhodophyta,0,False,False,False,False,0,False,False
+UP001061958_83374,Galdieria partita,Rhodophyta,0,True,True,True,True,4,True,False
+UP001157974_101924,Rhodosorus marinus,Rhodophyta,0,False,True,True,True,3,False,False
+UP001300502_3028027,Galdieria yellowstonensis,Rhodophyta,0,True,True,True,True,4,True,False
+UP001301350_2771,Cyanidium caldarium,Rhodophyta,0,False,True,True,True,3,False,False
+UP000000759_556484,Phaeodactylum tricornutum (strain CCAP 1055/1),Bacillariophyta,0,False,True,False,True,2,False,False
+UP000001449_35128,Thalassiosira pseudonana,Bacillariophyta,1,False,True,False,True,2,False,True
+UP000002729_44056,Aureococcus anophagefferens,Pelagophyceae,0,False,True,True,True,3,False,False
+UP000095751_635003,Fragilariopsis cylindrus CCMP1102,Bacillariophyta,1,False,True,True,True,3,False,True
+UP000198406_1519565,Fistulifera solaris,Bacillariophyta,2,True,True,True,True,4,True,True
+UP000291116_183589,Pseudo-nitzschia multistriata,Bacillariophyta,1,True,True,False,True,3,True,True
+UP000355283_1027361,Nannochloropsis salina CCMP1776,Eustigmatophyceae,0,True,True,False,True,3,True,False
+UP000664859_303371,Tribonema minus,Xanthophyceae,1,False,True,False,True,2,False,True
+UP000789595_35677,Pelagomonas calceolata,Pelagophyceae,0,True,True,False,True,3,True,False
+UP001054902_426638,Chaetoceros tenuissimus,Bacillariophyta,2,True,True,True,True,4,True,True
+UP001153069_568900,Seminavis robusta,Bacillariophyta,1,True,True,True,True,4,True,True
+UP001165060_2962635,Tetraparma gracilis,Bolidophyceae,0,False,True,True,True,3,False,False
+UP001165065_722753,Triparma columacea,Bolidophyceae,0,False,True,False,True,2,False,False
+UP001165082_2557542,Triparma retinervis,Bolidophyceae,0,False,True,False,True,2,False,False
+UP001165085_1606541,Triparma strigata,Bolidophyceae,0,False,True,True,True,3,False,False
+UP001165122_1714387,Triparma laevis f. longispina,Bolidophyceae,0,False,True,False,True,2,False,False
+UP001165160_1606542,Triparma verrucosa,Bolidophyceae,0,False,True,True,True,3,False,False
+UP001224775_267567,Skeletonema marinoi,Bacillariophyta,1,True,True,True,True,4,True,True
+UP001230188_2483200,Chrysophaeum taylorii,Pelagophyceae,0,True,True,False,True,3,True,False
+UP001295423_2856,Cylindrotheca closterium,Bacillariophyta,2,True,True,True,True,4,True,True
+UP001363151_44056,Aureococcus anophagefferens,Pelagophyceae,0,False,True,True,True,3,False,False
+UP001516023_29204,Cyclotella cryptica,Bacillariophyta,2,True,True,True,True,4,True,True
+UP001530293_259834,Discostella pseudostelligera,Bacillariophyta,1,True,True,True,True,4,True,True
+UP001530315_2934178,Stephanodiscus triporus,Bacillariophyta,2,False,True,True,True,3,False,True
+UP001530377_382380,Cyclostephanos tholiformis,Bacillariophyta,1,True,True,True,True,4,True,True
+UP001530400_382360,Cyclotella atomus,Bacillariophyta,1,True,True,True,True,4,True,True
+UP000002630_2880,Ectocarpus siliculosus,Phaeophyceae,0,False,True,False,True,2,False,False
+UP000019335_72520,Nannochloropsis gaditana,Eustigmatophyceae,0,True,True,False,True,3,True,False
+UP000266841_159749,Thalassiosira oceanica,Bacillariophyta,1,True,True,True,True,4,True,True
+UP000693970_303405,Nitzschia inconspicua,Bacillariophyta,0,True,True,True,True,4,True,False
+UP000013827_280463,Emiliania huxleyi (strain CCMP1516),Haptophyta,1,True,True,False,True,3,True,True
+UP000037460_1460289,Chrysochromulina tobinii,Haptophyta,0,False,True,False,True,2,False,False
+UP000751190_2081491,Diacronema lutheri,Haptophyta,1,True,True,True,True,4,True,True
+UP001515480_97485,Prymnesium parvum,Haptophyta,2,True,True,False,True,3,True,True
+UP000011087_905079,Guillardia theta (strain CCMP2712),Cryptophyceae,2,True,True,True,True,4,True,True
+UP000186817_2951,Symbiodinium microadriaticum,Dinophyceae,1,False,True,True,True,3,False,True
+UP000601435_1628268,Symbiodinium necroappetens,Dinophyceae,0,False,True,True,False,2,False,False
+UP000604046_878477,Symbiodinium natans,Dinophyceae,0,False,True,True,True,3,False,False
+UP000649617_2952,Symbiodinium pilosum,Dinophyceae,0,False,True,True,True,3,False,False
+UP000654075_89957,Polarella glacialis,Dinophyceae,1,False,True,False,False,1,False,True
+UP001178507_2562239,Effrenium voratum,Dinophyceae,0,False,True,True,True,3,False,False
+UP001642484_1381693,Durusdinium trenchii,Dinophyceae,0,False,True,True,True,3,False,False
+UP001152797_2562237,Cladocopium goreaui,Dinophyceae,1,False,True,True,False,2,False,True
+UP001189429_2364126,Prorocentrum cordatum,Dinophyceae,1,False,True,False,False,1,False,True
+UP001642464_1381693,Durusdinium trenchii,Dinophyceae,0,True,True,True,True,4,True,False
+UP000054558_105231,Klebsormidium nitens,Streptophyta (algas),1,False,True,False,True,2,False,True
+UP000265515_69332,Chara braunii,Streptophyta (algas),1,True,True,False,True,3,True,True
+UP000006548_3702,Arabidopsis thaliana,Embryophyta,0,False,False,False,False,0,False,False
+UP000006727_3218,Physcomitrium patens,Embryophyta,0,False,False,False,False,0,False,False
+UP000005640_9606,Homo sapiens,Metazoa,1,True,True,True,True,4,True,True
+UP000002311_559292,Saccharomyces cerevisiae,Fungi,0,False,False,False,False,0,False,False
+UP000059680_39947,Oryza sativa japonica,Embryophyta,0,False,False,False,False,0,False,False
+UP000244005_3197,Marchantia polymorpha,Embryophyta,0,False,False,False,False,0,False,False
+UP000007305_4577,Zea mays,Embryophyta,0,False,False,False,False,0,False,False
+UP000000803_7227,Drosophila melanogaster,Metazoa,0,True,True,False,True,3,True,False
+UP000002195_44689,Dictyostelium discoideum,Amoebozoa,0,True,True,True,True,4,True,False
+UP000001450_36329,Plasmodium falciparum,Apicomplexa,0,False,True,False,True,2,False,False
+UP000001514_88036,Selaginella moellendorffii,Embryophyta,0,False,False,False,False,0,False,False
+UP000009168_312017,Tetrahymena thermophila,Ciliophora,0,False,True,True,True,3,False,False

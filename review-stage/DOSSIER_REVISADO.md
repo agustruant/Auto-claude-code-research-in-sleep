@@ -1,4 +1,4 @@
-# Dossier SCLY-like — versión revisada (auto-review loop, rondas 1–3)
+# Dossier SCLY-like — versión revisada (auto-review loop, rondas 1–4)
 
 Este archivo **no reemplaza** al PDF original: reescribe las secciones que la revisión encontró incorrectas o sobreafirmadas. Lo que no aparece acá queda como en el original. Cada cambio remite a la debilidad numerada en la revisión de la ronda 1 (`ronda1_revisor.md`, puntos 1–12 = D1–D12) o de la ronda 2 (`ronda2_revisor.md`, N1–N8).
 
@@ -9,6 +9,128 @@ Etiquetas:
 - **[PENDIENTE-ANÁLISIS]**: hace falta correr un análisis nuevo.
 
 Los recálculos sobre el CSV están en `review-stage/recalculo_localizacion.txt` y salen de `review-stage/scripts/recalculo_localizacion.py`.
+
+## ★ Resultados con los datos del proyecto (ronda 4)
+
+Fuente: archivos del Drive (`candidatos_desulfurasas.csv`, `arbol_desulfurasas.nwk`, `msa_desulfurasas_trim.fasta`, `dominios_desulfurasas.fasta`, `conservacion_scly_por_posicion.csv`, `sec_vs_scly_por_proteoma.csv`, `tasas_relativas_pareadas.csv` y tablas chicas), copiados en `review-stage/datos/`. Script: `scripts/recalculo_datos_proyecto.py`. Salida completa: `recalculo_datos_proyecto.txt`. **Donde esta sección contradice al resto del documento, vale esta sección.**
+
+### R1. La His en +1 es diagnóstica, de forma independiente del bucle
+
+- Sobre los 617 candidatos:
+  - SCLY-like: 66/66 con C-H;
+  - NFS1: 0/134 (Thr en +1 en el 100 %);
+  - NFS2: 0/116;
+  - "otro": 11/301.
+- **Asignación por mejor cebo** (score phmmer contra cebos de cada familia, sin mirar el bucle), contra His en +1:
+  - de las 77 secuencias con C-H, 75 tienen como mejor cebo uno SCLY-like; las 2 restantes son las quimeras largas de dinoflagelados;
+  - de las 507 cuyo mejor cebo es NFS1 o NFS2, sólo 2 tienen C-H.
+
+  Los dos criterios coinciden casi por completo. La His es un carácter diagnóstico real, no un artefacto de cómo se definió el grupo.
+- El clasificador automático de bucles del propio CSV (`clase_loop`) etiquetó 58 de las 66 SCLY-like como "I IscS/NFS1". La asignación final, entonces, **no** salió de ese clasificador. Hay que documentar en Métodos qué regla produjo la columna `clase`.
+
+### R2. ⚠ Once secuencias con firma SCLY-like quedaron afuera del clado
+
+Son 11 secuencias de "otro" con C-H, mejor cebo SCLY-like (E-value entre 10⁻⁹² y 10⁻¹¹⁶), longitudes normales (370–501 aa, salvo una quimera de *Cladocopium* de 2654 aa) y Cys catalítica en posición normal. Son indistinguibles de las 66 y no están en el árbol:
+
+| Especie | Linaje | Accesión |
+|---|---|---|
+| *Monoraphidium neglectum* | Chlorophyta | A0A0D2N0J3 |
+| *Raphidocelis subcapitata* | Chlorophyta | A0A2V0PAY6 |
+| *Phaeodactylum tricornutum* | Bacillariophyta | B7G8F0 |
+| *Nitzschia inconspicua* (2) | Bacillariophyta | A0A9K3KRJ2, A0A9K3LVN3 |
+| *Aureococcus anophagefferens* (3, 2 proteomas) | **Pelagophyceae** | F0XXL4, A0ABR1FZ61, A0ABR1FWJ4 |
+| *Pelagomonas calceolata* | **Pelagophyceae** | A0A8J2WTZ1 |
+| *Chrysophaeum taylorii* | **Pelagophyceae** | A0AAD7XJ29 |
+| *Cladocopium goreaui* | Dinophyceae | A0A9P1FCD2 (quimera) |
+
+Si se confirman, cambia la distribución:
+- **Pelagophyceae pasa de 0/4 a 4/4 proteomas.** La "ausencia en estramenopilas no diatomeas" se reduce a Bolidophyceae (0/6), Eustigmatophyceae (0/2) y Phaeophyceae (0/1).
+- Bacillariophyta pasa de 14/16 a **16/16**.
+- Chlorophyta pasa de 32/48 a **34/48** proteomas.
+
+Embryophyta y Rhodophyta siguen en 0: ningún candidato de esos linajes tiene C-H.
+
+**Antes de escribir:** hay que bajar las 11 secuencias de UniProt, extraer el dominio, agregarlas al alineamiento y verificar que caigan dentro del clado. Es la verificación más urgente de todo el proyecto, porque toca la tabla de distribución y una afirmación de ausencia.
+
+### R3. Asp146 no se conserva en el clado algal
+
+Numeración verificada sobre la secuencia humana del propio dominio: H145, **D146**, K259 (Lys del PLP), C388 (Cys catalítica), H389 (His diagnóstica).
+
+| Grupo | Residuo en la posición de Asp146 (MSA) |
+|---|---|
+| SCLY humana | **Asp** |
+| SCLY-like algales | **Pro 52**, Val 5 (4 dinoflagelados + *Guillardia*), gap 8 |
+| NFS1 | Lys 113, Arg 1 |
+| NFS2 | His 106 |
+
+- Asp146 es el residuo que da a la SCL humana su especificidad por Sec (Collins et al. 2012, [doi:10.1371/journal.pone.0030581](https://doi.org/10.1371/journal.pone.0030581)). Ninguna secuencia algal lo tiene: en su lugar hay una Pro conservada. Coincide con la tabla de conservación (posición 231 del modelo HText: Pro, f = 0,90).
+- **Interpretación:** sigue siendo un dato *no informativo* sobre la especificidad, porque la SclA bacteriana prefiere Sec con His en esa posición (Johnstone et al. 2021, [doi:10.1016/j.biochi.2021.01.002](https://doi.org/10.1016/j.biochi.2021.01.002)). Pero es una **divergencia clara respecto de la SCLY de mamífero** en el residuo funcional mejor caracterizado.
+- Refuerza que el clado se presente como "relacionado con SCLY" y no como "selenocisteína liasas algales". Es también una predicción comprobable: la Pro conservada hace al clado algal mecanísticamente distinto de la SCLY animal.
+
+### R4. Bucle catalítico de los tres grupos (alineamiento real)
+
+| Posición respecto de la Cys | −5 | −4 | −3 | −2 | −1 | **0** | **+1** | +2 |
+|---|---|---|---|---|---|---|---|---|
+| NFS1 (124) | S | S | G | S | A | C | **T** (100 %) | S |
+| NFS2 (110) | R | S/A | G | H | H | C | **T 58 / A 32 / C 19** | Q |
+| SCLY-like (66) | S | A | G | A/S | A | C | **H** (100 %) | S |
+
+- El +1 de NFS2 **no** es "Thr 100 %" ni "Ser": es variable.
+- En NFS2 hay His en −2 y −1. La exclusividad de SCLY-like es una **His en +1**.
+- El −6 también distingue: Ala/Cys en SCLY-like, Val/Ile en NFS1 y NFS2.
+
+### R5. Posiciones discriminantes: el enriquecimiento cerca del cofactor no se sostiene
+
+Con la definición del propio dossier (conservada en las dos familias, H ≤ 0,5, con consenso distinto):
+
+| Comparación | Conservadas en todas | A < 8 Å (base) | Discriminantes | A < 8 Å | Binomial |
+|---|---|---|---|---|---|
+| SCLY vs NFS1 **y** NFS2 | 38 | 15 (39,5 %) | **2** (S159, G197) | 1 | p = 0,63 |
+| SCLY vs NFS1 | 65 | 23 (35,4 %) | 6 (S159, G197, A232, T330, N431, H462) | 4 | p = 0,12 |
+
+- Las "6 posiciones discriminantes" del dossier son discriminantes **sólo contra NFS1**. Contra NFS2, A232, T330, N431 y H462 no están conservadas (H_II = 0,77–1,47).
+- Con la base correcta, **no hay enriquecimiento significativo** cerca del cofactor. Esa afirmación sale del paper.
+- S159 sí es discriminante contra las dos familias (en la tabla original figuraba "—").
+
+### R6. Asociación con la maquinaria Sec: CMH confirma la pseudorreplicación
+
+- "Sec+" en el CSV (`Sec_estricto`) = PSTK **y** SEPSECS **y** EEFSEC. Depende de PSTK, que se detecta mal.
+- Fisher global: OR = 3,36, p = 0,0018 (se reproduce).
+- **Cochran-Mantel-Haenszel por linaje** (4 estratos informativos: diatomeas, Chlorophyta, dinoflagelados, haptofitas): **OR_MH = 1,26, p = 0,65**.
+- La asociación desaparece al controlar por linaje. La lectura de pseudorreplicación del dossier original era correcta: ahora tiene el test que la respalda.
+
+### R7. Árbol y conteos reconciliados
+
+- El árbol tiene **304 hojas**, no 617: 124 NFS1 + 110 NFS2 + 66 SCLY-like (65 algales del barrido + la humana del barrido) + 4 referencias (IscS, SufS, SCLY humana, HText).
+  - Las 301 "otro" no están en el árbol.
+  - Faltan 16 NFS1/NFS2 de proteomas de contraste (*Drosophila*, *Marchantia*, maíz, arroz, *Selaginella*, *Dictyostelium*, *Plasmodium*, *Tetrahymena*, *Polarella*). Eso explica 134/116 en el CSV contra 124/110 en el árbol y en la conservación.
+  - **Corregir "árbol de 617 secuencias"** en el texto y en la figura.
+- **Las hojas ya llevaban la etiqueta de clase** (prefijos `I__`, `II__`, `L3__`). El árbol se hizo *después* de asignar, así que es una verificación de monofilia, no un descubrimiento ciego.
+- **Soportes SH-like:**
+  - clado con SCLY humana + HText (68 hojas): 0,965;
+  - **clado sólo algal + HText (66 hojas): 0,855**;
+  - la SCLY humana es efectivamente hermana del grupo algal.
+- **PABB004 no está entre los 119 proteomas.** El barrido da **65 SCLY-like algales**. Chlorophyta: **32/48 proteomas = 30/44 especies** (hay especies con 2 proteomas). Los "32/48" del dossier eran proteomas, no especies, y no incluían PABB004.
+- *Drosophila*: 0 SCLY-like. Coincide con que los insectos no tienen SCLY reportada, pero no lo verifiqué en la literatura.
+
+### R8. Tasas relativas
+
+Se reproduce lo del dossier: 38/38 pares con SCLY > NFS1 y 38/38 con NFS2 > NFS1 (p = 7,3 × 10⁻¹², el mínimo exacto). SCLY contra NFS2: 17/38, p = 0,12. Las objeciones metodológicas del §2.14 siguen en pie.
+
+### Cómo cambian las afirmaciones
+
+| Afirmación | Antes | Ahora |
+|---|---|---|
+| His en +1 diagnóstica | Pendiente / circular | **Sólido**: concuerda 75/77 con la asignación por cebo; 0/250 NFS con C-H |
+| Clado hermano de SCLY humana | Provisorio | Topología confirmada en el árbol; soporte sólo-algal 0,855 (SH). Sigue faltando muestreo eucariota y grupo externo |
+| Ausente en Pelagophyceae | Dato | **Probablemente falso**: 4/4 proteomas con candidatos C-H. Verificar |
+| Diatomeas 14/16 | Dato | Probablemente 16/16 |
+| Asp146 | Sin analizar | **Pro conservada en algas; Asp sólo en humana** |
+| Discriminantes cerca del cofactor | Pendiente | **Retirado**: p = 0,12–0,63 con la base correcta |
+| SCLY ↔ Sec es pseudorreplicación | No demostrada | **Apoyado**: CMH OR 1,26, p = 0,65 |
+| Árbol de 617 | Dato | **Falso**: 304 hojas, ya etiquetadas |
+
+---
 
 ## Secciones del original que quedan reemplazadas (ronda 2)
 
@@ -350,6 +472,10 @@ Las 38 especies comparten ramas internas, así que los pares no son independient
 ---
 
 ## 8. Lo que falta (reordenado según la revisión)
+
+**Estado tras la ronda 4.**
+- Resueltos con los datos del proyecto: 1 (Asp146 → Pro), 2 (tabla His), 4 (alineamiento del bucle) y la mayor parte del 6 (conteos), más el CMH del 9.
+- **Bloqueante nuevo y prioritario:** verificar las 11 secuencias C-H excluidas (R2). Hay que bajarlas de UniProt, extraer el dominio PF00266, alinearlas y ubicarlas en el árbol.
 
 **Para poder enviar (bloqueantes):**
 1. **Asp146**: qué residuo hay en la posición equivalente en las 66 secuencias. Sale del alineamiento existente; es una tarde de trabajo.

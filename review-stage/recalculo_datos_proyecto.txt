@@ -1,0 +1,69 @@
+== 1. His en +1 de la Cys catalítica, por clase (617 candidatos)
+Cys en pos 7  False True       
+His en +1     False False True 
+clase                          
+I   IscS/NFS1     0   134     0
+II  SufS/NFS2     0   116     0
+L3  SCLY-like     0     0    66
+otro            188   102    11
+  residuo +1 en I   IscS/NFS1: {'T': 134}
+  residuo +1 en II  SufS/NFS2: {'T': 62, 'A': 35, 'C': 19}
+  residuo +1 en L3  SCLY-like: {'H': 66}
+  residuo +1 en otro: {'A': 37, 'N': 26, 'T': 15, 'H': 11, 'S': 6}
+  mejor cebo vs His +1 (independiente del bucle):
+CH     False  True 
+row_0              
+s_I      178      2
+s_II     327      0
+s_L3      35     75
+  'otro' con C-H: 11
+                           acc                                        especie           grupo            cebo        evalue  blen           loop
+tr|A0A0D2N0J3|A0A0D2N0J3_9CHLO                        Monoraphidium neglectum     Chlorophyta  L3_Spabb_HText 4.644572e-116   454 ASGAAACHSGSGDA
+tr|A0A2V0PAY6|A0A2V0PAY6_9CHLO                       Raphidocelis subcapitata     Chlorophyta  L3_Spabb_HText 5.914837e-113   443 ASAAAACHSAAGGA
+tr|A0A8J2WTZ1|A0A8J2WTZ1_9STRA                         Pelagomonas calceolata   Pelagophyceae  L3_Spabb_HText  1.260887e-98   434 ASASAACHSGTAAV
+tr|A0A9K3KRJ2|A0A9K3KRJ2_9STRA                          Nitzschia inconspicua Bacillariophyta L3_Cre_PNW80545  2.378029e-92   461 ASAGATCHSTASIS
+tr|A0A9K3LVN3|A0A9K3LVN3_9STRA                          Nitzschia inconspicua Bacillariophyta L3_Cre_PNW80545  2.575849e-92   457 ASAGATCHSTASIS
+tr|A0A9P1FCD2|A0A9P1FCD2_9DINO                            Cladocopium goreaui     Dinophyceae  L3_Spabb_HText  1.766191e-80  2654 ASTAAACHSGDTEI
+tr|A0AAD7XJ29|A0AAD7XJ29_9STRA                          Chrysophaeum taylorii   Pelagophyceae  L3_Spabb_HText  1.488332e-98   433 ASASAACHTGSTSV
+tr|A0ABR1FWJ4|A0ABR1FWJ4_AURAN                    Aureococcus anophagefferens   Pelagophyceae L3_Cre_PNW80545  3.746907e-34   370 RLASAACHSGSDAV
+tr|A0ABR1FZ61|A0ABR1FZ61_AURAN                    Aureococcus anophagefferens   Pelagophyceae  L3_Spabb_HText 2.815367e-101   501 ASASAACHSGSDAV
+        tr|B7G8F0|B7G8F0_PHATC Phaeodactylum tricornutum (strain CCAP 1055/1) Bacillariophyta L3_Cre_PNW80545  2.339559e-92   386 ASAGATCHSASGVS
+        tr|F0XXL4|F0XXL4_AURAN                    Aureococcus anophagefferens   Pelagophyceae  L3_Spabb_HText  1.152063e-97   372 ASASAACHSGSDAV
+
+== 2. Árbol: hojas 304 {'I': 124, 'REF_IscS_Ecoli': 1, 'L3': 66, 'REF_SCLY_human': 1, 'REF_HText_Spabb': 1, 'II': 110, 'REF_SufS_Ecoli': 1}
+  MRCA de L3: n = 68 soporte SH = 0.965 ['REF_SCLY_human', 'REF_HText_Spabb']
+  MRCA sólo algal (+HText): n = 66 soporte SH = 0.855
+  NFS1/NFS2 del CSV que no están en el árbol: 16 (Dictyostelium discoideum, Drosophila melanogaster, Marchantia polymorpha, Oryza sativa japonica, Plasmodium falciparum, Polarella glacialis, Selaginella moellendorffii, Tetrahymena thermophila, Zea mays)
+
+== 3. Numeración humana: dominio empieza en 32 | H145 H D146 D K259 K C388 C H389 H
+  posición Asp146: I: {'K': 113, '-': 10, 'R': 1} | II: {'H': 106, '-': 4} | L3: {'P': 52, '-': 8, 'V': 5, 'D': 1}
+  Cys-6: I: {'V': 115, 'I': 6, 'L': 2, '-': 1} | II: {'V': 58, 'I': 34, 'M': 11, 'T': 3} | L3: {'A': 48, 'C': 12, '-': 6}
+  Cys-5: I: {'S': 123, '-': 1} | II: {'R': 109, '-': 1} | L3: {'S': 57, '-': 6, 'T': 1, 'A': 1}
+  Cys-4: I: {'S': 123, '-': 1} | II: {'S': 65, 'A': 41, 'H': 2, 'T': 1} | L3: {'A': 55, '-': 6, 'S': 2, 'V': 1}
+  Cys-3: I: {'G': 123, '-': 1} | II: {'G': 109, '-': 1} | L3: {'G': 60, '-': 6}
+  Cys-2: I: {'S': 121, 'A': 2, '-': 1} | II: {'H': 109, '-': 1} | L3: {'A': 46, 'S': 14, '-': 6}
+  Cys-1: I: {'A': 123, '-': 1} | II: {'H': 109, '-': 1} | L3: {'A': 58, '-': 6, 'S': 2}
+  Cys+0: I: {'C': 123, '-': 1} | II: {'C': 109, '-': 1} | L3: {'C': 60, '-': 6}
+  Cys+1: I: {'T': 123, '-': 1} | II: {'T': 58, 'A': 32, 'C': 19, '-': 1} | L3: {'H': 60, '-': 6}
+  Cys+2: I: {'S': 123, '-': 1} | II: {'Q': 105, 'M': 4, '-': 1} | L3: {'S': 49, '-': 6, 'T': 5, 'A': 4}
+  L3 sin Pro en Asp146: [('Q96I15', 'D'), ('A0A1Q9EC91', 'V'), ('A0A1Y1HX28', '-'), ('A0A699ZEV1', '-'), ('A0A813D9I6', 'V'), ('A0A835W6A0', '-'), ('A0A835WMZ9', '-'), ('A0A9P1CGG1', 'V'), ('A0A9W6BEK4', '-'), ('A0AAX4PJN5', '-'), ('A0ABD3PL28', '-'), ('A0ABN9Y9J6', 'V'), ('D8U8R1', '-'), ('L1J7X1', 'V')]
+
+== 4. Conservación: 348 posiciones, 46 a < 8 Å
+  SCLY vs NFS1 y NFS2: conservadas 38 (15 cerca, p0=0.395); discriminantes 2 [159, 197], cerca 1; binomial p = 0.634
+  SCLY vs NFS1: conservadas 65 (23 cerca, p0=0.354); discriminantes 6 [159, 197, 232, 330, 431, 462], cerca 4; binomial p = 0.122
+  Spearman f_L3 vs distancia: SignificanceResult(statistic=np.float64(-0.4818962105239518), pvalue=np.float64(1.2321965923221239e-21))
+
+== 5. Sec_estricto = PSTK y SEPSECS y EEFSEC: True
+  Fisher global: SignificanceResult(statistic=np.float64(3.3638443935926774), pvalue=np.float64(0.0017522530877923375))
+  estrato Bacillariophyta [[11, 1], [3, 1]]
+  estrato Chlorophyta [[18, 9], [14, 7]]
+  estrato Dinophyceae [[0, 1], [4, 5]]
+  estrato Haptophyta [[3, 0], [0, 1]]
+  CMH: OR_MH = 1.26, p = 0.648
+  Chlorophyta: 32/48 proteomas, 30/44 especies con SCLY-like
+  PABB004 en los 119: False | Drosophila SCLY-like: 0
+
+== 6. Tasas: n = 38
+  SCLY-NFS1: 38/38 pares positivos, mediana 0.399, Wilcoxon p = 7.28e-12 (mínimo exacto 2/2^38 = 7.3e-12)
+  NFS2-NFS1: 38/38 pares positivos, mediana 0.393, Wilcoxon p = 7.28e-12 (mínimo exacto 2/2^38 = 7.3e-12)
+  SCLY-NFS2: 17/38 pares positivos, mediana -0.025, Wilcoxon p = 0.122 (mínimo exacto 2/2^38 = 7.3e-12)

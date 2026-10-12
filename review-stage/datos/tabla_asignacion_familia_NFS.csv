@@ -1,0 +1,12 @@
+﻿clave,accession,gen,organismo,rol,largo_aa,bucle_catalitico,grupo_por_bucle,id_vs_NFS1_At,id_vs_NFS2_At,id_vs_IscS_Ec,id_vs_SufS_Ec
+SufS_Ecoli_grupoII,P77444,SufS (CsdB),Escherichia coli,referencia grupo II,406,IAVRTGHHC,II (SufS/NFS2),26.0,48.3,25.3,100.0
+CsdA_Ecoli_grupoII,Q46925,CsdA,Escherichia coli,referencia grupo II,401,IALRAGQHC,II (SufS/NFS2),24.9,40.2,25.6,43.8
+NFS2_Arabidopsis_grupoII,Q93WX6,NFS2 / CpNifS,Arabidopsis thaliana,referencia grupo II,463,VAIRSGHHC,II (SufS/NFS2),25.3,100.0,22.8,48.3
+A0A2K3D4F5,A0A2K3D4F5,CHLRE_12g525650,Chlamydomonas reinhardtii,candidato,470,VAVRSGHHC,II (SufS/NFS2),22.0,55.1,25.5,45.7
+NFS2_PABB,KAF8071197.1,NFS2 (HT031_001280),Scenedesmus sp. PABB004,candidato,521,VAVRSGHHC,II (SufS/NFS2),23.8,58.1,26.8,44.2
+IscS_Ecoli_grupoI,P0A6B7,IscS,Escherichia coli,referencia grupo I,404,LAVSSGSACTSASL,I (IscS/NFS1),55.7,22.8,100.0,25.3
+NFS1_Arabidopsis_grupoI,O49543,NFS1 / NIFS1,Arabidopsis thaliana,referencia grupo I,453,VAVSSGSACTSASL,I (IscS/NFS1),100.0,25.3,55.7,26.0
+A0A2K3E3W0,A0A2K3E3W0,CHLRE_02g146250,Chlamydomonas reinhardtii,candidato,464,IAVSSGSACTSASL,I (IscS/NFS1),65.3,23.1,59.7,26.0
+PABB_NFS1,KAF8057853.1,NFS1,Scenedesmus sp. PABB004,candidato,487,IAVSSGSACTSASL,I (IscS/NFS1),64.2,22.0,59.2,25.7
+NFS2_Chlamy_PNW80545,PNW80545.1,CHLRE_07g322000,Chlamydomonas reinhardtii,cebo original del trabajo,491,LAASAGAACHSSGAA,I (IscS/NFS1),35.4,19.8,37.9,23.2
+HText_region_1900_2400,KAF8071094.1 (1900-2400),"HT031_001176 ""HText""",Scenedesmus sp. PABB004,candidato (recorte de ORF de 3383 aa),3383,LAASAGAACHSTGGP,I (IscS/NFS1),35.3,21.4,38.4,21.4
