@@ -47,3 +47,46 @@
 ### Estado
 - Sigue a la ronda 3.
 
+## Ronda 3 (2026-10-12)
+
+### Evaluación
+- Score: **5/10** · Veredicto: **not ready**
+- El revisor declara **saturado el trabajo sólo de texto**: el techo estimado es ~5,5–6/10. Lo que falta es evidencia nueva, no redacción.
+- Respuesta completa: [`ronda3_revisor.md`](ronda3_revisor.md)
+
+### Acciones (post-ronda 3)
+- §2.10/§6/§7: conteo de controles corregido (2 plastidiales de algas verdes: DeepLoc 1/2, TargetP 0/2; DeepLoc además falla 1/3 mitocondriales). Se quitó "prasinofitas y clorofíceas"; ahora dice Chlorophyta con trebouxiofícea. (En la ronda 2 este cambio se había reportado como hecho y no lo estaba; quedó corregido acá.)
+- §1.5: el 0,96 se atribuye al clado con la humana; 65/55 contra 66/56 condicionado a PABB004.
+- §2.15, §5.2(c), §4: Chlorophyta 32→31/30; OR dentro de Chlorophyta a recalcular; pseudorreplicación "no demostrada, CMH pendiente".
+- §9 reescrita entera; §10 "6 posiciones" → 4; encabezado y referencias D/N aclarados; set de "9/67 aberrantes" definido; recorte de la predicción 0,9477 identificado.
+
+## Terminación
+
+**El loop se detiene tras la ronda 3 (de 4) sin evaluación positiva.** Una cuarta ronda sin datos nuevos repetiría la misma nota: el revisor determinó que la mejora por texto está saturada.
+
+Progresión: 4 → 5 → 5 (techo estimado por texto: ~6).
+
+### Bloqueantes restantes y esfuerzo estimado
+| # | Tarea | Tipo | Esfuerzo |
+|---|---|---|---|
+| 1 | Tabla de contingencia His +1 (bipartición del árbol vs NFS1/NFS2/301) | recálculo con archivos del proyecto | 1–2 h |
+| 2 | Enriquecimiento con base condicional para G197/A232/T330 | recálculo | 1 h |
+| 3 | Reconciliar conteos (65/66 en el árbol, 134/116 vs 124/110, 386/348, Drosophila, Chlorophyta 31/30) | recálculo | 2 h |
+| 4 | CMH (y definir Sec+) sobre `sec_vs_scly_por_proteoma.csv` | recálculo | 1 h |
+| 5 | Residuo equivalente a Asp146 en las 66 | análisis sobre el alineamiento existente | ½ día |
+| 6 | Alineamiento ±8 alrededor de la Cys en los tres grupos | análisis | ½ día |
+| 7 | IQ-TREE 2 (ModelFinder C20/C60, UFBoot2 + SH-aLRT), grupo externo = clase V no asignadas, más SCLY de eucariotas no algales, Zygnematophyceae | análisis | 1–2 días (cómputo local, sin costo) |
+| 8 | HISAT2 + StringTie sobre SRR12973628 (5') | análisis | 1 día |
+| 9 | tBLASTn genómico + sintenia en embriofitas/rodofitas/Zygnematophyceae | análisis | 2–3 días |
+| 10 | Localización con ASAFind/HECTAR/PredAlgo + controles citosólicos, o pasarla a suplementaria como "no resuelta" | análisis o decisión | ½–1 día |
+
+Con 1–7 resueltos, el revisor estima "almost" (~7). Para "ready" hacen falta además 8–10.
+
+**Recomendación:** no seguir iterando sobre el texto. Hay que correr 1–4 (son recálculos sobre archivos que ya existen en el proyecto pero no se subieron a este repo) y 5–7. Después, relanzar el loop con esos resultados.
+
+### Descripción del método (para figuras)
+Pipeline: barrido phmmer de 10 cebos sobre 119 proteomas de referencia de UniProt → extracción PF00266 (hmmsearch) → FAMSA → filtro de ocupación 0,35 → VeryFastTree → asignación de clado y bucle catalítico. Rama genómica: diagnóstico del ORF quimérico (CD-Search, sintenia con NREL 46B-D3) → reparación manual del extremo 3' → validación por k-meros de unión en RNA-seq crudo. Rama estructural: modelos AlphaFold + transferencia de ligando desde 3A9Z/1KMK/1P3W con TM-align.
+
+### Notas sobre el proceso
+- **Revisor de la misma familia** (subagente de Claude): independencia no verificada; el skill original pide Codex/GPT. No se usó ninguna API paga.
+- Pasos del skill omitidos por no aplicar o no estar disponibles: `/result-to-claim`, `/render-html`, notificación Feishu, trazas de `.aris/`.
