@@ -12,7 +12,7 @@ Cada número de este texto se recalculó desde los archivos del proyecto con los
 
 | | |
 |---|---|
-| Evaluación de la última ronda | **{{SCORE}}** |
+| Evaluación de la última ronda | **8/10, "almost"** (ronda 7) |
 | Lo sólido | el clado, su firma, la reasignación del cebo, el modelo quimérico de PABB004, el estado Pro en la posición equivalente a Asp146 |
 | Lo que todavía no está | muestreo eucariota dentro del árbol ML con test AU, barrido Sec válido, extremo 5' del gen de PABB004, tBLASTn de las ausencias |
 | Revisor | subagente de Claude: **misma familia de modelos que el ejecutor**, independencia no verificada |
@@ -23,10 +23,10 @@ Cada número de este texto se recalculó desde los archivos del proyecto con los
 
 1. El cebo **PNW80545.1** de *Chlamydomonas reinhardtii* (A0A2K3DJ46), anotado "NFS2" en AlgaePath, **no es NFS2**. Pertenece a un clado de cisteína desulfurasas clase V distinto de NFS1 (ISC) y de NFS2 (SUF), relacionado con la selenocisteína liasa (SCLY) animal.
 2. ***Scenedesmus* sp. PABB004 tiene los tres genes**: NFS1 (KAF8057853.1), NFS2 (KAF8071197.1) y un SCLY-like escondido en un ORF quimérico de 3383 aa (KAF8071094.1).
-3. **El clado SCLY-like es monofilético en un árbol ML** (IQ-TREE, Q.pfam+I+R9): SCLY-like + SCLY humana con **SH-aLRT 95,8 / UFBoot 99**, sin intrusos de NFS1 ni de NFS2. Tiene **85 secuencias algales** en **73 de 119 proteomas** de referencia.
+3. **El clado SCLY-like es monofilético en un árbol ML** (IQ-TREE, Q.pfam+I+R9): SCLY-like + SCLY humana con **SH-aLRT 95,8 / UFBoot 99**, sin intrusos de NFS1 ni de NFS2. Tiene **84 secuencias algales únicas** (83 de proteomas + HText) en **74 de 119 proteomas** de referencia, contando *Tetrabaena* por un fragmento.
 4. **Firma del bucle catalítico:**
    - una His en la posición +1 de la Cys catalítica que **ninguna** de las 250 NFS1/NFS2 tiene;
-   - la His está en casi todo el clado, pero se perdió en linajes puntuales: Bolidophyceae (una pérdida en el tallo del grupo), *Tetrabaena* y un parálogo de *Stephanodiscus* que además perdió la Cys.
+   - la His está en casi todo el clado. Las excepciones son Bolidophyceae, con una pérdida en el tallo del grupo, y un parálogo de *Stephanodiscus* que además perdió la Cys.
 5. **Residuo equivalente a Asp146** (el que da a la SCLY humana su especificidad por Sec):
    - es **Pro (dipéptido Pro-Ala)** en prácticamente todo el clado algal, Val en dinoflagelados y Asp **sólo en Choanozoa** (14 metazoos + *Salpingoeca*);
    - el Asp de la SCLY animal es un **estado derivado**, ganado en algún punto entre Amorphea y Choanozoa, y la Pro es un estado ampliamente distribuido. La polaridad depende del muestreo (§3.4).
@@ -52,7 +52,7 @@ Cada número de este texto se recalculó desde los archivos del proyecto con los
   1. extracción del dominio con un HMM construido del alineamiento del proyecto;
   2. asignación por el mejor HMM de clado (NFS1, NFS2 o SCLY-like, construidos con los miembros de cada clado);
   3. **confirmación por ubicación en el árbol ML**. Es el árbol el que decide: los HMM heredan la membresía original.
-- **Pendiente:** aplicar esta regla a los 617 candidatos. Hoy se aplicó a 46: las 16 de la ronda 6 y las 30 de la ronda 7.
+- **Pendiente:** aplicar la regla a los 617 candidatos. Hoy cubre 112: las 66 de `clase` más 46 examinadas. Las 505 restantes tienen como mejor cebo uno de NFS1/NFS2 y **ninguna tiene C-H**. Los únicos casos en el límite son las copias divergentes de *Tetrabaena* y una de *Durusdinium* con bucle tipo NFS1. Pasar los tres HMM de clado sobre las 505 es barato, pero hace falta el FASTA de los 617.
 
 **Árboles.**
 1. Árbol original: VeryFastTree, 304 hojas. **Las hojas ya llevaban la etiqueta de clase**, así que es una verificación de monofilia y no un descubrimiento a ciegas. Los soportes son SH-like locales, no bootstrap.
@@ -103,8 +103,8 @@ En *Scenedesmus* sp. NREL 46B-D3, el gen SCLY está a 393 pb del de histidinol d
 | Miembros originales (`clase` = L3) | 65 algales + SCLY humana |
 | HText (PABB004, curado a mano; PABB004 **no** está en los 119 proteomas) | +1 |
 | Excluidos por error y reubicados (ronda 6) | +15 |
-| Adicionales (ronda 7) | +4 (*Ectocarpus*, *Durusdinium* ×2, *Stephanodiscus*) |
-| **Total algal** | **85** |
+| Adicionales (ronda 7) | +4 (*Ectocarpus*, *Durusdinium* ×2, *Stephanodiscus*); las dos de *Durusdinium* son la **misma secuencia** (RUF2 es una subcadena exacta de KTI6, de otro proteoma de la misma especie) |
+| **Total algal** | **85 entradas = 84 secuencias únicas** (83 de proteomas + HText), más el fragmento de *Tetrabaena* A0A2J7ZMY6, que no está en el árbol |
 
 **Soportes en el árbol ML:**
 - SCLY-like + humana: **95,8 / 99**;
@@ -123,10 +123,12 @@ En *Scenedesmus* sp. NREL 46B-D3, el gen SCLY está a 393 pb del de histidinol d
 | *Ectocarpus* D8LEU7 (Phaeophyceae) | **Dentro del clado**, hermana de *Tribonema* (Xanthophyceae; 87,6/81), coherente con la filogenia de especies. Pro en 146. El modelo génico termina justo antes del bucle catalítico |
 | *Durusdinium* A0ABP0KTI6 y A0ABP0RUF2 | **Dentro**, con el resto de los dinoflagelados (100/100). Val en 146. La cola C-terminal tiene un corrimiento de marco |
 | *Stephanodiscus* A0ABD3QSF5 | **Dentro**, junto a los otros dos SCLY-like de la misma especie. Pro en 146, **sin la Cys catalítica**: parálogo probablemente inactivo |
-| *Tetrabaena* A0A2J7ZVZ7 y A0A2J7ZID8 | **Fuera**: forman el grupo hermano de todo el clado SCLY-like + SCLY humana (78,2/78). Pro en 146, bucle `GVGGCAC-S` sin la His. Lo más probable es un ortólogo volvocal muy divergente atraído hacia afuera por rama larga, porque *Gonium*, *Volvox* y *Pleodorina* tienen SCLY-like normales. **No se cuentan** en la distribución |
+| *Tetrabaena* A0A2J7ZVZ7 y A0A2J7ZID8 | **Fuera**: forman el grupo hermano de todo el clado SCLY-like + SCLY humana (78,2/78). Bucle `GVGGCAC-S`. Comparten sólo ~37 % de identidad con las SCLY-like de volvocales y pertenecen a una **familia propia de *Tetrabaena*** con 5 copias del motivo `GVGGCAC`. **El ortólogo verdadero es el fragmento A0A2J7ZMY6** (118 aa; 71 % de identidad con *Gonium* en 113 aa, contexto `EHPAV`, Pro en 146). Por ese fragmento, *Tetrabaena* **cuenta como presente** |
 | 21 proteínas con pentraxina o lectina | Sin dominio clase V: descartadas |
 
-Con las 4 secuencias que entran, el clado algal queda con 82 + 4 = 86 hojas (88,7/73 en el árbol final).
+**Cómo leer las etiquetas de `iqfinal`.** Los dos primeros números son nombres de nodo que IQ-TREE arrastró desde el árbol de restricción, y en algunos nodos cercanos a las inserciones quedaron **desplazados**. Por ejemplo, el nodo sólo algal muestra 91,6/82, pero su valor real en la restricción es 61,1/57. Los dos últimos se recalcularon, pero en los splits impuestos por la restricción están inflados. Sólo sirven para medir **qué tan estable es la ubicación de las 6 secuencias insertadas**. Para los soportes del clado valen los del árbol de la ronda 6 (95,8/99 y 61,1/57).
+
+En el árbol final, el clado SCLY-like tiene 86 hojas (85 entradas algales + humana).
 
 **Secuencias descartadas:**
 - A0ABR1FWJ4 (*Aureococcus*): mismo locus que A0ABR1FZ61, pero le falta el dominio y tiene un corrimiento del marco.
@@ -145,8 +147,9 @@ Alineamiento de los tres grupos alrededor de la Cys catalítica (MSA del proyect
 
 - **La His en +1 es diagnóstica en una sola dirección:** la tienen **0 de 250** NFS1/NFS2. Dentro del clado está en casi todos los miembros, con estas pérdidas:
   - **Bolidophyceae (5)**: `[IV]AAGSAC-[ED]`, una sola pérdida en el tallo. Además tienen I/V en −6, igual que NFS1/NFS2;
-  - ***Tetrabaena*** (2): `GVGGCAC-S`;
-  - ***Stephanodiscus* A0ABD3QSF5**: `VACSAGSIS`, sin la Cys catalítica. Es un parálogo probablemente inactivo; la especie tiene otros dos SCLY-like con Cys e His.
+  - ***Stephanodiscus* A0ABD3QSF5**: `CSAGSISIL` (posiciones −6 a +2), sin la Cys catalítica (Cys→Ser, His→Ile);
+  - no se pueden evaluar *Ectocarpus*, cuyo modelo termina antes del bucle, ni *Durusdinium*, que tiene corrimiento de marco;
+  - las 5 copias divergentes de *Tetrabaena* (`GVGGCAC`) quedan fuera del clado y no cuentan acá. Es un parálogo probablemente inactivo; la especie tiene otros dos SCLY-like con Cys e His.
 - G-x-x-C no es diagnóstico, porque NFS1 también lo tiene.
 - La His no se puede usar como criterio de pertenencia, porque eso sería circular. Lo correcto es tratarla como un carácter que se superpone casi exactamente con el clado definido por árbol y HMM: de las 77 secuencias con C-H, 75 tienen como mejor cebo uno SCLY-like.
 
@@ -166,11 +169,13 @@ Alineamiento de los tres grupos alrededor de la Cys catalítica (MSA del proyect
 | NFS1 | Lys 113, Arg 1 (gap 10) |
 | NFS2 | His 106 (gap 4) |
 | SCLY-like algales | **Pro** en todas las informativas salvo los Val. Incluye las 15 de la ronda 6 y *Ectocarpus* y *Stephanodiscus* |
-| Dinoflagelados + una copia de *Guillardia* | **Val** (5, más *Durusdinium* ×2 en la ronda 7) |
-| Choanozoa (14 metazoos + *Salpingoeca*) | **Asp** |
+| Dinoflagelados + una copia de *Guillardia* | **Val** (5, más *Durusdinium*, una secuencia única) |
+| Choanozoa (14 metazoos + *Salpingoeca*) | **Asp** ¹ |
 | *Acanthamoeba*, *Trypanosoma*, *Thalassiosira*, *Chlamydomonas* | Pro |
 | *Phytophthora* | Val |
 | *C. elegans* | Pro |
+
+¹ Dos fragmentos de *Symbiodinium* de unos 110 aa (A0A812J8T9 y A0A1Q9ECG7) muestran D en esa columna, pero el alineamiento se corta justo ahí. Es casi seguro un artefacto de alineamiento y no contradice que "Asp aparece sólo en Choanozoa".
 
 - El cambio es de **dos sitios**: Pro-Ala en algas, *Acanthamoeba* y *Trypanosoma*, contra Asp-Ser en holozoos. *C. elegans* tiene Pro-Ser, lo que encaja con una reversión. El experimento propuesto tiene que incluir el **doble mutante P→D / A→S**.
 - Que NFS1 tenga la Lys del mutante D146K confirma que es la **posición homóloga**. **No** prueba que esa posición controle la especificidad en NFS1/NFS2. Además, la SclA bacteriana prefiere Sec con His en esa posición (Johnstone et al. 2021).
@@ -189,7 +194,7 @@ Alineamiento de los tres grupos alrededor de la Cys catalítica (MSA del proyect
 Qué se lee de la tabla:
 - **Asp en el linaje animal es robusto.** Que Pro sea el estado de la raíz depende de dos especies, y que la ganancia esté en Choanozoa depende de un solo coanoflagelado.
 - No hay Ichthyosporea ni Filasterea en el muestreo, así que la ganancia está en algún punto del tallo **Amorphea → Choanozoa**.
-- **La reversión en *C. elegans*** sólo se puede ubicar en algún punto entre el ancestro de Ecdysozoa y *C. elegans*, porque es el único ecdisozoo con el gen. **No es una predicción cumplida.** El estado Pro aparece en 32 de 47 proteomas con SCLY-like Pro que sí tienen maquinaria Sec, entre ellos *Ostreococcus lucimarinus*, con uno de los selenoproteomas más grandes que se conocen. Además *C. elegans* conserva la inserción de Sec para TrxR-1.
+- **La reversión en *C. elegans*** sólo se puede ubicar en algún punto entre el ancestro de Ecdysozoa y *C. elegans*, porque es el único ecdisozoo con el gen. **No es una predicción cumplida.** De los 63 proteomas con al menos una SCLY-like con Pro, 36 tienen maquinaria Sec según el barrido del CSV, que está en discusión (§3.10). Entre ellos está *Ostreococcus lucimarinus*, con uno de los selenoproteomas más grandes que se conocen. Además *C. elegans* conserva la inserción de Sec para TrxR-1.
 - **Val:** cuántas veces apareció no se resuelve. Con la topología de especies el SAR queda ambiguo (P 0,46 / V 0,54), y *Guillardia* tiene dos copias, una con Pro y otra con Val.
 - El árbol de genes contradice al de especies en varios puntos (*Trypanosoma*, *Acanthamoeba*, *Salpingoeca*, *C. elegans*). La reconstrucción **supone herencia vertical**; falta un test AU.
 
@@ -200,7 +205,7 @@ Proteomas de referencia con SCLY-like:
 | Linaje | Proteomas con SCLY-like | Especies |
 |---|---|---|
 | Bacillariophyta | 16/16 | 16/16 |
-| Chlorophyta | 34/48 | 32/44 |
+| Chlorophyta | 35/48 | 33/44 |
 | Bolidophyceae | 5/6 (sin His) | 5/6 |
 | Pelagophyceae | 4/4 | 3/3 |
 | Phaeophyceae | 1/1 (*Ectocarpus*, modelo truncado) | 1/1 |
@@ -214,7 +219,7 @@ Proteomas de referencia con SCLY-like:
 | **Rhodophyta** | **0/12** | **0/12** |
 | Metazoa (contraste) | 1/2 (humano; *Drosophila* no) | |
 | Hongos, amebozoos, ciliados, apicomplejos | 0 | |
-| **Total** | **74/119** | |
+| **Total** | **75/119** | |
 
 - **Ausencias firmes:** Embryophyta (0/6) y Rhodophyta (0/12). Es ausencia en proteomas: falta tBLASTn genómico y sintenia.
 - Las dos carofitas tienen el gen, pero sin Zygnematophyceae en el muestreo **no se puede ubicar la pérdida en la terrestrialización**. Sin glaucofitas, "pérdida independiente en rodofitas" no se puede afirmar.
@@ -257,6 +262,7 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 | Extracelular | 1 |
 
 - P(plástido) > 0,5: **13/60**, de las cuales 10 son Chlorophyta (10/31).
+- Esto cubre sólo los miembros originales: las 19 secuencias agregadas en las rondas 6 y 7 no pasaron por los predictores.
 - **Panel de control:** en los 2 controles plastidiales de algas verdes, DeepLoc acierta 1 y TargetP ninguno. DeepLoc además falla 1 de 3 mitocondriales. En las algas con plástido secundario se usaron predictores no adecuados.
 - **Conclusión:** la localización **no se resuelve** con estos predictores. La proteína curada de PABB004 tampoco se puede predecir, porque le falta el N-terminal.
 
@@ -279,8 +285,9 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 - "Sec+" en el CSV = PSTK **y** SEPSECS **y** EEFSEC.
 - **Hay dos barridos que no coinciden:** el del CSV tiene PSTK en 55/119; el informe del barrido, en 18. Hay que decidir cuál vale.
 - Con el CSV y la distribución final:
-  - Fisher global: OR 2,61, p = 0,022;
-  - **CMH por linaje: OR 1,41 (IC 0,45–4,37), p = 0,55**, con 3 estratos informativos (Chlorophyta, Dinophyceae, Haptophyta) y Breslow-Day p = 0,13.
+  - Fisher global: OR 2,45, p = 0,035;
+  - **CMH por linaje: OR 1,17 (IC 0,37–3,70), p = 0,78**, con 3 estratos informativos y Breslow-Day p = 0,093.
+- Un ejemplo concreto de por qué el barrido Sec no es confiable: los dos proteomas de *Durusdinium trenchii* tienen la **misma** SCLY-like, pero uno pasa `Sec_estricto` y el otro no.
 - La asociación no se sostiene dentro de los linajes. La correlación entre el estado del residuo 146 y la maquinaria Sec no se puede testear, porque Asp es un único evento.
 - Hipótesis, n = 1: las Bolidophyceae (pérdida de la His) no tienen PSTK (Sec_estricto 0/6).
 
@@ -324,7 +331,7 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 | Estructura 3' del gen curado | **Sólida**: 29 contra 0 lecturas |
 | Gen curado completo | **No**: 5' sin resolver |
 | His en +1 como marcador del clado | **Sólido en una dirección** (0/250 NFS); con pérdidas puntuales dentro del clado |
-| Pro en la posición de Asp146 en el clado algal | **Sólido** |
+| Pro en la posición de Asp146 en el clado algal | **Sólido** (Val en dinoflagelados) |
 | El Asp de la SCLY animal es derivado | **Apoyado**, con dependencia del muestreo |
 | Ortólogo de SCLY / hermano de la SCLY humana | **Provisorio** |
 | Ausente en embriofitas y rodofitas | **Sólido a nivel de proteoma**; falta el genoma |
@@ -340,7 +347,7 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 ## 7. Pendientes, por prioridad
 
 **Para "almost":**
-1. Aplicar la regla HMM + árbol a los 617 candidatos y documentarla en Métodos.
+1. Aplicar la regla HMM + árbol a los 505 candidatos restantes (hace falta el FASTA de los 617) y documentarla en Métodos.
 2. Decidir cuál barrido Sec vale, o declarar la maquinaria "no evaluada".
 3. Depositar el árbol de especies usado en la reconstrucción y hacer el test AU (árbol de genes restringido a la topología de especies).
 
@@ -354,7 +361,7 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 
 ## 8. Encuadre para publicar
 
-**Título posible:** *An algal clade of selenocysteine lyase-related cysteine desulfurases with a conserved non-animal state at the substrate-specificity position.*
+**Título posible:** *An overlooked algal clade of selenocysteine lyase-related cysteine desulfurases with a proline at the position homologous to SCLY Asp146.*
 
 Ejes:
 1. un clado clase V que pasó desapercibido por mala anotación, con un caso documentado de modelo génico quimérico;
@@ -396,3 +403,4 @@ La cita de da Silva et al. 2020 (*PLoS NTD*, SPS–SCLY en tripanosomátidos) la
 
 - Árboles: `datos/ubicacion16/iq318.*` (referencia) y `datos/ubicacion_final/iqfinal.*` (con las 6 adicionales).
 - Registro de rondas: `AUTO_REVIEW.md`. Respuestas del revisor: `ronda1_revisor.md` a `ronda7_revisor.md`.
+- Secuencias aportadas a mano: `datos/ubicacion16/nuevas16.fasta`, `datos/ubicacion30/nuevas30.fasta`.

@@ -179,3 +179,13 @@ Para "ready", además:
 1. Ubicar las 30 (como mínimo D8LEU7 y las dos de *Durusdinium*). Hace falta su FASTA.
 2. Aplicar la regla HMM + árbol a los 617.
 3. Consolidar el dossier en una sola versión.
+
+---
+
+## Ronda 7 (2026-10-12) — 30 secuencias más y dossier consolidado
+
+- Score: **8/10** · Veredicto: **almost**. Respuesta del revisor: [`ronda7_revisor.md`](ronda7_revisor.md)
+- Filtradas las 30 secuencias: 21 sin dominio clase V; 6 ubicadas con IQ-TREE restringido; 3 fragmentos.
+- Distribución final: **75/119**. Se suman Phaeophyceae 1/1 y *Tetrabaena* (por el fragmento ortólogo).
+- Dossier consolidado: [`DOSSIER_SCLY_like_v2.md`](DOSSIER_SCLY_like_v2.md), con las correcciones 1–8 del revisor aplicadas.
+- Pendientes para "ready": HMM sobre los 505 candidatos restantes (hace falta el FASTA de los 617), eucariotas en el árbol ML + test AU, barrido Sec, tBLASTn de las ausencias, 5' de PABB004.
