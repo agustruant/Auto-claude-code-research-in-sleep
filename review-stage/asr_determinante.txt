@@ -2,7 +2,7 @@
 == Guillardia polimórfica (P+V), raíz en Discoba: Fitch = 4 cambios; q_ML = 0.110; lnL = -16.21
   raíz                         D=0.011  P=0.977  V=0.012
   Amorphea                     D=0.069  P=0.922  V=0.009
-  Holozoa                      D=0.944  P=0.052
+  Choanozoa (Salpingoeca+Metazoa) D=0.944  P=0.052
   Metazoa                      D=0.996
   Bilateria                    D=0.996
   Ecdysozoa+Lophotrochozoa     D=0.937  P=0.060
@@ -12,7 +12,7 @@
 == Guillardia = V (sólo la copia L1J7X1): Fitch = 5 cambios; q_ML = 0.144; lnL = -18.47
   raíz                         D=0.035  P=0.903  V=0.062
   Amorphea                     D=0.140  P=0.816  V=0.044
-  Holozoa                      D=0.931  P=0.061  V=0.008
+  Choanozoa (Salpingoeca+Metazoa) D=0.931  P=0.061  V=0.008
   Metazoa                      D=0.994
   Bilateria                    D=0.992  P=0.007
   Ecdysozoa+Lophotrochozoa     D=0.914  P=0.080  V=0.006
@@ -22,7 +22,7 @@
 == Guillardia = P (sólo la copia L1J7A3): Fitch = 4 cambios; q_ML = 0.107; lnL = -16.30
   raíz                         D=0.009  P=0.983  V=0.008
   Amorphea                     D=0.062  P=0.931  V=0.006
-  Holozoa                      D=0.946  P=0.051
+  Choanozoa (Salpingoeca+Metazoa) D=0.946  P=0.051
   Metazoa                      D=0.997
   Bilateria                    D=0.996
   Ecdysozoa+Lophotrochozoa     D=0.939  P=0.058
@@ -32,7 +32,7 @@
 == raíz Amorphea | Diaphoretickes: Fitch = 4 cambios; q_ML = 0.111; lnL = -16.16
   raíz                         D=0.060  P=0.923  V=0.017
   Amorphea                     D=0.108  P=0.883  V=0.009
-  Holozoa                      D=0.946  P=0.050
+  Choanozoa (Salpingoeca+Metazoa) D=0.946  P=0.050
   Metazoa                      D=0.996
   Bilateria                    D=0.995
   Ecdysozoa+Lophotrochozoa     D=0.936  P=0.060
@@ -42,9 +42,51 @@
 == Guillardia hermana de dinoflagelados (como en el árbol de genes): Fitch = 4 cambios; q_ML = 0.108; lnL = -15.85
   raíz                         D=0.008  P=0.985  V=0.007
   Amorphea                     D=0.060  P=0.934  V=0.005
-  Holozoa                      D=0.945  P=0.052
+  Choanozoa (Salpingoeca+Metazoa) D=0.945  P=0.052
   Metazoa                      D=0.996
   Bilateria                    D=0.996
   Ecdysozoa+Lophotrochozoa     D=0.938  P=0.059
   Diaphoretickes               P=0.971  V=0.025
   SAR                          P=0.645  V=0.351
+
+######## Sensibilidad (pedida en la ronda 5) ########
+
+== ramas profundas x5: Fitch = 4 cambios; q_ML = 0.062; lnL = -14.20
+  raíz                         D=0.079  P=0.842  V=0.079
+  Amorphea                     D=0.231  P=0.711  V=0.057
+  Choanozoa (Salpingoeca+Metazoa) D=0.972  P=0.023  V=0.006
+  Metazoa                      D=0.999
+  Bilateria                    D=0.999
+  Ecdysozoa+Lophotrochozoa     D=0.966  P=0.033
+  Diaphoretickes               D=0.060  P=0.706  V=0.234
+  SAR                          D=0.042  P=0.354  V=0.604
+
+== ramas profundas x10: Fitch = 4 cambios; q_ML = 0.046; lnL = -13.89
+  raíz                         D=0.140  P=0.725  V=0.135
+  Amorphea                     D=0.321  P=0.580  V=0.099
+  Choanozoa (Salpingoeca+Metazoa) D=0.979  P=0.015  V=0.006
+  Metazoa                      D=0.999
+  Bilateria                    D=0.999
+  Ecdysozoa+Lophotrochozoa     D=0.976  P=0.024
+  Diaphoretickes               D=0.124  P=0.567  V=0.309
+  SAR                          D=0.087  P=0.299  V=0.614
+
+== Acanthamoeba y Trypanosoma desconocidos (posible HGT): Fitch = 4 cambios; q_ML = 0.116; lnL = -14.12
+  raíz                         D=0.370  P=0.315  V=0.315
+  Amorphea                     D=0.667  P=0.167  V=0.167
+  Choanozoa (Salpingoeca+Metazoa) D=0.979  P=0.011  V=0.011
+  Metazoa                      D=0.998
+  Bilateria                    D=0.995
+  Ecdysozoa+Lophotrochozoa     D=0.933  P=0.063
+  Diaphoretickes               D=0.100  P=0.450  V=0.449
+  SAR                          D=0.016  P=0.230  V=0.753
+
+== Salpingoeca desconocido (n = 1 coanoflagelado): Fitch = 4 cambios; q_ML = 0.112; lnL = -15.44
+  raíz                         D=0.008  P=0.981  V=0.011
+  Amorphea                     D=0.037  P=0.954  V=0.010
+  Choanozoa (Salpingoeca+Metazoa) D=0.490  P=0.478  V=0.032
+  Metazoa                      D=0.969  P=0.028
+  Bilateria                    D=0.995
+  Ecdysozoa+Lophotrochozoa     D=0.935  P=0.061
+  Diaphoretickes               P=0.924  V=0.071
+  SAR                          P=0.460  V=0.535

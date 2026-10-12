@@ -47,11 +47,71 @@ Fuente: `datos/bloque_SeS/` (bitácora + 10 archivos del Drive, carpeta `bloque_
 11. **La tabla del §5 se armó sobre las 300 secuencias del árbol.** Le faltan las 11 C-H de R2 y los 5 candidatos de Bolidophyceae (`AAGSAC-E/D`). Antes de escribir "Pro 100 % en algas" hay que ver qué residuo tienen.
 12. **Duplicados en `asr_tree.nwk`:** *Thalassiosira* B8BXE3 y *Chlamydomonas* A0A2K3DJ46 aparecen dos veces (ALG y EUK). Igual que con la SCLY humana en el árbol principal, hay que deduplicar.
 
+### B4. Correcciones de la ronda 5 (revisión + verificación propia)
+
+**Ancla Glu-His.** Sólo la His es invariante:
+- NFS1: 95 E-H y 19 D-H;
+- NFS2: 102 E-H, 1 D-H y 3 N-H;
+- SCLY-like: 58/58 E-H.
+
+Decir "ancla (E/D/N)-H, His invariante".
+
+**El nodo de ganancia es Choanozoa, no Holozoa.** El nodo que se reconstruye es *Salpingoeca* + Metazoa, y no hay Ichthyosporea ni Filasterea en el muestreo. Lo único que se puede decir es que el Asp aparece en algún punto del tallo entre Amorphea y Choanozoa. "Innovación holozoa de un solo paso" queda fuera.
+
+**La reconstrucción ancestral depende de supuestos** (`scripts/asr_determinante.py`, sección de sensibilidad):
+
+| Supuesto | Raíz P | Amorphea P | Choanozoa D |
+|---|---|---|---|
+| Ramas iguales (bitácora) | 0,98 | 0,92 | 0,94 |
+| Ramas profundas ×5 | 0,84 | 0,71 | 0,97 |
+| Ramas profundas ×10 | 0,73 | 0,58 | 0,98 |
+| *Acanthamoeba* y *Trypanosoma* desconocidos (posible HGT) | **0,32** | 0,17 | 0,98 |
+| *Salpingoeca* desconocido | 0,98 | 0,95 | **0,49** |
+
+Qué se lee de la tabla:
+- **Asp en el linaje animal** es robusto.
+- **Pro en la raíz** depende de dos especies, *Acanthamoeba* y *Trypanosoma*. Los grupos externos (NFS1 K, NFS2 H) no ayudan a polarizar P contra D.
+- **El momento de la ganancia** depende de un solo coanoflagelado.
+- Igualar todas las ramas **no es una elección conservadora**: hace que los nodos profundos parezcan más seguros de lo que son.
+- Hay que reportar la parsimonia como resultado principal y el Mk con esta tabla de sensibilidad.
+
+**El árbol de genes tiene más conflictos con el de especies, no sólo *C. elegans*:**
+- *Trypanosoma* sale hermano de los holozoos (0,90).
+- *Acanthamoeba* cae dentro de las algas (0,13).
+- *Salpingoeca* cae dentro de Metazoa, junto a *Capitella* (0,63).
+
+Reconstruir sobre el árbol de especies supone herencia vertical, y ese supuesto hay que declararlo. Para testearlo: árbol de genes restringido a la topología de especies + test AU.
+
+**⚠ *C. elegans* no es una "predicción cumplida".**
+- Mi cálculo: el estado Pro aparece en **32 de 47 proteomas** con SCLY-like Pro que pasan `Sec_estricto`, entre ellos *Ostreococcus lucimarinus* (4/4 marcadores, uno de los selenoproteomas eucariotas más grandes), *Micromonas*, *Chlamydomonas* y *Tetradesmus*. El revisor contó ≥ 23 con otro criterio.
+- Entonces Pro no marca un uso reducido del selenio, y que *C. elegans* tenga Pro no confirma la hipótesis.
+- Además, *C. elegans* **no** desmanteló el sistema: conserva toda la maquinaria de inserción de Sec para TrxR-1 (Taskov et al. 2005, [doi:10.1093/nar/gki507](https://doi.org/10.1093/nar/gki507)).
+- **Redacción correcta:** "reversión Asp → Pro en el linaje de *C. elegans*, un organismo de selenoproteoma mínimo. Es anecdótica, porque Pro coexiste con selenoproteomas grandes en algas".
+
+**Correlación estado del residuo ↔ maquinaria Sec:** con estos datos no se puede testear. Asp aparece en un solo evento filogenético, así que el n efectivo es 1. Se reporta como descripción.
+
+**Homología del estado Pro:**
+- *Acanthamoeba* y *Trypanosoma* tienen el dipéptido P-A, igual que las algas (P-A[V/I]). Es consistente con un único estado Pro homólogo.
+- *C. elegans* tiene P-S: conserva la Ser en +1 de los holozoos (D-S), lo que encaja con una reversión secundaria.
+- El cambio es de **dos sitios (PA ↔ DS)**, no de uno. El experimento propuesto tiene que incluir el doble mutante P→D / A→S.
+
+**Literatura que faltaba:**
+- **Poliak et al. 2009** (FEBS J 277:383, [doi:10.1111/j.1742-4658.2009.07489.x](https://doi.org/10.1111/j.1742-4658.2009.07489.x)) estudió la SCL de *T. brucei* (Q38DC4), **una enzima con Pro**.
+  - Es monofilética con las SCL eucariotas y está en núcleo y citoplasma.
+  - Al silenciarla bajan las actividades cisteína desulfurasa y selenocisteína liasa en las fracciones celulares.
+  - Es el único precedente funcional de una SCL con Pro, y hay que discutirlo.
+  - Por el abstract no se sabe si midieron la especificidad sobre la enzima purificada; hay que leer el paper completo.
+- Da Silva et al. 2020 (PLoS NTD, [doi:10.1371/journal.pntd.0008091](https://doi.org/10.1371/journal.pntd.0008091)), sobre la interacción SPS–SCLY en tripanosomátidos, la aportó el revisor y **no la verifiqué**.
+
+**Estructura:** el Asp146 está además a 3,7–4 Å de los residuos 284–287 de la cadena B, en la interfaz del dímero (dato del revisor). La distancia de 6,29 Å al PLR es la mínima entre átomos (N del esqueleto de Asp146 → N1 del PLR), no un contacto de cadena lateral.
+
+**Encuadre para el abstract.** "El estado Asp de la SCLY animal es derivado y el estado Pro está ampliamente distribuido en eucariotas", en lugar de "innovación holozoa de un solo paso".
+
 ### B3. Cómo cambia la evaluación global
 
-- La relación con SCLY deja de apoyarse en una sola secuencia humana duplicada: hay 14 metazoos y un coanoflagelado, todos con Asp, en un clado holozoo con soporte 0,999.
+- La relación con SCLY deja de apoyarse en una sola secuencia humana duplicada: hay 14 metazoos y un coanoflagelado, todos con Asp, en un clado con soporte 0,999 (Choanozoa: no hay holozoos no coanozoos en el muestreo).
 - Aparece un **segundo carácter diagnóstico, funcional**: Asp146 (Collins 2012, D146K). Su estado está **polarizado**: Asp es derivado en Holozoa sobre un fondo Pro.
-- El encuadre "la especificidad estricta por Sec de la SCLY animal es una innovación holozoa" es defendible **como hipótesis**. Las limitaciones del §11 de la bitácora están bien declaradas. La predicción experimental (núcleo algal con Pro contra mutante P→D) es concreta y comprobable.
+- El encuadre defendible (ver B4) es: el estado Asp de la SCLY animal es derivado (ganado en el tallo Amorphea → Choanozoa) y el estado Pro está ampliamente distribuido. Las limitaciones del §11 de la bitácora están bien declaradas. La predicción experimental (núcleo algal con Pro contra mutante P→D) es concreta y comprobable.
 - Sigue pendiente lo de antes: las 11 secuencias C-H, la regla de `clase`, el barrido Sec y el extremo 5'.
 
 ---

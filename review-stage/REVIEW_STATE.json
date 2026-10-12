@@ -1,6 +1,6 @@
 {
  "run_id": "run_20261012_8ed5232f",
- "round": 4,
+ "round": 5,
  "threadId": null,
  "reviewer_backend": "claude-subagent (same-family, unverified independence)",
  "executor_family": "anthropic",
@@ -9,9 +9,9 @@
  "independence_verified": false,
  "status": "completed",
  "difficulty": "medium",
- "last_score": 6,
+ "last_score": 6.5,
  "last_verdict": "not ready",
  "pending_experiments": [],
- "timestamp": "2026-10-12T19:06:01+00:00",
- "stop_reason": "MAX_ROUNDS reached (4); score 6/10 after recompute with project data"
+ "timestamp": "2026-10-12T20:09:17+00:00",
+ "stop_reason": "extension round 5 done; remaining blockers need new data (UniProt seqs, extra taxa)"
 }

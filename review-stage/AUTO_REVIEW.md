@@ -130,3 +130,33 @@ El usuario dio acceso a los archivos del proyecto (Google Drive), que se copiaro
 ### Notas
 - Revisor de la misma familia de modelos (subagente de Claude); independencia no verificada. No se usó ninguna API paga.
 - Pasos del skill omitidos: `/result-to-claim`, `/render-html`, Feishu, trazas `.aris/`.
+
+---
+
+## Ronda 5 (2026-10-12, extensión pedida por el usuario) — bloque determinante Se/S
+
+Insumos: la bitácora `bitacora_determinante_SeS.md` y la carpeta `bloque_determinante_SeS` del Drive (copiadas en `datos/bloque_SeS/`).
+
+### Evaluación
+- Score: **6,5/10** · Veredicto: **not ready**
+- Respuesta del revisor: [`ronda5_revisor.md`](ronda5_revisor.md)
+
+### Acciones
+- Verificados de forma independiente la estructura 3GZC, los conteos, las 32 llamadas eucariotas y el árbol de genes.
+- Reconstrucción ancestral reimplementada con análisis de sensibilidad (`scripts/asr_determinante.py`).
+- Nueva sección ★★ B1–B4 en el dossier:
+  - B2: 12 correcciones;
+  - B4: Choanozoa, sensibilidad, conflicto entre árbol de genes y de especies, retiro de la "predicción cumplida" de *C. elegans* (verificado: Pro en 32 de 47 proteomas que pasan `Sec_estricto`), ancla (E/D/N)-H, dipéptido PA ↔ DS, Poliak 2009 verificado en PubMed.
+
+### Estado
+Progresión: 4 → 5 → 5 → 6 → **6,5**.
+
+Para llegar a "almost":
+1. Ubicar en el árbol las 11 secuencias C-H y los 5 candidatos de Bolidophyceae, y documentar la regla de `clase`.
+2. Aplicar las correcciones de texto a la bitácora.
+3. Depositar el árbol de especies y hacer el test AU.
+
+Para "ready", además:
+- sumar los taxones holozoos basales y los nematodos;
+- resolver el barrido Sec;
+- resolver el extremo 5' de PABB004.
