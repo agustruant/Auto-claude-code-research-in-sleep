@@ -1,0 +1,1120 @@
+Expediente completo — descubrimiento de
+un clado de cisteína desulfurasas tipo SCLY
+en algas
+Documento interno de trabajo. No es un manuscrito: es el expediente con todo lo que se hizo, por qué se eligió
+cada herramienta, qué dio cada paso, qué se descartó y por qué.
+
+
+0. Cómo leer este documento
+Está ordenado por el orden en que pasaron las cosas, no por el orden en que irían en un paper. Eso es deliberado:
+la parte más valiosa del proyecto es justamente que una hipótesis inicial equivocada se detectó, se corrigió y la
+corrección resultó ser el hallazgo.
+
+Cada sección trae:
+
+•   Qué se hizo y con qué herramienta.
+•   Por qué esa herramienta y no otra.
+•   Qué dio — con los números exactos.
+•   Qué no prueba — la limitación, explícita.
+
+Las secciones marcadas con ⚠ contienen material que se descartó. Están incluidas a propósito: un director o un
+revisor va a preguntar qué pasó con ellas.
+
+Al final: lo que falta para blindar la publicación (§8) y las opciones de paper (§9).
+
+
+1. Resumen ejecutivo
+En el genoma de Scenedesmus sp. PABB004 se buscaba una segunda cisteína desulfurasa plastidial (NFS2). Lo que
+se encontró fue otra cosa, y mejor.
+
+1. El cebo que se había usado para buscar NFS2 —PNW80545.1 de Chlamydomonas reinhardtii, anotado como
+   "NFS2" en AlgaePath— no es NFS2. Es el miembro de un tercer grupo de aminotransferasas clase V, distinto
+   de NFS1 (ISC, mitocondrial) y de NFS2 (SUF, plastidial).
+2. Ese tercer grupo es homólogo de la selenocisteína liasa (SCLY) animal. Se lo identifica por un rasgo de una
+   sola posición: en el bucle catalítico, inmediatamente después de la cisteína del sitio activo hay una histidina
+   (SAGxACH). NFS1 lleva ahí serina/treonina; NFS2 lleva serina.
+3. Scenedesmus sp. PABB004 tiene los tres genes: NFS1 (KAF8057853.1), NFS2 (KAF8071197.1) y el SCLY-like, que
+   estaba mal anotado — oculto dentro de un ORF quimérico de 3383 aa (KAF8071094.1).
+4. El gen SCLY-like se curó manualmente y la curación se validó con lecturas crudas de RNA-seq de la propia
+   cepa: la unión exón-exón del modelo corregido tiene 29 lecturas de soporte; la del modelo automático del
+   anotador tiene cero.
+5. Un barrido sobre 119 proteomas de referencia (2.110.345 secuencias) recupera 66 proteínas SCLY-like en 56
+   especies de 7 linajes algales, formando un clado monofilético con soporte 0,96 y con la SCLY humana como
+   rama hermana.
+6. El clado está ausente en las 6 embriofitas, las 12 rodofitas y 14 proteomas de estramenopilas no diatomeas
+   examinados. La pérdida en plantas terrestres y en algas rojas es independiente.
+7. La firma G-x-x-C-H es invariante: entropía de Shannon = 0,000 bits en las 66 secuencias.
+
+El titular honesto: primera descripción sistemática de un clado de cisteína desulfurasas tipo selenocisteína liasa en
+algas, con un caso de curación génica validado por RNA-seq.
+
+Lo que NO se puede decir: que es una familia nueva (no lo es: es el ortólogo algal de SCLY, antes no descrito como
+grupo), ni que se demostró actividad sobre selenocisteína (eso requiere ensayo enzimático).
+
+
+
+
+2. Cronología
+
+2.1 — Punto de partida: ¿hay una segunda NFS2 en PABB004?
+Qué se hizo. BLASTp del cebo PNW80545.1 (C. reinhardtii, etiquetado "NFS2" en AlgaePath) contra las proteínas de
+Scenedesmus sp. PABB004 (BioProject PRJNA637367, scaffold JABVCE010000002.1).
+
+Por qué BLASTp. Para una primera pesca de homólogos cercanos dentro de un genoma chico es lo correcto:
+rápido, con estadística bien calibrada, y no necesita un modelo previo de la familia.
+
+Qué dio. Un único hit fuerte, pero contra una proteína de 3383 aa (KAF8071094.1) — absurdamente larga para
+una desulfurasa, que ronda los 450–500 aa. El alineamiento cubría sólo un tramo interno.
+
+
+
+
+                                      Hits de BLASTp contra el genoma de Scenedesmus
+
+Qué no prueba. Un hit de BLASTp contra un ORF largo no dice si el ORF es real, si es una fusión génica verdadera o
+si es un error de anotación. Esa pregunta quedó abierta durante casi todo el proyecto y recién se cerró en §2.13.
+
+
+
+2.2 — Diseccionar el ORF de 3383 aa
+Qué se hizo. CD-Search (NCBI Conserved Domain Database) sobre KAF8071094.1 completo, y BLASTp del tramo
+recortado contra el propio ORF para localizar los límites.
+
+Por qué CD-Search. Es el servidor que hace lo que se necesitaba: dado un ORF largo sin anotación confiable,
+devolver la arquitectura de dominios con coordenadas y E-value. Un BLAST te dice "se parece a X"; CD-Search te
+dice "tiene estos cinco bloques en estas posiciones".
+Qué dio. Cinco bloques de dominios sin relación funcional entre sí, en un mismo marco de lectura:
+
+ Bloque                               Dominio                                       Función esperada
+ 1                                    Lipase_3 / Abhydrolase                        lipasa
+ 2                                    NDPk                                          nucleósido-difosfato quinasa
+ 3                                    Histidinol_dh (PLN02926)                      biosíntesis de histidina
+ 4                                    AAT_I (aminotransferasa clase I/II/V)         la desulfurasa
+ 5                                    tres repeticiones LamG                        laminina G
+
+
+
+
+                                      Arquitectura de dominios del ORF de 3383 aa
+
+
+
+
+                                   BLASTp del tramo recortado contra el ORF completo
+
+Ningún organismo conocido fusiona lipasa + NDP quinasa + histidinol deshidrogenasa + aminotransferasa +
+laminina G en una sola cadena. Diagnóstico: el ORF es un artefacto de anotación — el predictor pegó varios genes
+vecinos en un transcripto único. El tramo de aminotransferasa se recortó a mano y se lo llamó provisoriamente
+"HText".
+Qué no prueba. El recorte manual fija límites arbitrarios. Las consecuencias de eso aparecen en §2.4 y se arreglan
+recién en §2.13.
+
+
+
+2.3 — La segunda búsqueda, y la NFS2 verdadera
+Qué se hizo. Búsqueda más permisiva contra el proteoma de PABB004 con cebos de NFS1 y NFS2 de Arabidopsis
+thaliana (O49543, Q93WX6).
+
+Qué dio. Dos proteínas limpias, de longitud normal:
+
+ Proteína                       Accesión                        aa                          Identidad con el ortólogo de A.
+                                                                                            thaliana
+ NFS1 (mitocondrial, vía ISC)   KAF8057853.1                    487                         64,2 %
+ NFS2 (plastidial, vía SUF)     KAF8071197.1                    521                         58,1 %
+
+
+
+Es decir: la NFS2 de PABB004 ya estaba anotada y era correcta. El locus HT031_001280, 1.669.642–1.671.931,
+cuatro exones.
+
+
+
+
+                                     Estructura del locus de NFS2 en el genoma de PABB004
+
+La pregunta cambió. Si KAF8071197.1 es la NFS2, ¿qué es "HText"? Y si HText se parece tanto al cebo de
+Chlamydomonas, ¿qué es el cebo?
+
+
+
+
+2.4 — Modelado estructural y localización: primeras señales contradictorias ⚠
+Qué se hizo. Modelo de AlphaFold2 de HText recortado; DeepLoc 2.1 y LOCALIZER para predecir destino
+subcelular; superposición en PyMOL contra IscS de E. coli.
+
+Qué dio.
+
+El modelo de AlphaFold mostró el plegamiento de aminotransferasa clase V (tipo I de fold PLP) bien resuelto, pero
+con ~125 residuos N-terminales de confianza nula colgando como un lazo desordenado — consecuencia directa
+del recorte manual del §2.2.
+                            Modelo de AlphaFold de HText con el extremo N-terminal desordenado
+
+La superposición contra IscS dio un núcleo catalítico prácticamente idéntico y dos extremos divergentes:
+
+
+
+
+                                 Superposición de HText (azul) contra IscS de E. coli (naranja)
+
+Y DeepLoc dio plástido con probabilidad 0,9477 para HText:
+
+
+
+
+                                 Predicción de localización de HText sobre el recorte original
+                                                 Salida de LOCALIZER
+
+⚠ Este resultado era un artefacto. El recorte del §2.2 empezaba en una región de baja complejidad rica en
+Ser/Arg/Ala que imita un péptido de tránsito al cloroplasto. DeepLoc leyó eso como señal plastidial. Cuando en
+§2.10 se corrió el panel completo con controles de destino conocido, el clado SCLY-like dio mediana de plástido
+0,13 y sólo 2 de 61 secuencias se predijeron plastidiales.
+
+Lección metodológica que quedó como norma del proyecto. Un predictor de localización corrido sobre una
+secuencia de límites inciertos no es evidencia. Desde acá en adelante, toda corrida de predictor lleva panel de
+control de destino conocido obligatorio.
+
+
+
+
+2.5 — El árbol que no cerraba: punto de inflexión ⚠
+Qué se hizo. Árbol preliminar en MEGA con HText, NFS2-PABB, ortólogos vegetales, bacterias, cianobacterias y
+arqueas.
+
+Qué dio.
+
+
+
+
+                                               Árbol preliminar en MEGA
+
+HText no caía con las NFS2 vegetales. Caía al lado del grupo bacteriano/arqueano, con soporte bajo (70–78),
+mientras que NFS2-PABB caía exactamente donde debía, con las NFS2 plastidiales de Arabidopsis y Zea. Si HText
+fuera una segunda NFS2, tenía que agrupar con las NFS2. No lo hacía.
+
+Por qué este árbol no alcanzaba para concluir. Pocos taxones, alineamiento sobre secuencias completas
+(incluyendo extensiones no homólogas), soportes bajos. Un árbol así levanta sospecha, no cierra un caso. Pero la
+sospecha fue la correcta.
+
+Decisión tomada acá: rehacer el análisis de cero, con un muestreo sistemático y con un criterio de asignación que
+no dependa del árbol.
+2.6 — La reasignación: el bucle catalítico
+Qué se hizo. En lugar de confiar en BLAST, en el árbol o en el TM-score, se fue al bucle catalítico — los ~10
+residuos que rodean la cisteína del sitio activo, que es donde las tres subfamilias de cisteína desulfurasas se
+diferencian funcionalmente.
+
+Por qué ese criterio y no BLAST / árbol / estructura.
+
+•      BLAST devuelve el pariente más parecido en la base, que puede estar mal anotado (fue exactamente lo que
+       pasó: el cebo estaba mal etiquetado y el error se propagó).
+•      TM-score global no sirve: todas las aminotransferasas clase V comparten el mismo plegamiento y dan 0,65–
+       0,95 entre sí. Es un criterio que no discrimina.
+•      El árbol depende del muestreo y del alineamiento.
+•      El bucle catalítico es un carácter discreto, leíble a ojo, con literatura bioquímica detrás: la longitud y
+       composición del bucle determinan si la enzima entrega el azufre a un aceptor directo (grupo I, bucle largo y
+       flexible) o a una proteína transportadora (grupo II, bucle corto).
+
+Qué dio.
+
+    Grupo                       Representantes                     Bucle catalítico        Cys catalítica
+    I — ISC / NFS1 / IscS       IscS P0A6B7, NFS1 At O49543        S-S-G-S-A-C-T-S         Cys328 en IscS
+                                                                   (extendido)
+    II — SUF / NFS2 / SufS      SufS P77444, NFS2 At Q93WX6        R-x-G-H-H-C (corto)     Cys364 en SufS
+    III — SCLY-like             SCLY humana Q96I15, HText,         `S-A-G-[A/S]-A-C-H-S`   —
+                                PNW80545.1
+
+
+
+La marca del grupo III es la histidina inmediatamente después de la cisteína. Ni el grupo I ni el II la tienen.
+
+
+
+
+                                           Asignación de familia por el bucle catalítico
+
+Consecuencias inmediatas:
+•      PNW80545.1 (= CHLRE_07g322000v5 = A0A2K3DJ46) no es NFS2 de Chlamydomonas. Es su SCLY-like. En UniProt
+       figura apenas como "Aminotransferase class V domain-containing protein", sin familia InterPro asignada.
+•      La NFS2 verdadera de Chlamydomonas es A0A2K3D4F5 (CHLRE_12g525650v5, 470 aa); la NFS1 verdadera es
+       A0A2K3E3W0 (= PNW87417.1, CHLRE_02g146250v5, 464 aa).
+•      HText es el SCLY-like de PABB004, con bucle LAASAGAACHSTGGPSVS.
+•      PABB004 tiene los tres genes.
+
+Esto es la bisagra del proyecto. Todo lo anterior se reinterpretó a la luz de esto; todo lo posterior salió de acá.
+
+
+
+2.7 — El barrido pan-algal
+Qué se hizo. Se bajaron 119 proteomas de referencia de UniProt (107 algales + 12 de contraste: 6 embriofitas,
+humano, Drosophila, levadura, Dictyostelium, Tetrahymena, Plasmodium) — 2.110.345 secuencias en total.
+Búsqueda con phmmer usando 10 cebos de las tres subfamilias, Z fijado al tamaño del universo, corte E < 1 ×
+10⁻¹⁰.
+
+Por qué phmmer y no BLASTp. phmmer usa un modelo probabilístico de perfil construido sobre la query; es más
+sensible que BLASTp para homología remota, que es exactamente el régimen de este problema (identidades del
+25–40 % entre subfamilias). Fijar Z al universo real evita que el E-value dependa del tamaño del proteoma
+individual, lo que haría incomparables las especies.
+
+Por qué proteomas de referencia de UniProt y no todo NCBI. Un proteoma de referencia es un juego no
+redundante, uno por especie, con anotación estable. Si se tira contra nr, el conteo queda dominado por cuántas
+veces se secuenció cada especie, no por biología.
+
+Qué dio. 617 proteínas de aminotransferasa clase V.
+
+Luego: extracción del dominio PF00266 con hmmsearch, alineamiento con FAMSA, filtrado de columnas con
+ocupación ≥ 0,35 (386 de 768 columnas sobrevivieron), árbol de máxima verosimilitud con VeryFastTree (modelo
+LG+Γ, 1000 réplicas de soporte), enraizado en el grupo II.
+
+Por qué alinear sólo el dominio y no la proteína completa. Las tres subfamilias difieren en extensiones N y C
+terminales que no son homólogas entre sí (péptidos de tránsito, extensiones de longitud variable). Alinearlas
+completas mete ruido en columnas que no tienen señal filogenética. Recortar al dominio Pfam es la práctica
+estándar y acá era imprescindible.
+
+Por qué FAMSA. Escala bien a cientos de secuencias divergentes sin la penalización de tiempo de MAFFT L-INS-i, y
+en benchmarks de familias grandes y divergentes rinde igual o mejor.
+
+Por qué VeryFastTree y no RAxML/IQ-TREE. Para 617 secuencias y un criterio de monofilia (no de topología
+interna fina), VeryFastTree con LG+Γ da el mismo resultado en minutos en vez de horas. El soporte que importa es
+el de los tres clados, y es alto.
+
+Qué dio el árbol — tres clados:
+
+    Clado                                n                                       Soporte
+    NFS2 / SufS (grupo II)               116                                     1,00
+    NFS1 / IscS (grupo I)                134                                     0,79
+    SCLY-like (grupo III)                66                                      0,96
+La SCLY humana (Q96I15) entra como rama hermana de las 65 secuencias algales. HText cae hermana de las dos
+copias de Tetradesmus obliquus.
+
+
+
+
+                                  Árbol de máxima verosimilitud de las desulfurasas clase V
+
+Qué no prueba. El soporte de 0,79 del clado NFS1 es mediocre — pero eso no afecta la conclusión, porque lo que
+se está afirmando es que SCLY-like es monofilético y distinto, y eso tiene 0,96. Las 301 proteínas clase V restantes
+(617 − 316) no fueron asignadas a ninguna de las tres subfamilias; son aminotransferasas clase V de otras
+funciones y quedaron fuera del alcance.
+2.8 — La firma invariante
+Qué se hizo. Entropía de Shannon posición por posición en el bucle catalítico de las 66 secuencias SCLY-like.
+
+Qué dio. 66 de 66 tienen Gly en la posición 4, Cys en la 7 e His en la 8. Entropía = 0,000 bits en las tres posiciones.
+
+
+
+
+                                          Perfil de conservación del bucle catalítico
+
+Esto es lo más fuerte que tiene el trabajo como carácter diagnóstico: 66 secuencias de 7 linajes separados por más
+de mil millones de años, y ni una sola sustitución en esas tres posiciones.
+
+
+
+2.9 — Distribución y pérdidas
+Qué se hizo. Conteo de presencia/ausencia del clado SCLY-like por proteoma.
+
+Qué dio. 66 proteínas en 56 especies, 7 linajes algales + Metazoa.
+
+ Linaje                                                          Proteomas con SCLY-like
+ Chlorophyta                                                     32 / 48
+ Bacillariophyta (diatomeas)                                     14 / 16
+ Dinophyceae                                                     4 / 10
+ Haptophyta                                                      3/4
+ Carofitas (Streptophyta acuáticas)                              2/2
+ Cryptophyceae                                                   1/1
+ Xanthophyceae                                                   1/1
+ Embryophyta                                                     0/6
+ Rhodophyta                                                      0 / 12
+ Bolidophyceae                                                   0/6
+ Pelagophyceae                                                   0/4
+ Eustigmatophyceae                                               0/2
+ Phaeophyceae                                                    0/1
+ Hongos, amebozoos, ciliados, apicomplejos                          0
+
+
+
+
+                                             Distribución del clado SCLY-like por linaje
+
+Lo interesante. Las dos carofitas (Chara braunii, Klebsormidium nitens) lo tienen; las seis embriofitas no. Eso ubica
+la pérdida en el linaje verde después de la divergencia de las carofitas, es decir, en la terrestrialización. Y las
+rodofitas tampoco lo tienen, lo que implica una segunda pérdida independiente.
+
+Qué no prueba. Ausencia en un proteoma de referencia no es ausencia en el genoma. Para afirmar "deleción"
+hace falta tBLASTn contra el genoma ensamblado y análisis de sintenia en la región ortóloga — eso no se hizo
+(está en §8 como pendiente). Por ahora la afirmación defendible es "no se detecta en el proteoma de referencia",
+y con n = 6 embriofitas y n = 12 rodofitas.
+
+
+
+2.10 — Localización subcelular, esta vez con controles
+Qué se hizo. 73 secuencias a DeepLoc 2.1, TargetP 2.0 (modo Plant), SignalP 6.0 (modos Eukarya y Other) y
+DeepTMHMM, con verificación previa de que las longitudes fueran correctas y con un panel de 7 proteínas de
+destino conocido como control.
+
+Por qué cuatro predictores. Cada uno resuelve una pregunta distinta y ninguno sirve solo: DeepLoc da el
+compartimento final; TargetP discrimina péptido de tránsito mitocondrial de plastidial; SignalP descarta vía
+secretoria; DeepTMHMM descarta hélices transmembrana. Que los cuatro coincidan en "no es de membrana, no
+es secretoria, no es plastidial" es más informativo que un número de un solo servidor.
+
+Por qué el panel de control. Por el escarmiento del §2.4.
+
+Qué dio. De las 61 secuencias con predicción fiable:
+
+ Predicción                                                     n
+ Citoplasma                                                     25
+ Mitocondria                                                    15
+ Citoplasma + mitocondria                                       13
+ Plástido                                                       2
+
+
+
+Medianas de probabilidad: citoplasma 0,65 · mitocondria 0,64 · plástido 0,13 · retículo 0,17. TargetP: 48 OTHER, 5
+SP, 4 mTP, 4 cTP. 60 de 61 sin péptido señal; 0 hélices transmembrana.
+
+
+
+
+                                          Localización predicha del clado SCLY-like
+
+El panel de control acertó 4 de 7. Falló en: NFS2 de Chlamydomonas (predijo mitocondria 0,93 cuando es
+plastidial), NFS1 de PABB004 (predijo citoplasma 0,84 cuando es mitocondrial), y TargetP falló para las dos de
+PABB004 (cTP 0,057).
+
+Conclusión honesta, y es la que hay que escribir en el paper. Este conjunto de predictores sirve para descartar
+plástido (es lo único en lo que el panel de control no falló, y la señal es masiva: mediana 0,13). No sirve para
+decidir citosol versus mitocondria en este grupo de proteínas. Decir "SCLY-like es citosólica" sería
+sobreinterpretar. Lo correcto es: no es plastidial; es citosólica y/o mitocondrial, consistente con la SCLY animal,
+que es citosólica.
+
+
+
+
+2.11 — Estructura: por qué se abandonó el docking ⚠
+Qué se hizo primero (y se descartó). Dos notebooks de docking comparativo con AutoDock Vina: selenocisteína
+contra los sitios activos de HText, NFS1 y NFS2.
+Por qué se descartó — tres razones independientes, cada una suficiente.
+
+8. El ligando no era selenocisteína. Ambos scripts ejecutan sed -i 's/Se$/S /g' sobre el PDBQT del ligando.
+    Eso reemplaza el selenio por azufre. El docking se corrió con cisteína, no con selenocisteína. Toda la
+    comparación Cys-vs-Sec que el ensayo pretendía hacer es, literalmente, Cys contra Cys.
+9. El receptor estaba vacío. Se dockeó sobre la apoenzima, sin el PLP. El PLP es el cofactor covalente que forma
+    la base de Schiff con la lisina y que define la geometría del sitio activo. Sin PLP, la cavidad que ve Vina no es el
+    sitio activo real.
+10. Los parámetros no coinciden con el texto. Caja de 22 Å (demasiado grande, el resultado se vuelve ruido de
+    muestreo), exhaustiveness = 8 en el código contra 32 declarado en el texto, y los notebooks no tienen
+    outputs guardados — no hay forma de auditar qué se corrió.
+
+Además, el problema de fondo. Aun con el docking bien hecho, no serviría para la conclusión que se le quería
+sacar. La diferencia energética entre Cys y Sec en una cavidad de este tipo es de fracciones de kcal/mol, muy por
+debajo del error de las funciones de puntuación empíricas de Vina (~2 kcal/mol). La especificidad Cys versus Sec
+no es resoluble por docking. Requiere QM/MM o el ensayo enzimático.
+
+Qué se hizo en su lugar: transferencia de ligando por superposición estructural.
+
+En vez de predecir dónde se uniría el sustrato, se tomó prestada la posición experimental del sustrato desde
+cristales que ya lo tienen resuelto, y se la trasladó a los modelos por superposición rígida con TM-align.
+
+Por qué esto sí es defendible. No hay predicción: la posición del ligando viene de densidad electrónica
+experimental. Lo único que se asume es que el plegamiento se superpone bien, y eso se mide (TM-score) y se
+valida (la lisina del PLP tiene que caer en el mismo lugar).
+
+Cristales usados y por qué cada uno:
+
+ PDB                                     Qué aporta                                Validación
+ 3A9Z                                    SCLY de rata con selenopropionato y PLP   referencia directa del clado
+ 1KMK                                    CsdB/SufS con perselenuro covalente       el estado de intermediario real
+                                         (CSZ364) + PLP
+ 1P3W                                    IscS con PLP, Lys206                      control del grupo I
+
+
+
+Validación del método. La lisina del PLP coincide con las tres referencias independientes, y el carbono C4A
+transferido cae a 1,3–3,0 Å del NZ de la lisina del modelo. Es decir, la superposición reconstruye la base de Schiff.
+Si el método fuera basura, esa distancia saldría en decenas de ångströms.
+
+TM-scores obtenidos:
+
+ Comparación                             TM-score                                  RMSD
+ SCLY humana vs 3A9Z                     0,99                                      0,82 Å
+ NFS1 Chlamy vs 1P3W                     0,98                                      —
+ NFS2 Chlamy vs 1KMK                     0,98                                      —
+ Núcleo de HText vs SCLY                 0,948                                     —
+ Núcleo de HText vs IscS                 0,911                                     —
+ Núcleo de HText vs SufS                 0,871                                     —
+
+
+
+Distancia del SG de la cisteína catalítica al selenio del ligando transferido:
+ Desde 3A9Z             Å                                                       Desde 1KMK           Å
+ HText                  4,6                                                     NFS2 (control)       3,0
+ SCLY-like Chlamy       12,2                                                    SCLY humana          3,7
+ SCLY humana            6,4                                                     HText                4,0
+ NFS1                   5,0                                                     NFS1                 6,1
+ NFS2                   5,5                                                     SCLY-like Chlamy     9,0
+
+
+
+Qué se concluye. El sitio de HText es geométricamente competente para la química de transferencia de selenio: la
+cisteína catalítica queda a distancia de ataque del selenio.
+
+Qué NO se concluye, y es importante. El rango 4,0 Å versus 9,0 Å entre HText y el SCLY-like de Chlamydomonas,
+que comparten 54 % de identidad, demuestra que el bucle apo de AlphaFold no sostiene una distancia única. Los
+bucles catalíticos de esta familia son flexibles y AlphaFold los modela en una conformación arbitraria entre muchas
+posibles. Por lo tanto estos números sirven para decir "el sitio es compatible", no para rankear enzimas por
+afinidad ni para comparar entre ortólogos.
+
+El subsitio de especificidad. Se buscaron los residuos que contactan el ligando en el cristal y se los mapeó en cada
+modelo. De todos ellos, sólo uno discrimina: el Asn25 de la SCLY de rata. En el clado SCLY hay Asn; en NFS1, Gln;
+en NFS2, Ala.
+
+
+
+
+                               Subsitio de especificidad reconstruido por transferencia de ligando
+      Entorno del PLP en el sitio activo
+
+
+
+
+Mapeo de conservación sobre la estructura 3D
+2.12 — Conservación: qué reemplazó al análisis de ConSurf ⚠
+Qué se hizo primero (y se descartó). Una tabla de 353 posiciones presentada como salida de ConSurf, con grados
+de conservación y clasificación enterrado/expuesto, y un test de Mann-Whitney entre "residuos del bolsillo" y
+"residuos de superficie" con p = 2,29 × 10⁻¹⁰.
+
+Por qué se descartó — cuatro razones.
+
+11. La distribución de grados es imposible. Los conteos son {grado 1: 203, grado 2: 118, grado 3: 15,
+    grado 9: 17} — los grados 4 a 8 están vacíos. ConSurf asigna los grados por partición en nueve intervalos de
+    la distribución continua de puntajes; no puede dejar cinco bins consecutivos en cero.
+12. 306 expuestos contra 47 enterrados — 87 % de superficie. Una proteína globular de este tamaño tiene del
+    orden de 30–40 % de residuos enterrados.
+13. Las columnas no existen en la salida real de ConSurf.
+14. El test es circular. Compara conservación entre residuos del bolsillo y de superficie, pero el bolsillo se definió
+    por conservación. Además el p-valor de la figura (2,29 × 10⁻¹⁰) no coincide con el del texto (4,18 × 10⁻¹¹).
+
+Por otra parte, el alineamiento MSA_73_panalgal.fasta sobre el que supuestamente se apoyaba tiene 88,6 % de
+posiciones de gap (70 secuencias, 4323 columnas). Ningún análisis de conservación posicional es interpretable
+sobre eso.
+
+Qué se hizo en su lugar: entropía de Shannon por familia y posiciones discriminantes.
+
+Se alineó el dominio del modelo de HText junto a 66 SCLY-like + 124 NFS1 + 110 NFS2, y se calculó la entropía
+posición por posición dentro de cada familia por separado en 348 posiciones. Una posición es discriminante de
+familia si está conservada en ambas familias (H ≤ 0,5 en las dos) y el residuo consenso es distinto.
+
+Por qué esto es mejor que ConSurf para esta pregunta. ConSurf responde "¿qué está conservado en esta
+proteína?". La pregunta del proyecto es otra: "¿qué distingue a SCLY-like de NFS1/NFS2?". Para eso hace falta
+comparar conservación entre familias, que es exactamente lo que hace este cálculo y lo que ConSurf no hace.
+
+Qué dio: seis posiciones discriminantes, cuatro de ellas a menos de 8 Å del PLP o del sustrato.
+
+ Posición (modelo / tabla)     SCLY-like                     NFS1/NFS2                    Distancia al cofactor
+ G197 / 72                     Gly 98 %                      Ala 100 %                    3,67 Å
+ A232 / 107                    Ala                           Cys                          4,55 Å
+ T330 / 205                    Thr                           Ser                          5,50 Å
+ H462 / 337                    His 100 %                     Thr 100 %                    6,89 Å
+ N431 / 306                    Asn                           —                            10,06 Å
+ S159 / 34                     Ser                           —                            23,50 Å
+
+
+
+La His462 es la histidina de la firma SAGxACH: conservada al 100 % en SCLY-like, y en NFS1/NFS2 la posición
+equivalente es Thr al 100 %. A 6,89 Å del cofactor.
+
+(Asn134 / posición 9 quedó justo afuera del corte, con H = 0,530 — y es el residuo más cercano al sustrato de
+todos, a 3,63 Å. Vale la pena mirarla.)
+
+El test no circular. En vez de comparar bolsillo contra superficie, se correlacionó conservación contra distancia al
+cofactor sobre todas las posiciones:
+•   Spearman ρ = −0,54, p = 2 × 10⁻²⁷.
+•   Posiciones cercanas (< 8 Å, n = 46): conservación mediana 0,924.
+•   Posiciones lejanas (≥ 15 Å, n = 197): conservación mediana 0,363.
+•   Mann-Whitney p = 5 × 10⁻¹⁶.
+
+Esto no es circular: la distancia al cofactor se mide en la estructura, la conservación se mide en el alineamiento, y
+son dos fuentes de datos independientes.
+
+
+
+
+                                 Conservación por posición y residuos discriminantes de familia
+
+
+
+
+                             Separación de SCLY respecto de las NFS en el espacio de características
+
+Nota de numeración, para que no se pierda. El modelo HText.cif tiene 478 residuos y corresponde a los residuos
+1811–2288 de KAF8071094.1. La tabla de conservación usa un offset de 125 respecto del modelo. Equivalencias:
+Cys336 (tabla) = Cys461 (modelo); Lys210 = Lys335; Gly333 = Gly458; Asn9 = Asn134; Thr73 = Thr198. El pLDDT
+medio del modelo es 79,2, pero desagregado: residuos 1–125 → 33,9 (el lazo del recorte, basura) y residuos 126–
+478 → 95,3 (excelente).
+
+
+
+2.13 — La curación del locus, validada con RNA-seq
+Esta es la pieza que convierte el trabajo de "análisis comparativo" en "resultado genómico con evidencia
+experimental".
+
+El problema. El gen SCLY-like de PABB004 está mal anotado: forma parte del ORF quimérico de 3383 aa
+(HT031_001176, 33 exones repartidos en 17,3 kb, 1.169.138–1.186.471). El CDS reconstruido de 10.152 nt traduce
+exactamente a la proteína depositada — o sea, el error está en el modelo génico, no en la traducción.
+
+Cómo se encontró el límite correcto. Se usó como guía el ortólogo de Scenedesmus sp. NREL 46B-D3
+(KAF6265975.1, 480 aa, 9 exones, locus COO60DRAFT_772314). El tramo del ORF de PABB004 alinea con él en 1923–
+2293 con 72,1 % de identidad sobre 366 aa, cubriendo los residuos 61–427 de NREL. Faltaban los 53 residuos C-
+terminales.
+
+Leyendo el genoma de corrido desde la posición 1.180.753 (donde el anotador cortaba) aparecen 39 codones más
+—VGTLRLSTGRHTTPGDVDAAVALITAAARKQGLDLGAGA, 75,7 % de identidad con NREL 428–464 y los primeros 14
+residuos idénticos— hasta un TGA en 1.180.871–1.180.873. Es decir: el anotador metió un intrón espurio justo
+ahí y se llevó puesto el extremo del gen.
+
+El modelo curado:
+
+ Gen                                                         1.179.501 – 1.180.873, hebra +
+ Exón 1                                                      1.179.501 – 1.180.240
+ Intrón                                                      1.180.241 – 1.180.347 (107 pb, GT-AG canónico)
+ Exón 2                                                      1.180.348 – 1.180.873
+ CDS                                                         1.266 nt
+ Proteína                                                    421 aa
+ Lys del PLP                                                 K234 (LTLIGHKFGAPKG)
+ Cys catalítica                                              C360, bucle LAASAGAACHSTGGPSVS
+ His diagnóstica                                             H361
+
+
+
+
+                                            Estructura de intrones predicha
+
+La validación — y acá está el dato más fuerte del trabajo.
+
+No había forma de correr un alineador de lecturas en este entorno (HISAT2 y STAR son sólo Linux). Se resolvió de
+otra manera: contar k-meros exactos de 32 nt que atraviesan cada unión, directamente sobre las lecturas crudas,
+en ambas hebras, descomprimiendo el FASTQ al vuelo. Se procesaron 21.890.509 lecturas del run SRR12973628
+(RNA-seq de PABB004, 60,2 M pares, HiSeq 2500, cultivo batch a 5 y 13 días).
+
+Por qué este método es válido. Un k-mero de 32 nt que cruza una unión exón-exón sólo puede existir en el ARN
+maduro, nunca en el ADN genómico. Si aparece en lecturas de RNA-seq, el empalme ocurrió. No hay ambigüedad
+de mapeo porque es coincidencia exacta de 32 caracteres.
+
+ Unión evaluada                                Lecturas de soporte
+ Intrón curado (1.180.240 \                    1.180.348)                                  29
+ Lectura corrida en 1.180.754 (sin el intrón   53
+ espurio)
+ Exón recuperado, interior en 1.180.800        21
+ Empalme del modelo automático                 1.181.193)                                  0
+ (1.180.753 \
+ Control: exón de NFS2                         201
+ Control: exón interno de SCLY                 9
+
+
+
+
+                                                     Locus curado y evidencia de RNA-seq
+
+Lo que esto prueba, con tres afirmaciones separadas:
+
+15. El modelo curado está transcrito: 29 lecturas cruzan el intrón corregido con secuencia exacta.
+16. El modelo del anotador es falso: cero lecturas, sobre 21,9 millones, soportan su unión. No es "poca
+    evidencia": es ninguna.
+17. El gen se expresa en PABB004 bajo condiciones de cultivo normales.
+
+Esto convierte a la curación de una propuesta en un hecho documentado.
+Evidencia independiente, del propio trabajo original. La búsqueda contra la base TSA (Transcriptome Shotgun
+Assembly) de algas verdes ya mostraba que el tramo de HText tiene transcriptos ensamblados en múltiples
+especies, y que la cobertura empieza alrededor del residuo 100 —consistente con que el extremo N-terminal del
+recorte manual era artefactual:
+
+
+
+
+                               Alineamientos del tramo de HText contra TSA de algas verdes
+
+Un detalle de sintenia que vale la pena. En Scenedesmus sp. NREL 46B-D3, el gen SCLY (KAF6265975.1, 1.081.247–
+1.084.664) está a 393 pb del gen de histidinol deshidrogenasa (KAF6265974.1, 386 aa, 1.078.038–1.080.854). Y en
+PABB004, el ORF quimérico contiene justamente un dominio Histidinol_dh inmediatamente antes del dominio de
+aminotransferasa. El anotador de PABB004 fusionó el mismo par de genes vecinos que en NREL están separados.
+Eso explica mecánicamente el error.
+Lo que falta en este frente. El extremo 5'. El ATG en 1.179.501 es el primer Met en marco, pero el modelo curado
+cubre a NREL recién desde su residuo 61 — faltan ~60 residuos N-terminales, en una región de baja complejidad
+Ala/Ser/Arg. Se resuelve con un ensamblado guiado (StringTie sobre el mismo run), y está pendiente.
+
+
+
+2.14 — Tasas evolutivas relativas
+Qué se hizo. Sobre el mismo árbol de máxima verosimilitud del §2.7, se midió la distancia de cada hoja a la raíz de
+su propio clado (longitud de rama acumulada, en sustituciones por sitio). Para eliminar el sesgo de muestreo —los
+tres clados no tienen las mismas especies— se restringió la comparación a las 38 especies que tienen los tres
+genes y se contrastó de a pares con el test de Wilcoxon pareado.
+
+Por qué así y no con dN/dS. dN/dS requiere las secuencias codificantes alineadas por codón para las 66+
+proteínas, un árbol calibrado y PAML corriendo. Nada de eso existe en este proyecto. La distancia de rama sobre el
+alineamiento proteico que ya está construido es una medida de tasa relativa legítima, y pareada por especie es un
+contraste limpio.
+
+Qué dio.
+
+ Clado                                                    Mediana (sust./sitio)
+ NFS1 / IscS (mitocondrial)                               0,71
+ NFS2 / SufS (plastidial)                                 1,10
+ SCLY-like (citosólico)                                   1,12
+
+
+
+ Contraste                             Wilcoxon pareado                           Diferencia mediana
+ SCLY vs NFS1                          p = 7 × 10⁻¹²                              +0,399
+ NFS2 vs NFS1                          p = 7 × 10⁻¹²                              +0,393
+ SCLY vs NFS2                          p = 0,12                                   −0,025
+                                      Tasas evolutivas relativas de las tres subfamilias
+
+Qué se concluye. NFS1 está bajo restricción marcadamente más fuerte que las otras dos subfamilias. Tiene
+sentido: NFS1 alimenta la vía ISC, de la que dependen los centros Fe-S de la cadena respiratoria y de enzimas
+esenciales; una mutación ahí es letal.
+
+Qué NO se concluye. SCLY no evoluciona más rápido que NFS2 — p = 0,12, no se distinguen. Si en algún borrador
+se afirmó que SCLY es la menos restringida de las tres, es incorrecto: los datos no lo sostienen.
+
+Limitación. Esto es tasa de sustitución proteica total, no ω. Una tasa más alta puede deberse a restricción más
+débil o a tasa de mutación más alta del locus; no se separan. Para separarlas hace falta el dN/dS real (ver §8).
+
+
+
+2.15 — La hipótesis del selenio, puesta a prueba
+La idea. Si estas enzimas son selenocisteína liasas, su distribución debería correlacionar con la presencia de la
+maquinaria de incorporación de selenocisteína (Sec). Las plantas terrestres perdieron el selenoproteoma; también
+perdieron SCLY-like. ¿Coincidencia o causa?
+                                Vía metabólica y justificación de la pérdida en plantas terrestres
+
+Qué se hizo. Barrido de los cuatro marcadores de la maquinaria Sec humana —SEPHS2 (Q99611), SEPSECS
+(Q9HD40), PSTK (Q8IV42), EEFSEC (P57772)— contra los 119 proteomas, con mejor hit recíproco (RBH) para evitar
+falsos positivos por homología de dominio. 919 hits, 341 RBH.
+
+Por qué RBH. Un hit unidireccional contra SEPHS2 puede ser cualquier selenofosfato sintetasa o incluso una SELD
+bacteriana. Exigir que el mejor hit del candidato de vuelta contra el proteoma humano sea el marcador original es
+el criterio mínimo de ortología.
+
+Qué dio.
+
+•   Global: OR = 3,36, p = 0,0018. Las especies con maquinaria Sec tienen más chances de tener SCLY-like.
+•   Las 6 embriofitas: 0 de 6 en los cuatro marcadores, y 0 de 6 en SCLY-like.
+•   Pero dentro de Chlorophyta: OR = 1,00, p = 1,00 (18 tienen ambas, 7 ninguna, 14 sólo SCLY, 9 sólo Sec).
+•   Diatomeas: OR = 3,67, p = 0,45.
+
+La interpretación correcta. El efecto global es pseudorreplicación filogenética: lo genera la comparación entre
+linajes (embriofitas y rodofitas perdieron las dos cosas), no una asociación dentro de ellos. Cuando se controla por
+linaje, la asociación desaparece.
+
+Entonces se declara como hipótesis, no como resultado. La co-pérdida de SCLY-like y de la maquinaria Sec en el
+camino a la tierra es consistente con una relación funcional, y es una hipótesis atractiva. No está demostrada por
+estos datos. Para demostrarla hace falta un test que controle la filogenia (§8).
+
+Limitación técnica adicional. PSTK se detecta mal: 28 de 48 en Chlorophyta, contra 43 de 48 de SEPSECS. PSTK es
+corta y divergente; el RBH la pierde. Usar PSTK como marcador de presencia/ausencia subestima.
+3. Justificación de las herramientas
+Herramienta                     Para qué se usó                   Por qué ésa                          Qué no resuelve
+BLASTp (NCBI)                   pesca inicial de homólogos en     rápido, estadística calibrada, sin   hereda errores de anotación de
+                                un genoma                         modelo previo                        la base; falla en homología
+                                                                                                       remota
+CD-Search (CDD)                 arquitectura de dominios del      devuelve bloques con                 no corrige el modelo génico
+                                ORF de 3383 aa                    coordenadas y E-value, no sólo
+                                                                  similitud global
+phmmer / hmmsearch              barrido de 119 proteomas;         perfiles probabilísticos: más        no distingue subfamilias — para
+(HMMER)                         extracción de PF00266             sensible que BLASTp a 25–40 %        eso hizo falta el bucle
+                                                                  de identidad; Z fijable para
+                                                                  comparabilidad entre
+                                                                  proteomas
+Proteomas de referencia         universo de búsqueda              uno por especie, no                  ausencia en el proteoma ≠
+UniProt                                                           redundante, anotación estable        ausencia en el genoma
+FAMSA                           alineamiento múltiple de 617      escala a cientos de secuencias       —
+                                dominios                          divergentes sin el costo de
+                                                                  MAFFT L-INS-i
+Filtro de ocupación ≥ 0,35      386 de 768 columnas retenidas     columnas con mayoría de gaps         descarta información en
+                                                                  aportan ruido, no señal              regiones variables
+VeryFastTree (LG+Γ, 1000        árbol de máxima verosimilitud     para 617 secuencias y una            topología interna fina menos
+réplicas)                                                         pregunta de monofilia, da el         confiable (NFS1 soporte 0,79)
+                                                                  mismo resultado que
+                                                                  RAxML/IQ-TREE en órdenes de
+                                                                  magnitud menos tiempo
+Bucle catalítico                criterio primario de asignación   carácter discreto con respaldo       requiere que la secuencia cubra
+                                de familia                        bioquímico; no depende de            el sitio activo
+                                                                  bases ni de alineamiento global
+AlphaFold2 / AlphaFold DB       modelos estructurales             único método que da estructura       modela bucles flexibles en una
+                                                                  para proteínas sin cristal; pLDDT    conformación arbitraria — ver
+                                                                  permite descartar regiones           §2.11
+                                                                  basura
+TM-align                        superposición estructural y       alineamiento estructural             TM-score global no discrimina
+                                transferencia de ligando          independiente de secuencia;          subfamilias de un mismo fold
+                                                                  TM-score normalizado por
+                                                                  longitud
+PDB `3A9Z`, `1KMK`, `1P3W`      posiciones experimentales de      densidad electrónica real en vez     el ligando viene de otra especie,
+                                PLP y sustrato                    de predicción de pose                en otro estado conformacional
+DeepLoc 2.1                     compartimento subcelular          estado del arte en predicción        falló 2 de 7 controles — ver
+                                                                  multicompartimento                   §2.10
+TargetP 2.0 (Plant)             mTP vs cTP                        único que separa tránsito            falló los dos controles de
+                                                                  mitocondrial de plastidial en        PABB004
+                                                                  plantas/algas
+SignalP 6.0 / DeepTMHMM         descartar secretoria y            preguntas acotadas donde             —
+                                transmembrana                     estos predictores son fiables
+Panel de control de destino     calibrar los predictores          sin esto, el artefacto del §2.4      —
+conocido                                                          habría quedado en el paper
+Entropía de Shannon por         conservación y posiciones         responde la pregunta real ("qué      necesita alineamientos limpios
+familia                         discriminantes                    distingue a SCLY de NFS") que        de las tres familias
+                                                                  ConSurf no responde
+Conteo de k-meros de unión en   validar la curación del gen       un k-mero de 32 nt que cruza         no reconstruye el gen completo
+lecturas crudas                                                   una unión sólo existe en ARN         — no da el extremo 5'
+                                                                  maduro; coincidencia exacta,
+                                                                  sin ambigüedad de mapeo
+Mejor hit recíproco (RBH)       ortología de la maquinaria Sec    criterio mínimo de ortología;        pierde proteínas cortas y
+                                                                  descarta parálogos de dominio        divergentes (PSTK)
+                                                                  compartido
+Wilcoxon pareado sobre          tasas evolutivas relativas        pareado por especie, elimina el      no separa restricción de tasa de
+distancias de rama                                                sesgo de muestreo entre clados       mutación — no es ω
+4. Tabla maestra de números
+ Dato                                                              Valor
+ Proteomas de referencia barridos                                  119 (107 algales + 12 de contraste)
+ Secuencias en el universo de búsqueda                             2.110.345
+ Proteínas de aminotransferasa clase V recuperadas                 617
+ Columnas del alineamiento retenidas                               386 de 768 (ocupación ≥ 0,35)
+ Clado NFS2 / SufS                                                 n = 116, soporte 1,00
+ Clado NFS1 / IscS                                                 n = 134, soporte 0,79
+ Clado SCLY-like                                                   n = 66, soporte 0,96
+ Especies con SCLY-like                                            56, en 7 linajes algales + Metazoa
+ Entropía de Shannon en Gly, Cys, His de la firma                  0,000 bits (66 / 66)
+ Longitud mediana de SCLY-like                                     438 aa (IQR 410–470)
+ Secuencias con longitud aberrante                                 9 de 67 (13 %)
+ Secuencias con localización fiable                                61 de 73
+ Mediana de probabilidad de plástido                               0,13
+ Aciertos del panel de control de localización                     4 de 7
+ TM-score SCLY humana vs 3A9Z                                      0,99 (RMSD 0,82 Å)
+ TM-score núcleo HText vs SCLY / IscS / SufS                       0,948 / 0,911 / 0,871
+ Distancia Cys-SG → Se en HText (desde 1KMK)                       4,0 Å
+ Posiciones del dominio analizadas por conservación                348
+ Posiciones discriminantes de familia                              6 (4 a < 8 Å del cofactor)
+ Correlación conservación vs distancia al cofactor                 ρ = −0,54, p = 2 × 10⁻²⁷
+ Lecturas de RNA-seq procesadas                                    21.890.509 (run SRR12973628)
+ Soporte del intrón curado                                         29 lecturas
+ Soporte del empalme del anotador                                  0 lecturas
+ Proteína SCLY-like curada de PABB004                              421 aa; K234, C360, H361
+ Tasa relativa: SCLY vs NFS1                                       p = 7 × 10⁻¹²
+ Tasa relativa: SCLY vs NFS2                                       p = 0,12 (no difieren)
+ Asociación SCLY ↔ maquinaria Sec, global                          OR = 3,36, p = 0,0018
+ Asociación dentro de Chlorophyta                                  OR = 1,00, p = 1,00
+
+
+
+
+5. Auditoría del material: qué entra y qué no
+Un revisor va a preguntar por cada análisis que se mencione. Esta sección deja constancia de qué se verificó y qué
+se descartó, con el motivo.
+
+5.1 — Material descartado de las versiones previas
+ Material                                    Veredicto                                    Motivo
+ Docking con AutoDock Vina (2 notebooks)     No usable                                    sed 's/Se$/S /g' reemplaza selenio
+                                                                                          por azufre; receptor sin PLP; caja de 22 Å;
+                                                                                          exhaustiveness 8 vs 32 declarado; sin
+                                                                                          outputs
+ Tabla "ConSurf" de 353 posiciones           No es salida de ConSurf                      grados 4–8 vacíos; 87 % de residuos
+                                                                                          expuestos; columnas inexistentes; test
+                                                                                          circular; p contradictorio entre figura y
+                                                                                          texto
+ MSA_73_panalgal.fasta                       No usable                                    88,6 % de gaps (70 secuencias, 4323
+                                                                                          columnas)
+ Localización plastidial de HText (DeepLoc   Artefacto                                    el recorte manual empezaba en una región
+ 0,9477)                                                                                  Ser/Arg/Ala que imita un péptido de
+                                                                               tránsito
+ Marco "segunda NFS2 en PABB004"        Incorrecto                             el cebo no era NFS2; KAF8071197.1 sí lo
+                                                                               es
+
+
+
+Además se compiló una tabla de 22 correcciones puntuales al texto del manuscrito (nomenclatura, accesiones, p-
+valores, atribuciones de familia).
+
+5.2 — Material nuevo recibido (paquete "Archaeplastida"): ⚠ no usable
+Se verificaron los doce archivos del paquete de tasas evolutivas y expresión. Ninguno de los cuatro análisis que
+proponen fue efectivamente ejecutado. Detalle, porque esto hay que tenerlo claro antes de mostrarle nada a
+nadie:
+
+(a) `matriz_expresion_panalgal.csv` y `figura_heatmap_expresion_panalgal.png` — datos sintéticos.
+
+La columna NFS2_Hits_TSA es exactamente `NFS1_Hits_TSA` × 1,2 en 23 de las 34 filas, y el cociente tiene media
+1,209 con desvío 0,020 en las 34. Dos genes distintos, en treinta y cuatro especies distintas, no pueden tener un
+cociente de conteos de hits constante en 1,2. Los números fueron generados por fórmula.
+
+A eso se suma que los TaxID están mal: Scenedesmus sp. PABB004 figura como 3087 (ése es el TaxID del género
+Scenedesmus; el real es 2742167), S. bijugus como 3089 (real 1539023), Gonium pectorale como 33090 (real
+33097) — y 3087/3088/3089 es una secuencia correlativa, señal de que fueron inventados. Las coberturas de ORF
+están todas comprimidas entre 90 y 99 %, lo que no ocurre con datos reales. Y la escala no es comparable entre
+especies: A. thaliana aparece con 94.899 hits de TSA frente a 12 de PABB004, lo que refleja esfuerzo de
+secuenciación, no expresión.
+
+(b) `figura_coexpresion_nfs2_scly.png` — correlación sobre los datos de (a). R = 0,51 calculado sobre la misma
+matriz. Además, si NFS2 es NFS1 × 1,2 por construcción, cualquier correlación que involucre esa columna está
+contaminada.
+
+(c) `figura_distribucion_macroevolutiva.png` — contradice los datos verificados. La figura reporta 100 % de
+presencia de SCLY-like en Chlorophyta, Bacillariophyta y Haptophyta. Los valores reales del barrido de 119
+proteomas (§2.9) son 32/48 = 67 %, 14/16 = 88 % y 3/4 = 75 %. Si esta figura va al lado de la tabla de distribución,
+el conflicto es inmediato.
+
+(d) `figura_tasa_evolutiva_y_divergencia.png`, `matriz_tasas_evolutivas_omega.csv`,
+`calibraciones_fosiles_y_tiempos.csv` — codeml nunca corrió.
+
+El script analisis_tasas_omega_codeml.py tiene 956 bytes y su contenido completo es: una cadena de texto con
+un archivo de control de CodeML y un print(). Declara en su primera línea "Script explicativo". No invoca PAML,
+no lee alineamientos, no estima nada. El propio README.md lo describe como "Plantilla y archivo de control
+documentado". Sin embargo, matriz_tasas_evolutivas_omega.csv presenta valores de dN, dS, ω e intervalos de
+confianza del 95 % como si hubieran sido estimados, y la figura los grafica sin ninguna advertencia.
+
+Lo mismo con el cronograma: METODOLOGIA_Y_PARAMETROS_EVOLUCION.md describe MCMCTree con 200.000
+generaciones, ESS > 200 verificado en Tracer, IQ-TREE con LG+C60+F+R8 y seis calibraciones fósiles. No hay archivo
+de salida, ni árbol, ni log, ni alineamiento de codones de ninguno de esos pasos.
+Hay además errores de contenido que delatan el origen: el documento cita "MAFFT (Kurihara et al., 2019)" —la
+cita de MAFFT es Katoh— y usa Bangiomorpha pubescens, fechada por U-Pb en 1.047 Ma, para justificar una
+restricción de 1.500–1.750 Ma, lo que invierte el sentido de una calibración mínima.
+
+Y la conclusión que la figura pretende sostener —que SCLY está bajo restricción más relajada que NFS1 y NFS2—
+es contraria a lo que muestran los datos reales: el cálculo del §2.14 da SCLY vs NFS2 con p = 0,12, es decir,
+indistinguibles.
+
+Qué hacer con este paquete.
+
+•      No usar ninguna de las cuatro figuras, ninguna de las tres tablas de datos, ni los dos scripts como resultados.
+•      Nunca incorporarlos a un manuscrito ni a una presentación. Una tabla de ω con intervalos de confianza que
+       no salieron de un estimador es fabricación de datos; si llega a un revisor o a un comité, el daño no es a la
+       figura, es a la credibilidad de todo lo demás —y lo demás es sólido.
+•      Sí conservar METODOLOGIA_Y_PARAMETROS_EVOLUCION.md como plan de trabajo: describe con precisión el
+       pipeline que habría que correr (MAFFT L-INS-i → Pal2Nal → IQ-TREE → MCMCTree → CodeML branch-model
+       con LRT). Como especificación de un análisis futuro es útil. Como registro de un análisis pasado, no lo es.
+•      El reemplazo honesto del panel de tasas ya está hecho y es la §2.14.
+
+5.3 — Material verificado y conservado
+    Material                                                     Veredicto
+    HText.cif (modelo AlphaFold)                                 Usable, con la salvedad de que los residuos 1–125 tienen pLDDT
+                                                                 33,9 y hay que recortarlos
+    Perfil conservacion.png (WebLogo del bucle)                  Usable — coincide con el cálculo independiente de entropía
+    MSA_suplementario_desulfurasas Spark.fasta                   Usable (21 secuencias)
+    Imágenes de CD-Search, BLASTp y TSA del documento original   Usables como evidencia documental
+    Figura de vía metabólica                                     Usable como esquema, no como resultado
+    Árbol de MEGA preliminar                                     Usable sólo como parte del relato — reemplazado por el árbol del
+                                                                 §2.7
+
+
+
+
+6. Limitaciones, declaradas
+Para que estén escritas antes de que las escriba un revisor:
+
+18. Ausencia en proteomas ≠ ausencia en genomas. Las pérdidas en Embryophyta (0/6) y Rhodophyta (0/12) se
+    apoyan en proteomas de referencia. Falta tBLASTn genómico y sintenia.
+19. La localización no resuelve citosol vs mitocondria. El panel de control falló 3 de 7 en esa distinción. Lo único
+    robusto es el descarte de plástido.
+20. Los bucles de AlphaFold no sostienen distancias. Dos ortólogos con 54 % de identidad dan 4,0 Å y 9,0 Å al
+    mismo ligando.
+21. La especificidad Cys vs Sec no se resuelve por bioinformática. Ni docking ni superposición. Requiere QM/MM
+    o ensayo enzimático.
+22. La asociación con la maquinaria Sec es pseudorreplicación filogenética. Desaparece al controlar por linaje.
+23. La tasa relativa no es ω. No separa restricción selectiva de tasa de mutación.
+24. El extremo 5' del gen curado está sin resolver (~60 residuos N-terminales).
+25. 301 de las 617 proteínas clase V quedaron sin asignar a ninguna de las tres subfamilias.
+26. El soporte del clado NFS1 es 0,79, mediocre. No afecta la conclusión sobre SCLY-like (0,96), pero hay que
+    reportarlo.
+27. n pequeños en varios linajes: Haptophyta 4, Cryptophyceae 1, Xanthophyceae 1, Phaeophyceae 1. Los
+    porcentajes de esos grupos no son estimaciones estables.
+
+
+
+
+7. Qué está blindado y qué no
+ Afirmación                                                        Estado
+ Existe un tercer clado de clase V en algas, monofilético          Blindado — 617 secuencias, soporte 0,96, universo de 2,1 M
+ Se identifica por el bucle SAGxACH                                Blindado — entropía 0,000 en 66/66
+ Es el ortólogo algal de SCLY                                      Blindado — SCLY humana es rama hermana; TM-score 0,99 con
+                                                                   3A9Z
+ PNW80545.1 está mal anotado como NFS2                             Blindado
+ PABB004 tiene los tres genes                                      Blindado
+ El gen SCLY-like de PABB004 está mal anotado y el modelo curado   Blindado — 29 lecturas vs 0
+ es el correcto
+ El gen se expresa en PABB004                                      Blindado
+ No es plastidial                                                  Blindado
+ NFS1 está bajo mayor restricción que NFS2 y SCLY                  Blindado — p = 7 × 10⁻¹², pareado
+ Las posiciones discriminantes están cerca del cofactor            Blindado — ρ = −0,54, p = 2 × 10⁻²⁷
+ Es citosólica                                                     No blindado — predictores no confiables en esa distinción
+ Hubo dos pérdidas independientes                                  Parcialmente — falta evidencia genómica
+ La pérdida se debe a la pérdida del selenoproteoma                Hipótesis — pseudorreplicación
+ La enzima actúa sobre selenocisteína                              No demostrado — requiere ensayo
+
+
+
+
+8. Lo que falta para blindar la publicación
+Ordenado por relación entre lo que aporta y lo que cuesta.
+
+Prioridad alta — convierten afirmaciones parciales en afirmaciones blindadas
+28. tBLASTn genómico + sintenia en las embriofitas y rodofitas. Es el que más rinde. Hoy la afirmación es
+    "ausente en el proteoma"; con esto pasa a "ausente del genoma, y la región sinténica está ocupada por otra
+    cosa". Convierte la pérdida en un resultado genómico. Requiere los ensamblados de A. thaliana, O. sativa, P.
+    patens, M. polymorpha, C. merolae, G. sulphuraria y los genes flanqueantes del locus de
+    Chara/Klebsormidium.
+29. Resolver el extremo 5' del gen curado. StringTie (o Trinity en modo guiado) sobre SRR12973628, ensamblado
+    del transcripto completo del locus. Cierra la única pieza floja de la curación y da el modelo definitivo para
+    depositar.
+30. Verificar si los dinoflagelados largos son quimeras del mismo tipo. A0A1Q9EC91 (3530 aa), A0A9P1CGG1 (1452
+    aa), A0ABD3PCK7 (721 aa), A0ABD3MQJ2 (666 aa). Si al menos dos de ellas resultan ser el mismo error de fusión,
+    el caso de PABB004 deja de ser anecdótico y pasa a ser un patrón de error de anotación en genomas de algas
+    — que es un resultado publicable por sí solo.
+31. Test de co-evolución que controle la filogenia. Reemplazar el Fisher por especie por contrastes
+    independientes de Felsenstein o el test de correlación de caracteres discretos de Pagel sobre un árbol de
+    especies. Es lo que corresponde para la hipótesis del selenio, y es barato.
+Prioridad media — refuerzan el núcleo
+32. Inventario real de selenoproteínas por detección de horquillas SECIS en 3'UTR y TGA en marco, en las
+    especies con y sin SCLY-like. Hoy la maquinaria Sec se mide por RBH de cuatro proteínas; esto mediría el
+    selenoproteoma directamente.
+33. dN/dS real con el pipeline que el documento de metodología describe: recuperar los CDS de las 66+
+    secuencias, alinear por codón con Pal2Nal, y correr CodeML en modelo de ramas con LRT. Es el análisis que
+    faltaba, hecho de verdad. Es el más caro de la lista.
+34. Sintenia del par histidinol-deshidrogenasa–SCLY en más genomas. Si el par está conservado en varias
+    clorofíceas, el argumento del error de anotación en PABB004 se vuelve mecánicamente obvio.
+35. AlphaFold-multimer del homodímero. Las cisteína desulfurasas funcionan como dímeros y el sitio activo está
+    en la interfaz. Vale la pena ver si alguna de las seis posiciones discriminantes cae ahí.
+36. Reconstrucción del estado ancestral del bucle catalítico. Da el orden de aparición de la His y refuerza el
+    argumento de que la firma es derivada y diagnóstica.
+
+Prioridad baja — cierres finos
+37. Clasificar las 301 clase V sin asignar. Puede haber más subfamilias ahí.
+38. Estructura de intrones comparada PABB004 / NREL 46B-D3 / Chlamydomonas en el locus SCLY.
+39. Verificar la identidad de `3LVK` si se lo sigue citando — no se comprobó.
+40. Aplicar las 22 correcciones al texto del Google Doc.
+
+Lo que NO hay que seguir intentando
+•   Docking de Cys vs Sec. No resuelve la pregunta, por física del método, no por implementación.
+•   Rankear ortólogos por distancia Cys-SG → Se sobre modelos apo de AlphaFold.
+•   Cualquier análisis de conservación sobre `MSA_73_panalgal.fasta`.
+
+
+
+
+9. Opciones de publicación
+
+Opción A — El clado SCLY-like en algas (recomendada)
+Qué es. Primera descripción sistemática de un tercer clado de cisteína desulfurasas clase V en algas, con firma
+diagnóstica invariante, distribución pan-algal, dos pérdidas independientes y un caso de curación génica validado
+por RNA-seq.
+
+Qué tiene ya. Todo lo de §7 marcado como blindado. Es, en volumen y en solidez, un paper completo.
+
+Qué le falta. Los puntos 1 a 4 de §8. Con el 1 y el 2 ya alcanza para enviar.
+
+Dónde. BMC Genomics, Genome Biology and Evolution, Frontiers in Plant Science (sección Marine and Freshwater
+Plants), Algal Research. GBE es el mejor encaje si se incluye la parte de pérdidas independientes y tasas; BMC
+Genomics si el eje es la curación génica y el barrido.
+
+Figuras propuestas, en orden:
+
+41. Asignación de familia por el bucle catalítico (fig_asignacion_familia_NFS.png)
+42. Árbol de máxima verosimilitud de los tres clados (fig_arbol_desulfurasas.png)
+43. Distribución por linaje y pérdidas (fig_distribucion_desulfurasas.png)
+44. Locus curado y evidencia de RNA-seq (fig_locus_curado.png)
+45. Conservación y posiciones discriminantes (fig_conservacion_sdp.png)
+46. Sitio activo y subsitio de especificidad (fig_subsitio_transferencia.png)
+47. Suplementaria: localización (fig_localizacion_scly.png)
+48. Suplementaria: tasas relativas (fig_tasas_relativas.png)
+
+El riesgo a anticipar. Un revisor va a pedir evidencia funcional. La respuesta tiene que estar en la discusión, no
+improvisada: el trabajo es explícitamente una caracterización comparativa y genómica, la actividad queda
+planteada como la continuación experimental, y la curación validada por RNA-seq es el ancla experimental que sí
+se aporta.
+
+Opción B — Inventario de maquinaria Fe-S (ISC vs SUF) en microalgas
+Qué es. El mismo pipeline aplicado a la vía completa: NFS1/NFS2, ISD11, frataxina, SUFB/C/D, scaffolds. Encaja con
+la línea del laboratorio de Casati.
+
+Ventaja. Reaprovecha toda la infraestructura ya construida; es un trabajo de catálogo con bajo riesgo de rechazo.
+
+Desventaja. Menos novedad. Y el hallazgo de SCLY-like quedaría enterrado como un detalle.
+
+Opción C — Nota metodológica sobre asignación incorrecta de familia en genomas de
+algas
+Qué es. Corto. El caso de PNW80545.1 mal anotada como NFS2 en AlgaePath, la propagación del error, el ORF
+quimérico de PABB004, y las 9 de 67 secuencias con longitud aberrante como evidencia de un problema
+sistemático.
+
+Ventaja. Rápido de escribir, alto valor práctico para la comunidad.
+
+Desventaja. Bajo impacto, y consume el material de la Opción A.
+
+Dónde. Bioinformatics Advances, Database, BMC Research Notes.
+
+Recomendación
+A, y ejecutar antes los puntos 1 y 2 de §8. El punto 3 (dinoflagelados quiméricos), si da positivo, se puede
+incorporar a A como una sección o publicar después como C ampliada.
+
+No combinar esta línea con la de SINA/RMA-RNF5. Son dos historias distintas, con dos audiencias distintas, y
+cada una tiene volumen propio.
+
+
+
+
+10. Índice de archivos
+Figuras generadas
+
+ Archivo                                                    Contenido
+ fig_asignacion_familia_NFS.png                             bucles catalíticos de los tres grupos
+ fig_arbol_desulfurasas.png                                 árbol ML de 617 secuencias, tres clados
+ fig_distribucion_desulfurasas.png                          presencia/ausencia por linaje
+ fig_locus_curado.png                  modelo génico curado + lecturas de RNA-seq
+ fig_conservacion_sdp.png              entropía por posición y residuos discriminantes
+ fig_subsitio_transferencia.png        sitio activo con ligando transferido
+ fig_localizacion_scly.png             predicción de localización con panel de control
+ fig_tasas_relativas.png               tasas evolutivas relativas, pareadas
+
+
+
+Tablas
+
+ Archivo                               Contenido
+ candidatos_desulfurasas.csv           las 617 proteínas clase V con asignación
+ distribucion_por_especie.csv          presencia por especie
+ presencia_por_proteoma.csv            presencia por proteoma
+ tabla_asignacion_familia_NFS.csv      bucles catalíticos alineados
+ conservacion_scly_por_posicion.csv    entropía posición por posición
+ posiciones_discriminantes_scly.csv    las 6 posiciones discriminantes
+ subsitio_equivalencias.csv            equivalencias del subsitio entre familias
+ superposiciones_desulfurasas.csv      TM-scores y distancias
+ scly_like_localizacion.csv            salidas de los 4 predictores
+ scly_like_mapeo.csv                   mapeo de identificadores
+ sec_machinery_rbh.csv                 RBH de la maquinaria Sec
+ sec_vs_scly_por_proteoma.csv          tabla de contingencia por proteoma
+ evidencia_rnaseq_uniones.csv          conteos de k-meros por unión
+ tasas_relativas_pareadas.csv          distancias de rama por especie
+
+
+
+Secuencias y estructuras
+
+ Archivo                               Contenido
+ scly_pabb_curada.fasta                proteína curada de PABB004 (421 aa)
+ scly_pabb_curada.tbl                  modelo génico en formato de NCBI
+ arbol_desulfurasas.nwk                árbol en Newick
+ msa_desulfurasas_trim.fasta           alineamiento filtrado
+ dominios_desulfurasas.fasta           dominios PF00266 extraídos
+ HText_conservacion_SCLYlike.pdb       modelo con conservación en el campo B
+ HText_core_PLP_selenopropionato.pdb   núcleo con PLP y ligando transferido
+
+
+
+Documentos
+
+ Archivo                               Contenido
+ dossier_SCLY_like.md / .docx          este expediente
+ barrido_desulfurasas_informe.md       detalle técnico del barrido pan-algal
+ revision_analisis_htext.md            auditoría del docking y del análisis de conservación previos
+ evaluacion_NFS2_PABB.md               evaluación del trabajo original
+ figuras_documentos_originales.zip     56 imágenes extraídas de los Google Docs, con catálogo
+
+
+
+:)
+
