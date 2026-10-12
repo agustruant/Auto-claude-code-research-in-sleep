@@ -1,0 +1,369 @@
+IQ-TREE multicore version 2.3.6 for Linux x86 64-bit built Aug  1 2024
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor, Heiko Schmidt,
+Dominik Schrempf, Michael Woodhams, Ly Trong Nhan, Thomas Wong
+
+Host:    vm (AVX512, FMA3, 15 GB RAM)
+Command: /tmp/claude-0/-home-user-Auto-claude-code-research-in-sleep/39f0fdb3-8509-5965-a47b-09212e2610f6/scratchpad/iq/iqtree-2.3.6-Linux-intel/bin/iqtree2 -s aln_318_trim.fasta -m MFP -mset LG,WAG,JTT,Q.pfam -B 1000 -alrt 1000 -T 4 --prefix iq318 -seed 12345
+Seed:    12345 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Mon Oct 12 20:16:26 2026
+Kernel:  AVX+FMA - 4 threads (4 CPU cores detected)
+
+Reading alignment file aln_318_trim.fasta ... Fasta format detected
+Reading fasta file: done in 0.00147432 secs using 99.91% CPU
+Alignment most likely contains protein sequences
+Alignment has 318 sequences with 386 columns, 386 distinct patterns
+371 parsimony-informative, 11 singleton sites, 4 constant sites
+                                               Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 0.00169059 secs using 265.4% CPU
+   1  I__O49543__Arabidopsis_thaliana                  5.70%    passed     54.33%
+   2  I__P25374__Saccharomyces_cerevisiae              5.96%    passed     35.03%
+   3  II__Q93WX6__Arabidopsis_thaliana                 4.15%    passed     33.01%
+   4  L3__Q96I15__Homo_sapiens                         5.18%    passed     91.04%
+   5  I__Q9Y697__Homo_sapiens                          5.70%    passed     60.34%
+   6  I__A0A087SBH3__Auxenochlorella_protothecoid      5.70%    passed     99.18%
+   7  L3__A0A090M4Q8__Ostreococcus_tauri               6.48%    passed     42.33%
+   8  I__A0A0D2M031__Monoraphidium_neglectum           5.70%    passed     99.86%
+   9  II__A0A0D2NKH0__Monoraphidium_neglectum          4.15%    passed     61.01%
+  10  L3__A0A0D3JFS3__Emiliania_huxleyi__strain_CC     7.25%    failed      0.34%
+  11  I__A0A0D3KWK1__Emiliania_huxleyi__strain_CC      8.29%    passed     94.81%
+  12  I__A0A0D3KXW7__Emiliania_huxleyi__strain_CC     87.82%    passed     27.99%
+  13  I__A0A0M0JAJ3__Chrysochromulina_tobinii          5.70%    passed     98.49%
+  14  II__A0A0M0JIF4__Chrysochromulina_tobinii         4.40%    passed     50.10%
+  15  II__A0A150GSI0__Gonium_pectorale                 4.15%    passed     51.07%
+  16  L3__A0A150H2L5__Gonium_pectorale                 5.70%    passed      5.36%
+  17  I__A0A1E7EW37__Fragilariopsis_cylindrus_CCM     38.60%    passed     43.75%
+  18  L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM    18.13%    passed     55.83%
+  19  II__A0A1E7FQI7__Fragilariopsis_cylindrus_CCM     4.15%    passed     97.84%
+  20  II__A0A1Q9D6N0__Symbiodinium_microadriaticum     4.40%    passed     93.21%
+  21  I__A0A1Q9DE09__Symbiodinium_microadriaticum     18.65%    passed     72.39%
+  22  II__A0A1Q9E2S5__Symbiodinium_microadriaticum     4.40%    passed     84.12%
+  23  I__A0A1Q9E9V0__Symbiodinium_microadriaticum      5.70%    passed     89.57%
+  24  L3__A0A1Q9EC91__Symbiodinium_microadriaticum    18.39%    passed     87.75%
+  25  I__A0A1X6NJT4__Porphyra_umbilicalis             10.36%    passed     83.23%
+  26  II__A0A1X6PID7__Porphyra_umbilicalis             5.18%    failed      0.62%
+  27  L3__A0A1Y1HX28__Klebsormidium_nitens            37.56%    passed     80.24%
+  28  I__A0A1Y1I0C3__Klebsormidium_nitens              5.70%    passed     97.37%
+  29  II__A0A1Y1I0J5__Klebsormidium_nitens             4.15%    passed     96.93%
+  30  II__A0A1Z5JBG7__Fistulifera_solaris              4.15%    passed     62.55%
+  31  L3__A0A1Z5JXU0__Fistulifera_solaris              6.48%    failed      0.03%
+  32  I__A0A1Z5KA33__Fistulifera_solaris               5.96%    passed     62.19%
+  33  L3__A0A1Z5KCV9__Fistulifera_solaris              6.22%    failed      0.16%
+  34  II__A0A1Z5KLZ0__Fistulifera_solaris              4.15%    passed     53.84%
+  35  I__A0A1Z5KQV2__Fistulifera_solaris               5.96%    passed     67.07%
+  36  L3__A0A250WXK3__Chlamydomonas_eustigma           7.77%    passed     84.12%
+  37  I__A0A250X580__Chlamydomonas_eustigma           37.82%    passed     28.91%
+  38  II__A0A250XQB1__Chlamydomonas_eustigma           4.15%    passed     87.91%
+  39  II__A0A2K1IG87__Physcomitrium_patens             4.40%    passed     93.90%
+  40  II__A0A2K1III6__Physcomitrium_patens             4.15%    passed     95.65%
+  41  I__A0A2K1L2H1__Physcomitrium_patens              5.70%    passed     54.26%
+  42  I__A0A2K1L8W3__Physcomitrium_patens              5.70%    passed     60.58%
+  43  II__A0A2K3D4F5__Chlamydomonas_reinhardtii        4.15%    passed     19.49%
+  44  L3__A0A2K3DJ46__Chlamydomonas_reinhardtii       53.89%    failed      2.14%
+  45  I__A0A2K3E3W0__Chlamydomonas_reinhardtii         5.70%    passed     97.89%
+  46  L3__A0A2P6TKZ5__Chlorella_sorokiniana            6.22%    passed     10.29%
+  47  I__A0A2P6U3X4__Chlorella_sorokiniana             5.70%    passed     88.03%
+  48  L3__A0A2P6V8I3__Micractinium_conductrix          6.22%    failed      0.00%
+  49  I__A0A2P6V904__Micractinium_conductrix           5.70%    passed     99.69%
+  50  II__A0A2V0NSU4__Raphidocelis_subcapitata         4.15%    passed     82.80%
+  51  I__A0A2V0PKC5__Raphidocelis_subcapitata          5.70%    passed     95.75%
+  52  II__A0A2V3ITM5__Gracilariopsis_chorda            5.18%    passed     49.45%
+  53  I__A0A2V3J0K4__Gracilariopsis_chorda             5.96%    passed     89.99%
+  54  L3__A0A383VU94__Tetradesmus_obliquus             6.22%    failed      1.07%
+  55  I__A0A383VZF3__Tetradesmus_obliquus              5.44%    passed     98.97%
+  56  II__A0A383W364__Tetradesmus_obliquus             4.15%    passed     95.49%
+  57  II__A0A388KHQ8__Chara_braunii                    4.15%    passed     61.11%
+  58  L3__A0A388KLW8__Chara_braunii                    8.29%    passed     78.34%
+  59  I__A0A388KUJ5__Chara_braunii                     5.70%    passed     66.56%
+  60  I__A0A388KUR9__Chara_braunii                     5.70%    passed     74.21%
+  61  II__A0A388LZT0__Chara_braunii                    4.15%    passed     61.11%
+  62  I__A0A448Z0Q3__Pseudo_nitzschia_multistriat     19.69%    passed     49.39%
+  63  L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat     3.37%    passed     63.18%
+  64  II__A0A4D9CTB8__Nannochloropsis_salina_CCMP1     4.15%    passed     18.52%
+  65  I__A0A4D9DAJ6__Nannochloropsis_salina_CCMP1      5.96%    passed     99.57%
+  66  I__A0A5B8MHP9__Chloropicon_primus                5.70%    passed     63.63%
+  67  II__A0A5B8MJF9__Chloropicon_primus               3.89%    passed     92.57%
+  68  L3__A0A5B8MPI0__Chloropicon_primus               5.44%    passed     86.12%
+  69  II__A0A5J4YI84__Porphyridium_purpureum           4.92%    passed     63.95%
+  70  I__A0A5J4ZA80__Porphyridium_purpureum            5.70%    passed    100.00%
+  71  II__A0A699YXJ6__Haematococcus_lacustris          5.70%    passed     20.06%
+  72  II__A0A699Z0U1__Haematococcus_lacustris          5.70%    passed     19.89%
+  73  L3__A0A699ZEV1__Haematococcus_lacustris         72.02%    passed     17.15%
+  74  II__A0A7J7IE79__Cyanidiococcus_yangmingshane     4.40%    passed     89.14%
+  75  I__A0A7J7IS76__Cyanidiococcus_yangmingshane      5.70%    passed     81.82%
+  76  I__A0A812KGR1__Symbiodinium_pilosum              5.96%    passed     93.32%
+  77  II__A0A812S1P1__Symbiodinium_pilosum             4.66%    passed     21.23%
+  78  II__A0A812SJ40__Symbiodinium_natans              4.40%    passed     90.26%
+  79  II__A0A812TZP6__Symbiodinium_pilosum             4.66%    passed     96.45%
+  80  II__A0A813AY52__Symbiodinium_necroappetens       4.40%    passed     80.68%
+  81  L3__A0A813D9I6__Polarella_glacialis             22.80%    passed     52.97%
+  82  I__A0A813DL46__Polarella_glacialis               5.96%    passed     55.25%
+  83  II__A0A813EC50__Polarella_glacialis              4.40%    passed     73.16%
+  84  I__A0A813EGT3__Polarella_glacialis               5.96%    passed     52.83%
+  85  I__A0A813EKS1__Polarella_glacialis              43.01%    passed     37.41%
+  86  I__A0A813F1C2__Polarella_glacialis               6.99%    passed     61.48%
+  87  II__A0A813F5G7__Polarella_glacialis             33.16%    passed     83.42%
+  88  I__A0A813FIL7__Polarella_glacialis              43.01%    passed     33.84%
+  89  I__A0A813FQQ5__Polarella_glacialis              54.15%    passed     26.11%
+  90  I__A0A813FUN0__Polarella_glacialis               5.96%    passed     52.83%
+  91  I__A0A813FV75__Polarella_glacialis               5.96%    passed     62.85%
+  92  I__A0A813GZQ2__Polarella_glacialis              43.01%    passed     37.88%
+  93  II__A0A830HDK8__Pycnococcus_provasolii           3.63%    passed     82.51%
+  94  L3__A0A830HW14__Pycnococcus_provasolii           4.66%    passed     51.28%
+  95  I__A0A830HZ24__Pycnococcus_provasolii            5.70%    passed     98.37%
+  96  I__A0A835TFC4__Chlamydomonas_incerta             5.70%    passed     94.31%
+  97  II__A0A835W4R2__Chlamydomonas_incerta            4.15%    passed     22.61%
+  98  I__A0A835W5I8__Chlamydomonas_schloesseri         5.70%    passed     96.37%
+  99  L3__A0A835W6A0__Chlamydomonas_incerta           48.45%    failed      0.20%
+ 100  L3__A0A835WMZ9__Chlamydomonas_schloesseri       48.45%    failed      0.25%
+ 101  L3__A0A835XY57__Edaphochlamys_debaryana         52.85%    failed      1.98%
+ 102  I__A0A835Y811__Edaphochlamys_debaryana           5.70%    passed     95.49%
+ 103  II__A0A835YHC6__Tribonema_minus                  4.40%    passed     27.62%
+ 104  I__A0A835YNJ7__Tribonema_minus                   5.96%    passed     99.59%
+ 105  I__A0A835YUN3__Tribonema_minus                  76.42%    passed     90.83%
+ 106  II__A0A836BBE5__Chlamydomonas_schloesseri        4.15%    passed     22.43%
+ 107  II__A0A836C3K8__Edaphochlamys_debaryana          4.15%    passed     90.58%
+ 108  L3__A0A836CMI1__Tribonema_minus                  6.22%    passed     36.58%
+ 109  II__A0A8J2SKF9__Pelagomonas_calceolata           3.89%    passed     71.43%
+ 110  I__A0A8J2T399__Pelagomonas_calceolata            8.81%    passed     92.46%
+ 111  I__A0A8J2X1B6__Pelagomonas_calceolata            5.96%    passed     77.72%
+ 112  II__A0A8J4AWN9__Volvox_africanus                 4.15%    passed     48.14%
+ 113  II__A0A8J4BYA2__Volvox_reticuliferus             4.15%    passed     74.75%
+ 114  L3__A0A8J4FGX8__Volvox_reticuliferus             5.96%    passed     14.77%
+ 115  L3__A0A8J5X355__Diacronema_lutheri               5.96%    failed      0.05%
+ 116  I__A0A8J6C7R9__Diacronema_lutheri                5.70%    passed     99.97%
+ 117  II__A0A8J6CI92__Diacronema_lutheri               4.40%    failed      3.44%
+ 118  II__A0A8S1IWC9__Ostreobium_quekettii            46.63%    passed     37.08%
+ 119  II__A0A8S1J0I1__Ostreobium_quekettii             4.15%    passed     95.58%
+ 120  L3__A0A8S1J814__Ostreobium_quekettii            12.44%    passed     84.90%
+ 121  II__A0A9C7PYH5__Galdieria_partita                4.15%    passed     38.69%
+ 122  I__A0A9C7Q133__Galdieria_partita                 5.96%    passed     79.13%
+ 123  L3__A0A9D4TIF6__Chlorella_vulgaris               6.22%    passed      9.95%
+ 124  I__A0A9D4TRG1__Chlorella_vulgaris                5.70%    passed     96.07%
+ 125  II__A0A9K3L7Y2__Nitzschia_inconspicua            4.15%    passed     76.17%
+ 126  II__A0A9K3LFN5__Nitzschia_inconspicua           10.62%    passed     83.88%
+ 127  I__A0A9K3LIY3__Nitzschia_inconspicua             5.70%    passed     69.94%
+ 128  I__A0A9K3PS87__Nitzschia_inconspicua             5.70%    passed     72.46%
+ 129  I__A0A9N8D7B1__Seminavis_robusta                 5.70%    passed     91.63%
+ 130  L3__A0A9N8H4H9__Seminavis_robusta                3.63%    passed     30.41%
+ 131  II__A0A9N8H885__Seminavis_robusta                4.40%    passed     96.57%
+ 132  I__A0A9P1BG81__Cladocopium_goreaui               5.96%    passed      9.21%
+ 133  II__A0A9P1BGJ2__Cladocopium_goreaui              4.15%    passed     69.72%
+ 134  II__A0A9P1C7R4__Cladocopium_goreaui              4.40%    passed     59.05%
+ 135  L3__A0A9P1CGG1__Cladocopium_goreaui              5.96%    passed     63.89%
+ 136  II__A0A9P1FU59__Cladocopium_goreaui              4.15%    passed     94.68%
+ 137  I__A0A9P1GER4__Cladocopium_goreaui              55.44%    passed     95.07%
+ 138  L3__A0A9W6BEK4__Pleodorina_starrii              46.89%    failed      1.46%
+ 139  I__A0A9W6BP52__Pleodorina_starrii                5.70%    passed     92.14%
+ 140  II__A0A9W6BWJ6__Pleodorina_starrii               3.89%    passed     18.94%
+ 141  I__A0A9W7A1X6__Triparma_retinervis               5.70%    passed     62.57%
+ 142  I__A0A9W7A8F9__Triparma_strigata                 5.70%    passed     71.34%
+ 143  II__A0A9W7CDX7__Triparma_laevis_f__longispin     4.15%    failed      4.47%
+ 144  II__A0A9W7E1R6__Triparma_strigata                4.15%    passed     12.45%
+ 145  II__A0A9W7E3A2__Triparma_retinervis              4.40%    passed      5.51%
+ 146  I__A0A9W7EV45__Triparma_verrucosa                5.70%    passed     87.63%
+ 147  II__A0A9W7FN66__Triparma_verrucosa               4.15%    passed     12.40%
+ 148  I__A0A9W7GKV9__Triparma_columacea                5.70%    passed     31.21%
+ 149  II__A0A9W7GLM1__Triparma_columacea               4.40%    passed     12.74%
+ 150  I__A0A9W7L032__Triparma_laevis_f__longispin      5.70%    passed     36.90%
+ 151  II__A0AA36HML1__Effrenium_voratum                5.44%    passed     94.37%
+ 152  II__A0AA36I4S5__Effrenium_voratum                4.15%    passed     96.36%
+ 153  I__A0AA36J6N9__Effrenium_voratum                 5.70%    passed     89.83%
+ 154  I__A0AAD2CQ79__Cylindrotheca_closterium          5.70%    passed     85.16%
+ 155  L3__A0AAD2FN92__Cylindrotheca_closterium         3.89%    passed     31.06%
+ 156  L3__A0AAD2FSZ6__Cylindrotheca_closterium         3.89%    passed     24.99%
+ 157  II__A0AAD2JLA6__Cylindrotheca_closterium         4.15%    passed     28.20%
+ 158  I__A0AAD3CNM3__Chaetoceros_tenuissimus           5.70%    passed     68.67%
+ 159  L3__A0AAD3CS45__Chaetoceros_tenuissimus          3.89%    passed     80.89%
+ 160  L3__A0AAD3CTN0__Chaetoceros_tenuissimus          4.15%    passed     94.87%
+ 161  II__A0AAD3D922__Chaetoceros_tenuissimus          4.92%    failed      3.50%
+ 162  II__A0AAD3DLB4__Astrephomene_gubernaculifera     4.15%    passed     10.70%
+ 163  I__A0AAD3HPG5__Astrephomene_gubernaculifera      5.70%    passed     93.30%
+ 164  L3__A0AAD5DKK7__Chlorella_ohadii                 6.22%    passed      7.31%
+ 165  I__A0AAD5H885__Chlorella_ohadii                  5.70%    passed     89.37%
+ 166  II__A0AAD7UNE2__Chrysophaeum_taylorii            3.89%    failed      0.04%
+ 167  I__A0AAD7XIM5__Chrysophaeum_taylorii             7.25%    passed     42.46%
+ 168  II__A0AAD8Y1M9__Skeletonema_marinoi              4.15%    passed     76.43%
+ 169  L3__A0AAD8YPT2__Skeletonema_marinoi              4.66%    passed     68.30%
+ 170  I__A0AAD9DDT3__Skeletonema_marinoi               5.70%    passed     60.83%
+ 171  I__A0AAD9MG95__Prototheca_wickerhamii            5.70%    passed     68.79%
+ 172  I__A0AAE0C3S8__Cymbomonas_tetramitiformis        5.70%    passed     47.06%
+ 173  II__A0AAE0FI37__Cymbomonas_tetramitiformis       4.15%    passed     89.04%
+ 174  L3__A0AAE0LE91__Cymbomonas_tetramitiformis       5.96%    passed     36.31%
+ 175  I__A0AAV1HVJ1__Coccomyxa_viridis                 5.70%    passed     80.81%
+ 176  II__A0AAV1ICZ6__Coccomyxa_viridis                4.15%    passed     94.61%
+ 177  I__A0AAV8UUU9__Rhodosorus_marinus                5.70%    passed     58.29%
+ 178  II__A0AAV9IDY7__Galdieria_yellowstonensis        3.37%    passed     27.26%
+ 179  I__A0AAV9II25__Galdieria_yellowstonensis         5.96%    passed     70.20%
+ 180  I__A0AAV9IK25__Galdieria_yellowstonensis         5.96%    passed     70.20%
+ 181  I__A0AAV9IQF5__Cyanidium_caldarium               5.96%    passed     93.78%
+ 182  II__A0AAV9J2Q2__Cyanidium_caldarium              4.40%    passed     21.67%
+ 183  II__A0AAW1NTA6__Symbiochloris_irregularis        4.15%    passed     92.31%
+ 184  I__A0AAW1P501__Symbiochloris_irregularis         5.96%    passed     97.17%
+ 185  L3__A0AAW1QA50___Myrmecia__bisecta               6.48%    failed      4.13%
+ 186  I__A0AAW1QFK0___Myrmecia__bisecta                5.70%    passed     90.62%
+ 187  I__A0AAW1QJ11__Apatococcus_lobatus               5.70%    passed     91.46%
+ 188  II__A0AAW1QSM0___Myrmecia__bisecta              11.40%    passed     91.14%
+ 189  L3__A0AAW1R1Z0__Elliptochloris_bilobata          6.22%    failed      0.00%
+ 190  II__A0AAW1RVX7__Apatococcus_fuscideae           41.71%    passed     63.32%
+ 191  II__A0AAW1S4E3__Apatococcus_lobatus             22.28%    passed     58.71%
+ 192  II__A0AAW1S4X2__Elliptochloris_bilobata          4.15%    passed     90.06%
+ 193  I__A0AAW1S9M3__Elliptochloris_bilobata           5.70%    passed     95.05%
+ 194  I__A0AAW1SY41__Apatococcus_fuscideae             5.70%    passed     91.46%
+ 195  I__A0AAW1T9X9__Apatococcus_fuscideae             5.70%    passed     90.31%
+ 196  I__A0AAX4P4V9__Chloropicon_roscoffensis          5.70%    passed     95.81%
+ 197  II__A0AAX4PEP3__Chloropicon_roscoffensis         3.89%    passed     96.87%
+ 198  L3__A0AAX4PFB6__Chloropicon_roscoffensis         5.96%    passed     71.84%
+ 199  L3__A0AAX4PJN5__Chloropicon_roscoffensis        73.32%    passed     25.91%
+ 200  II__A0AB34IPJ2__Prymnesium_parvum                4.66%    passed     65.13%
+ 201  I__A0AB34IS35__Prymnesium_parvum                 5.70%    passed     99.95%
+ 202  L3__A0AB34J9E3__Prymnesium_parvum               24.35%    failed      0.01%
+ 203  L3__A0AB34KAI8__Prymnesium_parvum                5.96%    failed      0.00%
+ 204  II__A0ABD3LXU8__Discostella_pseudostelligera     4.15%    passed     83.95%
+ 205  L3__A0ABD3M126__Discostella_pseudostelligera     3.63%    passed     24.71%
+ 206  L3__A0ABD3MQJ2__Stephanodiscus_triporus         26.42%    passed     98.51%
+ 207  II__A0ABD3MSF9__Cyclotella_atomus                4.66%    passed     91.80%
+ 208  I__A0ABD3MXL0__Stephanodiscus_triporus          26.94%    passed     43.66%
+ 209  II__A0ABD3MYQ6__Stephanodiscus_triporus         25.91%    passed     57.01%
+ 210  I__A0ABD3NDW2__Cyclotella_atomus                 5.70%    passed     75.35%
+ 211  I__A0ABD3NZ76__Cyclotella_cryptica               9.07%    passed     50.66%
+ 212  L3__A0ABD3PCK7__Stephanodiscus_triporus         30.05%    passed     91.02%
+ 213  L3__A0ABD3PCQ2__Cyclotella_cryptica              4.66%    passed     73.61%
+ 214  L3__A0ABD3PL28__Cyclotella_cryptica             56.22%    passed     28.01%
+ 215  II__A0ABD3QH57__Cyclotella_cryptica              4.40%    passed     96.24%
+ 216  L3__A0ABD3QT07__Cyclotella_atomus                5.18%    passed     58.52%
+ 217  II__A0ABD3R565__Cyclostephanos_tholiformis       4.15%    passed     42.61%
+ 218  II__A0ABD3RA89__Cyclostephanos_tholiformis       4.15%    passed     42.61%
+ 219  I__A0ABD3RT14__Cyclostephanos_tholiformis        5.70%    passed     15.92%
+ 220  L3__A0ABD3SBR2__Cyclostephanos_tholiformis       3.89%    passed     72.39%
+ 221  I__A0ABN9U0F9__Prorocentrum_cordatum             5.96%    passed     87.31%
+ 222  II__A0ABN9V3V7__Prorocentrum_cordatum            4.40%    passed     15.76%
+ 223  L3__A0ABN9Y9J6__Prorocentrum_cordatum           27.72%    passed     49.67%
+ 224  I__A0ABP0HQJ3__Durusdinium_trenchii             36.01%    failed      2.90%
+ 225  I__A0ABP0JKY5__Durusdinium_trenchii              7.77%    failed      0.14%
+ 226  II__A0ABP0KKF9__Durusdinium_trenchii             4.15%    passed     66.10%
+ 227  II__A0ABP0KUW1__Durusdinium_trenchii            51.30%    passed     95.26%
+ 228  II__A0ABP0LK72__Durusdinium_trenchii             4.66%    passed     40.40%
+ 229  II__A0ABP0LS76__Durusdinium_trenchii             4.40%    passed     38.43%
+ 230  I__A0ABP0LT22__Durusdinium_trenchii              5.70%    passed     98.38%
+ 231  I__A0ABP0LT72__Durusdinium_trenchii              5.70%    passed     98.38%
+ 232  I__A0ABP0LTD8__Durusdinium_trenchii              6.74%    passed     72.69%
+ 233  I__A0ABP0LV06__Durusdinium_trenchii              6.74%    passed     72.69%
+ 234  II__A0ABP0QRF0__Durusdinium_trenchii             4.15%    passed     66.81%
+ 235  II__A0ABP0QTW1__Durusdinium_trenchii             5.18%    passed     50.53%
+ 236  II__A0ABP0S8C1__Durusdinium_trenchii             6.22%    failed      4.39%
+ 237  II__A0ABP0SL67__Durusdinium_trenchii             4.15%    passed     39.85%
+ 238  II__A0ABP1FU44__Coccomyxa_viridis                4.15%    passed     82.58%
+ 239  I__A0ABP1G8Q3__Coccomyxa_viridis                 5.70%    passed     78.81%
+ 240  II__A0ABQ5RLQ4__Volvox_africanus                 4.15%    passed     45.18%
+ 241  I__A0ABQ5RV58__Volvox_africanus                  5.70%    passed     94.10%
+ 242  II__A0ABQ6MPW9__Tetraparma_gracilis              4.66%    passed     48.48%
+ 243  I__A0ABQ6MTM1__Tetraparma_gracilis               5.70%    passed     99.81%
+ 244  L3__A0ABQ7GSE4__Dunaliella_salina               25.39%    passed     45.76%
+ 245  II__A0ABR1G4C2__Aureococcus_anophagefferens      3.89%    failed      0.00%
+ 246  I__A0ABR1G8E5__Aureococcus_anophagefferens       5.96%    passed     95.74%
+ 247  I__A0ABR2YJJ0__Coccomyxa_subellipsoidea          5.70%    passed     94.38%
+ 248  II__A0ABR2Z3A6__Coccomyxa_subellipsoidea         6.48%    passed     80.77%
+ 249  L3__A0ABY8TSA6__Tetradesmus_obliquus             6.22%    failed      1.70%
+ 250  II__A0ABY8TSU8__Tetradesmus_obliquus             4.15%    passed     92.96%
+ 251  I__A0ABY8U2V6__Tetradesmus_obliquus              5.44%    passed     99.00%
+ 252  I__A0ACC3BQ38__Pyropia_yezoensis                 5.70%    passed     99.31%
+ 253  II__A0ACC3C150__Pyropia_yezoensis                5.18%    failed      0.39%
+ 254  I__A0ACE1RWG8__Coccomyxa_elongata                5.70%    passed     97.55%
+ 255  II__A0ACE1SKF8__Coccomyxa_elongata               4.15%    passed     97.16%
+ 256  I__A0ACF7TST8__Micractinium_tetrahymenae         5.70%    passed     96.32%
+ 257  L3__A0ACF7V9P5__Micractinium_tetrahymenae        6.22%    failed      0.84%
+ 258  I__A0ACF8QD05__Chlorella_vulgaris                5.96%    passed     96.79%
+ 259  L3__A0ACF8QEV9__Chlorella_vulgaris               6.22%    passed     14.00%
+ 260  I__A4RUB0__Ostreococcus_lucimarinus__st          6.74%    passed     48.98%
+ 261  II__A4RUI4__Ostreococcus_lucimarinus__st         4.15%    passed     90.63%
+ 262  L3__A4S300__Ostreococcus_lucimarinus__st         6.48%    passed     57.51%
+ 263  I__B7FUS8__Phaeodactylum_tricornutum__s          6.74%    passed     77.93%
+ 264  II__B7FV09__Phaeodactylum_tricornutum__s         4.40%    passed     45.92%
+ 265  I__B8BTI1__Thalassiosira_pseudonana              6.74%    passed     87.71%
+ 266  L3__B8BXE3__Thalassiosira_pseudonana             4.92%    passed     53.96%
+ 267  II__C1DZT7__Micromonas_commoda                   4.15%    passed     72.96%
+ 268  I__C1E3B7__Micromonas_commoda                    5.70%    passed     95.27%
+ 269  L3__C1EHB0__Micromonas_commoda                   6.74%    passed     15.28%
+ 270  II__C1MJ23__Micromonas_pusilla__strain_C         4.15%    passed     68.52%
+ 271  L3__C1MNN5__Micromonas_pusilla__strain_C         6.48%    failed      1.84%
+ 272  I__C1N3B7__Micromonas_pusilla__strain_C          5.44%    passed     92.91%
+ 273  II__D7G5K2__Ectocarpus_siliculosus               4.40%    passed     78.42%
+ 274  I__D8LSH6__Ectocarpus_siliculosus                5.96%    passed     75.64%
+ 275  I__D8TZS2__Volvox_carteri_f__nagariensi          5.70%    passed     97.96%
+ 276  II__D8U4F0__Volvox_carteri_f__nagariensi         4.15%    passed     64.04%
+ 277  L3__D8U8R1__Volvox_carteri_f__nagariensi        47.41%    failed      2.48%
+ 278  L3__E1ZDB8__Chlorella_variabilis                 5.96%    failed      1.00%
+ 279  I__E1ZRR8__Chlorella_variabilis                  8.55%    passed     86.54%
+ 280  I__F0XX58__Aureococcus_anophagefferens           5.96%    passed     95.74%
+ 281  II__F0XYR2__Aureococcus_anophagefferens          3.89%    failed      0.00%
+ 282  II__I0YTX4__Coccomyxa_subellipsoidea__st         4.15%    passed     95.22%
+ 283  I__I0Z0B3__Coccomyxa_subellipsoidea__st          5.70%    passed     93.30%
+ 284  L3__K0SC66__Thalassiosira_oceanica               5.70%    passed     95.82%
+ 285  I__K0T2T4__Thalassiosira_oceanica                5.70%    passed     66.72%
+ 286  II__K8F3P5__Bathycoccus_prasinos                 3.63%    passed     89.33%
+ 287  L3__K8F9J9__Bathycoccus_prasinos                 2.33%    passed     15.41%
+ 288  I__K8FF08__Bathycoccus_prasinos                  5.70%    passed     36.77%
+ 289  I__L1IX87__Guillardia_theta__strain_CCM          5.70%    passed     99.00%
+ 290  L3__L1J7A3__Guillardia_theta__strain_CCM        28.76%    passed     57.31%
+ 291  L3__L1J7X1__Guillardia_theta__strain_CCM        47.93%    passed     43.44%
+ 292  II__M1V4W8__Cyanidioschyzon_merolae__str         4.40%    passed     83.20%
+ 293  I__M1VI67__Cyanidioschyzon_merolae__str          5.70%    passed     84.64%
+ 294  I__M2VVE5__Galdieria_sulphuraria                 5.96%    passed     87.27%
+ 295  II__M2Y4K9__Galdieria_sulphuraria                4.15%    passed     25.71%
+ 296  II__Q01CJ7__Ostreococcus_tauri                   4.15%    passed     97.99%
+ 297  I__Q01CS2__Ostreococcus_tauri                    5.70%    passed     48.85%
+ 298  I__R7QGB9__Chondrus_crispus                      5.70%    passed     96.73%
+ 299  II__W7TM03__Nannochloropsis_gaditana             4.15%    passed     21.56%
+ 300  I__W7TNL7__Nannochloropsis_gaditana              5.96%    passed     99.17%
+ 301  REF_IscS_Ecoli                                   5.96%    passed     48.76%
+ 302  REF_SufS_Ecoli                                   4.66%    passed     48.25%
+ 303  REF_HText_Spabb                                 10.10%    failed      0.00%
+ 304  NEW__A0A9K3LVN3__Nitzschia_inconspicua           3.37%    passed     74.65%
+ 305  NEW__A0A9K3KRJ2__Nitzschia_inconspicua           3.37%    passed     81.43%
+ 306  NEW__B7G8F0__Phaeodactylum_tricornutum_st        4.40%    passed     48.59%
+ 307  NEW__A0A8J2WTZ1__Pelagomonas_calceolata          7.25%    failed      1.48%
+ 308  NEW__F0XXL4__Aureococcus_anophagefferens         7.25%    failed      0.00%
+ 309  NEW__A0ABR1FZ61__Aureococcus_anophagefferens     7.25%    failed      0.00%
+ 310  NEW__A0A0D2N0J3__Monoraphidium_neglectum         5.96%    failed      0.00%
+ 311  NEW__A0A9P1FCD2__Cladocopium_goreaui             8.81%    passed     68.48%
+ 312  NEW__A0AAD7XJ29__Chrysophaeum_taylorii           7.51%    failed      0.34%
+ 313  NEW__A0A2V0PAY6__Raphidocelis_subcapitata        7.51%    failed      0.00%
+ 314  NEW__A0A9W7AV08__Triparma_laevis_f_longispina    5.44%    failed      0.00%
+ 315  NEW__A0A9W7B676__Triparma_strigata               6.99%    failed      0.00%
+ 316  NEW__A0A9W7KXE0__Triparma_verrucosa              6.99%    failed      0.00%
+ 317  NEW__A0ABQ6MTH9__Tetraparma_gracilis             6.22%    failed      1.84%
+ 318  NEW__A0A9W7GEK0__Triparma_columacea             19.95%    failed      0.05%
+WARNING: 10 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                            9.84%  43 sequences failed composition chi2 test (p-value<5%; df=19)
+NOTE: II__A0A388LZT0__Chara_braunii is identical to II__A0A388KHQ8__Chara_braunii but kept for subsequent analysis
+NOTE: I__A0A813FUN0__Polarella_glacialis is identical to I__A0A813EGT3__Polarella_glacialis but kept for subsequent analysis
+NOTE: I__A0AAV9IK25__Galdieria_yellowstonensis is identical to I__A0AAV9II25__Galdieria_yellowstonensis but kept for subsequent analysis
+NOTE: I__A0AAW1SY41__Apatococcus_fuscideae is identical to I__A0AAW1QJ11__Apatococcus_lobatus but kept for subsequent analysis
+NOTE: II__A0ABD3RA89__Cyclostephanos_tholiformis is identical to II__A0ABD3R565__Cyclostephanos_tholiformis but kept for subsequent analysis
+NOTE: I__A0ABP0LT72__Durusdinium_trenchii is identical to I__A0ABP0LT22__Durusdinium_trenchii but kept for subsequent analysis
+NOTE: I__A0ABP0LV06__Durusdinium_trenchii is identical to I__A0ABP0LTD8__Durusdinium_trenchii but kept for subsequent analysis
+NOTE: II__F0XYR2__Aureococcus_anophagefferens is identical to II__A0ABR1G4C2__Aureococcus_anophagefferens but kept for subsequent analysis
+NOTE: I__F0XX58__Aureococcus_anophagefferens is identical to I__A0ABR1G8E5__Aureococcus_anophagefferens but kept for subsequent analysis
+NOTE: NEW__A0ABR1FZ61__Aureococcus_anophagefferens is identical to NEW__F0XXL4__Aureococcus_anophagefferens but kept for subsequent analysis
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.143 seconds
+Perform fast likelihood tree search using LG+I+G model...
+Estimate model parameters (epsilon = 5.000)
+Perform nearest neighbor interchange...
+Estimate model parameters (epsilon = 1.000)
+1. Initial log-likelihood: -83639.334
+Optimal log-likelihood: -83639.005
+Proportion of invariable sites: 0.010
+Gamma shape alpha: 1.027
+Parameters optimization took 1 rounds (0.456 sec)
+Time for fast ML tree search: 6.671 seconds
+
+NOTE: ModelFinder requires 202 MB RAM!
+ModelFinder will test up to 176 protein models (sample size: 386 epsilon: 0.100) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  LG            89219.977    633 179705.954   982349.954   182209.999
+  2  LG+I          89031.597    634 179331.195   984511.195   181839.195
+  3  LG+G4         83666.626    634 168601.252   973781.252   171109.252
+  4  LG+I+G4       83638.979    635 168547.957   976267.957   171059.914
+  5  LG+R2         85030.575    635 171331.149   979051.149   173843.106
