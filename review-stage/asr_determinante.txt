@@ -1,0 +1,50 @@
+
+== Guillardia polimórfica (P+V), raíz en Discoba: Fitch = 4 cambios; q_ML = 0.110; lnL = -16.21
+  raíz                         D=0.011  P=0.977  V=0.012
+  Amorphea                     D=0.069  P=0.922  V=0.009
+  Holozoa                      D=0.944  P=0.052
+  Metazoa                      D=0.996
+  Bilateria                    D=0.996
+  Ecdysozoa+Lophotrochozoa     D=0.937  P=0.060
+  Diaphoretickes               D=0.006  P=0.920  V=0.074
+  SAR                          P=0.458  V=0.537
+
+== Guillardia = V (sólo la copia L1J7X1): Fitch = 5 cambios; q_ML = 0.144; lnL = -18.47
+  raíz                         D=0.035  P=0.903  V=0.062
+  Amorphea                     D=0.140  P=0.816  V=0.044
+  Holozoa                      D=0.931  P=0.061  V=0.008
+  Metazoa                      D=0.994
+  Bilateria                    D=0.992  P=0.007
+  Ecdysozoa+Lophotrochozoa     D=0.914  P=0.080  V=0.006
+  Diaphoretickes               D=0.016  P=0.557  V=0.427
+  SAR                          D=0.007  P=0.280  V=0.713
+
+== Guillardia = P (sólo la copia L1J7A3): Fitch = 4 cambios; q_ML = 0.107; lnL = -16.30
+  raíz                         D=0.009  P=0.983  V=0.008
+  Amorphea                     D=0.062  P=0.931  V=0.006
+  Holozoa                      D=0.946  P=0.051
+  Metazoa                      D=0.997
+  Bilateria                    D=0.996
+  Ecdysozoa+Lophotrochozoa     D=0.939  P=0.058
+  Diaphoretickes               D=0.005  P=0.955  V=0.039
+  SAR                          P=0.476  V=0.519
+
+== raíz Amorphea | Diaphoretickes: Fitch = 4 cambios; q_ML = 0.111; lnL = -16.16
+  raíz                         D=0.060  P=0.923  V=0.017
+  Amorphea                     D=0.108  P=0.883  V=0.009
+  Holozoa                      D=0.946  P=0.050
+  Metazoa                      D=0.996
+  Bilateria                    D=0.995
+  Ecdysozoa+Lophotrochozoa     D=0.936  P=0.060
+  Diaphoretickes               P=0.927  V=0.069
+  SAR                          P=0.462  V=0.533
+
+== Guillardia hermana de dinoflagelados (como en el árbol de genes): Fitch = 4 cambios; q_ML = 0.108; lnL = -15.85
+  raíz                         D=0.008  P=0.985  V=0.007
+  Amorphea                     D=0.060  P=0.934  V=0.005
+  Holozoa                      D=0.945  P=0.052
+  Metazoa                      D=0.996
+  Bilateria                    D=0.996
+  Ecdysozoa+Lophotrochozoa     D=0.938  P=0.059
+  Diaphoretickes               P=0.971  V=0.025
+  SAR                          P=0.645  V=0.351

@@ -1,4 +1,4 @@
-# Dossier SCLY-like — versión revisada (auto-review loop, rondas 1–4)
+# Dossier SCLY-like — versión revisada (auto-review loop, rondas 1–5)
 
 Este archivo **no reemplaza** al PDF original: reescribe las secciones que la revisión encontró incorrectas o sobreafirmadas. Lo que no aparece acá queda como en el original. Cada cambio remite a la debilidad numerada en la revisión de la ronda 1 (`ronda1_revisor.md`, puntos 1–12 = D1–D12) o de la ronda 2 (`ronda2_revisor.md`, N1–N8).
 
@@ -9,6 +9,52 @@ Etiquetas:
 - **[PENDIENTE-ANÁLISIS]**: hace falta correr un análisis nuevo.
 
 Los recálculos sobre el CSV están en `review-stage/recalculo_localizacion.txt` y salen de `review-stage/scripts/recalculo_localizacion.py`.
+
+## ★★ Bloque "determinante Se/S" (bitácora del 12/10, ronda 5)
+
+Fuente: `datos/bloque_SeS/` (bitácora + 10 archivos del Drive, carpeta `bloque_determinante_SeS`). Verificación: `scripts/asr_determinante.py` → `asr_determinante.txt`, más los recálculos de R3.
+
+### B1. Se confirma con datos propios
+
+| Afirmación de la bitácora | Verificación |
+|---|---|
+| 3GZC: cadena A, residuos 29–444 | ✔ (403 residuos resueltos) |
+| Asp146 → ligando PLR: 6,29 Å; → SG de Cys388: 3,73 Å | ✔ exacto |
+| Bucle `ASVGAACH` desde el 382 | ✔ |
+| NFS1 Lys 113 / NFS2 His 106 / SCLY-like algal Pro 51 / dinos + *Guillardia*: Val 5, Pro 1 | ✔ exacto (300 filas). También coincide con el cálculo independiente de R3, que llegó a la columna por otro camino |
+| 32 llamadas eucariotas, todas con el ancla Glu-His; Metazoa 14 Asp + *C. elegans* Pro; *Salpingoeca* Asp; *Acanthamoeba*, *Trypanosoma*, *Thalassiosira* y *Chlamydomonas* Pro; *Phytophthora* Val | ✔ |
+| *C. elegans* Q19434 es SCLY-like real | ✔ Bucle `ASTGAACHK` (C-H) y contexto `TTNIEH-P` |
+| Holozoa monofilético en el árbol de genes | ✔ 16 hojas, soporte 0,999. *C. elegans* sale en la base: artefacto de atracción de ramas largas, como dice la bitácora |
+| ASR: raíz Pro; Holozoa Asp; Asp → Pro en el linaje de *C. elegans* | ✔ **Reproducido** sobre una topología estándar reconstruida (el árbol de especies de 23 taxones no está entre los archivos): raíz P 0,90–0,98, Holozoa D 0,93–0,95, Metazoa D 0,99. Robusto a la raíz (Discoba o Amorphea/Diaphoretickes) y a cómo se codifique *Guillardia* |
+| Citas: Lobanov 2007, Taskov 2005, Mihara 1999, Collins 2012, Omi 2010 | ✔ en PubMed |
+
+### B2. A corregir
+
+1. **Val: "dos orígenes independientes" no se sostiene en la topología de especies.**
+   - *Guillardia* (Cryptista) no es hermana de los dinoflagelados (Alveolata). Agruparlos sale del árbol de genes, donde además el soporte del nodo es 0,000.
+   - Sobre la topología estándar, el SAR queda **ambiguo**: P 0,46–0,48 / V 0,52–0,54. Un solo origen de Val en el SAR, con reversión en *Thalassiosira*, es tan parsimonioso como dos orígenes.
+   - *Guillardia* tiene **dos copias**: L1J7A3 con Pro y L1J7X1 con Val. Si se la codifica sólo como V, la parsimonia pasa a 5 cambios.
+   - **Redacción correcta:** "el estado Val aparece en el SAR (*Phytophthora*, dinoflagelados) y en una de las dos copias de *Guillardia*; el número de orígenes no se resuelve con este muestreo".
+2. **"Asp → Pro en la rama terminal de *C. elegans*"** es lo que da *este* muestreo, pero *C. elegans* es el **único ecdisozoo** con el gen (*Drosophila* no lo tiene). La reversión puede estar en cualquier punto entre el MRCA de Ecdysozoa y *C. elegans*. Además, el nodo Ecdysozoa + Lophotrochozoa tiene D 0,91–0,94, no 0,97–0,99. Hay que sumar otros nematodos y algún artrópodo o priapúlido que tenga el gen; la bitácora ya lo propone en el §12.2.
+3. **Mk:** la bitácora reporta q = 0,025 con 5 estados; con los 3 estados observados y q por máxima verosimilitud, q = 0,11. Los posteriores bajan un poco (Holozoa 0,973 → 0,94–0,95), pero la conclusión no cambia. Hay que declarar el espacio de estados y cómo se fijó q.
+4. **Árbol de especies:** no está entre los archivos. Hay que depositarlo en Newick, con la fuente de la topología.
+5. **Que NFS1 lleve Lys "confirma que la columna controla la discriminación Se/S en toda la familia"** es demasiado fuerte. Confirma que es la columna homóloga a la del mutante D146K. Que controle la especificidad en NFS1/NFS2 no está probado, y la SclA bacteriana prefiere Sec con His en esa posición (Johnstone et al. 2021).
+6. **"SCLY es suficiente pero no necesaria para usar selenio"** está mal planteado. Que *Tetrahymena*, *Plasmodium* y *Drosophila* usen Sec sin SCLY-like muestra que no es necesaria. "Suficiente" no tiene sentido acá: tener la enzima no hace que un organismo use selenio, y hay proteomas con SCLY-like y sin `Sec_estricto` (23 en el CSV). Mejor: "la presencia de SCLY no es necesaria para usar Sec".
+7. **"Una prolina rompe el esqueleto"** → "restringe la conformación del esqueleto (φ fijo, sin donor de puente H)".
+8. **Mihara 1999:** los autores son Mihara, Maeda, Fujii, Kurihara, Hata y Esaki ([doi:10.1074/jbc.274.21.14768](https://doi.org/10.1074/jbc.274.21.14768)). **Lobanov 2007:** las 3 selenoproteínas son de *D. pseudoobscura* ([doi:10.1186/gb-2007-8-9-r198](https://doi.org/10.1186/gb-2007-8-9-r198)).
+9. **El ligando de 3GZC es PLR** (análogo de PLP), no PLP. La distancia de 6,29 Å es a PLR.
+10. **"`SAGxACH` invariante"** (§0, §5, §10 de la bitácora) → **G-x-x-C-H** (R4).
+11. **La tabla del §5 se armó sobre las 300 secuencias del árbol.** Le faltan las 11 C-H de R2 y los 5 candidatos de Bolidophyceae (`AAGSAC-E/D`). Antes de escribir "Pro 100 % en algas" hay que ver qué residuo tienen.
+12. **Duplicados en `asr_tree.nwk`:** *Thalassiosira* B8BXE3 y *Chlamydomonas* A0A2K3DJ46 aparecen dos veces (ALG y EUK). Igual que con la SCLY humana en el árbol principal, hay que deduplicar.
+
+### B3. Cómo cambia la evaluación global
+
+- La relación con SCLY deja de apoyarse en una sola secuencia humana duplicada: hay 14 metazoos y un coanoflagelado, todos con Asp, en un clado holozoo con soporte 0,999.
+- Aparece un **segundo carácter diagnóstico, funcional**: Asp146 (Collins 2012, D146K). Su estado está **polarizado**: Asp es derivado en Holozoa sobre un fondo Pro.
+- El encuadre "la especificidad estricta por Sec de la SCLY animal es una innovación holozoa" es defendible **como hipótesis**. Las limitaciones del §11 de la bitácora están bien declaradas. La predicción experimental (núcleo algal con Pro contra mutante P→D) es concreta y comprobable.
+- Sigue pendiente lo de antes: las 11 secuencias C-H, la regla de `clase`, el barrido Sec y el extremo 5'.
+
+---
 
 ## ★ Resultados con los datos del proyecto (ronda 4)
 

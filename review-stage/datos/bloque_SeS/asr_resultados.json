@@ -1,0 +1,31 @@
+{
+ "fitch_cambios": 4,
+ "q_Mk": 0.025267770481895616,
+ "nodos": {
+  "raíz eucariota": {
+   "P": 0.994
+  },
+  "MRCA Amorphea": {
+   "D": 0.028,
+   "P": 0.969
+  },
+  "MRCA Holozoa": {
+   "D": 0.973,
+   "P": 0.025
+  },
+  "MRCA Metazoa": {
+   "D": 0.999
+  },
+  "MRCA Bilateria": {
+   "D": 0.999
+  },
+  "rama madre de C. elegans": {
+   "D": 0.971,
+   "P": 0.027
+  },
+  "MRCA Diaphoretickes": {
+   "P": 0.983,
+   "V": 0.015
+  }
+ }
+}

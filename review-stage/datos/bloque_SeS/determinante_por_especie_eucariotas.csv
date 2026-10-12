@@ -1,0 +1,22 @@
+﻿grupo,especie,det
+Amoebozoa,Acanthamoeba castellanii,P
+Choanoflagellata,Salpingoeca rosetta,D
+Discoba,Trypanosoma brucei,P
+Metazoa,Amphimedon queenslandica,D
+Metazoa,Branchiostoma floridae,D
+Metazoa,Caenorhabditis elegans,P
+Metazoa,Capitella teleta,D
+Metazoa,Ciona intestinalis,D
+Metazoa,Crassostrea gigas,D
+Metazoa,Danio rerio,D
+Metazoa,Gallus gallus,D
+Metazoa,Homo sapiens,D
+Metazoa,Hydra vulgaris,D
+Metazoa,Mus musculus,D
+Metazoa,Nematostella vectensis,D
+Metazoa,Strongylocentrotus purpuratus,D
+Metazoa,Trichoplax adhaerens,D
+Metazoa,Xenopus tropicalis,D
+Stramenopila,Phytophthora infestans,V
+Stramenopila,Thalassiosira pseudonana,P
+Viridiplantae,Chlamydomonas reinhardtii,P

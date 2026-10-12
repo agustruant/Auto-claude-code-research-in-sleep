@@ -1,0 +1,10 @@
+﻿busqueda,consulta,resultados,lectura
+"selenocysteine lyase (titulo, total historico)","TITLE:""selenocysteine lyase""",45,casi todos fisiologia de raton; no hay survey filogenetico
+selenocysteine lyase + evolucion/filogenia,"TITLE:""selenocysteine lyase"" AND (evolution OR phylogen* OR distribution)",3,Trypanosoma 2010 + dos de 1982-83
+selenoproteoma + perdida + eucariotas,selenoprotein*/selenoproteome + loss/evolution + eukaryot*,7,dominado por Lobanov 2007
+selenoproteinas + algas,selenoprotein* + alga*/Chlamydomonas/diatom*,8,Chlamydomonas bien estudiada
+cysteine desulfurase + algas,"TITLE:""cysteine desulfurase"" + alga*/Chlamydomonas",0,campo virgen
+misanotacion de desulfurasas,"""cysteine desulfurase"" + annotation/misannotat*",0,nadie lo trato
+co-eliminacion de Sec,"selenocysteine + ""co-elimination""/""coordinated loss""",0,el termino no existe; Lobanov 2007 lo cubre en sustancia
+clase V aminotransferasa + filogenia,"""class V aminotransferase"" / ""NifS-like"" + phylogen*",1,"un paper de Giardia, 2003"
+genomas de carofitas / terrestrializacion,Zygnematophyceae/charophyt*/Klebsormidium/Mesostigma + genome,21,genomas disponibles pero sin proteoma en UniProt
