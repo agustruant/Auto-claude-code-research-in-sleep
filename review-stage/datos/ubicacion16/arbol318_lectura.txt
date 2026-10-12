@@ -1,0 +1,22 @@
+I: 124 miembros; MRCA contiene 125 hojas; intrusos {'REF_IscS_Ecoli': 1}; soporte '83.5/98'
+II: 110 miembros; MRCA contiene 318 hojas; intrusos {'I': 124, 'REF_IscS_Ecoli': 1, 'L3': 66, 'NEW': 15, 'REF_HText_Spabb': 1, 'REF_SufS_Ecoli': 1}; soporte '100/100'
+L3: 66 miembros; MRCA contiene 82 hojas; intrusos {'NEW': 15, 'REF_HText_Spabb': 1}; soporte '95.8/99'
+
+Nuevas dentro del MRCA de L3: 15 / 15
+  NEW__A0A8J2WTZ1__Pelagomonas_calceolata            DENTRO de L3 | nodo padre '94.4/100' | junto a: ['NEW__F0XXL4__Aureococcus_anophagefferens', 'NEW__A0ABR1FZ61__Aureococcus_anophagefferens']
+  NEW__F0XXL4__Aureococcus_anophagefferens           DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__A0ABR1FZ61__Aureococcus_anophagefferens']
+  NEW__A0ABR1FZ61__Aureococcus_anophagefferens       DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__F0XXL4__Aureococcus_anophagefferens']
+  NEW__A0AAD7XJ29__Chrysophaeum_taylorii             DENTRO de L3 | nodo padre '99.8/100' | junto a: ['NEW__A0A8J2WTZ1__Pelagomonas_calceolata', 'NEW__F0XXL4__Aureococcus_anophagefferens', 'NEW__A0ABR1FZ61__Aureococcus_anophagefferens']
+  NEW__A0A0D2N0J3__Monoraphidium_neglectum           DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__A0A2V0PAY6__Raphidocelis_subcapitata']
+  NEW__A0A2V0PAY6__Raphidocelis_subcapitata          DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__A0A0D2N0J3__Monoraphidium_neglectum']
+  NEW__A0A9K3LVN3__Nitzschia_inconspicua             DENTRO de L3 | nodo padre '100/100' | junto a: ['NEW__A0A9K3KRJ2__Nitzschia_inconspicua']
+  NEW__A0A9K3KRJ2__Nitzschia_inconspicua             DENTRO de L3 | nodo padre '100/100' | junto a: ['NEW__A0A9K3LVN3__Nitzschia_inconspicua']
+  NEW__B7G8F0__Phaeodactylum_tricornutum_st          DENTRO de L3 | nodo padre '7.6/87' | junto a: ['L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM', 'L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat', 'NEW__A0A9K3LVN3__Nitzschia_inconspicua', 'NEW__A0A9K3KRJ2__Nitzschia_inconspicua']
+  NEW__A0A9W7AV08__Triparma_laevis_f_longispina      DENTRO de L3 | nodo padre '96.3/100' | junto a: ['NEW__A0A9W7B676__Triparma_strigata', 'NEW__A0A9W7KXE0__Triparma_verrucosa']
+  NEW__A0A9W7B676__Triparma_strigata                 DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__A0A9W7KXE0__Triparma_verrucosa']
+  NEW__A0A9W7KXE0__Triparma_verrucosa                DENTRO de L3 | nodo padre '99.9/100' | junto a: ['NEW__A0A9W7B676__Triparma_strigata']
+  NEW__A0ABQ6MTH9__Tetraparma_gracilis               DENTRO de L3 | nodo padre '91.9/100' | junto a: ['NEW__A0A9W7AV08__Triparma_laevis_f_longispina', 'NEW__A0A9W7B676__Triparma_strigata', 'NEW__A0A9W7KXE0__Triparma_verrucosa']
+  NEW__A0A9W7GEK0__Triparma_columacea                DENTRO de L3 | nodo padre '99.8/100' | junto a: ['NEW__A0A9W7AV08__Triparma_laevis_f_longispina', 'NEW__A0A9W7B676__Triparma_strigata', 'NEW__A0A9W7KXE0__Triparma_verrucosa', 'NEW__A0ABQ6MTH9__Tetraparma_gracilis']
+  NEW__A0A9P1FCD2__Cladocopium_goreaui               DENTRO de L3 | nodo padre '0/45' | junto a: ['L3__A0A090M4Q8__Ostreococcus_tauri', 'L3__A4S300__Ostreococcus_lucimarinus__st', 'L3__C1EHB0__Micromonas_commoda', 'L3__C1MNN5__Micromonas_pusilla__strain_C']
+
+MRCA(L3 + nuevas): 82 hojas; intrusos: ['REF_HText_Spabb'] ; soporte 95.8/99

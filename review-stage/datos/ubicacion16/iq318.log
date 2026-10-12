@@ -367,3 +367,163 @@ ModelFinder will test up to 176 protein models (sample size: 386 epsilon: 0.100)
   3  LG+G4         83666.626    634 168601.252   973781.252   171109.252
   4  LG+I+G4       83638.979    635 168547.957   976267.957   171059.914
   5  LG+R2         85030.575    635 171331.149   979051.149   173843.106
+  6  LG+R3         83922.308    637 169118.615   981930.615   171638.484
+  7  LG+R4         83612.872    639 168503.744   986423.744   171031.524
+  8  LG+R5         83478.930    641 168239.859   991283.859   170775.551
+  9  LG+R6         83430.600    643 168147.200   996331.200   170690.803
+ 10  LG+R7         83414.149    645 168118.298   1001458.298  170669.813
+ 11  LG+R8         83396.287    647 168086.574   1006598.574  170646.001
+ 12  LG+R9         83383.764    649 168065.527   1011765.527  170632.866
+ 13  LG+R10        83383.257    651 168068.514   1016972.514  170643.764
+ 14  LG+I+R2       84939.187    636 171150.373   981414.373   173666.286
+ 15  LG+I+R3       83892.169    638 169060.337   984424.337   171584.162
+ 16  LG+I+R4       83589.408    640 168458.817   988938.817   170990.553
+ 17  LG+I+R5       83469.432    642 168222.863   993834.863   170762.511
+ 18  LG+I+R6       83423.366    644 168134.732   998894.732   170682.291
+ 19  LG+I+R7       83407.472    646 168106.943   1004030.943  170662.414
+ 20  LG+I+R8       83392.285    648 168080.570   1009184.570  170643.953
+ 21  LG+I+R9       83379.869    650 168059.738   1014359.738  170631.033
+ 22  LG+I+R10      83379.384    652 168062.768   1019574.768  170641.974
+ 34  LG+F+R9       83354.709    668 168045.417   1061829.417  170687.917
+ 43  LG+F+I+R9     83350.082    669 168038.165   1064498.165  170684.620
+ 56  WAG+R9        83876.828    649 169051.656   1012751.656  171618.995
+ 65  WAG+I+R9      83874.802    650 169049.605   1015349.605  171620.899
+ 78  WAG+F+R9      83696.609    668 168729.219   1062513.219  171371.718
+ 87  WAG+F+I+R9    83694.659    669 168727.317   1065187.317  171373.773
+100  JTT+R9        85096.251    649 171490.503   1015190.503  174057.841
+109  JTT+I+R9      85093.073    650 171486.147   1017786.147  174057.441
+122  JTT+F+R9      85141.728    668 171619.456   1065403.456  174261.955
+131  JTT+F+I+R9    85138.604    669 171615.207   1068075.207  174261.662
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+144  Q.pfam+R9     83272.784    649 167843.569   1011543.569  170410.907
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+153  Q.pfam+I+R9   83266.698    650 167833.396   1014133.396  170404.690
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+166  Q.pfam+F+R9   83402.704    668 168141.408   1061925.408  170783.908
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+175  Q.pfam+F+I+R9 83396.465    669 168130.930   1064590.930  170777.385
+Akaike Information Criterion:           Q.pfam+I+R9
+Corrected Akaike Information Criterion: LG+G4
+Bayesian Information Criterion:         Q.pfam+I+R9
+Best-fit model: Q.pfam+I+R9 chosen according to BIC
+
+All model information printed to iq318.model.gz
+CPU time for ModelFinder: 4078.027 seconds (1h:7m:58s)
+Wall-clock time for ModelFinder: 1041.966 seconds (0h:17m:21s)
+Generating 1000 samples for ultrafast bootstrap (seed: 12345)...
+WARNING: Normalizing state frequencies so that sum of them equals to 1
+
+NOTE: 181 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -83274.722
+2. Current log-likelihood: -83267.035
+3. Current log-likelihood: -83266.753
+Optimal log-likelihood: -83266.672
+Proportion of invariable sites: 0.009
+Site proportion and rates:  (0.109,0.076) (0.117,0.209) (0.115,0.386) (0.254,0.658) (0.098,0.980) (0.123,1.481) (0.079,2.056) (0.085,3.089) (0.011,4.679)
+Parameters optimization took 3 rounds (15.856 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 7.50334 secs using 395% CPU
+Computing ML distances took 7.504018 sec (of wall-clock time) 29.637148 sec (of CPU time)
+WARNING: Some pairwise ML distances are too long (saturated)
+Setting up auxiliary I and S matrices: done in 0.00283374 secs using 78.94% CPU
+Computing RapidNJ tree took 0.008057 sec (of wall-clock time) 0.009228 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -84562.922
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 13.937 second
+Computing log-likelihood of 98 initial trees ... 31.613 seconds
+Current best score: -83266.672
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -83234.622
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -83233.969
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -83212.591
+Iteration 10 / LogL: -83271.929 / Time: 0h:20m:16s
+Iteration 20 / LogL: -83262.733 / Time: 0h:21m:40s
+Finish initializing candidate tree set (20)
+Current best tree score: -83212.591 / CPU time: 231.409
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 21: -83209.922
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 22: -83192.679
+Iteration 30 / LogL: -83200.267 / Time: 0h:23m:24s (0h:19m:8s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 36: -83191.838
+Iteration 40 / LogL: -83204.504 / Time: 0h:24m:54s (0h:18m:34s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 41: -83184.822
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 42: -83178.184
+Iteration 50 / LogL: -83209.539 / Time: 0h:26m:33s (0h:17m:16s left)
+Log-likelihood cutoff on original alignment: -83335.482
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 56: -83177.566
+Iteration 60 / LogL: -83183.240 / Time: 0h:28m:2s (0h:17m:22s left)
+Iteration 70 / LogL: -83179.544 / Time: 0h:29m:23s (0h:14m:59s left)
+Iteration 80 / LogL: -83178.845 / Time: 0h:30m:45s (0h:12m:53s left)
+Iteration 90 / LogL: -83178.921 / Time: 0h:32m:3s (0h:10m:53s left)
+Iteration 100 / LogL: -83187.169 / Time: 0h:33m:26s (0h:9m:5s left)
+Log-likelihood cutoff on original alignment: -83302.316
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Iteration 110 / LogL: -83240.866 / Time: 0h:34m:48s (0h:14m:23s left)
+Iteration 120 / LogL: -83185.169 / Time: 0h:36m:7s (0h:12m:36s left)
+Iteration 130 / LogL: -83181.773 / Time: 0h:37m:31s (0h:10m:56s left)
+Iteration 140 / LogL: -83188.779 / Time: 0h:38m:52s (0h:9m:16s left)
+Iteration 150 / LogL: -83188.240 / Time: 0h:40m:12s (0h:7m:39s left)
+Log-likelihood cutoff on original alignment: -83298.986
+TREE SEARCH COMPLETED AFTER 157 ITERATIONS / Time: 0h:41m:12s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -83177.566
+Optimal log-likelihood: -83177.561
+Proportion of invariable sites: 0.009
+Site proportion and rates:  (0.107,0.074) (0.115,0.205) (0.118,0.381) (0.247,0.653) (0.105,0.961) (0.122,1.480) (0.078,2.041) (0.087,3.073) (0.012,4.669)
+Parameters optimization took 1 rounds (2.794 sec)
+BEST SCORE FOUND : -83177.561
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+Alternative NNI shows better log-likelihood -83177.507 > -83177.561
+Alternative NNI shows better log-likelihood -83177.390 > -83177.561
+2.015 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iq318.splits.nex
+Total tree length: 71.953
+
+Total number of iterations: 157
+CPU time used for tree search: 5452.437 sec (1h:30m:52s)
+Wall-clock time used for tree search: 1403.957 sec (0h:23m:23s)
+Total CPU time used: 9655.149 sec (2h:40m:55s)
+Total wall-clock time used: 2478.409 sec (0h:41m:18s)
+
+Computing bootstrap consensus tree...
+Reading input file iq318.splits.nex...
+318 taxa and 1408 splits.
+Consensus tree written to iq318.contree
+Reading input trees file iq318.contree
+Log-likelihood of consensus tree: -83177.464
+
+Analysis results written to: 
+  IQ-TREE report:                iq318.iqtree
+  Maximum-likelihood tree:       iq318.treefile
+  Likelihood distances:          iq318.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iq318.splits.nex
+  Consensus tree:                iq318.contree
+  Screen log file:               iq318.log
+
+Date and Time: Mon Oct 12 20:57:48 2026

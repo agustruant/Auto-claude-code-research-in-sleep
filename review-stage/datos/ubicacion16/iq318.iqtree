@@ -1,0 +1,1480 @@
+IQ-TREE 2.3.6 built Aug  1 2024
+
+Input file name: aln_318_trim.fasta
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 12345
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 318 sequences with 386 amino-acid sites
+Number of constant sites: 4 (= 1.03627% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 4 (= 1.03627% of all sites)
+Number of parsimony informative sites: 371
+Number of distinct site patterns: 386
+
+ModelFinder
+-----------
+
+Best-fit model according to BIC: Q.pfam+I+R9
+
+List of models sorted by BIC scores: 
+
+Model                  LogL         AIC      w-AIC        AICc     w-AICc         BIC      w-BIC
+Q.pfam+I+R9      -83266.698  167833.396 +    0.994 1014133.396 -        0  170404.690 +    0.957
+Q.pfam+R9        -83272.784  167843.569 -  0.00614 1011543.569 -        0  170410.907 -   0.0428
+LG+I+R9          -83379.869  168059.738 - 7.04e-50 1014359.738 -        0  170631.033 - 6.78e-50
+LG+R9            -83383.764  168065.527 -  3.9e-51 1011765.527 -        0  170632.866 - 2.71e-50
+LG+I+R10         -83379.384  168062.768 - 1.55e-50 1019574.768 -        0  170641.974 - 2.85e-52
+LG+R10           -83383.257  168068.514 - 8.75e-52 1016972.514 -        0  170643.764 - 1.17e-52
+LG+I+R8          -83392.285  168080.570 - 2.11e-54 1009184.570 -        0  170643.953 - 1.06e-52
+LG+R8            -83396.287  168086.574 - 1.05e-55 1006598.574 -        0  170646.001 - 3.81e-53
+LG+I+R7          -83407.472  168106.943 - 3.96e-60 1004030.943 -        0  170662.414 - 1.04e-56
+LG+R7            -83414.149  168118.298 - 1.35e-62 1001458.298 -        0  170669.813 - 2.57e-58
+LG+I+R6          -83423.366  168134.732 - 3.66e-66  998894.732 -        0  170682.291 - 5.02e-61
+LG+F+I+R9        -83350.082  168038.165 - 3.41e-45 1064498.165 -        0  170684.620 - 1.57e-61
+LG+F+R9          -83354.709  168045.417 - 9.07e-47 1061829.417 -        0  170687.917 - 3.01e-62
+LG+R6            -83430.600  168147.200 - 7.17e-69  996331.200 -        0  170690.803 - 7.12e-63
+LG+I+R5          -83469.432  168222.863 - 2.66e-85  993834.863 -        0  170762.511 - 1.91e-78
+LG+R5            -83478.930  168239.859 - 5.43e-89  991283.859 -        0  170775.551 - 2.82e-81
+Q.pfam+F+I+R9    -83396.465  168130.930 - 2.45e-65 1064590.930 -        0  170777.385 - 1.13e-81
+Q.pfam+F+R9      -83402.704  168141.408 -  1.3e-67 1061925.408 -        0  170783.908 - 4.32e-83
+LG+I+R4          -83589.408  168458.817 - 1.55e-136  988938.817 -        0  170990.553 - 5.79e-128
+LG+R4            -83612.872  168503.744 - 2.71e-146  986423.744 -        0  171031.524 - 7.34e-137
+LG+I+G4          -83638.979  168547.957 - 6.8e-156  976267.957 -        0  171059.914 - 5.02e-143
+LG+G4            -83666.626  168601.252 - 1.82e-167  973781.252 +        1  171109.252 - 9.71e-154
+WAG+F+R9         -83696.609  168729.219 - 2.96e-195 1062513.219 -        0  171371.718 - 9.86e-211
+WAG+F+I+R9       -83694.659  168727.318 - 7.67e-195 1065187.317 -        0  171373.773 - 3.53e-211
+LG+I+R3          -83892.169  169060.337 - 3.72e-267  984424.337 -        0  171584.162 - 7.28e-257
+WAG+R9           -83876.828  169051.656 - 2.85e-265 1012751.656 -        0  171618.995 - 1.99e-264
+WAG+I+R9         -83874.802  169049.605 - 7.96e-265 1015349.605 -        0  171620.899 - 7.67e-265
+LG+R3            -83922.308  169118.615 - 8.23e-280  981930.615 -        0  171638.484 - 1.16e-268
+LG+I+R2          -84939.187  171150.373 -        0  981414.373 -        0  173666.286 -        0
+LG+R2            -85030.575  171331.149 -        0  979051.149 -        0  173843.106 -        0
+JTT+I+R9         -85093.073  171486.147 -        0 1017786.147 -        0  174057.441 -        0
+JTT+R9           -85096.251  171490.503 -        0 1015190.503 -        0  174057.841 -        0
+JTT+F+I+R9       -85138.604  171615.207 -        0 1068075.207 -        0  174261.662 -        0
+JTT+F+R9         -85141.728  171619.456 -        0 1065403.456 -        0  174261.955 -        0
+LG+I             -89031.597  179331.195 -        0  984511.195 -        0  181839.195 -        0
+LG               -89219.977  179705.954 -        0  982349.954 -        0  182209.999 -        0
+
+AIC, w-AIC   : Akaike information criterion scores and weights.
+AICc, w-AICc : Corrected AIC scores and weights.
+BIC, w-BIC   : Bayesian information criterion scores and weights.
+
+Plus signs denote the 95% confidence sets.
+Minus signs denote significant exclusion.
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: Q.pfam+I+R9
+
+State frequencies: (model)
+
+Model of rate heterogeneity: Invar+FreeRate with 9 categories
+Proportion of invariable sites: 0.0090
+Site proportion and rates:  (0.1068,0.0735) (0.1155,0.2047) (0.1181,0.3806) (0.2470,0.6534) (0.1051,0.9609) (0.1224,1.4800) (0.0776,2.0405) (0.0868,3.0733) (0.0117,4.6693)
+
+ Category  Relative_rate  Proportion
+  0         0              0.0090
+  1         0.0735         0.1068
+  2         0.2047         0.1155
+  3         0.3806         0.1181
+  4         0.6534         0.2470
+  5         0.9609         0.1051
+  6         1.4800         0.1224
+  7         2.0405         0.0776
+  8         3.0733         0.0868
+  9         4.6693         0.0117
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -83177.5611 (s.e. 2776.1648)
+Unconstrained log-likelihood (without tree): -2298.9532
+Number of free parameters (#branches + #model parameters): 650
+Akaike information criterion (AIC) score: 167655.1221
+Corrected Akaike information criterion (AICc) score: 1013955.1221
+Bayesian information criterion (BIC) score: 170226.4164
+
+**************************** WARNING ****************************
+Number of parameters (K, model parameters and branch lengths): 650
+Sample size (n, alignment length): 386
+
+Given that K>=n, the parameter estimates might be inaccurate.
+Thus, phylogenetic estimates should be interpreted with caution.
+
+Ideally, it is desirable that n >> K. When selecting optimal models,
+1. use AIC or BIC if n > 40K;
+2. use AICc or BIC if 40K >= n > K;
+3. be extremely cautious if n <= K
+
+To improve the situation (3), consider the following options:
+  1. Increase the sample size (n)
+  2. Decrease the number of parameters (K) to be estimated. If
+     possible:
+     a. Remove the least important sequences from the alignment
+     b. Specify some of the parameter values for the substitution
+        model (e.g., the nucleotide or amino acid frequencies)
+     c. Specify some of the parameter values for the rates-across-
+        sites model (e.g., the shape parameter for the discrete
+        Gamma distribution, the proportion of invariable sites, or
+        the rates of change for different rate categories under
+        the FreeRate model)
+
+Reference:
+Burnham KR, Anderson DR (2002). Model Selection and Multimodel
+Inference: A Practical Information-Theoretic Approach. Springer,
+New York.
+************************ END OF WARNING ***********************
+
+Total tree length (sum of branch lengths): 71.9534
+Sum of internal branch lengths: 29.5572 (41.0782% of tree length)
+
+WARNING: 8 near-zero internal branches (<0.0026) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'I__O49543__Arabidopsis_thaliana' is drawn at root
+Numbers in parentheses are SH-aLRT support (%) / ultrafast bootstrap support (%)
+
++---I__O49543__Arabidopsis_thaliana
+|
+|                          +---I__P25374__Saccharomyces_cerevisiae
+|                       +--| (65.7/69)
+|                       |  +--I__Q9Y697__Homo_sapiens
+|                    +--| (90.3/66)
+|                    |  |                    +--I__A0A1E7EW37__Fragilariopsis_cylindrus_CCM
+|                    |  |                 +--| (53.9/100)
+|                    |  |                 |  +--I__A0A448Z0Q3__Pseudo_nitzschia_multistriat
+|                    |  |              +--| (92.7/99)
+|                    |  |              |  |              +--I__A0A1Z5KA33__Fistulifera_solaris
+|                    |  |              |  |           +--| (100/100)
+|                    |  |              |  |           |  +--I__A0A1Z5KQV2__Fistulifera_solaris
+|                    |  |              |  |        +--| (88.8/82)
+|                    |  |              |  |        |  +--I__A0A9N8D7B1__Seminavis_robusta
+|                    |  |              |  |     +--| (81.1/78)
+|                    |  |              |  |     |  +--I__B7FUS8__Phaeodactylum_tricornutum__s
+|                    |  |              |  |  +--| (91.8/78)
+|                    |  |              |  |  |  +--I__A0AAD2CQ79__Cylindrotheca_closterium
+|                    |  |              |  +--| (90.9/98)
+|                    |  |              |     |  +--I__A0A9K3LIY3__Nitzschia_inconspicua
+|                    |  |              |     +--| (99.7/100)
+|                    |  |              |        +--I__A0A9K3PS87__Nitzschia_inconspicua
+|                    |  |           +--| (98.5/100)
+|                    |  |           |  |  +--I__A0AAD3CNM3__Chaetoceros_tenuissimus
+|                    |  |           |  +--| (71.4/92)
+|                    |  |           |     |           +--I__A0AAD9DDT3__Skeletonema_marinoi
+|                    |  |           |     |        +--| (85.6/93)
+|                    |  |           |     |        |  |  +--I__B8BTI1__Thalassiosira_pseudonana
+|                    |  |           |     |        |  +--| (43.3/93)
+|                    |  |           |     |        |     +--I__K0T2T4__Thalassiosira_oceanica
+|                    |  |           |     |     +--| (94.3/100)
+|                    |  |           |     |     |  |  +--I__A0ABD3NDW2__Cyclotella_atomus
+|                    |  |           |     |     |  +--| (96/100)
+|                    |  |           |     |     |     +--I__A0ABD3NZ76__Cyclotella_cryptica
+|                    |  |           |     |  +--| (25.5/81)
+|                    |  |           |     |  |  +--I__A0ABD3RT14__Cyclostephanos_tholiformis
+|                    |  |           |     +--| (100/100)
+|                    |  |           |        +--I__A0ABD3MXL0__Stephanodiscus_triporus
+|                    |  |        +--| (96.2/73)
+|                    |  |        |  |     +--I__A0A9W7A1X6__Triparma_retinervis
+|                    |  |        |  |  +--| (99.9/100)
+|                    |  |        |  |  |  +--I__A0A9W7GKV9__Triparma_columacea
+|                    |  |        |  +--| (99.1/100)
+|                    |  |        |     |        +--I__A0A9W7A8F9__Triparma_strigata
+|                    |  |        |     |     +--| (98.7/100)
+|                    |  |        |     |     |  +--I__A0A9W7EV45__Triparma_verrucosa
+|                    |  |        |     |  +--| (96.6/100)
+|                    |  |        |     |  |  +--I__A0A9W7L032__Triparma_laevis_f__longispin
+|                    |  |        |     +--| (52.3/97)
+|                    |  |        |        +--I__A0ABQ6MTM1__Tetraparma_gracilis
+|                    |  |     +--| (19/40)
+|                    |  |     |  |     +--I__A0A835YNJ7__Tribonema_minus
+|                    |  |     |  |  +--| (73/97)
+|                    |  |     |  |  |  +---I__A0A835YUN3__Tribonema_minus
+|                    |  |     |  +--| (98.2/99)
+|                    |  |     |     +--I__D8LSH6__Ectocarpus_siliculosus
+|                    |  |  +--| (92.3/98)
+|                    |  |  |  |  +--I__A0A4D9DAJ6__Nannochloropsis_salina_CCMP1
+|                    |  |  |  +--| (100/100)
+|                    |  |  |     +**I__W7TNL7__Nannochloropsis_gaditana
+|                    |  +--| (97.4/99)
+|                    |     |        +--I__A0A8J2T399__Pelagomonas_calceolata
+|                    |     |     +--| (100/100)
+|                    |     |     |  +**I__A0A8J2X1B6__Pelagomonas_calceolata
+|                    |     |  +--| (99.3/100)
+|                    |     |  |  |  +**I__A0ABR1G8E5__Aureococcus_anophagefferens
+|                    |     |  |  +--| (98.5/100)
+|                    |     |  |     +**I__F0XX58__Aureococcus_anophagefferens
+|                    |     +--| (99.8/100)
+|                    |        +--I__A0AAD7XIM5__Chrysophaeum_taylorii
+|                 +--| (53/54)
+|                 |  |           +**I__A0A0D3KWK1__Emiliania_huxleyi__strain_CC
+|                 |  |        +--| (95.4/98)
+|                 |  |        |  +-------I__A0A0D3KXW7__Emiliania_huxleyi__strain_CC
+|                 |  |     +--| (49.3/98)
+|                 |  |     |  |     +--I__A0A0M0JAJ3__Chrysochromulina_tobinii
+|                 |  |     |  |  +--| (31.4/94)
+|                 |  |     |  |  |  +--I__A0AB34IS35__Prymnesium_parvum
+|                 |  |     |  +--| (82.6/99)
+|                 |  |     |     +---I__A0A8J6C7R9__Diacronema_lutheri
+|                 |  |  +--| (97/98)
+|                 |  |  |  |  +--I__A0A1X6NJT4__Porphyra_umbilicalis
+|                 |  |  |  +--| (100/100)
+|                 |  |  |     +--I__A0ACC3BQ38__Pyropia_yezoensis
+|                 |  +--| (85.2/51)
+|                 |     |                       +--I__A0A1Q9DE09__Symbiodinium_microadriaticum
+|                 |     |                    +--| (35.4/89)
+|                 |     |                    |  +--I__A0A812KGR1__Symbiodinium_pilosum
+|                 |     |                 +--| (98.5/100)
+|                 |     |                 |  +--I__A0A1Q9E9V0__Symbiodinium_microadriaticum
+|                 |     |              +--| (18.4/75)
+|                 |     |              |  |  +--I__A0A9P1GER4__Cladocopium_goreaui
+|                 |     |              |  +--| (96.7/100)
+|                 |     |              |     |     +**I__A0ABP0LT22__Durusdinium_trenchii
+|                 |     |              |     |  +**| (0/88)
+|                 |     |              |     |  |  +**I__A0ABP0LT72__Durusdinium_trenchii
+|                 |     |              |     +--| (91.5/95)
+|                 |     |              |        |  +**I__A0ABP0LTD8__Durusdinium_trenchii
+|                 |     |              |        +--| (100/99)
+|                 |     |              |           +**I__A0ABP0LV06__Durusdinium_trenchii
+|                 |     |           +--| (95.8/100)
+|                 |     |           |  +--I__A0AA36J6N9__Effrenium_voratum
+|                 |     |        +--| (100/100)
+|                 |     |        |  |     +--I__A0A813DL46__Polarella_glacialis
+|                 |     |        |  |  +--| (100/100)
+|                 |     |        |  |  |  |     +**I__A0A813EGT3__Polarella_glacialis
+|                 |     |        |  |  |  |  +--| (97.9/100)
+|                 |     |        |  |  |  |  |  +**I__A0A813FUN0__Polarella_glacialis
+|                 |     |        |  |  |  +**| (53.4/94)
+|                 |     |        |  |  |     |  +--I__A0A813EKS1__Polarella_glacialis
+|                 |     |        |  |  |     +**| (0/92)
+|                 |     |        |  |  |        |           +--I__A0A813F1C2__Polarella_glacialis
+|                 |     |        |  |  |        |        +**| (0/97)
+|                 |     |        |  |  |        |        |  +**I__A0A813FV75__Polarella_glacialis
+|                 |     |        |  |  |        |     +**| (0/44)
+|                 |     |        |  |  |        |     |  +--I__A0A813FQQ5__Polarella_glacialis
+|                 |     |        |  |  |        |  +**| (0/24)
+|                 |     |        |  |  |        |  |  +**I__A0A813GZQ2__Polarella_glacialis
+|                 |     |        |  |  |        +**| (0/14)
+|                 |     |        |  |  |           +--I__A0A813FIL7__Polarella_glacialis
+|                 |     |        |  +--| (14.3/51)
+|                 |     |        |     +--I__A0ABN9U0F9__Prorocentrum_cordatum
+|                 |     |     +--| (88.9/60)
+|                 |     |     |  |     +--I__A0A9C7Q133__Galdieria_partita
+|                 |     |     |  |  +--| (88.9/100)
+|                 |     |     |  |  |  +--I__M2VVE5__Galdieria_sulphuraria
+|                 |     |     |  +--| (99.9/100)
+|                 |     |     |     |  +**I__A0AAV9II25__Galdieria_yellowstonensis
+|                 |     |     |     +--| (96.1/100)
+|                 |     |     |        +**I__A0AAV9IK25__Galdieria_yellowstonensis
+|                 |     |  +--| (0/10)
+|                 |     |  |  |  +--I__A0A5J4ZA80__Porphyridium_purpureum
+|                 |     |  |  +--| (92.5/97)
+|                 |     |  |     +--I__A0AAV8UUU9__Rhodosorus_marinus
+|                 |     +--| (89.4/54)
+|                 |        |     +--I__A0A7J7IS76__Cyanidiococcus_yangmingshane
+|                 |        |  +--| (82.7/99)
+|                 |        |  |  +--I__M1VI67__Cyanidioschyzon_merolae__str
+|                 |        +--| (99.2/100)
+|                 |           +--I__A0AAV9IQF5__Cyanidium_caldarium
+|              +--| (77.1/57)
+|              |  +--I__L1IX87__Guillardia_theta__strain_CCM
+|           +--| (97.3/93)
+|           |  |                                                             +--II__Q93WX6__Arabidopsis_thaliana
+|           |  |                                                          +--| (96.2/100)
+|           |  |                                                          |  |  +--II__A0A2K1IG87__Physcomitrium_patens
+|           |  |                                                          |  +--| (100/100)
+|           |  |                                                          |     +--II__A0A2K1III6__Physcomitrium_patens
+|           |  |                                                       +--| (97.7/98)
+|           |  |                                                       |  |                    +--II__A0A0D2NKH0__Monoraphidium_neglectum
+|           |  |                                                       |  |                 +--| (96.9/100)
+|           |  |                                                       |  |                 |  +--II__A0A2V0NSU4__Raphidocelis_subcapitata
+|           |  |                                                       |  |              +--| (90.9/100)
+|           |  |                                                       |  |              |  |  +**II__A0A383W364__Tetradesmus_obliquus
+|           |  |                                                       |  |              |  +--| (100/100)
+|           |  |                                                       |  |              |     +--II__A0ABY8TSU8__Tetradesmus_obliquus
+|           |  |                                                       |  |           +--| (94.7/100)
+|           |  |                                                       |  |           |  |           +--II__A0A150GSI0__Gonium_pectorale
+|           |  |                                                       |  |           |  |        +--| (74.2/92)
+|           |  |                                                       |  |           |  |        |  |           +--II__A0A8J4AWN9__Volvox_africanus
+|           |  |                                                       |  |           |  |        |  |        +--| (31.7/74)
+|           |  |                                                       |  |           |  |        |  |        |  +--II__A0ABQ5RLQ4__Volvox_africanus
+|           |  |                                                       |  |           |  |        |  |     +--| (98.9/100)
+|           |  |                                                       |  |           |  |        |  |     |  +--II__A0A8J4BYA2__Volvox_reticuliferus
+|           |  |                                                       |  |           |  |        |  |  +--| (28.4/77)
+|           |  |                                                       |  |           |  |        |  |  |  +--II__D8U4F0__Volvox_carteri_f__nagariensi
+|           |  |                                                       |  |           |  |        |  +--| (92.8/100)
+|           |  |                                                       |  |           |  |        |     +--II__A0A9W6BWJ6__Pleodorina_starrii
+|           |  |                                                       |  |           |  |     +--| (75.3/98)
+|           |  |                                                       |  |           |  |     |  |        +--II__A0A2K3D4F5__Chlamydomonas_reinhardtii
+|           |  |                                                       |  |           |  |     |  |     +--| (54/100)
+|           |  |                                                       |  |           |  |     |  |     |  +--II__A0A835W4R2__Chlamydomonas_incerta
+|           |  |                                                       |  |           |  |     |  |  +--| (99.5/100)
+|           |  |                                                       |  |           |  |     |  |  |  +--II__A0A836BBE5__Chlamydomonas_schloesseri
+|           |  |                                                       |  |           |  |     |  +--| (85.4/95)
+|           |  |                                                       |  |           |  |     |     +--II__A0A836C3K8__Edaphochlamys_debaryana
+|           |  |                                                       |  |           |  |  +--| (100/100)
+|           |  |                                                       |  |           |  |  |  +--II__A0AAD3DLB4__Astrephomene_gubernaculifera
+|           |  |                                                       |  |           |  +--| (93.2/99)
+|           |  |                                                       |  |           |     |     +--II__A0A250XQB1__Chlamydomonas_eustigma
+|           |  |                                                       |  |           |     |  +--| (85.9/93)
+|           |  |                                                       |  |           |     |  |  |  +--II__A0A699YXJ6__Haematococcus_lacustris
+|           |  |                                                       |  |           |     |  |  +--| (100/100)
+|           |  |                                                       |  |           |     |  |     +**II__A0A699Z0U1__Haematococcus_lacustris
+|           |  |                                                       |  |           |     +--| (49.5/90)
+|           |  |                                                       |  |           |        |     +--II__A0A8S1IWC9__Ostreobium_quekettii
+|           |  |                                                       |  |           |        |  +--| (100/100)
+|           |  |                                                       |  |           |        |  |  +**II__A0A8S1J0I1__Ostreobium_quekettii
+|           |  |                                                       |  |           |        +--| (92.5/99)
+|           |  |                                                       |  |           |           |                 +--II__A0AAV1ICZ6__Coccomyxa_viridis
+|           |  |                                                       |  |           |           |              +--| (99.2/100)
+|           |  |                                                       |  |           |           |              |  +--II__A0ABP1FU44__Coccomyxa_viridis
+|           |  |                                                       |  |           |           |           +--| (99.7/100)
+|           |  |                                                       |  |           |           |           |  |     +--II__A0ABR2Z3A6__Coccomyxa_subellipsoidea
+|           |  |                                                       |  |           |           |           |  |  +--| (75.1/100)
+|           |  |                                                       |  |           |           |           |  |  |  +--II__A0ACE1SKF8__Coccomyxa_elongata
+|           |  |                                                       |  |           |           |           |  +--| (99.6/100)
+|           |  |                                                       |  |           |           |           |     +--II__I0YTX4__Coccomyxa_subellipsoidea__st
+|           |  |                                                       |  |           |           |        +--| (97.9/100)
+|           |  |                                                       |  |           |           |        |  +--II__A0AAW1S4X2__Elliptochloris_bilobata
+|           |  |                                                       |  |           |           |     +--| (87.7/100)
+|           |  |                                                       |  |           |           |     |  +--II__A0AAW1NTA6__Symbiochloris_irregularis
+|           |  |                                                       |  |           |           |  +--| (75.7/95)
+|           |  |                                                       |  |           |           |  |  |  +--II__A0AAW1RVX7__Apatococcus_fuscideae
+|           |  |                                                       |  |           |           |  |  +--| (100/100)
+|           |  |                                                       |  |           |           |  |     +--II__A0AAW1S4E3__Apatococcus_lobatus
+|           |  |                                                       |  |           |           +--| (93.2/96)
+|           |  |                                                       |  |           |              +--II__A0AAW1QSM0___Myrmecia__bisecta
+|           |  |                                                       |  |        +--| (96.6/99)
+|           |  |                                                       |  |        |  |        +--II__A4RUI4__Ostreococcus_lucimarinus__st
+|           |  |                                                       |  |        |  |     +--| (99.6/100)
+|           |  |                                                       |  |        |  |     |  +--II__Q01CJ7__Ostreococcus_tauri
+|           |  |                                                       |  |        |  |  +--| (83.5/98)
+|           |  |                                                       |  |        |  |  |  +---II__K8F3P5__Bathycoccus_prasinos
+|           |  |                                                       |  |        |  +--| (93.5/99)
+|           |  |                                                       |  |        |     |  +--II__C1DZT7__Micromonas_commoda
+|           |  |                                                       |  |        |     +--| (99.5/100)
+|           |  |                                                       |  |        |        +--II__C1MJ23__Micromonas_pusilla__strain_C
+|           |  |                                                       |  |     +--| (91.6/89)
+|           |  |                                                       |  |     |  |     +--II__A0A5B8MJF9__Chloropicon_primus
+|           |  |                                                       |  |     |  |  +--| (100/100)
+|           |  |                                                       |  |     |  |  |  +--II__A0AAX4PEP3__Chloropicon_roscoffensis
+|           |  |                                                       |  |     |  +--| (53.2/87)
+|           |  |                                                       |  |     |     +-----II__A0A830HDK8__Pycnococcus_provasolii
+|           |  |                                                       |  |  +--| (69.3/70)
+|           |  |                                                       |  |  |  |   +**II__A0A388KHQ8__Chara_braunii
+|           |  |                                                       |  |  |  +---| (100/100)
+|           |  |                                                       |  |  |      +**II__A0A388LZT0__Chara_braunii
+|           |  |                                                       |  +--| (84.7/81)
+|           |  |                                                       |     |  +--II__A0A1Y1I0J5__Klebsormidium_nitens
+|           |  |                                                       |     +--| (90.3/88)
+|           |  |                                                       |        +--II__A0AAE0FI37__Cymbomonas_tetramitiformis
+|           |  |                                                    +--| (74.9/99)
+|           |  |                                                    |  |              +--II__A0A1X6PID7__Porphyra_umbilicalis
+|           |  |                                                    |  |           +--| (100/100)
+|           |  |                                                    |  |           |  +--II__A0ACC3C150__Pyropia_yezoensis
+|           |  |                                                    |  |        +--| (89/99)
+|           |  |                                                    |  |        |  +---II__A0A2V3ITM5__Gracilariopsis_chorda
+|           |  |                                                    |  |     +--| (44.2/91)
+|           |  |                                                    |  |     |  +---II__A0A5J4YI84__Porphyridium_purpureum
+|           |  |                                                    |  |  +--| (6.7/80)
+|           |  |                                                    |  |  |  |      +--II__A0A9C7PYH5__Galdieria_partita
+|           |  |                                                    |  |  |  |   +--| (99.2/100)
+|           |  |                                                    |  |  |  |   |  +--II__M2Y4K9__Galdieria_sulphuraria
+|           |  |                                                    |  |  |  +---| (100/100)
+|           |  |                                                    |  |  |      +--II__A0AAV9IDY7__Galdieria_yellowstonensis
+|           |  |                                                    |  +--| (99.6/100)
+|           |  |                                                    |     |     +--II__A0A7J7IE79__Cyanidiococcus_yangmingshane
+|           |  |                                                    |     |  +--| (99.9/100)
+|           |  |                                                    |     |  |  +--II__M1V4W8__Cyanidioschyzon_merolae__str
+|           |  |                                                    |     +--| (99.9/100)
+|           |  |                                                    |        +--II__A0AAV9J2Q2__Cyanidium_caldarium
+|           |  |                                                 +--| (84.3/100)
+|           |  |                                                 |  |            +**II__A0A1Q9E2S5__Symbiodinium_microadriaticum
+|           |  |                                                 |  |         +--| (99.8/100)
+|           |  |                                                 |  |         |  +--II__A0A813AY52__Symbiodinium_necroappetens
+|           |  |                                                 |  |      +--| (95.2/100)
+|           |  |                                                 |  |      |  |     +--II__A0A9P1FU59__Cladocopium_goreaui
+|           |  |                                                 |  |      |  |  +--| (93.1/99)
+|           |  |                                                 |  |      |  |  |  |     +**II__A0ABP0KKF9__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |  |  +**| (0/47)
+|           |  |                                                 |  |      |  |  |  |  |  +--II__A0ABP0QTW1__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |  +--| (100/100)
+|           |  |                                                 |  |      |  |  |     |  +**II__A0ABP0KUW1__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |     +--| (81.9/99)
+|           |  |                                                 |  |      |  |  |        +**II__A0ABP0QRF0__Durusdinium_trenchii
+|           |  |                                                 |  |      |  +--| (96.9/100)
+|           |  |                                                 |  |      |     +--II__A0AA36I4S5__Effrenium_voratum
+|           |  |                                                 |  |   +--| (69.4/99)
+|           |  |                                                 |  |   |  |  +**II__A0A813EC50__Polarella_glacialis
+|           |  |                                                 |  |   |  +--| (100/100)
+|           |  |                                                 |  |   |     +**II__A0A813F5G7__Polarella_glacialis
+|           |  |                                                 |  +---| (100/100)
+|           |  |                                                 |      +--II__A0ABN9V3V7__Prorocentrum_cordatum
+|           |  |                                              +--| (88/96)
+|           |  |                                              |  |        +--II__A0A0M0JIF4__Chrysochromulina_tobinii
+|           |  |                                              |  |     +--| (93.8/83)
+|           |  |                                              |  |     |  +--II__A0AB34IPJ2__Prymnesium_parvum
+|           |  |                                              |  |  +--| (86.2/81)
+|           |  |                                              |  |  |  |                   +--II__A0A1Q9D6N0__Symbiodinium_microadriaticum
+|           |  |                                              |  |  |  |                +--| (68.6/92)
+|           |  |                                              |  |  |  |                |  +--II__A0A812SJ40__Symbiodinium_natans
+|           |  |                                              |  |  |  |             +--| (84/93)
+|           |  |                                              |  |  |  |             |  +--II__A0A812TZP6__Symbiodinium_pilosum
+|           |  |                                              |  |  |  |        +----| (100/100)
+|           |  |                                              |  |  |  |        |    |  +--II__A0A9P1C7R4__Cladocopium_goreaui
+|           |  |                                              |  |  |  |        |    +--| (50.6/98)
+|           |  |                                              |  |  |  |        |       +--II__A0AA36HML1__Effrenium_voratum
+|           |  |                                              |  |  |  |     +--| (92.1/64)
+|           |  |                                              |  |  |  |     |  |   +--II__A0A4D9CTB8__Nannochloropsis_salina_CCMP1
+|           |  |                                              |  |  |  |     |  +---| (100/100)
+|           |  |                                              |  |  |  |     |      +--II__W7TM03__Nannochloropsis_gaditana
+|           |  |                                              |  |  |  |  +--| (75.1/64)
+|           |  |                                              |  |  |  |  |  |  +--II__A0A835YHC6__Tribonema_minus
+|           |  |                                              |  |  |  |  |  +--| (97.9/100)
+|           |  |                                              |  |  |  |  |     +--II__D7G5K2__Ectocarpus_siliculosus
+|           |  |                                              |  |  |  +--| (90.1/92)
+|           |  |                                              |  |  |     |     +--II__A0A8J2SKF9__Pelagomonas_calceolata
+|           |  |                                              |  |  |     |  +--| (97.9/100)
+|           |  |                                              |  |  |     |  |  |  +**II__A0ABR1G4C2__Aureococcus_anophagefferens
+|           |  |                                              |  |  |     |  |  +--| (100/100)
+|           |  |                                              |  |  |     |  |     +**II__F0XYR2__Aureococcus_anophagefferens
+|           |  |                                              |  |  |     +--| (99.9/100)
+|           |  |                                              |  |  |        +--II__A0AAD7UNE2__Chrysophaeum_taylorii
+|           |  |                                              |  +--| (95.7/97)
+|           |  |                                              |     +---II__A0A8J6CI92__Diacronema_lutheri
+|           |  |                                           +--| (100/100)
+|           |  |                                           |  |              +--II__A0A1E7FQI7__Fragilariopsis_cylindrus_CCM
+|           |  |                                           |  |           +--| (93.7/100)
+|           |  |                                           |  |           |  |  +--II__A0A9K3L7Y2__Nitzschia_inconspicua
+|           |  |                                           |  |           |  +--| (99.7/100)
+|           |  |                                           |  |           |     +--II__A0A9K3LFN5__Nitzschia_inconspicua
+|           |  |                                           |  |        +--| (99.5/100)
+|           |  |                                           |  |        |  +--II__A0AAD2JLA6__Cylindrotheca_closterium
+|           |  |                                           |  |     +--| (93.9/90)
+|           |  |                                           |  |     |  |  +--II__A0A9N8H885__Seminavis_robusta
+|           |  |                                           |  |     |  +--| (38.2/79)
+|           |  |                                           |  |     |     |  +--II__A0AAD3D922__Chaetoceros_tenuissimus
+|           |  |                                           |  |     |     +--| (99/100)
+|           |  |                                           |  |     |        |     +--II__A0AAD8Y1M9__Skeletonema_marinoi
+|           |  |                                           |  |     |        |  +--| (99.1/100)
+|           |  |                                           |  |     |        |  |  |  +--II__A0ABD3LXU8__Discostella_pseudostelligera
+|           |  |                                           |  |     |        |  |  +--| (21.7/63)
+|           |  |                                           |  |     |        |  |     |  +--II__A0ABD3MYQ6__Stephanodiscus_triporus
+|           |  |                                           |  |     |        |  |     +--| (100/100)
+|           |  |                                           |  |     |        |  |        |  +**II__A0ABD3R565__Cyclostephanos_tholiformis
+|           |  |                                           |  |     |        |  |        +--| (99.5/100)
+|           |  |                                           |  |     |        |  |           +**II__A0ABD3RA89__Cyclostephanos_tholiformis
+|           |  |                                           |  |     |        +--| (99.5/100)
+|           |  |                                           |  |     |           |  +--II__A0ABD3MSF9__Cyclotella_atomus
+|           |  |                                           |  |     |           +--| (98/100)
+|           |  |                                           |  |     |              +--II__A0ABD3QH57__Cyclotella_cryptica
+|           |  |                                           |  |  +--| (99.4/100)
+|           |  |                                           |  |  |  |     +--II__A0A1Z5JBG7__Fistulifera_solaris
+|           |  |                                           |  |  |  |  +--| (100/100)
+|           |  |                                           |  |  |  |  |  +--II__A0A1Z5KLZ0__Fistulifera_solaris
+|           |  |                                           |  |  |  +--| (92.6/94)
+|           |  |                                           |  |  |     +--II__B7FV09__Phaeodactylum_tricornutum__s
+|           |  |                                           |  +--| (73.8/99)
+|           |  |                                           |     |        +--II__A0A9W7CDX7__Triparma_laevis_f__longispin
+|           |  |                                           |     |     +--| (99.8/100)
+|           |  |                                           |     |     |  |  +--II__A0A9W7E1R6__Triparma_strigata
+|           |  |                                           |     |     |  +--| (94.1/100)
+|           |  |                                           |     |     |     +**II__A0A9W7FN66__Triparma_verrucosa
+|           |  |                                           |     |  +--| (98.8/100)
+|           |  |                                           |     |  |  |  +--II__A0A9W7E3A2__Triparma_retinervis
+|           |  |                                           |     |  |  +--| (99.9/100)
+|           |  |                                           |     |  |     +--II__A0A9W7GLM1__Triparma_columacea
+|           |  |                                           |     +--| (100/100)
+|           |  |                                           |        +---II__A0ABQ6MPW9__Tetraparma_gracilis
+|           |  |                                        +--| (83.8/83)
+|           |  |                                        |  +------II__A0A9P1BGJ2__Cladocopium_goreaui
+|           |  |                                     +--| (88.4/85)
+|           |  |                                     |  |     +-------II__A0A812S1P1__Symbiodinium_pilosum
+|           |  |                                     |  |  +--| (75.8/99)
+|           |  |                                     |  |  |  +-------REF_SufS_Ecoli
+|           |  |                                     |  +--| (96.2/98)
+|           |  |                                     |     |        +--II__A0ABP0LK72__Durusdinium_trenchii
+|           |  |                                     |     +--------| (100/100)
+|           |  |                                     |              +**II__A0ABP0LS76__Durusdinium_trenchii
+|           |  |            +------------------------| (100/100)
+|           |  |            |                        |   +----II__A0ABP0S8C1__Durusdinium_trenchii
+|           |  |            |                        +---| (99.2/100)
+|           |  |            |                            +--II__A0ABP0SL67__Durusdinium_trenchii
+|           |  |        +---| (97/99)
+|           |  |        |   |  +---------------L3__Q96I15__Homo_sapiens
+|           |  |        |   +--| (95.8/99)
+|           |  |        |      |                          +--L3__A0A090M4Q8__Ostreococcus_tauri
+|           |  |        |      |                       +--| (100/100)
+|           |  |        |      |                       |  +--L3__A4S300__Ostreococcus_lucimarinus__st
+|           |  |        |      |                    +--| (97.1/100)
+|           |  |        |      |                    |  |  +--L3__C1EHB0__Micromonas_commoda
+|           |  |        |      |                    |  +--| (98.9/100)
+|           |  |        |      |                    |     +---L3__C1MNN5__Micromonas_pusilla__strain_C
+|           |  |        |      |                 +--| (95/98)
+|           |  |        |      |                 |  +---------L3__K8F9J9__Bathycoccus_prasinos
+|           |  |        |      |              +--| (27.1/59)
+|           |  |        |      |              |  |              +----L3__A0A0D3JFS3__Emiliania_huxleyi__strain_CC
+|           |  |        |      |              |  |           +--| (87.4/99)
+|           |  |        |      |              |  |           |  |  +--L3__A0AB34J9E3__Prymnesium_parvum
+|           |  |        |      |              |  |           |  +--| (99.4/100)
+|           |  |        |      |              |  |           |     +--L3__A0AB34KAI8__Prymnesium_parvum
+|           |  |        |      |              |  |        +--| (73/91)
+|           |  |        |      |              |  |        |  |  +----L3__A0A8J5X355__Diacronema_lutheri
+|           |  |        |      |              |  |        |  +--| (99.1/100)
+|           |  |        |      |              |  |        |     |     +--NEW__A0A8J2WTZ1__Pelagomonas_calceolata
+|           |  |        |      |              |  |        |     |  +--| (94.4/100)
+|           |  |        |      |              |  |        |     |  |  |  +**NEW__F0XXL4__Aureococcus_anophagefferens
+|           |  |        |      |              |  |        |     |  |  +--| (99.9/100)
+|           |  |        |      |              |  |        |     |  |     +**NEW__A0ABR1FZ61__Aureococcus_anophagefferens
+|           |  |        |      |              |  |        |     +--| (99.8/100)
+|           |  |        |      |              |  |        |        +---NEW__A0AAD7XJ29__Chrysophaeum_taylorii
+|           |  |        |      |              |  |     +--| (86.6/57)
+|           |  |        |      |              |  |     |  +-----L3__A0A699ZEV1__Haematococcus_lacustris
+|           |  |        |      |              |  |  +--| (87/19)
+|           |  |        |      |              |  |  |  +------L3__A0A836CMI1__Tribonema_minus
+|           |  |        |      |              |  +--| (62.1/56)
+|           |  |        |      |              |     |                       +--L3__A0A150H2L5__Gonium_pectorale
+|           |  |        |      |              |     |                    +--| (58.9/100)
+|           |  |        |      |              |     |                    |  |     +--L3__A0A2K3DJ46__Chlamydomonas_reinhardtii
+|           |  |        |      |              |     |                    |  |  +--| (94.7/100)
+|           |  |        |      |              |     |                    |  |  |  +--L3__A0A835XY57__Edaphochlamys_debaryana
+|           |  |        |      |              |     |                    |  +--| (68.9/99)
+|           |  |        |      |              |     |                    |     |     +--L3__A0A8J4FGX8__Volvox_reticuliferus
+|           |  |        |      |              |     |                    |     |  +--| (0/23)
+|           |  |        |      |              |     |                    |     |  |  +--L3__A0A9W6BEK4__Pleodorina_starrii
+|           |  |        |      |              |     |                    |     +--| (62.5/100)
+|           |  |        |      |              |     |                    |        +--L3__D8U8R1__Volvox_carteri_f__nagariensi
+|           |  |        |      |              |     |                 +--| (99.9/100)
+|           |  |        |      |              |     |                 |  |  +--L3__A0A835W6A0__Chlamydomonas_incerta
+|           |  |        |      |              |     |                 |  +--| (99.8/100)
+|           |  |        |      |              |     |                 |     +--L3__A0A835WMZ9__Chlamydomonas_schloesseri
+|           |  |        |      |              |     |              +--| (81/99)
+|           |  |        |      |              |     |              |  +-----L3__A0ABQ7GSE4__Dunaliella_salina
+|           |  |        |      |              |     |           +--| (75.8/93)
+|           |  |        |      |              |     |           |  +-----L3__A0A250WXK3__Chlamydomonas_eustigma
+|           |  |        |      |              |     |        +--| (78.1/68)
+|           |  |        |      |              |     |        |  |              +**L3__A0A383VU94__Tetradesmus_obliquus
+|           |  |        |      |              |     |        |  |           +--| (99.9/100)
+|           |  |        |      |              |     |        |  |           |  +--L3__A0ABY8TSA6__Tetradesmus_obliquus
+|           |  |        |      |              |     |        |  |        +--| (97.1/95)
+|           |  |        |      |              |     |        |  |        |  +--REF_HText_Spabb
+|           |  |        |      |              |     |        |  |     +--| (56.4/94)
+|           |  |        |      |              |     |        |  |     |  +----L3__A0AAW1R1Z0__Elliptochloris_bilobata
+|           |  |        |      |              |     |        |  |  +--| (45.1/73)
+|           |  |        |      |              |     |        |  |  |  +----L3__A0AAW1QA50___Myrmecia__bisecta
+|           |  |        |      |              |     |        |  +--| (79.4/70)
+|           |  |        |      |              |     |        |     |  +--NEW__A0A0D2N0J3__Monoraphidium_neglectum
+|           |  |        |      |              |     |        |     +--| (99.9/100)
+|           |  |        |      |              |     |        |        +--NEW__A0A2V0PAY6__Raphidocelis_subcapitata
+|           |  |        |      |              |     |     +--| (86.9/62)
+|           |  |        |      |              |     |     |  |        +--L3__A0A2P6TKZ5__Chlorella_sorokiniana
+|           |  |        |      |              |     |     |  |     +--| (99.6/100)
+|           |  |        |      |              |     |     |  |     |  +--L3__A0AAD5DKK7__Chlorella_ohadii
+|           |  |        |      |              |     |     |  |  +--| (5/92)
+|           |  |        |      |              |     |     |  |  |  |  +--L3__A0A2P6V8I3__Micractinium_conductrix
+|           |  |        |      |              |     |     |  |  |  +--| (96.2/100)
+|           |  |        |      |              |     |     |  |  |     +--L3__A0ACF7V9P5__Micractinium_tetrahymenae
+|           |  |        |      |              |     |     |  +--| (100/100)
+|           |  |        |      |              |     |     |     |     +--L3__A0A9D4TIF6__Chlorella_vulgaris
+|           |  |        |      |              |     |     |     |  +--| (100/100)
+|           |  |        |      |              |     |     |     |  |  +--L3__A0ACF8QEV9__Chlorella_vulgaris
+|           |  |        |      |              |     |     |     +--| (98.9/100)
+|           |  |        |      |              |     |     |        +--L3__E1ZDB8__Chlorella_variabilis
+|           |  |        |      |              |     |  +--| (53.9/53)
+|           |  |        |      |              |     |  |  |  +------L3__A0A8S1J814__Ostreobium_quekettii
+|           |  |        |      |              |     |  |  +--| (96.7/68)
+|           |  |        |      |              |     |  |     +----L3__A0AAE0LE91__Cymbomonas_tetramitiformis
+|           |  |        |      |              |     +--| (78.6/25)
+|           |  |        |      |              |        |  +-----L3__A0A5B8MPI0__Chloropicon_primus
+|           |  |        |      |              |        +--| (100/100)
+|           |  |        |      |              |           |    +--L3__A0AAX4PFB6__Chloropicon_roscoffensis
+|           |  |        |      |              |           +----| (100/100)
+|           |  |        |      |              |                +--L3__A0AAX4PJN5__Chloropicon_roscoffensis
+|           |  |        |      |           +--| (7.9/44)
+|           |  |        |      |           |  +------------L3__A0A830HW14__Pycnococcus_provasolii
+|           |  |        |      |        +--| (97.2/100)
+|           |  |        |      |        |  |                          +--L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM
+|           |  |        |      |        |  |                       +--| (99.4/100)
+|           |  |        |      |        |  |                       |  +--L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat
+|           |  |        |      |        |  |                    +--| (93/100)
+|           |  |        |      |        |  |                    |  |  +**NEW__A0A9K3LVN3__Nitzschia_inconspicua
+|           |  |        |      |        |  |                    |  +--| (100/100)
+|           |  |        |      |        |  |                    |     +--NEW__A0A9K3KRJ2__Nitzschia_inconspicua
+|           |  |        |      |        |  |                 +--| (52.5/98)
+|           |  |        |      |        |  |                 |  +---L3__A0A9N8H4H9__Seminavis_robusta
+|           |  |        |      |        |  |              +--| (79.1/100)
+|           |  |        |      |        |  |              |  |   +**L3__A0AAD2FN92__Cylindrotheca_closterium
+|           |  |        |      |        |  |              |  +---| (100/100)
+|           |  |        |      |        |  |              |      +--L3__A0AAD2FSZ6__Cylindrotheca_closterium
+|           |  |        |      |        |  |           +--| (7.6/87)
+|           |  |        |      |        |  |           |  +---NEW__B7G8F0__Phaeodactylum_tricornutum_st
+|           |  |        |      |        |  |        +--| (80.7/91)
+|           |  |        |      |        |  |        |  |      +--L3__A0A1Z5JXU0__Fistulifera_solaris
+|           |  |        |      |        |  |        |  +------| (100/100)
+|           |  |        |      |        |  |        |         +--L3__A0A1Z5KCV9__Fistulifera_solaris
+|           |  |        |      |        |  |     +--| (85.4/92)
+|           |  |        |      |        |  |     |  |  +---L3__A0AAD3CS45__Chaetoceros_tenuissimus
+|           |  |        |      |        |  |     |  +--| (98/100)
+|           |  |        |      |        |  |     |     +--L3__A0AAD3CTN0__Chaetoceros_tenuissimus
+|           |  |        |      |        |  |  +--| (42.7/65)
+|           |  |        |      |        |  |  |  |           +--L3__A0AAD8YPT2__Skeletonema_marinoi
+|           |  |        |      |        |  |  |  |        +--| (85.1/100)
+|           |  |        |      |        |  |  |  |        |  |  +--L3__A0ABD3M126__Discostella_pseudostelligera
+|           |  |        |      |        |  |  |  |        |  +--| (74.4/100)
+|           |  |        |      |        |  |  |  |        |     |     +--L3__A0ABD3MQJ2__Stephanodiscus_triporus
+|           |  |        |      |        |  |  |  |        |     |  +--| (96.6/100)
+|           |  |        |      |        |  |  |  |        |     |  |  +--L3__A0ABD3PCK7__Stephanodiscus_triporus
+|           |  |        |      |        |  |  |  |        |     +--| (97.3/100)
+|           |  |        |      |        |  |  |  |        |        +--L3__A0ABD3SBR2__Cyclostephanos_tholiformis
+|           |  |        |      |        |  |  |  |     +--| (93/100)
+|           |  |        |      |        |  |  |  |     |  |     +--L3__A0ABD3PCQ2__Cyclotella_cryptica
+|           |  |        |      |        |  |  |  |     |  |  +--| (94/100)
+|           |  |        |      |        |  |  |  |     |  |  |  +--L3__A0ABD3PL28__Cyclotella_cryptica
+|           |  |        |      |        |  |  |  |     |  +--| (99.2/100)
+|           |  |        |      |        |  |  |  |     |     +--L3__A0ABD3QT07__Cyclotella_atomus
+|           |  |        |      |        |  |  |  |  +--| (70.8/92)
+|           |  |        |      |        |  |  |  |  |  +--L3__B8BXE3__Thalassiosira_pseudonana
+|           |  |        |      |        |  |  |  +--| (99.5/100)
+|           |  |        |      |        |  |  |     +---L3__K0SC66__Thalassiosira_oceanica
+|           |  |        |      |        |  +--| (99.1/100)
+|           |  |        |      |        |     |               +-----NEW__A0A9W7AV08__Triparma_laevis_f_longispina
+|           |  |        |      |        |     |           +---| (96.3/100)
+|           |  |        |      |        |     |           |   |    +--NEW__A0A9W7B676__Triparma_strigata
+|           |  |        |      |        |     |           |   +----| (99.9/100)
+|           |  |        |      |        |     |           |        +**NEW__A0A9W7KXE0__Triparma_verrucosa
+|           |  |        |      |        |     |       +---| (91.9/100)
+|           |  |        |      |        |     |       |   +------------------NEW__A0ABQ6MTH9__Tetraparma_gracilis
+|           |  |        |      |        |     +-------| (99.8/100)
+|           |  |        |      |        |             +-------------NEW__A0A9W7GEK0__Triparma_columacea
+|           |  |        |      |     +--| (91.6/82)
+|           |  |        |      |     |  |                 +--L3__A0A1Q9EC91__Symbiodinium_microadriaticum
+|           |  |        |      |     |  |              +--| (54.5/62)
+|           |  |        |      |     |  |              |  +--L3__A0ABN9Y9J6__Prorocentrum_cordatum
+|           |  |        |      |     |  |           +--| (86.1/62)
+|           |  |        |      |     |  |           |  +--L3__A0A813D9I6__Polarella_glacialis
+|           |  |        |      |     |  |     +-----| (100/100)
+|           |  |        |      |     |  |     |     +--L3__A0A9P1CGG1__Cladocopium_goreaui
+|           |  |        |      |     |  |  +--| (90.3/99)
+|           |  |        |      |     |  |  |  +-------L3__L1J7X1__Guillardia_theta__strain_CCM
+|           |  |        |      |     |  +--| (84.2/96)
+|           |  |        |      |     |     |  +-----L3__A0A1Y1HX28__Klebsormidium_nitens
+|           |  |        |      |     |     +--| (99.2/100)
+|           |  |        |      |     |        +---L3__A0A388KLW8__Chara_braunii
+|           |  |        |      |  +--| (0/45)
+|           |  |        |      |  |  +----------NEW__A0A9P1FCD2__Cladocopium_goreaui
+|           |  |        |      +--| (61.1/57)
+|           |  |        |         +-------------L3__L1J7A3__Guillardia_theta__strain_CCM
+|           |  |     +--| (83.5/98)
+|           |  |     |  |  +----I__A0A9P1BG81__Cladocopium_goreaui
+|           |  |     |  +--| (93.5/100)
+|           |  |     |     |          +--I__A0ABP0HQJ3__Durusdinium_trenchii
+|           |  |     |     +----------| (100/100)
+|           |  |     |                +--I__A0ABP0JKY5__Durusdinium_trenchii
+|           |  |  +--| (98.1/97)
+|           |  |  |  +---REF_IscS_Ecoli
+|           |  +--| (89.7/62)
+|           |     |  +--I__A0A2V3J0K4__Gracilariopsis_chorda
+|           |     +--| (99.6/100)
+|           |        +--I__R7QGB9__Chondrus_crispus
+|        +--| (89.3/90)
+|        |  |           +--I__A0A5B8MHP9__Chloropicon_primus
+|        |  |        +--| (100/100)
+|        |  |        |  +--I__A0AAX4P4V9__Chloropicon_roscoffensis
+|        |  |     +--| (92.1/93)
+|        |  |     |  |     +--I__A4RUB0__Ostreococcus_lucimarinus__st
+|        |  |     |  |  +--| (100/100)
+|        |  |     |  |  |  +--I__Q01CS2__Ostreococcus_tauri
+|        |  |     |  +--| (0.7/42)
+|        |  |     |     |     +--I__C1E3B7__Micromonas_commoda
+|        |  |     |     |  +--| (79.3/99)
+|        |  |     |     |  |  +--I__C1N3B7__Micromonas_pusilla__strain_C
+|        |  |     |     +--| (93.7/98)
+|        |  |     |        +--I__K8FF08__Bathycoccus_prasinos
+|        |  |  +--| (90/98)
+|        |  |  |  +--I__A0A830HZ24__Pycnococcus_provasolii
+|        |  +--| (94.7/99)
+|        |     +--I__A0AAE0C3S8__Cymbomonas_tetramitiformis
+|     +--| (91.3/90)
+|     |  |        +--I__A0A087SBH3__Auxenochlorella_protothecoid
+|     |  |     +--| (99.5/100)
+|     |  |     |  +--I__A0AAD9MG95__Prototheca_wickerhamii
+|     |  |  +--| (37.1/75)
+|     |  |  |  |              +--I__A0A2P6U3X4__Chlorella_sorokiniana
+|     |  |  |  |           +--| (97.9/100)
+|     |  |  |  |           |  +--I__A0AAD5H885__Chlorella_ohadii
+|     |  |  |  |        +--| (34.5/98)
+|     |  |  |  |        |  |     +--I__A0A9D4TRG1__Chlorella_vulgaris
+|     |  |  |  |        |  |  +--| (98.8/100)
+|     |  |  |  |        |  |  |  +--I__A0ACF8QD05__Chlorella_vulgaris
+|     |  |  |  |        |  +--| (82.4/99)
+|     |  |  |  |        |     +--I__E1ZRR8__Chlorella_variabilis
+|     |  |  |  |     +--| (85.9/99)
+|     |  |  |  |     |  +--I__A0ACF7TST8__Micractinium_tetrahymenae
+|     |  |  |  |  +--| (99.8/100)
+|     |  |  |  |  |  +--I__A0A2P6V904__Micractinium_conductrix
+|     |  |  |  +--| (87.8/92)
+|     |  |  |     |                 +--I__A0AAV1HVJ1__Coccomyxa_viridis
+|     |  |  |     |              +--| (97.9/100)
+|     |  |  |     |              |  +--I__A0ABP1G8Q3__Coccomyxa_viridis
+|     |  |  |     |           +--| (98.2/100)
+|     |  |  |     |           |  |     +--I__A0ABR2YJJ0__Coccomyxa_subellipsoidea
+|     |  |  |     |           |  |  +--| (99.8/100)
+|     |  |  |     |           |  |  |  +--I__I0Z0B3__Coccomyxa_subellipsoidea__st
+|     |  |  |     |           |  +--| (95.6/100)
+|     |  |  |     |           |     +--I__A0ACE1RWG8__Coccomyxa_elongata
+|     |  |  |     |        +--| (91.4/100)
+|     |  |  |     |        |  +--I__A0AAW1S9M3__Elliptochloris_bilobata
+|     |  |  |     |     +--| (57.3/97)
+|     |  |  |     |     |  |     +**I__A0AAW1QJ11__Apatococcus_lobatus
+|     |  |  |     |     |  |  +--| (90.7/100)
+|     |  |  |     |     |  |  |  +**I__A0AAW1SY41__Apatococcus_fuscideae
+|     |  |  |     |     |  +--| (100/100)
+|     |  |  |     |     |     +--I__A0AAW1T9X9__Apatococcus_fuscideae
+|     |  |  |     |  +--| (71.2/98)
+|     |  |  |     |  |  +--I__A0AAW1P501__Symbiochloris_irregularis
+|     |  |  |     +--| (91.2/99)
+|     |  |  |        +--I__A0AAW1QFK0___Myrmecia__bisecta
+|     |  +--| (94.1/100)
+|     |     |        +--I__A0A0D2M031__Monoraphidium_neglectum
+|     |     |     +--| (99.1/100)
+|     |     |     |  +--I__A0A2V0PKC5__Raphidocelis_subcapitata
+|     |     |  +--| (86/98)
+|     |     |  |  |  +--I__A0A383VZF3__Tetradesmus_obliquus
+|     |     |  |  +--| (100/100)
+|     |     |  |     +--I__A0ABY8U2V6__Tetradesmus_obliquus
+|     |     +--| (98.2/100)
+|     |        |  +---I__A0A250X580__Chlamydomonas_eustigma
+|     |        +--| (37.4/89)
+|     |           |        +--I__A0A2K3E3W0__Chlamydomonas_reinhardtii
+|     |           |     +--| (76.1/91)
+|     |           |     |  +--I__A0A835TFC4__Chlamydomonas_incerta
+|     |           |  +--| (90.5/97)
+|     |           |  |  +--I__A0A835W5I8__Chlamydomonas_schloesseri
+|     |           +--| (99.9/100)
+|     |              |     +--I__A0A835Y811__Edaphochlamys_debaryana
+|     |              |  +--| (67.6/67)
+|     |              |  |  +--I__D8TZS2__Volvox_carteri_f__nagariensi
+|     |              +--| (86.7/96)
+|     |                 |  +--I__A0A9W6BP52__Pleodorina_starrii
+|     |                 +--| (38.2/66)
+|     |                    |  +--I__A0AAD3HPG5__Astrephomene_gubernaculifera
+|     |                    +--| (52.5/71)
+|     |                       +--I__A0ABQ5RV58__Volvox_africanus
+|  +--| (88/97)
+|  |  |  +**I__A0A388KUJ5__Chara_braunii
+|  |  +--| (100/100)
+|  |     +--I__A0A388KUR9__Chara_braunii
++--| (97.4/98)
+|  +--I__A0A1Y1I0C3__Klebsormidium_nitens
+|
+|  +--I__A0A2K1L2H1__Physcomitrium_patens
++--| (98.1/100)
+   +--I__A0A2K1L8W3__Physcomitrium_patens
+
+Tree in newick format:
+
+(I__O49543__Arabidopsis_thaliana:0.2755316820,(((((((((I__P25374__Saccharomyces_cerevisiae:0.3303575298,I__Q9Y697__Homo_sapiens:0.1946112082)65.7/69:0.0404996411,(((((((I__A0A1E7EW37__Fragilariopsis_cylindrus_CCM:0.0859954568,I__A0A448Z0Q3__Pseudo_nitzschia_multistriat:0.0685032883)53.9/100:0.0269767354,(((((I__A0A1Z5KA33__Fistulifera_solaris:0.0222793368,I__A0A1Z5KQV2__Fistulifera_solaris:0.0032683814)100/100:0.1344782847,I__A0A9N8D7B1__Seminavis_robusta:0.0932430443)88.8/82:0.0226085437,I__B7FUS8__Phaeodactylum_tricornutum__s:0.0873394675)81.1/78:0.0078870303,I__A0AAD2CQ79__Cylindrotheca_closterium:0.0743296534)91.8/78:0.0258694914,(I__A0A9K3LIY3__Nitzschia_inconspicua:0.0074705307,I__A0A9K3PS87__Nitzschia_inconspicua:0.0042086455)99.7/100:0.0590376756)90.9/98:0.0298636577)92.7/99:0.0358571631,(I__A0AAD3CNM3__Chaetoceros_tenuissimus:0.1411111107,((((I__A0AAD9DDT3__Skeletonema_marinoi:0.0627112931,(I__B8BTI1__Thalassiosira_pseudonana:0.0406504489,I__K0T2T4__Thalassiosira_oceanica:0.0783526789)43.3/93:0.0139678212)85.6/93:0.0180703778,(I__A0ABD3NDW2__Cyclotella_atomus:0.0329032852,I__A0ABD3NZ76__Cyclotella_cryptica:0.0658215702)96/100:0.0309511460)94.3/100:0.0264449571,I__A0ABD3RT14__Cyclostephanos_tholiformis:0.1114592056)25.5/81:0.0110746151,I__A0ABD3MXL0__Stephanodiscus_triporus:0.0772069324)100/100:0.0904018157)71.4/92:0.0238392774)98.5/100:0.0767161384,((I__A0A9W7A1X6__Triparma_retinervis:0.0144540837,I__A0A9W7GKV9__Triparma_columacea:0.0185140236)99.9/100:0.1366667409,(((I__A0A9W7A8F9__Triparma_strigata:0.0030726389,I__A0A9W7EV45__Triparma_verrucosa:0.0084379768)98.7/100:0.0531728844,I__A0A9W7L032__Triparma_laevis_f__longispin:0.0789426992)96.6/100:0.0673247353,I__A0ABQ6MTM1__Tetraparma_gracilis:0.2378057304)52.3/97:0.0507954864)99.1/100:0.0947337553)96.2/73:0.0567257983,((I__A0A835YNJ7__Tribonema_minus:0.0586539752,I__A0A835YUN3__Tribonema_minus:0.2723947630)73/97:0.0962236235,I__D8LSH6__Ectocarpus_siliculosus:0.1497783625)98.2/99:0.0682409067)19/40:0.0237068911,(I__A0A4D9DAJ6__Nannochloropsis_salina_CCMP1:0.0056915734,I__W7TNL7__Nannochloropsis_gaditana:0.0000025061)100/100:0.1946045581)92.3/98:0.0399396997,(((I__A0A8J2T399__Pelagomonas_calceolata:0.0243127375,I__A0A8J2X1B6__Pelagomonas_calceolata:0.0000022768)100/100:0.1179089599,(I__A0ABR1G8E5__Aureococcus_anophagefferens:0.0000010056,I__F0XX58__Aureococcus_anophagefferens:0.0000010056)98.5/100:0.0718398314)99.3/100:0.1000972852,I__A0AAD7XIM5__Chrysophaeum_taylorii:0.1904502543)99.8/100:0.1176500867)97.4/99:0.0659790313)90.3/66:0.0277512796,((((I__A0A0D3KWK1__Emiliania_huxleyi__strain_CC:0.0000022905,I__A0A0D3KXW7__Emiliania_huxleyi__strain_CC:0.5590335705)95.4/98:0.1518183594,((I__A0A0M0JAJ3__Chrysochromulina_tobinii:0.1290007264,I__A0AB34IS35__Prymnesium_parvum:0.1398900308)31.4/94:0.0316070367,I__A0A8J6C7R9__Diacronema_lutheri:0.2789487767)82.6/99:0.0354931693)49.3/98:0.0267507444,(I__A0A1X6NJT4__Porphyra_umbilicalis:0.0421955583,I__A0ACC3BQ38__Pyropia_yezoensis:0.0268453201)100/100:0.2377833610)97/98:0.0589285859,((((((((I__A0A1Q9DE09__Symbiodinium_microadriaticum:0.0160351833,I__A0A812KGR1__Symbiodinium_pilosum:0.0067187769)35.4/89:0.0088055218,I__A0A1Q9E9V0__Symbiodinium_microadriaticum:0.0111258191)98.5/100:0.0329130595,(I__A0A9P1GER4__Cladocopium_goreaui:0.0290301254,((I__A0ABP0LT22__Durusdinium_trenchii:0.0000010056,I__A0ABP0LT72__Durusdinium_trenchii:0.0000010056)0/88:0.0000023468,(I__A0ABP0LTD8__Durusdinium_trenchii:0.0000010056,I__A0ABP0LV06__Durusdinium_trenchii:0.0000010056)100/99:0.0434920488)91.5/95:0.0227732747)96.7/100:0.0370666620)18.4/75:0.0095022793,I__A0AA36J6N9__Effrenium_voratum:0.0680998284)95.8/100:0.0627542169,((I__A0A813DL46__Polarella_glacialis:0.0032514402,((I__A0A813EGT3__Polarella_glacialis:0.0000010056,I__A0A813FUN0__Polarella_glacialis:0.0000010056)97.9/100:0.0144193637,(I__A0A813EKS1__Polarella_glacialis:0.0048533988,((((I__A0A813F1C2__Polarella_glacialis:0.0056792443,I__A0A813FV75__Polarella_glacialis:0.0000010056)0/97:0.0000020677,I__A0A813FQQ5__Polarella_glacialis:0.0122785704)0/44:0.0025706834,I__A0A813GZQ2__Polarella_glacialis:0.0000010056)0/24:0.0000028845,I__A0A813FIL7__Polarella_glacialis:0.0196002815)0/14:0.0000014941)0/92:0.0002882657)53.4/94:0.0023840522)100/100:0.1129053998,I__A0ABN9U0F9__Prorocentrum_cordatum:0.1279102330)14.3/51:0.0337530183)100/100:0.2599023447,((I__A0A9C7Q133__Galdieria_partita:0.0133933654,I__M2VVE5__Galdieria_sulphuraria:0.0206881316)88.9/100:0.0160288905,(I__A0AAV9II25__Galdieria_yellowstonensis:0.0000010056,I__A0AAV9IK25__Galdieria_yellowstonensis:0.0000010056)96.1/100:0.0288665653)99.9/100:0.1102157503)88.9/60:0.0375419405,(I__A0A5J4ZA80__Porphyridium_purpureum:0.2017800465,I__A0AAV8UUU9__Rhodosorus_marinus:0.2519426231)92.5/97:0.0572400726)0/10:0.0189656129,((I__A0A7J7IS76__Cyanidiococcus_yangmingshane:0.0650394563,I__M1VI67__Cyanidioschyzon_merolae__str:0.0841718761)82.7/99:0.0578400088,I__A0AAV9IQF5__Cyanidium_caldarium:0.1546326940)99.2/100:0.1213359547)89.4/54:0.0340069952)85.2/51:0.0157706637)53/54:0.0076405863,I__L1IX87__Guillardia_theta__strain_CCM:0.2614074789)77.1/57:0.0105039895,(((((((((((((II__Q93WX6__Arabidopsis_thaliana:0.2303824095,(II__A0A2K1IG87__Physcomitrium_patens:0.0550778574,II__A0A2K1III6__Physcomitrium_patens:0.0555986241)100/100:0.1318066062)96.2/100:0.0709632443,(((((((II__A0A0D2NKH0__Monoraphidium_neglectum:0.0978904714,II__A0A2V0NSU4__Raphidocelis_subcapitata:0.0570128876)96.9/100:0.0598774072,(II__A0A383W364__Tetradesmus_obliquus:0.0000010056,II__A0ABY8TSU8__Tetradesmus_obliquus:0.0055591109)100/100:0.1353547558)90.9/100:0.0384248553,((((II__A0A150GSI0__Gonium_pectorale:0.0657206160,((((II__A0A8J4AWN9__Volvox_africanus:0.0074659507,II__A0ABQ5RLQ4__Volvox_africanus:0.0191761958)31.7/74:0.0126270765,II__A0A8J4BYA2__Volvox_reticuliferus:0.0272289763)98.9/100:0.0451935762,II__D8U4F0__Volvox_carteri_f__nagariensi:0.0328866321)28.4/77:0.0166483348,II__A0A9W6BWJ6__Pleodorina_starrii:0.0437938574)92.8/100:0.0396951741)74.2/92:0.0192763434,(((II__A0A2K3D4F5__Chlamydomonas_reinhardtii:0.0325419956,II__A0A835W4R2__Chlamydomonas_incerta:0.0156174302)54/100:0.0136782082,II__A0A836BBE5__Chlamydomonas_schloesseri:0.0334804588)99.5/100:0.0575597597,II__A0A836C3K8__Edaphochlamys_debaryana:0.1126932736)85.4/95:0.0197188737)75.3/98:0.0266633363,II__A0AAD3DLB4__Astrephomene_gubernaculifera:0.0587977304)100/100:0.1745650169,((II__A0A250XQB1__Chlamydomonas_eustigma:0.1799376453,(II__A0A699YXJ6__Haematococcus_lacustris:0.0056798176,II__A0A699Z0U1__Haematococcus_lacustris:0.0000022682)100/100:0.1549841055)85.9/93:0.0453379822,((II__A0A8S1IWC9__Ostreobium_quekettii:0.0092961046,II__A0A8S1J0I1__Ostreobium_quekettii:0.0016514889)100/100:0.2537731810,((((((II__A0AAV1ICZ6__Coccomyxa_viridis:0.0799816800,II__A0ABP1FU44__Coccomyxa_viridis:0.0872950847)99.2/100:0.0882568050,((II__A0ABR2Z3A6__Coccomyxa_subellipsoidea:0.0425375716,II__A0ACE1SKF8__Coccomyxa_elongata:0.0561201695)75.1/100:0.0130531203,II__I0YTX4__Coccomyxa_subellipsoidea__st:0.0412093528)99.6/100:0.0872168043)99.7/100:0.1157868622,II__A0AAW1S4X2__Elliptochloris_bilobata:0.1312360655)97.9/100:0.0826546666,II__A0AAW1NTA6__Symbiochloris_irregularis:0.2200562587)87.7/100:0.0443981955,(II__A0AAW1RVX7__Apatococcus_fuscideae:0.0028001582,II__A0AAW1S4E3__Apatococcus_lobatus:0.0262322701)100/100:0.2493290235)75.7/95:0.0229521745,II__A0AAW1QSM0___Myrmecia__bisecta:0.1742790349)93.2/96:0.0507539875)92.5/99:0.0425871376)49.5/90:0.0222335709)93.2/99:0.0377147683)94.7/100:0.0556297998,(((II__A4RUI4__Ostreococcus_lucimarinus__st:0.0744765734,II__Q01CJ7__Ostreococcus_tauri:0.0403213175)99.6/100:0.1176389654,II__K8F3P5__Bathycoccus_prasinos:0.3122712600)83.5/98:0.0695746921,(II__C1DZT7__Micromonas_commoda:0.1588205357,II__C1MJ23__Micromonas_pusilla__strain_C:0.1468441410)99.5/100:0.1221875953)93.5/99:0.0699923392)96.6/99:0.0708452069,((II__A0A5B8MJF9__Chloropicon_primus:0.0977076348,II__A0AAX4PEP3__Chloropicon_roscoffensis:0.1328700064)100/100:0.2359222486,II__A0A830HDK8__Pycnococcus_provasolii:0.4656408772)53.2/87:0.0628299871)91.6/89:0.0420978245,(II__A0A388KHQ8__Chara_braunii:0.0000010056,II__A0A388LZT0__Chara_braunii:0.0000010056)100/100:0.3078888472)69.3/70:0.0333976125,(II__A0A1Y1I0J5__Klebsormidium_nitens:0.2548692982,II__A0AAE0FI37__Cymbomonas_tetramitiformis:0.2038826071)90.3/88:0.0329568253)84.7/81:0.0282022285)97.7/98:0.0818739561,(((((II__A0A1X6PID7__Porphyra_umbilicalis:0.0642982279,II__A0ACC3C150__Pyropia_yezoensis:0.0439686552)100/100:0.2057832699,II__A0A2V3ITM5__Gracilariopsis_chorda:0.3280744729)89/99:0.0589223800,II__A0A5J4YI84__Porphyridium_purpureum:0.3249075654)44.2/91:0.0450421004,((II__A0A9C7PYH5__Galdieria_partita:0.0590663779,II__M2Y4K9__Galdieria_sulphuraria:0.0251071128)99.2/100:0.1047622511,II__A0AAV9IDY7__Galdieria_yellowstonensis:0.1050865282)100/100:0.3354920705)6.7/80:0.0336870152,((II__A0A7J7IE79__Cyanidiococcus_yangmingshane:0.0924503405,II__M1V4W8__Cyanidioschyzon_merolae__str:0.1018945931)99.9/100:0.1371018411,II__A0AAV9J2Q2__Cyanidium_caldarium:0.2653613545)99.9/100:0.1730846458)99.6/100:0.1151516102)74.9/99:0.0602813095,((((II__A0A1Q9E2S5__Symbiodinium_microadriaticum:0.0000010056,II__A0A813AY52__Symbiodinium_necroappetens:0.0027110336)99.8/100:0.0936899146,((II__A0A9P1FU59__Cladocopium_goreaui:0.0445886467,((II__A0ABP0KKF9__Durusdinium_trenchii:0.0000010056,II__A0ABP0QTW1__Durusdinium_trenchii:0.0027657906)0/47:0.0000010056,(II__A0ABP0KUW1__Durusdinium_trenchii:0.0000010056,II__A0ABP0QRF0__Durusdinium_trenchii:0.0000010056)81.9/99:0.0027359765)100/100:0.1032177946)93.1/99:0.0463139978,II__A0AA36I4S5__Effrenium_voratum:0.0621614782)96.9/100:0.0668767373)95.2/100:0.0750929507,(II__A0A813EC50__Polarella_glacialis:0.0000010056,II__A0A813F5G7__Polarella_glacialis:0.0000010056)100/100:0.1721442272)69.4/99:0.0467663819,II__A0ABN9V3V7__Prorocentrum_cordatum:0.1533020485)100/100:0.2917948204)84.3/100:0.0428093397,(((II__A0A0M0JIF4__Chrysochromulina_tobinii:0.1927795629,II__A0AB34IPJ2__Prymnesium_parvum:0.2202495146)93.8/83:0.0807206009,((((((II__A0A1Q9D6N0__Symbiodinium_microadriaticum:0.0186627303,II__A0A812SJ40__Symbiodinium_natans:0.0271973547)68.6/92:0.0161431167,II__A0A812TZP6__Symbiodinium_pilosum:0.0152935521)84/93:0.0287623291,(II__A0A9P1C7R4__Cladocopium_goreaui:0.0793958495,II__A0AA36HML1__Effrenium_voratum:0.1125677576)50.6/98:0.0260394381)100/100:0.3644888419,(II__A0A4D9CTB8__Nannochloropsis_salina_CCMP1:0.0045076423,II__W7TM03__Nannochloropsis_gaditana:0.0039239656)100/100:0.2716765842)92.1/64:0.0771461704,(II__A0A835YHC6__Tribonema_minus:0.2109633348,II__D7G5K2__Ectocarpus_siliculosus:0.1821779304)97.9/100:0.0939910282)75.1/64:0.0228974853,((II__A0A8J2SKF9__Pelagomonas_calceolata:0.2658370773,(II__A0ABR1G4C2__Aureococcus_anophagefferens:0.0000010056,II__F0XYR2__Aureococcus_anophagefferens:0.0000010056)100/100:0.2325502506)97.9/100:0.1146445697,II__A0AAD7UNE2__Chrysophaeum_taylorii:0.2598880454)99.9/100:0.1986342642)90.1/92:0.0368663797)86.2/81:0.0307999597,II__A0A8J6CI92__Diacronema_lutheri:0.3203033169)95.7/97:0.0743043889)88/96:0.0490189517,(((((II__A0A1E7FQI7__Fragilariopsis_cylindrus_CCM:0.1265108824,(II__A0A9K3L7Y2__Nitzschia_inconspicua:0.0063298658,II__A0A9K3LFN5__Nitzschia_inconspicua:0.0026255449)99.7/100:0.0816892227)93.7/100:0.0569047184,II__A0AAD2JLA6__Cylindrotheca_closterium:0.1162043564)99.5/100:0.0861434132,(II__A0A9N8H885__Seminavis_robusta:0.1991403016,(II__A0AAD3D922__Chaetoceros_tenuissimus:0.1898410218,((II__A0AAD8Y1M9__Skeletonema_marinoi:0.0891894868,(II__A0ABD3LXU8__Discostella_pseudostelligera:0.0792757212,(II__A0ABD3MYQ6__Stephanodiscus_triporus:0.0601217441,(II__A0ABD3R565__Cyclostephanos_tholiformis:0.0000010056,II__A0ABD3RA89__Cyclostephanos_tholiformis:0.0000010056)99.5/100:0.0873520605)100/100:0.1574133531)21.7/63:0.0208446310)99.1/100:0.0891983554,(II__A0ABD3MSF9__Cyclotella_atomus:0.0988354130,II__A0ABD3QH57__Cyclotella_cryptica:0.1216869868)98/100:0.0751915539)99.5/100:0.1175136595)99/100:0.0967769290)38.2/79:0.0109057950)93.9/90:0.0499117656,((II__A0A1Z5JBG7__Fistulifera_solaris:0.0160266440,II__A0A1Z5KLZ0__Fistulifera_solaris:0.0245229882)100/100:0.2177723167,II__B7FV09__Phaeodactylum_tricornutum__s:0.2000936415)92.6/94:0.0585763232)99.4/100:0.1325030773,(((II__A0A9W7CDX7__Triparma_laevis_f__longispin:0.1040053796,(II__A0A9W7E1R6__Triparma_strigata:0.0031940404,II__A0A9W7FN66__Triparma_verrucosa:0.0021574712)94.1/100:0.0490645910)99.8/100:0.2410293316,(II__A0A9W7E3A2__Triparma_retinervis:0.0217942861,II__A0A9W7GLM1__Triparma_columacea:0.0580042741)99.9/100:0.2374209830)98.8/100:0.1478738281,II__A0ABQ6MPW9__Tetraparma_gracilis:0.3306941094)100/100:0.1915809310)73.8/99:0.0428566736)100/100:0.2183855441,II__A0A9P1BGJ2__Cladocopium_goreaui:0.4748866477)83.8/83:0.0715124816,((II__A0A812S1P1__Symbiodinium_pilosum:0.5693788471,REF_SufS_Ecoli:0.5642627749)75.8/99:0.1184986597,(II__A0ABP0LK72__Durusdinium_trenchii:0.0082812658,II__A0ABP0LS76__Durusdinium_trenchii:0.0000026072)100/100:0.6546321879)96.2/98:0.1198336048)88.4/85:0.1051293879,(II__A0ABP0S8C1__Durusdinium_trenchii:0.3650489465,II__A0ABP0SL67__Durusdinium_trenchii:0.2161532691)99.2/100:0.2834730235)100/100:1.7140570460,(L3__Q96I15__Homo_sapiens:1.0948358024,(((((((((L3__A0A090M4Q8__Ostreococcus_tauri:0.1425135675,L3__A4S300__Ostreococcus_lucimarinus__st:0.1172250901)100/100:0.1977450283,(L3__C1EHB0__Micromonas_commoda:0.1561133805,L3__C1MNN5__Micromonas_pusilla__strain_C:0.2690255532)98.9/100:0.1339485786)97.1/100:0.1266850406,L3__K8F9J9__Bathycoccus_prasinos:0.6791786508)95/98:0.1272511089,(((((L3__A0A0D3JFS3__Emiliania_huxleyi__strain_CC:0.3491145082,(L3__A0AB34J9E3__Prymnesium_parvum:0.1905155487,L3__A0AB34KAI8__Prymnesium_parvum:0.1945609833)99.4/100:0.1466484427)87.4/99:0.1074412756,(L3__A0A8J5X355__Diacronema_lutheri:0.3604031050,((NEW__A0A8J2WTZ1__Pelagomonas_calceolata:0.2107195256,(NEW__F0XXL4__Aureococcus_anophagefferens:0.0000010056,NEW__A0ABR1FZ61__Aureococcus_anophagefferens:0.0000010056)99.9/100:0.1846186299)94.4/100:0.0879262598,NEW__A0AAD7XJ29__Chrysophaeum_taylorii:0.2906710218)99.8/100:0.1890140053)99.1/100:0.1730279304)73/91:0.0281615897,L3__A0A699ZEV1__Haematococcus_lacustris:0.4195768983)86.6/57:0.0662721060,L3__A0A836CMI1__Tribonema_minus:0.4984567619)87/19:0.0637766885,((((((((L3__A0A150H2L5__Gonium_pectorale:0.0926667734,((L3__A0A2K3DJ46__Chlamydomonas_reinhardtii:0.1472855688,L3__A0A835XY57__Edaphochlamys_debaryana:0.2099401284)94.7/100:0.1100181348,((L3__A0A8J4FGX8__Volvox_reticuliferus:0.1258954430,L3__A0A9W6BEK4__Pleodorina_starrii:0.0936929422)0/23:0.0192441461,L3__D8U8R1__Volvox_carteri_f__nagariensi:0.1653613171)62.5/100:0.0381026514)68.9/99:0.0214656195)58.9/100:0.0347713802,(L3__A0A835W6A0__Chlamydomonas_incerta:0.0508984905,L3__A0A835WMZ9__Chlamydomonas_schloesseri:0.0340787558)99.8/100:0.1672470319)99.9/100:0.1605687293,L3__A0ABQ7GSE4__Dunaliella_salina:0.4457507185)81/99:0.0360923161,L3__A0A250WXK3__Chlamydomonas_eustigma:0.4324485158)75.8/93:0.0428116319,(((((L3__A0A383VU94__Tetradesmus_obliquus:0.0000010056,L3__A0ABY8TSA6__Tetradesmus_obliquus:0.0027178750)99.9/100:0.1887631021,REF_HText_Spabb:0.1923051522)97.1/95:0.0798711754,L3__A0AAW1R1Z0__Elliptochloris_bilobata:0.3560058322)56.4/94:0.0399360639,L3__A0AAW1QA50___Myrmecia__bisecta:0.3763265692)45.1/73:0.0301189079,(NEW__A0A0D2N0J3__Monoraphidium_neglectum:0.2160880668,NEW__A0A2V0PAY6__Raphidocelis_subcapitata:0.2299108900)99.9/100:0.1382117189)79.4/70:0.0354127890)78.1/68:0.0367663805,(((L3__A0A2P6TKZ5__Chlorella_sorokiniana:0.0355631739,L3__A0AAD5DKK7__Chlorella_ohadii:0.0423615818)99.6/100:0.0877718527,(L3__A0A2P6V8I3__Micractinium_conductrix:0.1578006764,L3__A0ACF7V9P5__Micractinium_tetrahymenae:0.1122099916)96.2/100:0.0551587159)5/92:0.0230909498,((L3__A0A9D4TIF6__Chlorella_vulgaris:0.0267066242,L3__A0ACF8QEV9__Chlorella_vulgaris:0.0132508176)100/100:0.1435292302,L3__E1ZDB8__Chlorella_variabilis:0.0977706089)98.9/100:0.0767473693)100/100:0.1420381035)86.9/62:0.0521588091,(L3__A0A8S1J814__Ostreobium_quekettii:0.4935002214,L3__A0AAE0LE91__Cymbomonas_tetramitiformis:0.3697271603)96.7/68:0.1217906046)53.9/53:0.0446514403,(L3__A0A5B8MPI0__Chloropicon_primus:0.4272354075,(L3__A0AAX4PFB6__Chloropicon_roscoffensis:0.0077468607,L3__A0AAX4PJN5__Chloropicon_roscoffensis:0.0428996464)100/100:0.3639263321)100/100:0.2264692877)78.6/25:0.0423248502)62.1/56:0.0676545803)27.1/59:0.0695783169,L3__A0A830HW14__Pycnococcus_provasolii:0.9069275834)7.9/44:0.0339987887,(((((((((L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM:0.1892382686,L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat:0.1826063957)99.4/100:0.1256616278,(NEW__A0A9K3LVN3__Nitzschia_inconspicua:0.0020256082,NEW__A0A9K3KRJ2__Nitzschia_inconspicua:0.0086922236)100/100:0.2347147217)93/100:0.0775909494,L3__A0A9N8H4H9__Seminavis_robusta:0.2873784788)52.5/98:0.0562440019,(L3__A0AAD2FN92__Cylindrotheca_closterium:0.0000010056,L3__A0AAD2FSZ6__Cylindrotheca_closterium:0.0026741122)100/100:0.3049897642)79.1/100:0.0733557648,NEW__B7G8F0__Phaeodactylum_tricornutum_st:0.3303560461)7.6/87:0.0527191991,(L3__A0A1Z5JXU0__Fistulifera_solaris:0.0549019277,L3__A0A1Z5KCV9__Fistulifera_solaris:0.0674680433)100/100:0.5183869821)80.7/91:0.0914253435,(L3__A0AAD3CS45__Chaetoceros_tenuissimus:0.3159400503,L3__A0AAD3CTN0__Chaetoceros_tenuissimus:0.2117593858)98/100:0.1229732455)85.4/92:0.1358399272,((((L3__A0AAD8YPT2__Skeletonema_marinoi:0.2314606806,(L3__A0ABD3M126__Discostella_pseudostelligera:0.1776010006,((L3__A0ABD3MQJ2__Stephanodiscus_triporus:0.1853209139,L3__A0ABD3PCK7__Stephanodiscus_triporus:0.1104507344)96.6/100:0.0882261895,L3__A0ABD3SBR2__Cyclostephanos_tholiformis:0.0760594980)97.3/100:0.0677608161)74.4/100:0.0424741378)85.1/100:0.0316046345,((L3__A0ABD3PCQ2__Cyclotella_cryptica:0.0422957273,L3__A0ABD3PL28__Cyclotella_cryptica:0.2110418054)94/100:0.0952991757,L3__A0ABD3QT07__Cyclotella_atomus:0.1429215015)99.2/100:0.1022407984)93/100:0.0468741455,L3__B8BXE3__Thalassiosira_pseudonana:0.1697270148)70.8/92:0.0338232014,L3__K0SC66__Thalassiosira_oceanica:0.3228056174)99.5/100:0.2159488197)42.7/65:0.1239420459,(((NEW__A0A9W7AV08__Triparma_laevis_f_longispina:0.4219880497,(NEW__A0A9W7B676__Triparma_strigata:0.0027765862,NEW__A0A9W7KXE0__Triparma_verrucosa:0.0000024646)99.9/100:0.3734339019)96.3/100:0.2748847051,NEW__A0ABQ6MTH9__Tetraparma_gracilis:1.2897432806)91.9/100:0.3144641507,NEW__A0A9W7GEK0__Triparma_columacea:0.9854919407)99.8/100:0.5567258682)99.1/100:0.2274744450)97.2/100:0.1145424983,(((((L3__A0A1Q9EC91__Symbiodinium_microadriaticum:0.1599816091,L3__A0ABN9Y9J6__Prorocentrum_cordatum:0.2349959998)54.5/62:0.0265626525,L3__A0A813D9I6__Polarella_glacialis:0.1421082858)86.1/62:0.0608541650,L3__A0A9P1CGG1__Cladocopium_goreaui:0.1227471681)100/100:0.4540979024,L3__L1J7X1__Guillardia_theta__strain_CCM:0.5589417068)90.3/99:0.0864624290,(L3__A0A1Y1HX28__Klebsormidium_nitens:0.4167002761,L3__A0A388KLW8__Chara_braunii:0.3314666994)99.2/100:0.2317909028)84.2/96:0.0404933395)91.6/82:0.1244447947,NEW__A0A9P1FCD2__Cladocopium_goreaui:0.7966334837)0/45:0.0041440111,L3__L1J7A3__Guillardia_theta__strain_CCM:0.9658193317)61.1/57:0.0311246949)95.8/99:0.2121922185)97/99:0.2833472969,(I__A0A9P1BG81__Cladocopium_goreaui:0.3618055823,(I__A0ABP0HQJ3__Durusdinium_trenchii:0.0330835722,I__A0ABP0JKY5__Durusdinium_trenchii:0.0264435024)100/100:0.7862172874)93.5/100:0.1766034448)83.5/98:0.1801430460,REF_IscS_Ecoli:0.3335302425)98.1/97:0.1369861381,(I__A0A2V3J0K4__Gracilariopsis_chorda:0.0863722335,I__R7QGB9__Chondrus_crispus:0.0840879927)99.6/100:0.1242270160)89.7/62:0.0414897826)97.3/93:0.0500413497,((((I__A0A5B8MHP9__Chloropicon_primus:0.0386251567,I__A0AAX4P4V9__Chloropicon_roscoffensis:0.0279939964)100/100:0.1567103427,((I__A4RUB0__Ostreococcus_lucimarinus__st:0.0424320335,I__Q01CS2__Ostreococcus_tauri:0.0859141486)100/100:0.1192156513,((I__C1E3B7__Micromonas_commoda:0.0865364332,I__C1N3B7__Micromonas_pusilla__strain_C:0.1041994437)79.3/99:0.0302797868,I__K8FF08__Bathycoccus_prasinos:0.1794414899)93.7/98:0.0537431405)0.7/42:0.0092228089)92.1/93:0.0335515814,I__A0A830HZ24__Pycnococcus_provasolii:0.1944069464)90/98:0.0368676529,I__A0AAE0C3S8__Cymbomonas_tetramitiformis:0.1855915464)94.7/99:0.0488202361)89.3/90:0.0268914511,(((I__A0A087SBH3__Auxenochlorella_protothecoid:0.1154686754,I__A0AAD9MG95__Prototheca_wickerhamii:0.1448277609)99.5/100:0.0878290423,(((((I__A0A2P6U3X4__Chlorella_sorokiniana:0.0056042425,I__A0AAD5H885__Chlorella_ohadii:0.0086085502)97.9/100:0.0304448984,((I__A0A9D4TRG1__Chlorella_vulgaris:0.0027581723,I__A0ACF8QD05__Chlorella_vulgaris:0.0056423982)98.8/100:0.0384096424,I__E1ZRR8__Chlorella_variabilis:0.0310799756)82.4/99:0.0228890856)34.5/98:0.0083777330,I__A0ACF7TST8__Micractinium_tetrahymenae:0.0277169582)85.9/99:0.0178560313,I__A0A2P6V904__Micractinium_conductrix:0.0517058195)99.8/100:0.0811127563,((((((I__A0AAV1HVJ1__Coccomyxa_viridis:0.0146777732,I__A0ABP1G8Q3__Coccomyxa_viridis:0.0242172620)97.9/100:0.0351651187,((I__A0ABR2YJJ0__Coccomyxa_subellipsoidea:0.0074840078,I__I0Z0B3__Coccomyxa_subellipsoidea__st:0.0223131144)99.8/100:0.0438471341,I__A0ACE1RWG8__Coccomyxa_elongata:0.0219750296)95.6/100:0.0275845519)98.2/100:0.0545482882,I__A0AAW1S9M3__Elliptochloris_bilobata:0.1041347466)91.4/100:0.0263818960,((I__A0AAW1QJ11__Apatococcus_lobatus:0.0000010056,I__A0AAW1SY41__Apatococcus_fuscideae:0.0000010056)90.7/100:0.0207692984,I__A0AAW1T9X9__Apatococcus_fuscideae:0.0346271942)100/100:0.1398410863)57.3/97:0.0180249192,I__A0AAW1P501__Symbiochloris_irregularis:0.1288762973)71.2/98:0.0278664136,I__A0AAW1QFK0___Myrmecia__bisecta:0.1204834308)91.2/99:0.0304464227)87.8/92:0.0381583418)37.1/75:0.0098700164,(((I__A0A0D2M031__Monoraphidium_neglectum:0.0476045469,I__A0A2V0PKC5__Raphidocelis_subcapitata:0.0537375667)99.1/100:0.0524452017,(I__A0A383VZF3__Tetradesmus_obliquus:0.0036606533,I__A0ABY8U2V6__Tetradesmus_obliquus:0.0206765462)100/100:0.1004472006)86/98:0.0192733805,(I__A0A250X580__Chlamydomonas_eustigma:0.2729089182,(((I__A0A2K3E3W0__Chlamydomonas_reinhardtii:0.0205398842,I__A0A835TFC4__Chlamydomonas_incerta:0.0155342134)76.1/91:0.0073848711,I__A0A835W5I8__Chlamydomonas_schloesseri:0.0111030165)90.5/97:0.0399136261,((I__A0A835Y811__Edaphochlamys_debaryana:0.0537399034,I__D8TZS2__Volvox_carteri_f__nagariensi:0.0366454210)67.6/67:0.0078206709,(I__A0A9W6BP52__Pleodorina_starrii:0.0288502008,(I__A0AAD3HPG5__Astrephomene_gubernaculifera:0.0716416230,I__A0ABQ5RV58__Volvox_africanus:0.0427382733)52.5/71:0.0134536000)38.2/66:0.0105732962)86.7/96:0.0174689638)99.9/100:0.1169668749)37.4/89:0.0180938997)98.2/100:0.0434596904)94.1/100:0.0362584717)91.3/90:0.0292821962,(I__A0A388KUJ5__Chara_braunii:0.0013721513,I__A0A388KUR9__Chara_braunii:0.0072464955)100/100:0.1181734996)88/97:0.0324753456,I__A0A1Y1I0C3__Klebsormidium_nitens:0.1046947713)97.4/98:0.0811781237,(I__A0A2K1L2H1__Physcomitrium_patens:0.0236295360,I__A0A2K1L8W3__Physcomitrium_patens:0.0522906994)98.1/100:0.0593980026);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -83177.463804
+Robinson-Foulds distance between ML tree and consensus tree: 20
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++---I__O49543__Arabidopsis_thaliana
+|
+|                          +---I__P25374__Saccharomyces_cerevisiae
+|                       +--| (69)
+|                       |  +--I__Q9Y697__Homo_sapiens
+|                    +--| (66)
+|                    |  |                 +--I__A0A1E7EW37__Fragilariopsis_cylindrus_CCM
+|                    |  |              +--| (100)
+|                    |  |              |  +--I__A0A448Z0Q3__Pseudo_nitzschia_multistriat
+|                    |  |           +--| (99)
+|                    |  |           |  |              +--I__A0A1Z5KA33__Fistulifera_solaris
+|                    |  |           |  |           +--| (100)
+|                    |  |           |  |           |  +--I__A0A1Z5KQV2__Fistulifera_solaris
+|                    |  |           |  |        +--| (82)
+|                    |  |           |  |        |  +--I__A0A9N8D7B1__Seminavis_robusta
+|                    |  |           |  |     +--| (78)
+|                    |  |           |  |     |  +--I__B7FUS8__Phaeodactylum_tricornutum__s
+|                    |  |           |  |  +--| (78)
+|                    |  |           |  |  |  +--I__A0AAD2CQ79__Cylindrotheca_closterium
+|                    |  |           |  +--| (98)
+|                    |  |           |     |  +--I__A0A9K3LIY3__Nitzschia_inconspicua
+|                    |  |           |     +--| (100)
+|                    |  |           |        +--I__A0A9K3PS87__Nitzschia_inconspicua
+|                    |  |        +--| (100)
+|                    |  |        |  |  +--I__A0AAD3CNM3__Chaetoceros_tenuissimus
+|                    |  |        |  +--| (92)
+|                    |  |        |     |           +--I__A0AAD9DDT3__Skeletonema_marinoi
+|                    |  |        |     |        +--| (93)
+|                    |  |        |     |        |  |  +--I__B8BTI1__Thalassiosira_pseudonana
+|                    |  |        |     |        |  +--| (93)
+|                    |  |        |     |        |     +--I__K0T2T4__Thalassiosira_oceanica
+|                    |  |        |     |     +--| (100)
+|                    |  |        |     |     |  |  +--I__A0ABD3NDW2__Cyclotella_atomus
+|                    |  |        |     |     |  +--| (100)
+|                    |  |        |     |     |     +--I__A0ABD3NZ76__Cyclotella_cryptica
+|                    |  |        |     |  +--| (81)
+|                    |  |        |     |  |  +--I__A0ABD3RT14__Cyclostephanos_tholiformis
+|                    |  |        |     +--| (100)
+|                    |  |        |        +--I__A0ABD3MXL0__Stephanodiscus_triporus
+|                    |  |     +--| (73)
+|                    |  |     |  |     +--I__A0A9W7A1X6__Triparma_retinervis
+|                    |  |     |  |  +--| (100)
+|                    |  |     |  |  |  +--I__A0A9W7GKV9__Triparma_columacea
+|                    |  |     |  +--| (100)
+|                    |  |     |     |        +--I__A0A9W7A8F9__Triparma_strigata
+|                    |  |     |     |     +--| (100)
+|                    |  |     |     |     |  +--I__A0A9W7EV45__Triparma_verrucosa
+|                    |  |     |     |  +--| (100)
+|                    |  |     |     |  |  +--I__A0A9W7L032__Triparma_laevis_f__longispin
+|                    |  |     |     +--| (97)
+|                    |  |     |        +--I__A0ABQ6MTM1__Tetraparma_gracilis
+|                    |  |  +--| (98)
+|                    |  |  |  |     +--I__A0A4D9DAJ6__Nannochloropsis_salina_CCMP1
+|                    |  |  |  |  +--| (100)
+|                    |  |  |  |  |  +--I__W7TNL7__Nannochloropsis_gaditana
+|                    |  |  |  +--| (57)
+|                    |  |  |     |     +--I__A0A835YNJ7__Tribonema_minus
+|                    |  |  |     |  +--| (97)
+|                    |  |  |     |  |  +--I__A0A835YUN3__Tribonema_minus
+|                    |  |  |     +--| (99)
+|                    |  |  |        +--I__D8LSH6__Ectocarpus_siliculosus
+|                    |  +--| (99)
+|                    |     |        +--I__A0A8J2T399__Pelagomonas_calceolata
+|                    |     |     +--| (100)
+|                    |     |     |  +--I__A0A8J2X1B6__Pelagomonas_calceolata
+|                    |     |  +--| (100)
+|                    |     |  |  |  +--I__A0ABR1G8E5__Aureococcus_anophagefferens
+|                    |     |  |  +--| (100)
+|                    |     |  |     +--I__F0XX58__Aureococcus_anophagefferens
+|                    |     +--| (100)
+|                    |        +--I__A0AAD7XIM5__Chrysophaeum_taylorii
+|                 +--| (54)
+|                 |  |           +--I__A0A0D3KWK1__Emiliania_huxleyi__strain_CC
+|                 |  |        +--| (98)
+|                 |  |        |  +-------I__A0A0D3KXW7__Emiliania_huxleyi__strain_CC
+|                 |  |     +--| (98)
+|                 |  |     |  |     +--I__A0A0M0JAJ3__Chrysochromulina_tobinii
+|                 |  |     |  |  +--| (94)
+|                 |  |     |  |  |  +--I__A0AB34IS35__Prymnesium_parvum
+|                 |  |     |  +--| (99)
+|                 |  |     |     +---I__A0A8J6C7R9__Diacronema_lutheri
+|                 |  |  +--| (98)
+|                 |  |  |  |  +--I__A0A1X6NJT4__Porphyra_umbilicalis
+|                 |  |  |  +--| (100)
+|                 |  |  |     +--I__A0ACC3BQ38__Pyropia_yezoensis
+|                 |  +--| (51)
+|                 |     |                    +--I__A0A1Q9DE09__Symbiodinium_microadriaticum
+|                 |     |                 +--| (89)
+|                 |     |                 |  +--I__A0A812KGR1__Symbiodinium_pilosum
+|                 |     |              +--| (100)
+|                 |     |              |  +--I__A0A1Q9E9V0__Symbiodinium_microadriaticum
+|                 |     |           +--| (75)
+|                 |     |           |  |  +--I__A0A9P1GER4__Cladocopium_goreaui
+|                 |     |           |  +--| (100)
+|                 |     |           |     |     +--I__A0ABP0LT22__Durusdinium_trenchii
+|                 |     |           |     |  +--| (88)
+|                 |     |           |     |  |  +--I__A0ABP0LT72__Durusdinium_trenchii
+|                 |     |           |     +--| (95)
+|                 |     |           |        |  +--I__A0ABP0LTD8__Durusdinium_trenchii
+|                 |     |           |        +--| (99)
+|                 |     |           |           +--I__A0ABP0LV06__Durusdinium_trenchii
+|                 |     |        +--| (100)
+|                 |     |        |  +--I__A0AA36J6N9__Effrenium_voratum
+|                 |     |     +--| (100)
+|                 |     |     |  |     +--I__A0A813DL46__Polarella_glacialis
+|                 |     |     |  |  +--| (100)
+|                 |     |     |  |  |  |     +--I__A0A813EGT3__Polarella_glacialis
+|                 |     |     |  |  |  |  +--| (100)
+|                 |     |     |  |  |  |  |  +--I__A0A813FUN0__Polarella_glacialis
+|                 |     |     |  |  |  +--| (94)
+|                 |     |     |  |  |     |           +--I__A0A813EKS1__Polarella_glacialis
+|                 |     |     |  |  |     |        +--| (44)
+|                 |     |     |  |  |     |        |  +--I__A0A813FQQ5__Polarella_glacialis
+|                 |     |     |  |  |     |     +--| (35)
+|                 |     |     |  |  |     |     |  |  +--I__A0A813F1C2__Polarella_glacialis
+|                 |     |     |  |  |     |     |  +--| (97)
+|                 |     |     |  |  |     |     |     +--I__A0A813FV75__Polarella_glacialis
+|                 |     |     |  |  |     |  +--| (45)
+|                 |     |     |  |  |     |  |  +--I__A0A813GZQ2__Polarella_glacialis
+|                 |     |     |  |  |     +--| (92)
+|                 |     |     |  |  |        +--I__A0A813FIL7__Polarella_glacialis
+|                 |     |     |  +--| (51)
+|                 |     |     |     +--I__A0ABN9U0F9__Prorocentrum_cordatum
+|                 |     |  +--| (60)
+|                 |     |  |  |     +--I__A0A9C7Q133__Galdieria_partita
+|                 |     |  |  |  +--| (100)
+|                 |     |  |  |  |  +--I__M2VVE5__Galdieria_sulphuraria
+|                 |     |  |  +--| (100)
+|                 |     |  |     |  +--I__A0AAV9II25__Galdieria_yellowstonensis
+|                 |     |  |     +--| (100)
+|                 |     |  |        +--I__A0AAV9IK25__Galdieria_yellowstonensis
+|                 |     +--| (54)
+|                 |        |     +--I__A0A5J4ZA80__Porphyridium_purpureum
+|                 |        |  +--| (97)
+|                 |        |  |  +--I__A0AAV8UUU9__Rhodosorus_marinus
+|                 |        +--| (56)
+|                 |           |     +--I__A0A7J7IS76__Cyanidiococcus_yangmingshane
+|                 |           |  +--| (99)
+|                 |           |  |  +--I__M1VI67__Cyanidioschyzon_merolae__str
+|                 |           +--| (100)
+|                 |              +--I__A0AAV9IQF5__Cyanidium_caldarium
+|              +--| (57)
+|              |  +--I__L1IX87__Guillardia_theta__strain_CCM
+|           +--| (93)
+|           |  |                                                             +--II__Q93WX6__Arabidopsis_thaliana
+|           |  |                                                          +--| (100)
+|           |  |                                                          |  |  +--II__A0A2K1IG87__Physcomitrium_patens
+|           |  |                                                          |  +--| (100)
+|           |  |                                                          |     +--II__A0A2K1III6__Physcomitrium_patens
+|           |  |                                                       +--| (98)
+|           |  |                                                       |  |                    +--II__A0A0D2NKH0__Monoraphidium_neglectum
+|           |  |                                                       |  |                 +--| (100)
+|           |  |                                                       |  |                 |  +--II__A0A2V0NSU4__Raphidocelis_subcapitata
+|           |  |                                                       |  |              +--| (100)
+|           |  |                                                       |  |              |  |  +--II__A0A383W364__Tetradesmus_obliquus
+|           |  |                                                       |  |              |  +--| (100)
+|           |  |                                                       |  |              |     +--II__A0ABY8TSU8__Tetradesmus_obliquus
+|           |  |                                                       |  |           +--| (100)
+|           |  |                                                       |  |           |  |           +--II__A0A150GSI0__Gonium_pectorale
+|           |  |                                                       |  |           |  |        +--| (92)
+|           |  |                                                       |  |           |  |        |  |           +--II__A0A8J4AWN9__Volvox_africanus
+|           |  |                                                       |  |           |  |        |  |        +--| (74)
+|           |  |                                                       |  |           |  |        |  |        |  +--II__A0ABQ5RLQ4__Volvox_africanus
+|           |  |                                                       |  |           |  |        |  |     +--| (100)
+|           |  |                                                       |  |           |  |        |  |     |  +--II__A0A8J4BYA2__Volvox_reticuliferus
+|           |  |                                                       |  |           |  |        |  |  +--| (77)
+|           |  |                                                       |  |           |  |        |  |  |  +--II__D8U4F0__Volvox_carteri_f__nagariensi
+|           |  |                                                       |  |           |  |        |  +--| (100)
+|           |  |                                                       |  |           |  |        |     +--II__A0A9W6BWJ6__Pleodorina_starrii
+|           |  |                                                       |  |           |  |     +--| (98)
+|           |  |                                                       |  |           |  |     |  |        +--II__A0A2K3D4F5__Chlamydomonas_reinhardtii
+|           |  |                                                       |  |           |  |     |  |     +--| (100)
+|           |  |                                                       |  |           |  |     |  |     |  +--II__A0A835W4R2__Chlamydomonas_incerta
+|           |  |                                                       |  |           |  |     |  |  +--| (100)
+|           |  |                                                       |  |           |  |     |  |  |  +--II__A0A836BBE5__Chlamydomonas_schloesseri
+|           |  |                                                       |  |           |  |     |  +--| (95)
+|           |  |                                                       |  |           |  |     |     +--II__A0A836C3K8__Edaphochlamys_debaryana
+|           |  |                                                       |  |           |  |  +--| (100)
+|           |  |                                                       |  |           |  |  |  +--II__A0AAD3DLB4__Astrephomene_gubernaculifera
+|           |  |                                                       |  |           |  +--| (99)
+|           |  |                                                       |  |           |     |     +--II__A0A250XQB1__Chlamydomonas_eustigma
+|           |  |                                                       |  |           |     |  +--| (93)
+|           |  |                                                       |  |           |     |  |  |  +--II__A0A699YXJ6__Haematococcus_lacustris
+|           |  |                                                       |  |           |     |  |  +--| (100)
+|           |  |                                                       |  |           |     |  |     +--II__A0A699Z0U1__Haematococcus_lacustris
+|           |  |                                                       |  |           |     +--| (90)
+|           |  |                                                       |  |           |        |     +--II__A0A8S1IWC9__Ostreobium_quekettii
+|           |  |                                                       |  |           |        |  +--| (100)
+|           |  |                                                       |  |           |        |  |  +--II__A0A8S1J0I1__Ostreobium_quekettii
+|           |  |                                                       |  |           |        +--| (99)
+|           |  |                                                       |  |           |           |                 +--II__A0AAV1ICZ6__Coccomyxa_viridis
+|           |  |                                                       |  |           |           |              +--| (100)
+|           |  |                                                       |  |           |           |              |  +--II__A0ABP1FU44__Coccomyxa_viridis
+|           |  |                                                       |  |           |           |           +--| (100)
+|           |  |                                                       |  |           |           |           |  |     +--II__A0ABR2Z3A6__Coccomyxa_subellipsoidea
+|           |  |                                                       |  |           |           |           |  |  +--| (100)
+|           |  |                                                       |  |           |           |           |  |  |  +--II__A0ACE1SKF8__Coccomyxa_elongata
+|           |  |                                                       |  |           |           |           |  +--| (100)
+|           |  |                                                       |  |           |           |           |     +--II__I0YTX4__Coccomyxa_subellipsoidea__st
+|           |  |                                                       |  |           |           |        +--| (100)
+|           |  |                                                       |  |           |           |        |  +--II__A0AAW1S4X2__Elliptochloris_bilobata
+|           |  |                                                       |  |           |           |     +--| (100)
+|           |  |                                                       |  |           |           |     |  +--II__A0AAW1NTA6__Symbiochloris_irregularis
+|           |  |                                                       |  |           |           |  +--| (95)
+|           |  |                                                       |  |           |           |  |  |  +--II__A0AAW1RVX7__Apatococcus_fuscideae
+|           |  |                                                       |  |           |           |  |  +--| (100)
+|           |  |                                                       |  |           |           |  |     +--II__A0AAW1S4E3__Apatococcus_lobatus
+|           |  |                                                       |  |           |           +--| (96)
+|           |  |                                                       |  |           |              +--II__A0AAW1QSM0___Myrmecia__bisecta
+|           |  |                                                       |  |        +--| (99)
+|           |  |                                                       |  |        |  |        +--II__A4RUI4__Ostreococcus_lucimarinus__st
+|           |  |                                                       |  |        |  |     +--| (100)
+|           |  |                                                       |  |        |  |     |  +--II__Q01CJ7__Ostreococcus_tauri
+|           |  |                                                       |  |        |  |  +--| (98)
+|           |  |                                                       |  |        |  |  |  +---II__K8F3P5__Bathycoccus_prasinos
+|           |  |                                                       |  |        |  +--| (99)
+|           |  |                                                       |  |        |     |  +--II__C1DZT7__Micromonas_commoda
+|           |  |                                                       |  |        |     +--| (100)
+|           |  |                                                       |  |        |        +--II__C1MJ23__Micromonas_pusilla__strain_C
+|           |  |                                                       |  |     +--| (89)
+|           |  |                                                       |  |     |  |     +--II__A0A5B8MJF9__Chloropicon_primus
+|           |  |                                                       |  |     |  |  +--| (100)
+|           |  |                                                       |  |     |  |  |  +--II__A0AAX4PEP3__Chloropicon_roscoffensis
+|           |  |                                                       |  |     |  +--| (87)
+|           |  |                                                       |  |     |     +-----II__A0A830HDK8__Pycnococcus_provasolii
+|           |  |                                                       |  |  +--| (70)
+|           |  |                                                       |  |  |  |   +--II__A0A388KHQ8__Chara_braunii
+|           |  |                                                       |  |  |  +---| (100)
+|           |  |                                                       |  |  |      +--II__A0A388LZT0__Chara_braunii
+|           |  |                                                       |  +--| (81)
+|           |  |                                                       |     |  +--II__A0A1Y1I0J5__Klebsormidium_nitens
+|           |  |                                                       |     +--| (88)
+|           |  |                                                       |        +--II__A0AAE0FI37__Cymbomonas_tetramitiformis
+|           |  |                                                    +--| (99)
+|           |  |                                                    |  |              +--II__A0A1X6PID7__Porphyra_umbilicalis
+|           |  |                                                    |  |           +--| (100)
+|           |  |                                                    |  |           |  +--II__A0ACC3C150__Pyropia_yezoensis
+|           |  |                                                    |  |        +--| (99)
+|           |  |                                                    |  |        |  +---II__A0A2V3ITM5__Gracilariopsis_chorda
+|           |  |                                                    |  |     +--| (91)
+|           |  |                                                    |  |     |  +---II__A0A5J4YI84__Porphyridium_purpureum
+|           |  |                                                    |  |  +--| (80)
+|           |  |                                                    |  |  |  |      +--II__A0A9C7PYH5__Galdieria_partita
+|           |  |                                                    |  |  |  |   +--| (100)
+|           |  |                                                    |  |  |  |   |  +--II__M2Y4K9__Galdieria_sulphuraria
+|           |  |                                                    |  |  |  +---| (100)
+|           |  |                                                    |  |  |      +--II__A0AAV9IDY7__Galdieria_yellowstonensis
+|           |  |                                                    |  +--| (100)
+|           |  |                                                    |     |     +--II__A0A7J7IE79__Cyanidiococcus_yangmingshane
+|           |  |                                                    |     |  +--| (100)
+|           |  |                                                    |     |  |  +--II__M1V4W8__Cyanidioschyzon_merolae__str
+|           |  |                                                    |     +--| (100)
+|           |  |                                                    |        +--II__A0AAV9J2Q2__Cyanidium_caldarium
+|           |  |                                                 +--| (100)
+|           |  |                                                 |  |            +--II__A0A1Q9E2S5__Symbiodinium_microadriaticum
+|           |  |                                                 |  |         +--| (100)
+|           |  |                                                 |  |         |  +--II__A0A813AY52__Symbiodinium_necroappetens
+|           |  |                                                 |  |      +--| (100)
+|           |  |                                                 |  |      |  |     +--II__A0A9P1FU59__Cladocopium_goreaui
+|           |  |                                                 |  |      |  |  +--| (99)
+|           |  |                                                 |  |      |  |  |  |     +--II__A0ABP0KKF9__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |  |  +--| (52)
+|           |  |                                                 |  |      |  |  |  |  |  |  +--II__A0ABP0KUW1__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |  |  |  +--| (99)
+|           |  |                                                 |  |      |  |  |  |  |     +--II__A0ABP0QRF0__Durusdinium_trenchii
+|           |  |                                                 |  |      |  |  |  +--| (100)
+|           |  |                                                 |  |      |  |  |     +--II__A0ABP0QTW1__Durusdinium_trenchii
+|           |  |                                                 |  |      |  +--| (100)
+|           |  |                                                 |  |      |     +--II__A0AA36I4S5__Effrenium_voratum
+|           |  |                                                 |  |   +--| (99)
+|           |  |                                                 |  |   |  |  +--II__A0A813EC50__Polarella_glacialis
+|           |  |                                                 |  |   |  +--| (100)
+|           |  |                                                 |  |   |     +--II__A0A813F5G7__Polarella_glacialis
+|           |  |                                                 |  +---| (100)
+|           |  |                                                 |      +--II__A0ABN9V3V7__Prorocentrum_cordatum
+|           |  |                                              +--| (96)
+|           |  |                                              |  |        +--II__A0A0M0JIF4__Chrysochromulina_tobinii
+|           |  |                                              |  |     +--| (83)
+|           |  |                                              |  |     |  +--II__A0AB34IPJ2__Prymnesium_parvum
+|           |  |                                              |  |  +--| (81)
+|           |  |                                              |  |  |  |                   +--II__A0A1Q9D6N0__Symbiodinium_microadriaticum
+|           |  |                                              |  |  |  |                +--| (92)
+|           |  |                                              |  |  |  |                |  +--II__A0A812SJ40__Symbiodinium_natans
+|           |  |                                              |  |  |  |             +--| (93)
+|           |  |                                              |  |  |  |             |  +--II__A0A812TZP6__Symbiodinium_pilosum
+|           |  |                                              |  |  |  |        +----| (100)
+|           |  |                                              |  |  |  |        |    |  +--II__A0A9P1C7R4__Cladocopium_goreaui
+|           |  |                                              |  |  |  |        |    +--| (98)
+|           |  |                                              |  |  |  |        |       +--II__A0AA36HML1__Effrenium_voratum
+|           |  |                                              |  |  |  |     +--| (64)
+|           |  |                                              |  |  |  |     |  |   +--II__A0A4D9CTB8__Nannochloropsis_salina_CCMP1
+|           |  |                                              |  |  |  |     |  +---| (100)
+|           |  |                                              |  |  |  |     |      +--II__W7TM03__Nannochloropsis_gaditana
+|           |  |                                              |  |  |  |  +--| (64)
+|           |  |                                              |  |  |  |  |  |  +--II__A0A835YHC6__Tribonema_minus
+|           |  |                                              |  |  |  |  |  +--| (100)
+|           |  |                                              |  |  |  |  |     +--II__D7G5K2__Ectocarpus_siliculosus
+|           |  |                                              |  |  |  +--| (92)
+|           |  |                                              |  |  |     |     +--II__A0A8J2SKF9__Pelagomonas_calceolata
+|           |  |                                              |  |  |     |  +--| (100)
+|           |  |                                              |  |  |     |  |  |  +--II__A0ABR1G4C2__Aureococcus_anophagefferens
+|           |  |                                              |  |  |     |  |  +--| (100)
+|           |  |                                              |  |  |     |  |     +--II__F0XYR2__Aureococcus_anophagefferens
+|           |  |                                              |  |  |     +--| (100)
+|           |  |                                              |  |  |        +--II__A0AAD7UNE2__Chrysophaeum_taylorii
+|           |  |                                              |  +--| (97)
+|           |  |                                              |     +---II__A0A8J6CI92__Diacronema_lutheri
+|           |  |                                           +--| (100)
+|           |  |                                           |  |              +--II__A0A1E7FQI7__Fragilariopsis_cylindrus_CCM
+|           |  |                                           |  |           +--| (100)
+|           |  |                                           |  |           |  |  +--II__A0A9K3L7Y2__Nitzschia_inconspicua
+|           |  |                                           |  |           |  +--| (100)
+|           |  |                                           |  |           |     +--II__A0A9K3LFN5__Nitzschia_inconspicua
+|           |  |                                           |  |        +--| (100)
+|           |  |                                           |  |        |  +--II__A0AAD2JLA6__Cylindrotheca_closterium
+|           |  |                                           |  |     +--| (90)
+|           |  |                                           |  |     |  |  +--II__A0A9N8H885__Seminavis_robusta
+|           |  |                                           |  |     |  +--| (79)
+|           |  |                                           |  |     |     |  +--II__A0AAD3D922__Chaetoceros_tenuissimus
+|           |  |                                           |  |     |     +--| (100)
+|           |  |                                           |  |     |        |     +--II__A0AAD8Y1M9__Skeletonema_marinoi
+|           |  |                                           |  |     |        |  +--| (100)
+|           |  |                                           |  |     |        |  |  |  +--II__A0ABD3LXU8__Discostella_pseudostelligera
+|           |  |                                           |  |     |        |  |  +--| (63)
+|           |  |                                           |  |     |        |  |     |  +--II__A0ABD3MYQ6__Stephanodiscus_triporus
+|           |  |                                           |  |     |        |  |     +--| (100)
+|           |  |                                           |  |     |        |  |        |  +--II__A0ABD3R565__Cyclostephanos_tholiformis
+|           |  |                                           |  |     |        |  |        +--| (100)
+|           |  |                                           |  |     |        |  |           +--II__A0ABD3RA89__Cyclostephanos_tholiformis
+|           |  |                                           |  |     |        +--| (100)
+|           |  |                                           |  |     |           |  +--II__A0ABD3MSF9__Cyclotella_atomus
+|           |  |                                           |  |     |           +--| (100)
+|           |  |                                           |  |     |              +--II__A0ABD3QH57__Cyclotella_cryptica
+|           |  |                                           |  |  +--| (100)
+|           |  |                                           |  |  |  |     +--II__A0A1Z5JBG7__Fistulifera_solaris
+|           |  |                                           |  |  |  |  +--| (100)
+|           |  |                                           |  |  |  |  |  +--II__A0A1Z5KLZ0__Fistulifera_solaris
+|           |  |                                           |  |  |  +--| (94)
+|           |  |                                           |  |  |     +--II__B7FV09__Phaeodactylum_tricornutum__s
+|           |  |                                           |  +--| (99)
+|           |  |                                           |     |        +--II__A0A9W7CDX7__Triparma_laevis_f__longispin
+|           |  |                                           |     |     +--| (100)
+|           |  |                                           |     |     |  |  +--II__A0A9W7E1R6__Triparma_strigata
+|           |  |                                           |     |     |  +--| (100)
+|           |  |                                           |     |     |     +--II__A0A9W7FN66__Triparma_verrucosa
+|           |  |                                           |     |  +--| (100)
+|           |  |                                           |     |  |  |  +--II__A0A9W7E3A2__Triparma_retinervis
+|           |  |                                           |     |  |  +--| (100)
+|           |  |                                           |     |  |     +--II__A0A9W7GLM1__Triparma_columacea
+|           |  |                                           |     +--| (100)
+|           |  |                                           |        +---II__A0ABQ6MPW9__Tetraparma_gracilis
+|           |  |                                        +--| (83)
+|           |  |                                        |  +------II__A0A9P1BGJ2__Cladocopium_goreaui
+|           |  |                                     +--| (85)
+|           |  |                                     |  |     +-------II__A0A812S1P1__Symbiodinium_pilosum
+|           |  |                                     |  |  +--| (99)
+|           |  |                                     |  |  |  +-------REF_SufS_Ecoli
+|           |  |                                     |  +--| (98)
+|           |  |                                     |     |        +--II__A0ABP0LK72__Durusdinium_trenchii
+|           |  |                                     |     +--------| (100)
+|           |  |                                     |              +--II__A0ABP0LS76__Durusdinium_trenchii
+|           |  |            +------------------------| (100)
+|           |  |            |                        |   +----II__A0ABP0S8C1__Durusdinium_trenchii
+|           |  |            |                        +---| (100)
+|           |  |            |                            +--II__A0ABP0SL67__Durusdinium_trenchii
+|           |  |        +---| (99)
+|           |  |        |   |  +---------------L3__Q96I15__Homo_sapiens
+|           |  |        |   +--| (99)
+|           |  |        |      |                          +--L3__A0A090M4Q8__Ostreococcus_tauri
+|           |  |        |      |                       +--| (100)
+|           |  |        |      |                       |  +--L3__A4S300__Ostreococcus_lucimarinus__st
+|           |  |        |      |                    +--| (100)
+|           |  |        |      |                    |  |  +--L3__C1EHB0__Micromonas_commoda
+|           |  |        |      |                    |  +--| (100)
+|           |  |        |      |                    |     +---L3__C1MNN5__Micromonas_pusilla__strain_C
+|           |  |        |      |                 +--| (98)
+|           |  |        |      |                 |  +---------L3__K8F9J9__Bathycoccus_prasinos
+|           |  |        |      |              +--| (59)
+|           |  |        |      |              |  |              +----L3__A0A0D3JFS3__Emiliania_huxleyi__strain_CC
+|           |  |        |      |              |  |           +--| (99)
+|           |  |        |      |              |  |           |  |  +--L3__A0AB34J9E3__Prymnesium_parvum
+|           |  |        |      |              |  |           |  +--| (100)
+|           |  |        |      |              |  |           |     +--L3__A0AB34KAI8__Prymnesium_parvum
+|           |  |        |      |              |  |        +--| (91)
+|           |  |        |      |              |  |        |  |  +----L3__A0A8J5X355__Diacronema_lutheri
+|           |  |        |      |              |  |        |  +--| (100)
+|           |  |        |      |              |  |        |     |     +--NEW__A0A8J2WTZ1__Pelagomonas_calceolata
+|           |  |        |      |              |  |        |     |  +--| (100)
+|           |  |        |      |              |  |        |     |  |  |  +--NEW__F0XXL4__Aureococcus_anophagefferens
+|           |  |        |      |              |  |        |     |  |  +--| (100)
+|           |  |        |      |              |  |        |     |  |     +--NEW__A0ABR1FZ61__Aureococcus_anophagefferens
+|           |  |        |      |              |  |        |     +--| (100)
+|           |  |        |      |              |  |        |        +---NEW__A0AAD7XJ29__Chrysophaeum_taylorii
+|           |  |        |      |              |  |     +--| (57)
+|           |  |        |      |              |  |     |  +-----L3__A0A699ZEV1__Haematococcus_lacustris
+|           |  |        |      |              |  |  +--| (14)
+|           |  |        |      |              |  |  |  |     +-----L3__A0A5B8MPI0__Chloropicon_primus
+|           |  |        |      |              |  |  |  |  +--| (100)
+|           |  |        |      |              |  |  |  |  |  |    +--L3__A0AAX4PFB6__Chloropicon_roscoffensis
+|           |  |        |      |              |  |  |  |  |  +----| (100)
+|           |  |        |      |              |  |  |  |  |       +--L3__A0AAX4PJN5__Chloropicon_roscoffensis
+|           |  |        |      |              |  |  |  +--| (42)
+|           |  |        |      |              |  |  |     +-----L3__A0A836CMI1__Tribonema_minus
+|           |  |        |      |              |  +--| (56)
+|           |  |        |      |              |     |                    +--L3__A0A150H2L5__Gonium_pectorale
+|           |  |        |      |              |     |                 +--| (100)
+|           |  |        |      |              |     |                 |  |     +--L3__A0A2K3DJ46__Chlamydomonas_reinhardtii
+|           |  |        |      |              |     |                 |  |  +--| (100)
+|           |  |        |      |              |     |                 |  |  |  +--L3__A0A835XY57__Edaphochlamys_debaryana
+|           |  |        |      |              |     |                 |  +--| (99)
+|           |  |        |      |              |     |                 |     |     +--L3__A0A8J4FGX8__Volvox_reticuliferus
+|           |  |        |      |              |     |                 |     |  +--| (77)
+|           |  |        |      |              |     |                 |     |  |  +--L3__D8U8R1__Volvox_carteri_f__nagariensi
+|           |  |        |      |              |     |                 |     +--| (100)
+|           |  |        |      |              |     |                 |        +--L3__A0A9W6BEK4__Pleodorina_starrii
+|           |  |        |      |              |     |              +--| (100)
+|           |  |        |      |              |     |              |  |  +--L3__A0A835W6A0__Chlamydomonas_incerta
+|           |  |        |      |              |     |              |  +--| (100)
+|           |  |        |      |              |     |              |     +--L3__A0A835WMZ9__Chlamydomonas_schloesseri
+|           |  |        |      |              |     |           +--| (99)
+|           |  |        |      |              |     |           |  +-----L3__A0ABQ7GSE4__Dunaliella_salina
+|           |  |        |      |              |     |        +--| (93)
+|           |  |        |      |              |     |        |  +-----L3__A0A250WXK3__Chlamydomonas_eustigma
+|           |  |        |      |              |     |     +--| (68)
+|           |  |        |      |              |     |     |  |              +--L3__A0A383VU94__Tetradesmus_obliquus
+|           |  |        |      |              |     |     |  |           +--| (100)
+|           |  |        |      |              |     |     |  |           |  +--L3__A0ABY8TSA6__Tetradesmus_obliquus
+|           |  |        |      |              |     |     |  |        +--| (95)
+|           |  |        |      |              |     |     |  |        |  +--REF_HText_Spabb
+|           |  |        |      |              |     |     |  |     +--| (94)
+|           |  |        |      |              |     |     |  |     |  +----L3__A0AAW1R1Z0__Elliptochloris_bilobata
+|           |  |        |      |              |     |     |  |  +--| (73)
+|           |  |        |      |              |     |     |  |  |  +----L3__A0AAW1QA50___Myrmecia__bisecta
+|           |  |        |      |              |     |     |  +--| (70)
+|           |  |        |      |              |     |     |     |  +--NEW__A0A0D2N0J3__Monoraphidium_neglectum
+|           |  |        |      |              |     |     |     +--| (100)
+|           |  |        |      |              |     |     |        +--NEW__A0A2V0PAY6__Raphidocelis_subcapitata
+|           |  |        |      |              |     |  +--| (62)
+|           |  |        |      |              |     |  |  |        +--L3__A0A2P6TKZ5__Chlorella_sorokiniana
+|           |  |        |      |              |     |  |  |     +--| (100)
+|           |  |        |      |              |     |  |  |     |  +--L3__A0AAD5DKK7__Chlorella_ohadii
+|           |  |        |      |              |     |  |  |  +--| (92)
+|           |  |        |      |              |     |  |  |  |  |  +--L3__A0A2P6V8I3__Micractinium_conductrix
+|           |  |        |      |              |     |  |  |  |  +--| (100)
+|           |  |        |      |              |     |  |  |  |     +--L3__A0ACF7V9P5__Micractinium_tetrahymenae
+|           |  |        |      |              |     |  |  +--| (100)
+|           |  |        |      |              |     |  |     |     +--L3__A0A9D4TIF6__Chlorella_vulgaris
+|           |  |        |      |              |     |  |     |  +--| (100)
+|           |  |        |      |              |     |  |     |  |  +--L3__A0ACF8QEV9__Chlorella_vulgaris
+|           |  |        |      |              |     |  |     +--| (100)
+|           |  |        |      |              |     |  |        +--L3__E1ZDB8__Chlorella_variabilis
+|           |  |        |      |              |     +--| (53)
+|           |  |        |      |              |        |  +------L3__A0A8S1J814__Ostreobium_quekettii
+|           |  |        |      |              |        +--| (68)
+|           |  |        |      |              |           +----L3__A0AAE0LE91__Cymbomonas_tetramitiformis
+|           |  |        |      |           +--| (44)
+|           |  |        |      |           |  +------------L3__A0A830HW14__Pycnococcus_provasolii
+|           |  |        |      |        +--| (100)
+|           |  |        |      |        |  |                          +--L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM
+|           |  |        |      |        |  |                       +--| (100)
+|           |  |        |      |        |  |                       |  +--L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat
+|           |  |        |      |        |  |                    +--| (100)
+|           |  |        |      |        |  |                    |  |  +--NEW__A0A9K3LVN3__Nitzschia_inconspicua
+|           |  |        |      |        |  |                    |  +--| (100)
+|           |  |        |      |        |  |                    |     +--NEW__A0A9K3KRJ2__Nitzschia_inconspicua
+|           |  |        |      |        |  |                 +--| (98)
+|           |  |        |      |        |  |                 |  +---L3__A0A9N8H4H9__Seminavis_robusta
+|           |  |        |      |        |  |              +--| (100)
+|           |  |        |      |        |  |              |  |   +--L3__A0AAD2FN92__Cylindrotheca_closterium
+|           |  |        |      |        |  |              |  +---| (100)
+|           |  |        |      |        |  |              |      +--L3__A0AAD2FSZ6__Cylindrotheca_closterium
+|           |  |        |      |        |  |           +--| (87)
+|           |  |        |      |        |  |           |  +---NEW__B7G8F0__Phaeodactylum_tricornutum_st
+|           |  |        |      |        |  |        +--| (91)
+|           |  |        |      |        |  |        |  |      +--L3__A0A1Z5JXU0__Fistulifera_solaris
+|           |  |        |      |        |  |        |  +------| (100)
+|           |  |        |      |        |  |        |         +--L3__A0A1Z5KCV9__Fistulifera_solaris
+|           |  |        |      |        |  |     +--| (92)
+|           |  |        |      |        |  |     |  |  +---L3__A0AAD3CS45__Chaetoceros_tenuissimus
+|           |  |        |      |        |  |     |  +--| (100)
+|           |  |        |      |        |  |     |     +--L3__A0AAD3CTN0__Chaetoceros_tenuissimus
+|           |  |        |      |        |  |  +--| (65)
+|           |  |        |      |        |  |  |  |           +--L3__A0AAD8YPT2__Skeletonema_marinoi
+|           |  |        |      |        |  |  |  |        +--| (100)
+|           |  |        |      |        |  |  |  |        |  |  +--L3__A0ABD3M126__Discostella_pseudostelligera
+|           |  |        |      |        |  |  |  |        |  +--| (100)
+|           |  |        |      |        |  |  |  |        |     |     +--L3__A0ABD3MQJ2__Stephanodiscus_triporus
+|           |  |        |      |        |  |  |  |        |     |  +--| (100)
+|           |  |        |      |        |  |  |  |        |     |  |  +--L3__A0ABD3PCK7__Stephanodiscus_triporus
+|           |  |        |      |        |  |  |  |        |     +--| (100)
+|           |  |        |      |        |  |  |  |        |        +--L3__A0ABD3SBR2__Cyclostephanos_tholiformis
+|           |  |        |      |        |  |  |  |     +--| (100)
+|           |  |        |      |        |  |  |  |     |  |     +--L3__A0ABD3PCQ2__Cyclotella_cryptica
+|           |  |        |      |        |  |  |  |     |  |  +--| (100)
+|           |  |        |      |        |  |  |  |     |  |  |  +--L3__A0ABD3PL28__Cyclotella_cryptica
+|           |  |        |      |        |  |  |  |     |  +--| (100)
+|           |  |        |      |        |  |  |  |     |     +--L3__A0ABD3QT07__Cyclotella_atomus
+|           |  |        |      |        |  |  |  |  +--| (92)
+|           |  |        |      |        |  |  |  |  |  +--L3__B8BXE3__Thalassiosira_pseudonana
+|           |  |        |      |        |  |  |  +--| (100)
+|           |  |        |      |        |  |  |     +---L3__K0SC66__Thalassiosira_oceanica
+|           |  |        |      |        |  +--| (100)
+|           |  |        |      |        |     |               +-----NEW__A0A9W7AV08__Triparma_laevis_f_longispina
+|           |  |        |      |        |     |           +---| (100)
+|           |  |        |      |        |     |           |   |    +--NEW__A0A9W7B676__Triparma_strigata
+|           |  |        |      |        |     |           |   +----| (100)
+|           |  |        |      |        |     |           |        +--NEW__A0A9W7KXE0__Triparma_verrucosa
+|           |  |        |      |        |     |       +---| (100)
+|           |  |        |      |        |     |       |   +------------------NEW__A0ABQ6MTH9__Tetraparma_gracilis
+|           |  |        |      |        |     +-------| (100)
+|           |  |        |      |        |             +-------------NEW__A0A9W7GEK0__Triparma_columacea
+|           |  |        |      |     +--| (82)
+|           |  |        |      |     |  |                 +--L3__A0A1Q9EC91__Symbiodinium_microadriaticum
+|           |  |        |      |     |  |              +--| (62)
+|           |  |        |      |     |  |              |  +--L3__A0ABN9Y9J6__Prorocentrum_cordatum
+|           |  |        |      |     |  |           +--| (62)
+|           |  |        |      |     |  |           |  +--L3__A0A813D9I6__Polarella_glacialis
+|           |  |        |      |     |  |     +-----| (100)
+|           |  |        |      |     |  |     |     +--L3__A0A9P1CGG1__Cladocopium_goreaui
+|           |  |        |      |     |  |  +--| (99)
+|           |  |        |      |     |  |  |  +-------L3__L1J7X1__Guillardia_theta__strain_CCM
+|           |  |        |      |     |  +--| (96)
+|           |  |        |      |     |     |  +-----L3__A0A1Y1HX28__Klebsormidium_nitens
+|           |  |        |      |     |     +--| (100)
+|           |  |        |      |     |        +---L3__A0A388KLW8__Chara_braunii
+|           |  |        |      |  +--| (45)
+|           |  |        |      |  |  +----------NEW__A0A9P1FCD2__Cladocopium_goreaui
+|           |  |        |      +--| (57)
+|           |  |        |         +-------------L3__L1J7A3__Guillardia_theta__strain_CCM
+|           |  |     +--| (98)
+|           |  |     |  |  +----I__A0A9P1BG81__Cladocopium_goreaui
+|           |  |     |  +--| (100)
+|           |  |     |     |          +--I__A0ABP0HQJ3__Durusdinium_trenchii
+|           |  |     |     +----------| (100)
+|           |  |     |                +--I__A0ABP0JKY5__Durusdinium_trenchii
+|           |  |  +--| (97)
+|           |  |  |  +---REF_IscS_Ecoli
+|           |  +--| (62)
+|           |     |  +--I__A0A2V3J0K4__Gracilariopsis_chorda
+|           |     +--| (100)
+|           |        +--I__R7QGB9__Chondrus_crispus
+|        +--| (90)
+|        |  |              +--I__A0A5B8MHP9__Chloropicon_primus
+|        |  |           +--| (100)
+|        |  |           |  +--I__A0AAX4P4V9__Chloropicon_roscoffensis
+|        |  |        +--| (57)
+|        |  |        |  |  +--I__A4RUB0__Ostreococcus_lucimarinus__st
+|        |  |        |  +--| (100)
+|        |  |        |     +--I__Q01CS2__Ostreococcus_tauri
+|        |  |     +--| (93)
+|        |  |     |  |     +--I__C1E3B7__Micromonas_commoda
+|        |  |     |  |  +--| (99)
+|        |  |     |  |  |  +--I__C1N3B7__Micromonas_pusilla__strain_C
+|        |  |     |  +--| (98)
+|        |  |     |     +--I__K8FF08__Bathycoccus_prasinos
+|        |  |  +--| (98)
+|        |  |  |  +--I__A0A830HZ24__Pycnococcus_provasolii
+|        |  +--| (99)
+|        |     +--I__A0AAE0C3S8__Cymbomonas_tetramitiformis
+|     +--| (90)
+|     |  |        +--I__A0A087SBH3__Auxenochlorella_protothecoid
+|     |  |     +--| (100)
+|     |  |     |  +--I__A0AAD9MG95__Prototheca_wickerhamii
+|     |  |  +--| (75)
+|     |  |  |  |              +--I__A0A2P6U3X4__Chlorella_sorokiniana
+|     |  |  |  |           +--| (100)
+|     |  |  |  |           |  +--I__A0AAD5H885__Chlorella_ohadii
+|     |  |  |  |        +--| (98)
+|     |  |  |  |        |  |     +--I__A0A9D4TRG1__Chlorella_vulgaris
+|     |  |  |  |        |  |  +--| (100)
+|     |  |  |  |        |  |  |  +--I__A0ACF8QD05__Chlorella_vulgaris
+|     |  |  |  |        |  +--| (99)
+|     |  |  |  |        |     +--I__E1ZRR8__Chlorella_variabilis
+|     |  |  |  |     +--| (99)
+|     |  |  |  |     |  +--I__A0ACF7TST8__Micractinium_tetrahymenae
+|     |  |  |  |  +--| (100)
+|     |  |  |  |  |  +--I__A0A2P6V904__Micractinium_conductrix
+|     |  |  |  +--| (92)
+|     |  |  |     |                 +--I__A0AAV1HVJ1__Coccomyxa_viridis
+|     |  |  |     |              +--| (100)
+|     |  |  |     |              |  +--I__A0ABP1G8Q3__Coccomyxa_viridis
+|     |  |  |     |           +--| (100)
+|     |  |  |     |           |  |     +--I__A0ABR2YJJ0__Coccomyxa_subellipsoidea
+|     |  |  |     |           |  |  +--| (100)
+|     |  |  |     |           |  |  |  +--I__I0Z0B3__Coccomyxa_subellipsoidea__st
+|     |  |  |     |           |  +--| (100)
+|     |  |  |     |           |     +--I__A0ACE1RWG8__Coccomyxa_elongata
+|     |  |  |     |        +--| (100)
+|     |  |  |     |        |  +--I__A0AAW1S9M3__Elliptochloris_bilobata
+|     |  |  |     |     +--| (97)
+|     |  |  |     |     |  |     +--I__A0AAW1QJ11__Apatococcus_lobatus
+|     |  |  |     |     |  |  +--| (100)
+|     |  |  |     |     |  |  |  +--I__A0AAW1SY41__Apatococcus_fuscideae
+|     |  |  |     |     |  +--| (100)
+|     |  |  |     |     |     +--I__A0AAW1T9X9__Apatococcus_fuscideae
+|     |  |  |     |  +--| (98)
+|     |  |  |     |  |  +--I__A0AAW1P501__Symbiochloris_irregularis
+|     |  |  |     +--| (99)
+|     |  |  |        +--I__A0AAW1QFK0___Myrmecia__bisecta
+|     |  +--| (100)
+|     |     |        +--I__A0A0D2M031__Monoraphidium_neglectum
+|     |     |     +--| (100)
+|     |     |     |  +--I__A0A2V0PKC5__Raphidocelis_subcapitata
+|     |     |  +--| (98)
+|     |     |  |  |  +--I__A0A383VZF3__Tetradesmus_obliquus
+|     |     |  |  +--| (100)
+|     |     |  |     +--I__A0ABY8U2V6__Tetradesmus_obliquus
+|     |     +--| (100)
+|     |        |  +---I__A0A250X580__Chlamydomonas_eustigma
+|     |        +--| (89)
+|     |           |        +--I__A0A2K3E3W0__Chlamydomonas_reinhardtii
+|     |           |     +--| (91)
+|     |           |     |  +--I__A0A835TFC4__Chlamydomonas_incerta
+|     |           |  +--| (97)
+|     |           |  |  +--I__A0A835W5I8__Chlamydomonas_schloesseri
+|     |           +--| (100)
+|     |              |     +--I__A0A835Y811__Edaphochlamys_debaryana
+|     |              |  +--| (67)
+|     |              |  |  +--I__D8TZS2__Volvox_carteri_f__nagariensi
+|     |              +--| (96)
+|     |                 |  +--I__A0A9W6BP52__Pleodorina_starrii
+|     |                 +--| (66)
+|     |                    |  +--I__A0AAD3HPG5__Astrephomene_gubernaculifera
+|     |                    +--| (71)
+|     |                       +--I__A0ABQ5RV58__Volvox_africanus
+|  +--| (97)
+|  |  |  +--I__A0A388KUJ5__Chara_braunii
+|  |  +--| (100)
+|  |     +--I__A0A388KUR9__Chara_braunii
++--| (98)
+|  +--I__A0A1Y1I0C3__Klebsormidium_nitens
+|
+|  +--I__A0A2K1L2H1__Physcomitrium_patens
++--| (100)
+   +--I__A0A2K1L8W3__Physcomitrium_patens
+
+
+Consensus tree in newick format: 
+
+(I__O49543__Arabidopsis_thaliana:0.2754298160,(((((((((I__P25374__Saccharomyces_cerevisiae:0.3317079430,I__Q9Y697__Homo_sapiens:0.1926646208)69:0.0401181870,((((((I__A0A1E7EW37__Fragilariopsis_cylindrus_CCM:0.0854249590,I__A0A448Z0Q3__Pseudo_nitzschia_multistriat:0.0688907498)100:0.0272581516,(((((I__A0A1Z5KA33__Fistulifera_solaris:0.0222673316,I__A0A1Z5KQV2__Fistulifera_solaris:0.0032661643)100:0.1343974760,I__A0A9N8D7B1__Seminavis_robusta:0.0932172140)82:0.0226448519,I__B7FUS8__Phaeodactylum_tricornutum__s:0.0872261292)78:0.0078820982,I__A0AAD2CQ79__Cylindrotheca_closterium:0.0743743198)78:0.0256122298,(I__A0A9K3LIY3__Nitzschia_inconspicua:0.0074662240,I__A0A9K3PS87__Nitzschia_inconspicua:0.0042065174)100:0.0591745748)98:0.0293807623)99:0.0351565675,(I__A0AAD3CNM3__Chaetoceros_tenuissimus:0.1405458427,((((I__A0AAD9DDT3__Skeletonema_marinoi:0.0627701962,(I__B8BTI1__Thalassiosira_pseudonana:0.0406469015,I__K0T2T4__Thalassiosira_oceanica:0.0782644633)93:0.0138293894)93:0.0180525598,(I__A0ABD3NDW2__Cyclotella_atomus:0.0328095713,I__A0ABD3NZ76__Cyclotella_cryptica:0.0657960395)100:0.0309041791)100:0.0261804427,I__A0ABD3RT14__Cyclostephanos_tholiformis:0.1116036211)81:0.0108672608,I__A0ABD3MXL0__Stephanodiscus_triporus:0.0775016866)100:0.0911391162)92:0.0243140655)100:0.0823870027,((I__A0A9W7A1X6__Triparma_retinervis:0.0144188751,I__A0A9W7GKV9__Triparma_columacea:0.0185418092)100:0.1355900366,(((I__A0A9W7A8F9__Triparma_strigata:0.0030779378,I__A0A9W7EV45__Triparma_verrucosa:0.0084276176)100:0.0528560660,I__A0A9W7L032__Triparma_laevis_f__longispin:0.0791178950)100:0.0705120773,I__A0ABQ6MTM1__Tetraparma_gracilis:0.2344674478)97:0.0503985391)100:0.0903999579)73:0.0583265963,((I__A0A4D9DAJ6__Nannochloropsis_salina_CCMP1:0.0056899003,I__W7TNL7__Nannochloropsis_gaditana:0.0000020213)100:0.1995912900,((I__A0A835YNJ7__Tribonema_minus:0.0665583044,I__A0A835YUN3__Tribonema_minus:0.2680688649)97:0.0877539514,I__D8LSH6__Ectocarpus_siliculosus:0.1509196668)99:0.0634491656)57:0.0242043344)98:0.0418576089,(((I__A0A8J2T399__Pelagomonas_calceolata:0.0243085432,I__A0A8J2X1B6__Pelagomonas_calceolata:0.0000022680)100:0.1182356648,(I__A0ABR1G8E5__Aureococcus_anophagefferens:0.0000022680,I__F0XX58__Aureococcus_anophagefferens:0.0000022680)100:0.0719438079)100:0.0973475990,I__A0AAD7XIM5__Chrysophaeum_taylorii:0.1932482562)100:0.1150489156)99:0.0718923715)66:0.0297542894,((((I__A0A0D3KWK1__Emiliania_huxleyi__strain_CC:0.0000024915,I__A0A0D3KXW7__Emiliania_huxleyi__strain_CC:0.5586539378)98:0.1520370682,((I__A0A0M0JAJ3__Chrysochromulina_tobinii:0.1279542385,I__A0AB34IS35__Prymnesium_parvum:0.1408186973)94:0.0319792568,I__A0A8J6C7R9__Diacronema_lutheri:0.2794779008)99:0.0352030521)98:0.0273695251,(I__A0A1X6NJT4__Porphyra_umbilicalis:0.0422112325,I__A0ACC3BQ38__Pyropia_yezoensis:0.0268136761)100:0.2365517750)98:0.0593103785,(((((((I__A0A1Q9DE09__Symbiodinium_microadriaticum:0.0160350371,I__A0A812KGR1__Symbiodinium_pilosum:0.0067108501)89:0.0088063809,I__A0A1Q9E9V0__Symbiodinium_microadriaticum:0.0111123303)100:0.0328765700,(I__A0A9P1GER4__Cladocopium_goreaui:0.0289206051,((I__A0ABP0LT22__Durusdinium_trenchii:0.0000022680,I__A0ABP0LT72__Durusdinium_trenchii:0.0000022680)88:0.0000029130,(I__A0ABP0LTD8__Durusdinium_trenchii:0.0000022680,I__A0ABP0LV06__Durusdinium_trenchii:0.0000022680)99:0.0434688643)95:0.0228104822)100:0.0370208900)75:0.0094035563,I__A0AA36J6N9__Effrenium_voratum:0.0681751578)100:0.0641502133,((I__A0A813DL46__Polarella_glacialis:0.0032502910,((I__A0A813EGT3__Polarella_glacialis:0.0000022680,I__A0A813FUN0__Polarella_glacialis:0.0000022680)100:0.0144130501,((((I__A0A813EKS1__Polarella_glacialis:0.0021650378,I__A0A813FQQ5__Polarella_glacialis:0.0122660033)44:0.0026816309,(I__A0A813F1C2__Polarella_glacialis:0.0056775912,I__A0A813FV75__Polarella_glacialis:0.0000022680)97:0.0024646898)35:0.0002887012,I__A0A813GZQ2__Polarella_glacialis:0.0000022680)45:0.0000022717,I__A0A813FIL7__Polarella_glacialis:0.0195837707)92:0.0000953079)94:0.0023839658)100:0.1127805776,I__A0ABN9U0F9__Prorocentrum_cordatum:0.1281128620)51:0.0324279785)100:0.2597004723,((I__A0A9C7Q133__Galdieria_partita:0.0134133094,I__M2VVE5__Galdieria_sulphuraria:0.0206542744)100:0.0160858814,(I__A0AAV9II25__Galdieria_yellowstonensis:0.0000022680,I__A0AAV9IK25__Galdieria_yellowstonensis:0.0000022680)100:0.0288164933)100:0.1095970902)60:0.0416443938,((I__A0A5J4ZA80__Porphyridium_purpureum:0.2018436207,I__A0AAV8UUU9__Rhodosorus_marinus:0.2540051236)97:0.0550886579,((I__A0A7J7IS76__Cyanidiococcus_yangmingshane:0.0649801894,I__M1VI67__Cyanidioschyzon_merolae__str:0.0834879055)99:0.0667677702,I__A0AAV9IQF5__Cyanidium_caldarium:0.1460385971)100:0.1185005681)56:0.0081264686)54:0.0417402428)51:0.0159964858)54:0.0079573142,I__L1IX87__Guillardia_theta__strain_CCM:0.2595048071)57:0.0105438445,(((((((((((((II__Q93WX6__Arabidopsis_thaliana:0.2302484488,(II__A0A2K1IG87__Physcomitrium_patens:0.0550654653,II__A0A2K1III6__Physcomitrium_patens:0.0555486459)100:0.1317343070)100:0.0708966007,(((((((II__A0A0D2NKH0__Monoraphidium_neglectum:0.0978402498,II__A0A2V0NSU4__Raphidocelis_subcapitata:0.0569661206)100:0.0598565611,(II__A0A383W364__Tetradesmus_obliquus:0.0000022717,II__A0ABY8TSU8__Tetradesmus_obliquus:0.0055551263)100:0.1353075674)100:0.0384281422,((((II__A0A150GSI0__Gonium_pectorale:0.0656722794,((((II__A0A8J4AWN9__Volvox_africanus:0.0074630440,II__A0ABQ5RLQ4__Volvox_africanus:0.0191580646)74:0.0126230822,II__A0A8J4BYA2__Volvox_reticuliferus:0.0272046615)100:0.0451545569,II__D8U4F0__Volvox_carteri_f__nagariensi:0.0328651118)77:0.0166349741,II__A0A9W6BWJ6__Pleodorina_starrii:0.0437628343)100:0.0396642814)92:0.0192710662,(((II__A0A2K3D4F5__Chlamydomonas_reinhardtii:0.0325193024,II__A0A835W4R2__Chlamydomonas_incerta:0.0156070157)100:0.0136684857,II__A0A836BBE5__Chlamydomonas_schloesseri:0.0334585428)100:0.0575259631,II__A0A836C3K8__Edaphochlamys_debaryana:0.1126078996)95:0.0196974504)98:0.0266513359,II__A0AAD3DLB4__Astrephomene_gubernaculifera:0.0587482439)100:0.1745349916,((II__A0A250XQB1__Chlamydomonas_eustigma:0.1798530425,(II__A0A699YXJ6__Haematococcus_lacustris:0.0056779265,II__A0A699Z0U1__Haematococcus_lacustris:0.0000022680)100:0.1549254171)93:0.0453118502,((II__A0A8S1IWC9__Ostreobium_quekettii:0.0092909390,II__A0A8S1J0I1__Ostreobium_quekettii:0.0016436938)100:0.2536473057,((((((II__A0AAV1ICZ6__Coccomyxa_viridis:0.0799439552,II__A0ABP1FU44__Coccomyxa_viridis:0.0872338976)100:0.0882033471,((II__A0ABR2Z3A6__Coccomyxa_subellipsoidea:0.0425160382,II__A0ACE1SKF8__Coccomyxa_elongata:0.0560799925)100:0.0130452813,II__I0YTX4__Coccomyxa_subellipsoidea__st:0.0411804197)100:0.0871680250)100:0.1157482991,II__A0AAW1S4X2__Elliptochloris_bilobata:0.1311824848)100:0.0825992742,II__A0AAW1NTA6__Symbiochloris_irregularis:0.2199571554)100:0.0443594192,(II__A0AAW1RVX7__Apatococcus_fuscideae:0.0027980832,II__A0AAW1S4E3__Apatococcus_lobatus:0.0262056933)100:0.2492128428)95:0.0229521954,II__A0AAW1QSM0___Myrmecia__bisecta:0.1742581008)96:0.0507153622)99:0.0425660225)90:0.0221998720)99:0.0377169953)100:0.0555760190,(((II__A4RUI4__Ostreococcus_lucimarinus__st:0.0744250470,II__Q01CJ7__Ostreococcus_tauri:0.0402967248)100:0.1175856866,II__K8F3P5__Bathycoccus_prasinos:0.3121399881)98:0.0695434484,(II__C1DZT7__Micromonas_commoda:0.1587266983,II__C1MJ23__Micromonas_pusilla__strain_C:0.1467880968)100:0.1221842935)99:0.0699488945)99:0.0708057952,((II__A0A5B8MJF9__Chloropicon_primus:0.0976759442,II__A0AAX4PEP3__Chloropicon_roscoffensis:0.1328021111)100:0.2357013261,II__A0A830HDK8__Pycnococcus_provasolii:0.4653260072)87:0.0628836046)89:0.0420645134,(II__A0A388KHQ8__Chara_braunii:0.0000022680,II__A0A388LZT0__Chara_braunii:0.0000022680)100:0.3076759715)70:0.0333950849,(II__A0A1Y1I0J5__Klebsormidium_nitens:0.2547807978,II__A0AAE0FI37__Cymbomonas_tetramitiformis:0.2037939764)88:0.0328559118)81:0.0282422683)98:0.0817257601,(((((II__A0A1X6PID7__Porphyra_umbilicalis:0.0641759904,II__A0ACC3C150__Pyropia_yezoensis:0.0440122713)100:0.2057558828,II__A0A2V3ITM5__Gracilariopsis_chorda:0.3279003331)99:0.0589089573,II__A0A5J4YI84__Porphyridium_purpureum:0.3246327544)91:0.0450465831,((II__A0A9C7PYH5__Galdieria_partita:0.0590198195,II__M2Y4K9__Galdieria_sulphuraria:0.0251047463)100:0.1046709580,II__A0AAV9IDY7__Galdieria_yellowstonensis:0.1050087479)100:0.3351429176)80:0.0335928103,((II__A0A7J7IE79__Cyanidiococcus_yangmingshane:0.0923868908,II__M1V4W8__Cyanidioschyzon_merolae__str:0.1018296812)100:0.1370277501,II__A0AAV9J2Q2__Cyanidium_caldarium:0.2652451034)100:0.1730650117)100:0.1151444465)99:0.0602463183,((((II__A0A1Q9E2S5__Symbiodinium_microadriaticum:0.0000022680,II__A0A813AY52__Symbiodinium_necroappetens:0.0027107760)100:0.0936501443,((II__A0A9P1FU59__Cladocopium_goreaui:0.0445765800,((II__A0ABP0KKF9__Durusdinium_trenchii:0.0000022680,(II__A0ABP0KUW1__Durusdinium_trenchii:0.0000022680,II__A0ABP0QRF0__Durusdinium_trenchii:0.0000022680)99:0.0027357458)52:0.0000022680,II__A0ABP0QTW1__Durusdinium_trenchii:0.0027645588)100:0.1031928143)99:0.0463066482,II__A0AA36I4S5__Effrenium_voratum:0.0621559902)100:0.0668726721)100:0.0750255252,(II__A0A813EC50__Polarella_glacialis:0.0000026735,II__A0A813F5G7__Polarella_glacialis:0.0000022680)100:0.1721299268)99:0.0467688733,II__A0ABN9V3V7__Prorocentrum_cordatum:0.1532431627)100:0.2918142241)100:0.0427700539,(((II__A0A0M0JIF4__Chrysochromulina_tobinii:0.1927275963,II__A0AB34IPJ2__Prymnesium_parvum:0.2200776249)83:0.0807078384,((((((II__A0A1Q9D6N0__Symbiodinium_microadriaticum:0.0186499167,II__A0A812SJ40__Symbiodinium_natans:0.0271762210)92:0.0161279055,II__A0A812TZP6__Symbiodinium_pilosum:0.0152852459)93:0.0287382506,(II__A0A9P1C7R4__Cladocopium_goreaui:0.0793254305,II__A0AA36HML1__Effrenium_voratum:0.1124693888)98:0.0260113419)100:0.3642581103,(II__A0A4D9CTB8__Nannochloropsis_salina_CCMP1:0.0045128054,II__W7TM03__Nannochloropsis_gaditana:0.0039117247)100:0.2715385002)64:0.0771508896,(II__A0A835YHC6__Tribonema_minus:0.2108320940,II__D7G5K2__Ectocarpus_siliculosus:0.1820889472)100:0.0939242122)64:0.0228819184,((II__A0A8J2SKF9__Pelagomonas_calceolata:0.2657350638,(II__A0ABR1G4C2__Aureococcus_anophagefferens:0.0000022680,II__F0XYR2__Aureococcus_anophagefferens:0.0000022680)100:0.2323689310)100:0.1144836891,II__A0AAD7UNE2__Chrysophaeum_taylorii:0.2597025954)100:0.1985135989)92:0.0368568874)81:0.0307931637,II__A0A8J6CI92__Diacronema_lutheri:0.3200779004)97:0.0743072704)96:0.0489762094,(((((II__A0A1E7FQI7__Fragilariopsis_cylindrus_CCM:0.1264063998,(II__A0A9K3L7Y2__Nitzschia_inconspicua:0.0063251543,II__A0A9K3LFN5__Nitzschia_inconspicua:0.0026244143)100:0.0816432323)100:0.0568229678,II__A0AAD2JLA6__Cylindrotheca_closterium:0.1161970711)100:0.0861511376,(II__A0A9N8H885__Seminavis_robusta:0.1989904308,(II__A0AAD3D922__Chaetoceros_tenuissimus:0.1897902374,((II__A0AAD8Y1M9__Skeletonema_marinoi:0.0891479612,(II__A0ABD3LXU8__Discostella_pseudostelligera:0.0792341341,(II__A0ABD3MYQ6__Stephanodiscus_triporus:0.0600996256,(II__A0ABD3R565__Cyclostephanos_tholiformis:0.0000022680,II__A0ABD3RA89__Cyclostephanos_tholiformis:0.0000022680)100:0.0872741904)100:0.1573466568)63:0.0208356699)100:0.0891078871,(II__A0ABD3MSF9__Cyclotella_atomus:0.0988133052,II__A0ABD3QH57__Cyclotella_cryptica:0.1216332426)100:0.0751573486)100:0.1174634457)100:0.0967714360)79:0.0108710164)90:0.0499214521,((II__A0A1Z5JBG7__Fistulifera_solaris:0.0160312356,II__A0A1Z5KLZ0__Fistulifera_solaris:0.0244956670)100:0.2176423056,II__B7FV09__Phaeodactylum_tricornutum__s:0.1999264132)94:0.0585305459)100:0.1324730170,(((II__A0A9W7CDX7__Triparma_laevis_f__longispin:0.1039497685,(II__A0A9W7E1R6__Triparma_strigata:0.0031914449,II__A0A9W7FN66__Triparma_verrucosa:0.0021584210)100:0.0490660461)100:0.2409291963,(II__A0A9W7E3A2__Triparma_retinervis:0.0217205956,II__A0A9W7GLM1__Triparma_columacea:0.0580452414)100:0.2372633607)100:0.1478900527,II__A0ABQ6MPW9__Tetraparma_gracilis:0.3306023653)100:0.1915147607)99:0.0428614907)100:0.2183136630,II__A0A9P1BGJ2__Cladocopium_goreaui:0.4744797541)83:0.0714100071,((II__A0A812S1P1__Symbiodinium_pilosum:0.5692172783,REF_SufS_Ecoli:0.5642899597)99:0.1183188293,(II__A0ABP0LK72__Durusdinium_trenchii:0.0082769631,II__A0ABP0LS76__Durusdinium_trenchii:0.0000022717)100:0.6543921991)98:0.1196854734)85:0.1048248286,(II__A0ABP0S8C1__Durusdinium_trenchii:0.3647225929,II__A0ABP0SL67__Durusdinium_trenchii:0.2162534662)100:0.2836654920)100:1.7164019964,(L3__Q96I15__Homo_sapiens:1.0952700185,(((((((((L3__A0A090M4Q8__Ostreococcus_tauri:0.1442155479,L3__A4S300__Ostreococcus_lucimarinus__st:0.1154162565)100:0.1984397628,(L3__C1EHB0__Micromonas_commoda:0.1543450929,L3__C1MNN5__Micromonas_pusilla__strain_C:0.2700871195)100:0.1335024168)100:0.1249892527,L3__K8F9J9__Bathycoccus_prasinos:0.6836182153)98:0.1222059549,(((((L3__A0A0D3JFS3__Emiliania_huxleyi__strain_CC:0.3507789044,(L3__A0AB34J9E3__Prymnesium_parvum:0.1823295675,L3__A0AB34KAI8__Prymnesium_parvum:0.2017513556)100:0.1374319135)99:0.1086315637,(L3__A0A8J5X355__Diacronema_lutheri:0.3663693309,((NEW__A0A8J2WTZ1__Pelagomonas_calceolata:0.2127638700,(NEW__F0XXL4__Aureococcus_anophagefferens:0.0000022680,NEW__A0ABR1FZ61__Aureococcus_anophagefferens:0.0000022680)100:0.1823874589)100:0.0896770024,NEW__A0AAD7XJ29__Chrysophaeum_taylorii:0.2876988404)100:0.1821592556)100:0.1855593215)91:0.0304455889,L3__A0A699ZEV1__Haematococcus_lacustris:0.4162625450)57:0.0857841647,((L3__A0A5B8MPI0__Chloropicon_primus:0.4334222381,(L3__A0AAX4PFB6__Chloropicon_roscoffensis:0.0057296349,L3__A0AAX4PJN5__Chloropicon_roscoffensis:0.0441528195)100:0.3522922111)100:0.1877936689,L3__A0A836CMI1__Tribonema_minus:0.4692952781)42:0.0748043490)14:0.0439147756,(((((((L3__A0A150H2L5__Gonium_pectorale:0.0914703912,((L3__A0A2K3DJ46__Chlamydomonas_reinhardtii:0.1478568685,L3__A0A835XY57__Edaphochlamys_debaryana:0.2089752380)100:0.1099205095,((L3__A0A8J4FGX8__Volvox_reticuliferus:0.1183277026,L3__D8U8R1__Volvox_carteri_f__nagariensi:0.1633314327)77:0.0254787819,L3__A0A9W6BEK4__Pleodorina_starrii:0.0912320728)100:0.0388966823)99:0.0228869652)100:0.0365457183,(L3__A0A835W6A0__Chlamydomonas_incerta:0.0508959267,L3__A0A835WMZ9__Chlamydomonas_schloesseri:0.0340026836)100:0.1695345488)100:0.1608833777,L3__A0ABQ7GSE4__Dunaliella_salina:0.4416535139)99:0.0383167914,L3__A0A250WXK3__Chlamydomonas_eustigma:0.4236596687)93:0.0447855645,(((((L3__A0A383VU94__Tetradesmus_obliquus:0.0000022680,L3__A0ABY8TSA6__Tetradesmus_obliquus:0.0027165515)100:0.1876452596,REF_HText_Spabb:0.1925245902)95:0.0825173501,L3__A0AAW1R1Z0__Elliptochloris_bilobata:0.3542499923)94:0.0387193705,L3__A0AAW1QA50___Myrmecia__bisecta:0.3765826841)73:0.0269243890,(NEW__A0A0D2N0J3__Monoraphidium_neglectum:0.2182964322,NEW__A0A2V0PAY6__Raphidocelis_subcapitata:0.2282410991)100:0.1406723343)70:0.0300705107)68:0.0451762852,(((L3__A0A2P6TKZ5__Chlorella_sorokiniana:0.0353695340,L3__A0AAD5DKK7__Chlorella_ohadii:0.0425315770)100:0.0903587724,(L3__A0A2P6V8I3__Micractinium_conductrix:0.1577990689,L3__A0ACF7V9P5__Micractinium_tetrahymenae:0.1122509353)100:0.0527018887)92:0.0242496197,((L3__A0A9D4TIF6__Chlorella_vulgaris:0.0267293002,L3__A0ACF8QEV9__Chlorella_vulgaris:0.0132030504)100:0.1425395097,L3__E1ZDB8__Chlorella_variabilis:0.0986894014)100:0.0763211309)100:0.1371920672)62:0.0466521774,(L3__A0A8S1J814__Ostreobium_quekettii:0.4999237768,L3__A0AAE0LE91__Cymbomonas_tetramitiformis:0.3663564477)68:0.1307597295)53:0.0477010436)56:0.0683366433)59:0.0890569447,L3__A0A830HW14__Pycnococcus_provasolii:0.8992549533)44:0.0321892982,(((((((((L3__A0A1E7FPK5__Fragilariopsis_cylindrus_CCM:0.1889034644,L3__A0A448ZAZ1__Pseudo_nitzschia_multistriat:0.1826820178)100:0.1252828510,(NEW__A0A9K3LVN3__Nitzschia_inconspicua:0.0020138380,NEW__A0A9K3KRJ2__Nitzschia_inconspicua:0.0086982672)100:0.2345102906)100:0.0772908951,L3__A0A9N8H4H9__Seminavis_robusta:0.2871197158)98:0.0571816243,(L3__A0AAD2FN92__Cylindrotheca_closterium:0.0000022680,L3__A0AAD2FSZ6__Cylindrotheca_closterium:0.0026719230)100:0.3045192139)100:0.0728273231,NEW__B7G8F0__Phaeodactylum_tricornutum_st:0.3294616030)87:0.0534696221,(L3__A0A1Z5JXU0__Fistulifera_solaris:0.0546966168,L3__A0A1Z5KCV9__Fistulifera_solaris:0.0676042039)100:0.5165249190)91:0.0888432411,(L3__A0AAD3CS45__Chaetoceros_tenuissimus:0.3155635712,L3__A0AAD3CTN0__Chaetoceros_tenuissimus:0.2114923114)100:0.1253192734)92:0.1369012732,((((L3__A0AAD8YPT2__Skeletonema_marinoi:0.2309215666,(L3__A0ABD3M126__Discostella_pseudostelligera:0.1773029030,((L3__A0ABD3MQJ2__Stephanodiscus_triporus:0.1852914839,L3__A0ABD3PCK7__Stephanodiscus_triporus:0.1103292577)100:0.0882030791,L3__A0ABD3SBR2__Cyclostephanos_tholiformis:0.0760773336)100:0.0675299950)100:0.0434977233)100:0.0326372981,((L3__A0ABD3PCQ2__Cyclotella_cryptica:0.0421993565,L3__A0ABD3PL28__Cyclotella_cryptica:0.2108386036)100:0.0956034222,L3__A0ABD3QT07__Cyclotella_atomus:0.1428882391)100:0.1010184910)100:0.0467820052,L3__B8BXE3__Thalassiosira_pseudonana:0.1682816658)92:0.0337164887,L3__K0SC66__Thalassiosira_oceanica:0.3228223923)100:0.2146539014)65:0.1217484263,(((NEW__A0A9W7AV08__Triparma_laevis_f_longispina:0.4224823078,(NEW__A0A9W7B676__Triparma_strigata:0.0027759083,NEW__A0A9W7KXE0__Triparma_verrucosa:0.0000022680)100:0.3722494131)100:0.2776415202,NEW__A0ABQ6MTH9__Tetraparma_gracilis:1.2824533358)100:0.3096369987,NEW__A0A9W7GEK0__Triparma_columacea:0.9894084996)100:0.5538653029)100:0.2272160181)100:0.1103265982,(((((L3__A0A1Q9EC91__Symbiodinium_microadriaticum:0.1597794417,L3__A0ABN9Y9J6__Prorocentrum_cordatum:0.2347969560)62:0.0263980019,L3__A0A813D9I6__Polarella_glacialis:0.1419482935)62:0.0626160003,L3__A0A9P1CGG1__Cladocopium_goreaui:0.1210890070)100:0.4505400676,L3__L1J7X1__Guillardia_theta__strain_CCM:0.5642895363)99:0.0863731388,(L3__A0A1Y1HX28__Klebsormidium_nitens:0.4169481242,L3__A0A388KLW8__Chara_braunii:0.3297243634)100:0.2321030190)96:0.0427350879)82:0.1239338584,NEW__A0A9P1FCD2__Cladocopium_goreaui:0.7916187684)45:0.0043766852,L3__L1J7A3__Guillardia_theta__strain_CCM:0.9667751560)57:0.0307449019)99:0.2142781659)99:0.2771137968,(I__A0A9P1BG81__Cladocopium_goreaui:0.3617607543,(I__A0ABP0HQJ3__Durusdinium_trenchii:0.0330575047,I__A0ABP0JKY5__Durusdinium_trenchii:0.0264292233)100:0.7854435917)100:0.1752829641)98:0.1817864503,REF_IscS_Ecoli:0.3341546605)97:0.1368108076,(I__A0A2V3J0K4__Gracilariopsis_chorda:0.0863035625,I__R7QGB9__Chondrus_crispus:0.0840875255)100:0.1227168907)62:0.0406381286)93:0.0499170855,(((((I__A0A5B8MHP9__Chloropicon_primus:0.0387793125,I__A0AAX4P4V9__Chloropicon_roscoffensis:0.0276326627)100:0.1534071522,(I__A4RUB0__Ostreococcus_lucimarinus__st:0.0408971301,I__Q01CS2__Ostreococcus_tauri:0.0869313480)100:0.1144672221)57:0.0214093291,((I__C1E3B7__Micromonas_commoda:0.0869490578,I__C1N3B7__Micromonas_pusilla__strain_C:0.1040085824)99:0.0315411843,I__K8FF08__Bathycoccus_prasinos:0.1774907030)98:0.0484541323)93:0.0332960937,I__A0A830HZ24__Pycnococcus_provasolii:0.1961421299)98:0.0325355373,I__A0AAE0C3S8__Cymbomonas_tetramitiformis:0.1858995641)99:0.0491223471)90:0.0275126178,(((I__A0A087SBH3__Auxenochlorella_protothecoid:0.1144220121,I__A0AAD9MG95__Prototheca_wickerhamii:0.1456277949)100:0.0876780304,(((((I__A0A2P6U3X4__Chlorella_sorokiniana:0.0056041333,I__A0AAD5H885__Chlorella_ohadii:0.0086006358)100:0.0304252726,((I__A0A9D4TRG1__Chlorella_vulgaris:0.0027569425,I__A0ACF8QD05__Chlorella_vulgaris:0.0056399051)100:0.0383885020,I__E1ZRR8__Chlorella_variabilis:0.0310620911)99:0.0228805031)98:0.0083719943,I__A0ACF7TST8__Micractinium_tetrahymenae:0.0277059742)99:0.0179104763,I__A0A2P6V904__Micractinium_conductrix:0.0516242633)100:0.0806530202,((((((I__A0AAV1HVJ1__Coccomyxa_viridis:0.0146738119,I__A0ABP1G8Q3__Coccomyxa_viridis:0.0242070002)100:0.0351551989,((I__A0ABR2YJJ0__Coccomyxa_subellipsoidea:0.0074815564,I__I0Z0B3__Coccomyxa_subellipsoidea__st:0.0223039094)100:0.0438288316,I__A0ACE1RWG8__Coccomyxa_elongata:0.0219656033)100:0.0275625760)100:0.0545013711,I__A0AAW1S9M3__Elliptochloris_bilobata:0.1041029974)100:0.0263767428,((I__A0AAW1QJ11__Apatococcus_lobatus:0.0000022680,I__A0AAW1SY41__Apatococcus_fuscideae:0.0000022680)100:0.0207520227,I__A0AAW1T9X9__Apatococcus_fuscideae:0.0346181862)100:0.1398195528)97:0.0177299660,I__A0AAW1P501__Symbiochloris_irregularis:0.1292249810)98:0.0278841698,I__A0AAW1QFK0___Myrmecia__bisecta:0.1204026866)99:0.0308424322)92:0.0380246113)75:0.0097753040,(((I__A0A0D2M031__Monoraphidium_neglectum:0.0476155882,I__A0A2V0PKC5__Raphidocelis_subcapitata:0.0536782267)100:0.0524270803,(I__A0A383VZF3__Tetradesmus_obliquus:0.0036637710,I__A0ABY8U2V6__Tetradesmus_obliquus:0.0206581014)100:0.1003987207)98:0.0193825614,(I__A0A250X580__Chlamydomonas_eustigma:0.2727023802,(((I__A0A2K3E3W0__Chlamydomonas_reinhardtii:0.0205285017,I__A0A835TFC4__Chlamydomonas_incerta:0.0155253900)91:0.0074748123,I__A0A835W5I8__Chlamydomonas_schloesseri:0.0110034005)97:0.0398859305,((I__A0A835Y811__Edaphochlamys_debaryana:0.0536455079,I__D8TZS2__Volvox_carteri_f__nagariensi:0.0366753147)67:0.0078206491,(I__A0A9W6BP52__Pleodorina_starrii:0.0287562420,(I__A0AAD3HPG5__Astrephomene_gubernaculifera:0.0715816399,I__A0ABQ5RV58__Volvox_africanus:0.0427590065)71:0.0135020557)66:0.0105727463)96:0.0174763658)100:0.1166481023)89:0.0180016096)100:0.0440907431)100:0.0366297131)90:0.0283164354,(I__A0A388KUJ5__Chara_braunii:0.0013632561,I__A0A388KUR9__Chara_braunii:0.0072498438)100:0.1184523979)97:0.0321829050,I__A0A1Y1I0C3__Klebsormidium_nitens:0.1046747547)98:0.0811428203,(I__A0A2K1L2H1__Physcomitrium_patens:0.0236670018,I__A0A2K1L8W3__Physcomitrium_patens:0.0522252744)100:0.0593168657);
+
+ALISIM COMMAND
+--------------
+To simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis, you can use the following command:
+
+--alisim simulated_MSA -t iq318.treefile -m "Q.pfam+I{0.0090472}+R9{0.106762,0.0735407,0.115457,0.204695,0.118056,0.380636,0.246993,0.65338,0.105096,0.960931,0.122434,1.47996,0.0775659,2.04055,0.0868475,3.07331,0.0117419,4.66927}" --length 386
+
+To mimic the alignment used to produce this analysis, i.e. simulate an alignment of the same length as the original alignment, using the tree and model parameters estimated from this analysis *and* copying the same gap positions as the original alignment, you can use the following command:
+
+iqtree -s aln_318_trim.fasta --alisim mimicked_MSA
+
+To simulate any number of alignments in either of the two commandlines above, use the --num-alignments options, for example mimic 100 alignments you would use the command line:
+
+iqtree -s aln_318_trim.fasta --alisim mimicked_MSA --num-alignments 100
+
+For more information on using AliSim, please visit: www.iqtree.org/doc/AliSim
+
+TIME STAMP
+----------
+
+Date and time: Mon Oct 12 20:57:48 2026
+Total CPU time used: 9655.149189 seconds (2h:40m:55s)
+Total wall-clock time used: 2481.554071 seconds (0h:41m:21s)
+
