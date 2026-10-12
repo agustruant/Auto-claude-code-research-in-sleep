@@ -1,6 +1,6 @@
 {
  "run_id": "run_20261012_8ed5232f",
- "round": 5,
+ "round": 6,
  "threadId": null,
  "reviewer_backend": "claude-subagent (same-family, unverified independence)",
  "executor_family": "anthropic",
@@ -9,9 +9,9 @@
  "independence_verified": false,
  "status": "completed",
  "difficulty": "medium",
- "last_score": 6.5,
+ "last_score": 7,
  "last_verdict": "not ready",
  "pending_experiments": [],
- "timestamp": "2026-10-12T20:09:17+00:00",
- "stop_reason": "extension round 5 done; remaining blockers need new data (UniProt seqs, extra taxa)"
+ "timestamp": "2026-10-12T21:04:43+00:00",
+ "stop_reason": "round 6 done; next needs FASTA of 30 unexamined best-bait-SCLY sequences"
 }

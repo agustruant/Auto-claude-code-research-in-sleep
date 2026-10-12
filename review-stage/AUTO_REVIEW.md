@@ -160,3 +160,22 @@ Para "ready", además:
 - sumar los taxones holozoos basales y los nematodos;
 - resolver el barrido Sec;
 - resolver el extremo 5' de PABB004.
+
+---
+
+## Ronda 6 (2026-10-12) — ubicación de las 16 secuencias candidatas
+
+### Evaluación
+- Score: **7/10** · Veredicto: **not ready**, cerca de "almost".
+- Respuesta del revisor: [`ronda6_revisor.md`](ronda6_revisor.md)
+
+### Acciones
+- Primer árbol ML completo del proyecto: IQ-TREE 2.3.6, Q.pfam+I+R9, UFBoot + SH-aLRT, 318 dominios.
+- Las 15 secuencias ubicables caen dentro del clado SCLY-like; tabla de distribución rehecha (71/119).
+- Aplicados los arreglos de texto 4–8 en ★★★ y la nota de precedencia. Corregido el script de lectura del árbol.
+- Identificadas **30 secuencias más** con mejor cebo SCLY-like sin examinar; la principal es *Ectocarpus* D8LEU7, que probablemente da Phaeophyceae 1/1.
+
+### Para "almost"
+1. Ubicar las 30 (como mínimo D8LEU7 y las dos de *Durusdinium*). Hace falta su FASTA.
+2. Aplicar la regla HMM + árbol a los 617.
+3. Consolidar el dossier en una sola versión.

@@ -16,14 +16,35 @@ Fuente: FASTA de las 16 accesiones de UniProt aportado por el autor (`datos/ubic
 - `scripts/ubicacion16.py`: extracción del dominio, asignación por HMM, realineamiento con FAMSA, bucle y Asp146;
 - `scripts/leer_arbol318.py`: lectura del árbol.
 
-Árbol: **IQ-TREE 2.3.6**, modelo **Q.pfam+I+R9** (BIC), **1000 UFBoot + 1000 SH-aLRT**, 318 dominios, 386 columnas con ocupación ≥ 0,35. Salidas en `datos/ubicacion16/iq318.*`. Es el primer árbol ML completo del proyecto, que hasta ahora sólo tenía la aproximación de VeryFastTree. Además se sacó la SCLY humana duplicada y se excluyó A0ABR1FWJ4, porque su modelo génico está corrupto (inserción de ~90 aa tipo `RRRPGGRPPRGHGG…`, corrimiento del marco, sólo 189 aa de dominio).
+Árbol: **IQ-TREE 2.3.6**, modelo **Q.pfam+I+R9** (BIC), **1000 UFBoot + 1000 SH-aLRT**, 318 dominios, 386 columnas con ocupación ≥ 0,35. Salidas en `datos/ubicacion16/iq318.*`. Es el primer árbol ML completo del proyecto, que hasta ahora sólo tenía la aproximación de VeryFastTree. Además se sacó la SCLY humana duplicada y se excluyó A0ABR1FWJ4. Es el **mismo locus que A0ABR1FZ61** (mismo proteoma, GN=SCLY, primeros ~90 aa y extremo C idénticos), pero le faltan ~135 aa del dominio, reemplazados por un segmento rico en R/G/P típico de un corrimiento del marco. Excluirla no saca ningún proteoma.
+
+**Métodos del árbol, a declarar:**
+- set de modelos restringido (`-mset LG,WAG,JTT,Q.pfam`);
+- 650 parámetros para 386 columnas (IQ-TREE lo advierte);
+- 10 secuencias con más de 50 % de gaps;
+- árbol sin raíz, enraizado para leerlo en NFS2 + SufS (el split {NFS1 + IscS + SCLY} contra {NFS2 + SufS} es 100/100);
+- las únicas referencias bacterianas son IscS y SufS de *E. coli*.
+
+El 95,8/99 del clado SCLY-like es un split no enraizado, así que no depende de la raíz.
+
+
+> **Precedencia (ronda 6).** Este bloque ★★★ reemplaza todas las afirmaciones anteriores del documento sobre:
+> - conteos del clado (65, 66 o 67 secuencias; 56 especies);
+> - "G-x-x-C-H / G, C, H invariantes" (§1, §2.8, §4, §7, R1);
+> - "estramenopilas no diatomeas ausentes" (§1.6, §2.9, R2);
+> - soporte 0,96 / 0,855 (§1.5, R7);
+> - "sin IQ-TREE" (§6.9, §7);
+> - "no se evaluó Asp146" (§6.4);
+> - los bloqueantes 1–4 del §8, que ya están hechos.
+>
+> La consolidación en un único texto queda como tarea pendiente.
 
 ### U1. Resultado
 
 | | |
 |---|---|
 | Extracción del dominio | las 16 con E ≤ 10⁻²² (15 con E ≤ 10⁻⁵², 10 con E ≤ 10⁻¹¹⁰) |
-| Mejor HMM de clado (construido con cada clado del MSA del proyecto) | **SCLY-like en las 16**. Margen sobre NFS1 de 64–237 bits |
+| Mejor HMM de clado (construido con cada clado del MSA del proyecto) | **SCLY-like en las 16**. Margen sobre NFS1 de **85–237 bits en las 15 ubicadas** (64 en A0ABR1FWJ4). No hay filtración: las 16 no se usaron para entrenar los HMM. Pero los HMM heredan la membresía de la columna `clase`, así que la evidencia que decide es el árbol ML; el HMM sólo coincide con él |
 | Ubicación en el árbol | **15/15 dentro del clado SCLY-like**. Clado SCLY-like + humana: SH-aLRT 95,8 / UFBoot 99 (82 hojas, sin intrusos de NFS1/NFS2) |
 | Residuo en la posición de Asp146 | **Pro en las 15**, todas con el dipéptido P-A (`[VI]EH-PA[IVT]`) |
 
@@ -32,7 +53,7 @@ Fuente: FASTA de las 16 accesiones de UniProt aportado por el autor (`datos/ubic
 - ***Monoraphidium* + *Raphidocelis***: 99,9/100.
 - ***Nitzschia* ×2**: 100/100, junto a *Phaeodactylum*, *Fragilariopsis* y *Pseudo-nitzschia*. Este nodo tiene soporte bajo (7,6/87).
 - **Bolidophyceae** (*Triparma* ×4 + *Tetraparma*): monofilético, 99,8/100, **dentro** del clado SCLY-like.
-- **La quimera de *Cladocopium*** (A0A9P1FCD2) cae junto a las prasinofitas con soporte **0/45**: ubicación no resuelta. Como los otros SCLY-like de dinoflagelados tienen Val y ésta tiene Pro, conviene descartar contaminación o un error de ensamblado antes de usarla.
+- **La quimera de *Cladocopium*** (A0A9P1FCD2) queda en la **base del clado algal**: hermana de un núcleo de 79 hojas (91,6/82), con soporte **0/45**. Ubicación no resuelta. Corrección: la ronda anterior decía "junto a las prasinofitas", que era un artefacto del script. La otra secuencia de *Cladocopium* (CGG1) está dentro de los dinoflagelados (100/100). Como los otros SCLY-like de dinoflagelados tienen Val y ésta tiene Pro, conviene descartar contaminación o un error de ensamblado antes de usarla.
 
 ### U2. Consecuencias
 
@@ -52,26 +73,37 @@ Fuente: FASTA de las 16 accesiones de UniProt aportado por el autor (`datos/ubic
 | Rhodophyta | 0/12 | 0/12 |
 | **Total** | 58/119 | **71/119** |
 
-- **"Ausente en estramenopilas no diatomeas" queda prácticamente sin efecto.** Las únicas ausencias son Eustigmatophyceae (0/2) y Phaeophyceae (0/1), con n muy chico.
+⚠ **Phaeophyceae 0/1 es probablemente falso.** *Ectocarpus* D8LEU7 (426 aa) tiene como mejor cebo uno SCLY-like: score 333, E 3,6 × 10⁻⁹⁷, margen de 129 bits sobre NFS1. Está en la mediana de los miembros aceptados. *Ectocarpus* ya tiene su propia NFS1 y su propia NFS2, así que este sería un tercer gen clase V. Su bucle no se pudo extraer. Además quedan **30 secuencias "otro" con mejor cebo SCLY-like sin examinar**. Las más relevantes:
+- dos de *Durusdinium* (A0ABP0KTI6, A0ABP0RUF2), con bucle raro;
+- *Stephanodiscus* A0ABD3QSF5;
+- tres de *Tetrabaena* (bucle `GVGGCAC`);
+- el resto, proteínas multidominio largas de Chlorophyta (50–150 bits), probablemente del tipo MOCOS.
+
+**Hasta ubicarlas, la tabla es provisoria y no se afirma ninguna ausencia en estramenopilas.**
+
+- **"Ausente en estramenopilas no diatomeas" queda sin efecto.** Eustigmatophyceae (0/2) tiene n muy chico, y Phaeophyceae probablemente tiene el gen (ver arriba).
 - **Las ausencias en embriofitas y rodofitas se mantienen**, y ahora son las únicas ausencias de linaje bien muestreado.
 
-**3. La His en +1 no es invariante en el clado.** Las 5 de Bolidophyceae tienen `[IV]AAGSAC-[ED]`: conservan G en −3 y la Cys, pero tienen Glu/Asp en +1. Como forman un subclado monofilético (99,8/100) dentro de SCLY-like, es una **pérdida única de la His en Bolidophyceae**.
+**3. La His en +1 no es invariante en el clado** (conteo sobre la columna `loop` del CSV más las 16 nuevas; en el MSA hay ~6 miembros con gap en esa posición). Las 5 de Bolidophyceae tienen `[IV]AAGSAC-[ED]`: conservan G en −3 y la Cys, pero tienen Glu/Asp en +1. Como forman un subclado monofilético (99,8/100) dentro de SCLY-like, es una **pérdida única de la His en Bolidophyceae**.
 - La His sigue siendo **diagnóstica en una sola dirección**: ninguna de las 250 NFS1/NFS2 la tiene.
 - Pero **no es invariante**: está en 77 de las 82 SCLY-like del árbol.
-- Hay que cambiar "G-x-x-C-H invariante" por "**G-x-x-C conservado, His en +1 en 77/82, perdida una vez en Bolidophyceae**".
+- Hay que cambiar "G-x-x-C-H invariante" por "**His en +1 en 77/82, perdida una vez en Bolidophyceae**". G-x-x-C no es diagnóstico, porque NFS1 también lo tiene (VSSGSAC).
+- **Las Bolidophyceae son hermanas de las diatomeas (99,1/100)**, igual que en el árbol de especies, lo que apoya una única pérdida en el tallo de Bolidophyceae. Tienen además las ramas más largas del clado (raíz-hoja 4,0–4,6 contra una mediana de 3,0).
+- Su bucle es un mosaico: en −6 tienen I/V, como NFS1/NFS2. Por eso el "−6 distingue" de R4 tiene esta excepción.
+- *Hipótesis, n = 1:* las 6 Bolidophyceae no tienen PSTK (`Sec_estricto` 0/6). La pérdida de la His coincide con un linaje sin maquinaria Sec detectada, con la salvedad de que los dos barridos Sec no coinciden.
 
-**4. Asp146 → Pro en todas las algas.** Las 15 nuevas tienen Pro con P-A, incluidas las Bolidophyceae sin His. El estado Pro es el que caracteriza al clado algal, y la His y el Pro146 varían de forma independiente.
+**4. Asp146: Pro en 68 de 73 secuencias algales informativas**, Val en 5 y gap en 8. Las 15 nuevas tienen Pro con P-A, incluidas las Bolidophyceae sin His. La His y el estado de la posición 146 se desacoplan en **dos eventos**: Bolidophyceae (pierden la His y conservan Pro) y dinoflagelados + una copia de *Guillardia* (conservan la His y tienen Val).
 - La única excepción son los Val de dinoflagelados y una de las copias de *Guillardia*.
 - La quimera de *Cladocopium* tiene Pro, a diferencia de los otros dinoflagelados.
 
 **5. Soportes del clado:**
 - Clado SCLY-like + humana: 95,8/99.
-- **Clado sólo algal: SH-aLRT 61,1 / UFBoot 57.** Es **débil** en el árbol ML: el 0,855 de VeryFastTree estaba inflado.
+- **Clado sólo algal: SH-aLRT 61,1 / UFBoot 57: no es robusto en el árbol ML.** El 0,855 de VeryFastTree no es comparable (otro método y otro set de taxones). Lo que debilita ese nodo es que *Guillardia* L1J7A3 y la quimera de *Cladocopium* quedan en la base. El **núcleo algal de 79 hojas tiene 91,6/82**.
 - Que la SCLY humana sea hermana de las algas sigue siendo la topología obtenida, pero con poco soporte. Muestrear eucariotas (bloque Se/S) y hacer un test AU sigue siendo necesario.
 
 **6. Selenio, con la distribución nueva:**
 - Fisher global: OR 2,68, p = 0,015.
-- CMH por linaje: **OR_MH 1,08, IC 0,35–3,33, p = 0,90**.
+- CMH por linaje: **OR_MH 1,08, IC 0,35–3,33, p = 0,90**. Con la distribución nueva quedan sólo **3 estratos informativos (62 proteomas)**, porque las diatomeas pasaron a 16/16. El resultado lo maneja Chlorophyta. Breslow-Day p = 0,098.
 - La asociación dentro de linajes desaparece. Sigue valiendo la advertencia de dos barridos Sec que no coinciden (R6).
 
 **7. Asignación de familia.** La regla que generó la columna `clase` sigue sin documentar. Se puede reemplazar por la de esta ronda: **HMM de clado + ubicación en el árbol ML**, reproducible con los scripts.
