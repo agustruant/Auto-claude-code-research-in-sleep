@@ -1,0 +1,34 @@
+A0ABP0KTI6: dominio 9-309 (301 aa), score 360, E 2.8e-110
+D8LEU7: dominio 99-425 (327 aa), score 348, E 9.0e-107
+A0ABD3QSF5: dominio 246-563 (318 aa), score 263, E 5.1e-81
+A0ABP0RUF2: dominio 1-242 (242 aa), score 275, E 2.0e-84
+A0A2J7ZVZ7: dominio 45-410 (366 aa), score 256, E 1.2e-78
+A0A2J7ZID8: dominio 45-410 (366 aa), score 255, E 2.6e-78
+A0A2J7ZMY6: dominio 1-83 (83 aa), score 76, E 5.5e-24
+A0A812J8T9: dominio 154-265 (112 aa), score 66, E 5.0e-21
+A0A1Q9ECG7: dominio 1311-1421 (111 aa), score 63, E 3.3e-20
+sin dominio: ['A0A150H2B0', 'A0A2K3DJG4', 'A0A2P6V7T8', 'A0A383VTX3', 'A0A5B8MQL4', 'A0A835W855', 'A0A835WNF5', 'A0A836BYW7', 'A0A8J4FE06', 'A0A8S1J1N3', 'A0A9D4TN60', 'A0A9W6F9K5', 'A0AAD5DTJ1', 'A0AAW1SDQ1', 'A0AAW1TAN9', 'A0AAX4PIL7', 'A0ABR2Z4M8', 'A0ABY8TRX9', 'A0ACF7TRD1', 'A0ACF8Q8W7', 'E1ZNZ8']
+
+== Asignación por HMM de clado (bits)
+  A0ABP0KTI6   Durusdinium trenchii             I=   301 II=   126 L3=   402 -> L3
+  D8LEU7       Ectocarpus siliculosus           I=   241 II=    93 L3=   430 -> L3
+  A0ABD3QSF5   Stephanodiscus triporus          I=   192 II=    54 L3=   327 -> L3
+  A0ABP0RUF2   Durusdinium trenchii             I=   236 II=   103 L3=   304 -> L3
+  A0A2J7ZVZ7   Tetrabaena socialis              I=   202 II=    93 L3=   246 -> L3
+  A0A2J7ZID8   Tetrabaena socialis              I=   200 II=    95 L3=   245 -> L3
+  A0A2J7ZMY6   Tetrabaena socialis              I=    49 II=    14 L3=    92 -> L3
+  A0A812J8T9   Symbiodinium necroappetens       I=    48 II=    17 L3=    86 -> L3
+  A0A1Q9ECG7   Symbiodinium microadriaticum     I=    48 II=    17 L3=    86 -> L3
+
+alineamiento: 312 secuencias, 799 columnas -> 389 con ocupación >= 0,35
+
+== Nuevas: residuo en Asp146 (contexto) y bucle catalítico (Cys-6..Cys+2)
+  NEW__A0ABP0KTI6__Durusdinium_trenchii                Asp146=V  ctx=SEHVAV  bucle=---------
+  NEW__D8LEU7__Ectocarpus_siliculosus                  Asp146=P  ctx=IEHPAV  bucle=---------
+  NEW__A0ABD3QSF5__Stephanodiscus_triporus             Asp146=P  ctx=VEHPAI  bucle=---------
+  NEW__A0ABP0RUF2__Durusdinium_trenchii                Asp146=V  ctx=SEHVAV  bucle=---------
+  NEW__A0A2J7ZVZ7__Tetrabaena_socialis                 Asp146=P  ctx=MEHPSV  bucle=YLGVGGCAC
+  NEW__A0A2J7ZID8__Tetrabaena_socialis                 Asp146=P  ctx=MEHPSV  bucle=YLGVGGCAC
+  NEW__A0A2J7ZMY6__Tetrabaena_socialis                 Asp146=-  ctx=------  bucle=---------
+  NEW__A0A812J8T9__Symbiodinium_necroappetens          Asp146=D  ctx=INHDEV  bucle=---------
+  NEW__A0A1Q9ECG7__Symbiodinium_microadriaticum        Asp146=D  ctx=INHDEV  bucle=---------

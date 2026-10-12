@@ -1,0 +1,70 @@
+A0A9K3LVN3: dominio 51-439 (389 aa), score 430, E 1.0e-131
+A0A9K3KRJ2: dominio 55-443 (389 aa), score 429, E 1.4e-131
+B7G8F0: dominio 1-386 (386 aa), score 416, E 1.8e-127
+A0A8J2WTZ1: dominio 54-423 (370 aa), score 407, E 7.9e-125
+F0XXL4: dominio 1-368 (368 aa), score 397, E 8.9e-122
+A0ABR1FZ61: dominio 46-413 (368 aa), score 396, E 2.6e-121
+A0A0D2N0J3: dominio 31-432 (402 aa), score 392, E 3.5e-120
+A0A9P1FCD2: dominio 1652-2008 (357 aa), score 386, E 1.7e-118
+A0AAD7XJ29: dominio 44-416 (373 aa), score 385, E 5.6e-118
+A0ABP0KTI6: dominio 9-309 (301 aa), score 360, E 2.0e-110
+A0A2V0PAY6: dominio 45-426 (382 aa), score 359, E 4.1e-110
+D8LEU7: dominio 99-425 (327 aa), score 348, E 6.3e-107
+A0ABD3QSF5: dominio 246-563 (318 aa), score 263, E 3.6e-81
+A0ABP0RUF2: dominio 1-242 (242 aa), score 275, E 1.4e-84
+A0A2J7ZVZ7: dominio 45-410 (366 aa), score 256, E 8.4e-79
+A0A9W7AV08: dominio 7-382 (376 aa), score 255, E 9.6e-79
+A0A2J7ZID8: dominio 45-410 (366 aa), score 255, E 1.8e-78
+A0A9W7B676: dominio 11-386 (376 aa), score 253, E 7.0e-78
+A0A9W7KXE0: dominio 11-386 (376 aa), score 253, E 7.2e-78
+A0ABQ6MTH9: dominio 1-383 (383 aa), score 181, E 5.2e-56
+A0A9W7GEK0: dominio 4-344 (341 aa), score 170, E 1.0e-52
+sin dominio: []
+
+== Asignación por HMM de clado (bits)
+  A0A9K3LVN3   Nitzschia inconspicua            I=   281 II=    79 L3=   518 -> L3
+  A0A9K3KRJ2   Nitzschia inconspicua            I=   280 II=    79 L3=   517 -> L3
+  B7G8F0       Phaeodactylum tricornutum (strai I=   283 II=    70 L3=   499 -> L3
+  A0A8J2WTZ1   Pelagomonas calceolata           I=   287 II=   105 L3=   484 -> L3
+  F0XXL4       Aureococcus anophagefferens      I=   265 II=    90 L3=   478 -> L3
+  A0ABR1FZ61   Aureococcus anophagefferens      I=   265 II=    90 L3=   478 -> L3
+  A0A0D2N0J3   Monoraphidium neglectum          I=   272 II=    89 L3=   481 -> L3
+  A0A9P1FCD2   Cladocopium goreaui              I=   337 II=   132 L3=   424 -> L3
+  A0AAD7XJ29   Chrysophaeum taylorii            I=   247 II=    95 L3=   470 -> L3
+  A0ABP0KTI6   Durusdinium trenchii             I=   301 II=   126 L3=   402 -> L3
+  A0A2V0PAY6   Raphidocelis subcapitata         I=   249 II=    52 L3=   444 -> L3
+  D8LEU7       Ectocarpus siliculosus           I=   241 II=    93 L3=   430 -> L3
+  A0ABD3QSF5   Stephanodiscus triporus          I=   192 II=    54 L3=   327 -> L3
+  A0ABP0RUF2   Durusdinium trenchii             I=   236 II=   103 L3=   304 -> L3
+  A0A2J7ZVZ7   Tetrabaena socialis              I=   202 II=    93 L3=   246 -> L3
+  A0A9W7AV08   Triparma laevis f. longispina    I=   167 II=    57 L3=   297 -> L3
+  A0A2J7ZID8   Tetrabaena socialis              I=   200 II=    95 L3=   245 -> L3
+  A0A9W7B676   Triparma strigata                I=   184 II=    56 L3=   283 -> L3
+  A0A9W7KXE0   Triparma verrucosa               I=   185 II=    56 L3=   283 -> L3
+  A0ABQ6MTH9   Tetraparma gracilis              I=   111 II=    32 L3=   201 -> L3
+  A0A9W7GEK0   Triparma columacea               I=   111 II=    34 L3=   196 -> L3
+
+alineamiento: 324 secuencias, 855 columnas -> 384 con ocupación >= 0,35
+
+== Nuevas: residuo en Asp146 (contexto) y bucle catalítico (Cys-6..Cys+2)
+  NEW__A0A9K3LVN3__Nitzschia_inconspicua               Asp146=P  ctx=VEHPAI  bucle=ASAGATCHS
+  NEW__A0A9K3KRJ2__Nitzschia_inconspicua               Asp146=P  ctx=VEHPAI  bucle=ASAGATCHS
+  NEW__B7G8F0__Phaeodactylum_tricornutum_st            Asp146=P  ctx=VEHPAI  bucle=ASAGATCHS
+  NEW__A0A8J2WTZ1__Pelagomonas_calceolata              Asp146=P  ctx=IEHPAI  bucle=ASASAACHS
+  NEW__F0XXL4__Aureococcus_anophagefferens             Asp146=P  ctx=VEHPAI  bucle=ASASAACHS
+  NEW__A0ABR1FZ61__Aureococcus_anophagefferens         Asp146=P  ctx=VEHPAI  bucle=ASASAACHS
+  NEW__A0A0D2N0J3__Monoraphidium_neglectum             Asp146=P  ctx=VEHPAV  bucle=ASGAAACHS
+  NEW__A0A9P1FCD2__Cladocopium_goreaui                 Asp146=P  ctx=IEHPAI  bucle=ASTAAACHS
+  NEW__A0AAD7XJ29__Chrysophaeum_taylorii               Asp146=P  ctx=IEHPAI  bucle=ASASAACHT
+  NEW__A0ABP0KTI6__Durusdinium_trenchii                Asp146=V  ctx=SEHVAV  bucle=---------
+  NEW__A0A2V0PAY6__Raphidocelis_subcapitata            Asp146=P  ctx=IEHPAV  bucle=ASAAAACHS
+  NEW__D8LEU7__Ectocarpus_siliculosus                  Asp146=P  ctx=IEHPAV  bucle=---------
+  NEW__A0ABD3QSF5__Stephanodiscus_triporus             Asp146=P  ctx=VEHPAI  bucle=---------
+  NEW__A0ABP0RUF2__Durusdinium_trenchii                Asp146=V  ctx=SEHVAV  bucle=---------
+  NEW__A0A2J7ZVZ7__Tetrabaena_socialis                 Asp146=P  ctx=MEHPSV  bucle=GVGGCACSK
+  NEW__A0A9W7AV08__Triparma_laevis_f_longispina        Asp146=P  ctx=VEHPAT  bucle=IAAGSACET
+  NEW__A0A2J7ZID8__Tetrabaena_socialis                 Asp146=P  ctx=MEHPSV  bucle=GVGGCACSK
+  NEW__A0A9W7B676__Triparma_strigata                   Asp146=P  ctx=IEHPAT  bucle=IAAGSACET
+  NEW__A0A9W7KXE0__Triparma_verrucosa                  Asp146=P  ctx=IEHPAT  bucle=IAAGSACET
+  NEW__A0ABQ6MTH9__Tetraparma_gracilis                 Asp146=P  ctx=VDHPAT  bucle=IAAGSACDA
+  NEW__A0A9W7GEK0__Triparma_columacea                  Asp146=P  ctx=VEHPAV  bucle=VAAGSACDS
