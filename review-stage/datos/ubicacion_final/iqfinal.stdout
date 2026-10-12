@@ -389,3 +389,392 @@ Iteration 40 / LogL: -84986.033 / Time: 0h:1m:53s (0h:4m:7s left)
 UPDATE BEST LOG-LIKELIHOOD: -84985.700
 Iteration 50 / LogL: -84985.747 / Time: 0h:1m:59s (0h:3m:2s left)
 Log-likelihood cutoff on original alignment: -85014.539
+UPDATE BEST LOG-LIKELIHOOD: -84985.700
+Iteration 60 / LogL: -84985.826 / Time: 0h:2m:8s (0h:2m:21s left)
+Iteration 70 / LogL: -84985.779 / Time: 0h:2m:15s (0h:1m:48s left)
+Iteration 80 / LogL: -84986.557 / Time: 0h:2m:22s (0h:1m:21s left)
+Iteration 90 / LogL: -84985.768 / Time: 0h:2m:30s (0h:0m:59s left)
+Iteration 100 / LogL: -84985.725 / Time: 0h:2m:37s (0h:0m:39s left)
+Log-likelihood cutoff on original alignment: -85014.022
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.999
+Iteration 110 / LogL: -84985.820 / Time: 0h:2m:44s (0h:2m:16s left)
+BETTER TREE FOUND at iteration 120: -84985.700
+Iteration 120 / LogL: -84985.700 / Time: 0h:2m:51s (0h:2m:23s left)
+Iteration 130 / LogL: -84985.793 / Time: 0h:2m:57s (0h:2m:3s left)
+Iteration 140 / LogL: -85115.807 / Time: 0h:3m:4s (0h:1m:46s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.700
+Iteration 150 / LogL: -84985.786 / Time: 0h:3m:10s (0h:1m:29s left)
+Log-likelihood cutoff on original alignment: -85014.995
+Iteration 160 / LogL: -84985.905 / Time: 0h:3m:18s (0h:1m:14s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.700
+Iteration 170 / LogL: -84985.837 / Time: 0h:3m:23s (0h:1m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.699
+Iteration 180 / LogL: -84985.940 / Time: 0h:3m:28s (0h:0m:46s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.699
+Iteration 190 / LogL: -84985.734 / Time: 0h:3m:34s (0h:0m:33s left)
+Iteration 200 / LogL: -84985.719 / Time: 0h:3m:40s (0h:0m:22s left)
+Log-likelihood cutoff on original alignment: -85016.168
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+UPDATE BEST LOG-LIKELIHOOD: -84985.699
+Iteration 210 / LogL: -84985.739 / Time: 0h:3m:47s (0h:1m:38s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.699
+Iteration 220 / LogL: -84986.009 / Time: 0h:3m:53s (0h:1m:25s left)
+UPDATE BEST LOG-LIKELIHOOD: -84985.699
+TREE SEARCH COMPLETED AFTER 221 ITERATIONS / Time: 0h:3m:53s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -84985.699
+2. Current log-likelihood: -84985.679
+Optimal log-likelihood: -84985.668
+Proportion of invariable sites: 0.009
+Site proportion and rates:  (0.101,0.069) (0.119,0.196) (0.082,0.348) (0.094,0.489) (0.214,0.701) (0.098,1.077) (0.139,1.606) (0.081,2.417) (0.064,3.442)
+Parameters optimization took 2 rounds (9.622 sec)
+BEST SCORE FOUND : -84985.668
+
+Testing tree branches by SH-like aLRT with 1000 replicates...
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+WARNING: Branch where both NNIs violate constraint tree will show 100% SH-aLRT support
+0.090 sec.
+Creating bootstrap support values...
+Split supports printed to NEXUS file iqfinal.splits.nex
+Total tree length: 76.236
+
+Total number of iterations: 221
+CPU time used for tree search: 741.951 sec (0h:12m:21s)
+Wall-clock time used for tree search: 201.124 sec (0h:3m:21s)
+Total CPU time used: 908.152 sec (0h:15m:8s)
+Total wall-clock time used: 244.572 sec (0h:4m:4s)
+
+Computing bootstrap consensus tree...
+Reading input file iqfinal.splits.nex...
+324 taxa and 674 splits.
+Consensus tree written to iqfinal.contree
+Reading input trees file iqfinal.contree
+Log-likelihood of consensus tree: -84985.686
+
+Analysis results written to: 
+  IQ-TREE report:                iqfinal.iqtree
+  Maximum-likelihood tree:       iqfinal.treefile
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          iqfinal.splits.nex
+  Consensus tree:                iqfinal.contree
+  Screen log file:               iqfinal.log
+
+Date and Time: Mon Oct 12 21:54:31 2026

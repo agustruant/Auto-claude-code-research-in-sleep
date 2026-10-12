@@ -23,7 +23,7 @@ Cada número de este texto se recalculó desde los archivos del proyecto con los
 
 1. El cebo **PNW80545.1** de *Chlamydomonas reinhardtii* (A0A2K3DJ46), anotado "NFS2" en AlgaePath, **no es NFS2**. Pertenece a un clado de cisteína desulfurasas clase V distinto de NFS1 (ISC) y de NFS2 (SUF), relacionado con la selenocisteína liasa (SCLY) animal.
 2. ***Scenedesmus* sp. PABB004 tiene los tres genes**: NFS1 (KAF8057853.1), NFS2 (KAF8071197.1) y un SCLY-like escondido en un ORF quimérico de 3383 aa (KAF8071094.1).
-3. **El clado SCLY-like es monofilético en un árbol ML** (IQ-TREE, Q.pfam+I+R9): SCLY-like + SCLY humana con **SH-aLRT 95,8 / UFBoot 99**, sin intrusos de NFS1 ni de NFS2. Tiene **{{N_ALG}} secuencias algales** en **{{N_PROT}} de 119 proteomas** de referencia.
+3. **El clado SCLY-like es monofilético en un árbol ML** (IQ-TREE, Q.pfam+I+R9): SCLY-like + SCLY humana con **SH-aLRT 95,8 / UFBoot 99**, sin intrusos de NFS1 ni de NFS2. Tiene **85 secuencias algales** en **73 de 119 proteomas** de referencia.
 4. **Firma del bucle catalítico:**
    - una His en la posición +1 de la Cys catalítica que **ninguna** de las 250 NFS1/NFS2 tiene;
    - la His está en casi todo el clado, pero se perdió en linajes puntuales: Bolidophyceae (una pérdida en el tallo del grupo), *Tetrabaena* y un parálogo de *Stephanodiscus* que además perdió la Cys.
@@ -103,8 +103,8 @@ En *Scenedesmus* sp. NREL 46B-D3, el gen SCLY está a 393 pb del de histidinol d
 | Miembros originales (`clase` = L3) | 65 algales + SCLY humana |
 | HText (PABB004, curado a mano; PABB004 **no** está en los 119 proteomas) | +1 |
 | Excluidos por error y reubicados (ronda 6) | +15 |
-| Adicionales (ronda 7) | +{{N_ADD}} |
-| **Total algal** | **{{N_ALG}}** |
+| Adicionales (ronda 7) | +4 (*Ectocarpus*, *Durusdinium* ×2, *Stephanodiscus*) |
+| **Total algal** | **85** |
 
 **Soportes en el árbol ML:**
 - SCLY-like + humana: **95,8 / 99**;
@@ -116,7 +116,17 @@ En *Scenedesmus* sp. NREL 46B-D3, el gen SCLY está a 393 pb del de histidinol d
 - Bolidophyceae: 99,8/100, hermanas de las diatomeas (99,1/100), igual que en el árbol de especies;
 - *Monoraphidium* + *Raphidocelis*: 99,9/100.
 
-{{UBICACION_R7}}
+**Ronda 7: 30 secuencias más con mejor cebo SCLY-like** (`datos/ubicacion30/`, árbol `datos/ubicacion_final/iqfinal.*`, restringido al árbol de la ronda 6). En las etiquetas de ese árbol, los dos primeros números vienen del árbol de restricción y los dos últimos son SH-aLRT/UFBoot recalculados.
+
+| Secuencia | Resultado |
+|---|---|
+| *Ectocarpus* D8LEU7 (Phaeophyceae) | **Dentro del clado**, hermana de *Tribonema* (Xanthophyceae; 87,6/81), coherente con la filogenia de especies. Pro en 146. El modelo génico termina justo antes del bucle catalítico |
+| *Durusdinium* A0ABP0KTI6 y A0ABP0RUF2 | **Dentro**, con el resto de los dinoflagelados (100/100). Val en 146. La cola C-terminal tiene un corrimiento de marco |
+| *Stephanodiscus* A0ABD3QSF5 | **Dentro**, junto a los otros dos SCLY-like de la misma especie. Pro en 146, **sin la Cys catalítica**: parálogo probablemente inactivo |
+| *Tetrabaena* A0A2J7ZVZ7 y A0A2J7ZID8 | **Fuera**: forman el grupo hermano de todo el clado SCLY-like + SCLY humana (78,2/78). Pro en 146, bucle `GVGGCAC-S` sin la His. Lo más probable es un ortólogo volvocal muy divergente atraído hacia afuera por rama larga, porque *Gonium*, *Volvox* y *Pleodorina* tienen SCLY-like normales. **No se cuentan** en la distribución |
+| 21 proteínas con pentraxina o lectina | Sin dominio clase V: descartadas |
+
+Con las 4 secuencias que entran, el clado algal queda con 82 + 4 = 86 hojas (88,7/73 en el árbol final).
 
 **Secuencias descartadas:**
 - A0ABR1FWJ4 (*Aureococcus*): mismo locus que A0ABR1FZ61, pero le falta el dominio y tiene un corrimiento del marco.
@@ -155,7 +165,7 @@ Alineamiento de los tres grupos alrededor de la Cys catalítica (MSA del proyect
 |---|---|
 | NFS1 | Lys 113, Arg 1 (gap 10) |
 | NFS2 | His 106 (gap 4) |
-| SCLY-like algales | **Pro** en todas las informativas salvo los Val. Incluye las 15 de la ronda 6 y {{PRO_R7}} |
+| SCLY-like algales | **Pro** en todas las informativas salvo los Val. Incluye las 15 de la ronda 6 y *Ectocarpus* y *Stephanodiscus* |
 | Dinoflagelados + una copia de *Guillardia* | **Val** (5, más *Durusdinium* ×2 en la ronda 7) |
 | Choanozoa (14 metazoos + *Salpingoeca*) | **Asp** |
 | *Acanthamoeba*, *Trypanosoma*, *Thalassiosira*, *Chlamydomonas* | Pro |
@@ -187,7 +197,24 @@ Qué se lee de la tabla:
 
 Proteomas de referencia con SCLY-like:
 
-{{TABLA_DISTRIB}}
+| Linaje | Proteomas con SCLY-like | Especies |
+|---|---|---|
+| Bacillariophyta | 16/16 | 16/16 |
+| Chlorophyta | 34/48 | 32/44 |
+| Bolidophyceae | 5/6 (sin His) | 5/6 |
+| Pelagophyceae | 4/4 | 3/3 |
+| Phaeophyceae | 1/1 (*Ectocarpus*, modelo truncado) | 1/1 |
+| Xanthophyceae | 1/1 | 1/1 |
+| Dinophyceae | 6/10 | 5/9 |
+| Haptophyta | 3/4 | 3/4 |
+| Cryptophyceae | 1/1 | 1/1 |
+| Streptophyta no embriofitas | 2/2 | 2/2 |
+| Eustigmatophyceae | 0/2 | 0/2 |
+| **Embryophyta** | **0/6** | **0/6** |
+| **Rhodophyta** | **0/12** | **0/12** |
+| Metazoa (contraste) | 1/2 (humano; *Drosophila* no) | |
+| Hongos, amebozoos, ciliados, apicomplejos | 0 | |
+| **Total** | **74/119** | |
 
 - **Ausencias firmes:** Embryophyta (0/6) y Rhodophyta (0/12). Es ausencia en proteomas: falta tBLASTn genómico y sintenia.
 - Las dos carofitas tienen el gen, pero sin Zygnematophyceae en el muestreo **no se puede ubicar la pérdida en la terrestrialización**. Sin glaucofitas, "pérdida independiente en rodofitas" no se puede afirmar.
@@ -251,9 +278,9 @@ Sobre 60 SCLY-like algales con N-terminal fiable (DeepLoc 2.1):
 
 - "Sec+" en el CSV = PSTK **y** SEPSECS **y** EEFSEC.
 - **Hay dos barridos que no coinciden:** el del CSV tiene PSTK en 55/119; el informe del barrido, en 18. Hay que decidir cuál vale.
-- Con el CSV y la distribución nueva:
-  - Fisher global: OR 2,68, p = 0,015;
-  - **CMH por linaje: OR 1,08 (IC 0,35–3,33), p = 0,90**, con 3 estratos informativos y dominado por Chlorophyta.
+- Con el CSV y la distribución final:
+  - Fisher global: OR 2,61, p = 0,022;
+  - **CMH por linaje: OR 1,41 (IC 0,45–4,37), p = 0,55**, con 3 estratos informativos (Chlorophyta, Dinophyceae, Haptophyta) y Breslow-Day p = 0,13.
 - La asociación no se sostiene dentro de los linajes. La correlación entre el estado del residuo 146 y la maquinaria Sec no se puede testear, porque Asp es un único evento.
 - Hipótesis, n = 1: las Bolidophyceae (pérdida de la His) no tienen PSTK (Sec_estricto 0/6).
 
