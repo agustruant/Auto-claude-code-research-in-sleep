@@ -90,3 +90,43 @@ Pipeline: barrido phmmer de 10 cebos sobre 119 proteomas de referencia de UniPro
 ### Notas sobre el proceso
 - **Revisor de la misma familia** (subagente de Claude): independencia no verificada; el skill original pide Codex/GPT. No se usó ninguna API paga.
 - Pasos del skill omitidos por no aplicar o no estar disponibles: `/result-to-claim`, `/render-html`, notificación Feishu, trazas de `.aris/`.
+
+---
+
+## Ronda 4 (2026-10-12) — con los datos crudos del proyecto
+
+El usuario dio acceso a los archivos del proyecto (Google Drive), que se copiaron en `datos/`. Antes de la ronda se recalculó todo con `scripts/recalculo_datos_proyecto.py` (salida en `recalculo_datos_proyecto.txt`) y se agregó la sección ★ R1–R8 al dossier.
+
+### Evaluación
+- Score: **6/10** · Veredicto: **not ready**. Pasa a "almost" cuando se ubiquen en el árbol las 11 secuencias de R2 y se apliquen los arreglos de texto.
+- El revisor reprodujo de forma independiente todos los números R1–R8.
+- Respuesta completa: [`ronda4_revisor.md`](ronda4_revisor.md)
+
+### Acciones (post-ronda 4)
+- R1: corregida la identidad de las 2 C-H con otro cebo (*Symbiodinium* + *Guillardia*); agregada la dirección 75/110; independencia rebajada a "aproximada".
+- R2: rango de E-value corregido (10⁻³⁴–10⁻¹¹⁶) y hit débil identificado; exclusión descrita como probable error; agregados los 5 candidatos de Bolidophyceae sin His (`AAGSAC-E/D`).
+- R3: gaps de NFS1/NFS2, H_L3 = 0,547 y la especulación marcada como tal.
+- R4: fuentes aclaradas; contradicción con el informe del barrido señalada.
+- R5: test sin H462 (3/5, p = 0,24) y reformulado como "con poca potencia".
+- R6: reescrita. Dos barridos Sec inconsistentes; CMH con IC 0,45–3,52; en algas solas OR 2,87, p = 0,011 (verificado). Pseudorreplicación "no demostrada".
+- R7: declarado el duplicado de la SCLY humana en el árbol; *Polarella* reclasificada.
+- Definidos los tres "66" y el conteo de Chlorophyta.
+
+## Terminación (ronda 4 de 4 — MAX_ROUNDS)
+
+**El loop termina por llegar al máximo de rondas, sin evaluación positiva.** Progresión: **4 → 5 → 5 → 6**. La subida a 6 vino de evidencia nueva sacada de los datos crudos, no de redacción.
+
+### Lo que falta, en orden
+| # | Tarea | Para |
+|---|---|---|
+| 1 | Bajar de UniProt las 11 secuencias C-H excluidas y las 5 de Bolidophyceae; extraer PF00266, alinear y ubicarlas en el árbol; rehacer la tabla de distribución | almost |
+| 2 | Documentar la regla que generó la columna `clase` (617 → 66) | almost |
+| 3 | Decidir cuál de los dos barridos de marcadores Sec es el válido | almost |
+| 4 | Sacar la SCLY humana duplicada; agregar SCLY de otros eucariotas y grupo externo; IQ-TREE con UFBoot/SH-aLRT | ready |
+| 5 | HISAT2 + StringTie (5' de PABB004); tBLASTn + sintenia para las pérdidas (Zygnematophyceae) | ready |
+| 6 | Marcador de selenoproteoma (SECIS / TGA) o declarar "no evaluado"; test de Pagel | ready |
+| 7 | Predicción funcional: localización con predictores adecuados, o el argumento estructural Pro146 | ready |
+
+### Notas
+- Revisor de la misma familia de modelos (subagente de Claude); independencia no verificada. No se usó ninguna API paga.
+- Pasos del skill omitidos: `/result-to-claim`, `/render-html`, Feishu, trazas `.aris/`.
