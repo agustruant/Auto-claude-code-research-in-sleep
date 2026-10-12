@@ -10,6 +10,43 @@ Etiquetas:
 
 Los recálculos sobre el CSV están en `review-stage/recalculo_localizacion.txt` y salen de `review-stage/scripts/recalculo_localizacion.py`.
 
+## Secciones del original que quedan reemplazadas (ronda 2)
+
+Estas partes del PDF original contradicen la revisión y **no deben usarse** tal como están:
+
+- **§2.4 y §5.1** — "sólo 2 de 61 plastidiales, mediana 0,13" y la predicción plastidial de HText (0,9477) como "artefacto". Se reemplaza por: *"predicción no interpretable: los límites de la secuencia eran inciertos"*. No se puede afirmar que fuera un artefacto, porque en Chlorophyta 10/31 SCLY-like completas tienen P(plástido) > 0,5 (§2.10).
+- **§2.6 (tabla) y §2.12** — "grupo III" y "SAGxACH". Se reemplazan por "clado SCLY-like" y "G-x-x-C-H" (§2.6 revisada).
+- **§2.7** — "1000 réplicas", "mismo resultado que RAxML/IQ-TREE". Ver §2.7 revisada.
+- **§3 (tabla de herramientas)** — "TargetP falló los dos controles de PABB004". En realidad falló 3: NFS2_PABB (OTHER), NFS1_PABB (OTHER) y NFS2 de *C. reinhardtii* (mTP). "DeepLoc falló 2 de 7" se mantiene.
+- **§4 (tabla maestra)** — reemplazada por la tabla de abajo.
+- **§2.14 (tabla)** — se saca la etiqueta "(citosólico)".
+
+### §4 — Tabla maestra (reemplazo)
+
+| Dato | Valor |
+|---|---|
+| Proteomas barridos | 119 (107 algales + 12 de contraste) |
+| Secuencias en el universo | 2.110.345 |
+| Clase V recuperadas | 617 |
+| Columnas retenidas | 386 de 768 (ocupación ≥ 0,35) |
+| Clados (soporte SH-like local, VeryFastTree) | NFS2 116 (1,00) · NFS1 134 (0,79) · SCLY-like incl. humana (0,96) |
+| SCLY-like algales | 65 en 55 especies del barrido; 66 en 56 con HText (§0) |
+| Residuos invariantes del bucle | G, C, H en 66/66 (descriptivo; circular, §2.8) |
+| Longitud mediana | 438 aa (IQR 410–470); 9/67 aberrantes |
+| Localización (algales con N-terminal fiable) | n = 60; mediana P(plástido) 0,14; 13/60 > 0,5 (Chlorophyta 10/31) |
+| Panel de control | DeepLoc 5/7; DeepLoc + TargetP 4/7; plastidiales de algas verdes: DeepLoc 1/2, TargetP 0/2 |
+| TM-score núcleo HText vs SCLY / IscS / SufS | 0,948 / 0,911 / 0,871 |
+| Posiciones discriminantes | 4 (G197, A232, T330, H462); H462 pendiente de +1 en NFS2; test de enriquecimiento pendiente |
+| Spearman conservación–distancia | ρ = −0,54 (sin p: posiciones no independientes) |
+| RNA-seq | 21.890.509 lecturas de SRR12973628; intrón curado 29; unión automática 0 (excluye isoforma > ~10 %) |
+| Proteína curada PABB004 | 421 aa (parcial, 5' sin resolver); K234, C360, H361 |
+| Distancias raíz-hoja | NFS1 < NFS2 ≈ SCLY (descriptivo; Wilcoxon no válido, §2.14) |
+| SCLY ↔ Sec | global OR 3,36 (p 0,0018); dentro de Chlorophyta OR 1,00 → pseudorreplicación |
+
+### Localización de la proteína curada
+
+El CSV usa el recorte HText (aa 1900–2400 del ORF quimérico), no la proteína curada de 421 aa. A la curada le faltan ~60 residuos N-terminales, que es justo donde estaría el péptido de tránsito, así que **no se puede predecir su localización** hasta resolver el 5'. Correrla con el N-terminal incompleto repetiría el error del §2.4.
+
 ---
 
 ## 0. Definiciones de conjunto (nuevo, D2)
@@ -55,9 +92,9 @@ Composición de S_alg recalculada del CSV:
 2. En todas las secuencias de ese clado hay una **His inmediatamente después de la Cys catalítica** (motivo **G-x-x-C-H**). En IscS (grupo I) esa posición es Thr. **[PENDIENTE-DATOS]** En SufS/CsdB (grupo II) hay que confirmar el residuo en el alineamiento: la versión previa decía Ser en §1 y Thr en §2.12, y no puede ser ambas cosas. Ver §2.6.
 3. *Scenedesmus* sp. PABB004 tiene NFS1 (KAF8057853.1), NFS2 (KAF8071197.1) y un gen SCLY-like que estaba oculto en un ORF quimérico de 3383 aa (KAF8071094.1).
 4. El extremo 3' del modelo curado (último intrón y los 39 codones C-terminales recuperados) está respaldado por lecturas de RNA-seq de la propia cepa. Hay 29 lecturas que cruzan el intrón curado y 0 que soportan la unión del modelo automático. El extremo 5' sigue sin resolver.
-5. El barrido sobre 119 proteomas de referencia (2.110.345 secuencias) recupera 66 secuencias SCLY-like en 56 especies (ver §0 por PABB004). Forman un clado con soporte SH-like 0,96 y con la SCLY humana como rama hermana.
+5. El barrido sobre 119 proteomas de referencia (2.110.345 secuencias) recupera 65 secuencias SCLY-like en 55 especies; con HText (PABB004, curada a mano) son 66 en 56 (ver §0). Forman un clado con soporte SH-like 0,96 y con la SCLY humana como rama hermana.
 6. El clado no se detecta en los proteomas de referencia de 6 embriofitas, 12 rodofitas y 13 estramenopilas no diatomeas.
-7. Gly, Cys e His del motivo G-x-x-C-H están conservadas en las 66 secuencias con bucle. **[PENDIENTE-DATOS]** Hace falta la tabla de contingencia de la §2.8 para descartar circularidad.
+7. Gly, Cys e His del motivo G-x-x-C-H están conservadas en las 66 secuencias con bucle. La tabla de herramientas del original declara que el bucle fue el **criterio primario de asignación**, así que la invariancia es circular hasta que se demuestre lo contrario (§2.8).
 
 **Titular defendible:** primera descripción sistemática de un clado de cisteína desulfurasas relacionado con SCLY en algas, con un caso de reparación de un modelo génico quimérico respaldado por RNA-seq.
 
@@ -95,9 +132,9 @@ Composición de S_alg recalculada del CSV:
 **[CORREGIDO] Literatura funcional que faltaba (D4).**
 - **Asp146 de la SCL humana** es el residuo que da la especificidad por Sec. La variante D146K pierde esa especificidad y gana actividad cisteína desulfurasa (Collins et al. 2012, PLoS One 7:e30581, [doi:10.1371/journal.pone.0030581](https://doi.org/10.1371/journal.pone.0030581)).
 - **Cys375 de la SCL de rata**, en el bucle flexible, forma el intermediario selenopersulfuro y orienta la Sec, pero no la Cys (Omi et al. 2010, J Biol Chem 285:12133, [doi:10.1074/jbc.M109.084475](https://doi.org/10.1074/jbc.M109.084475)).
-- **[PENDIENTE-ANÁLISIS]** El dossier tiene que reportar qué residuo ocupa la posición equivalente a Asp146 en las 66 SCLY-like algales. Si está conservado como Asp, es el argumento estructural más fuerte a favor de especificidad por Sec. Si no, es un argumento en contra. En los dos casos hay que reportarlo; hoy no se menciona.
+- **[PENDIENTE-ANÁLISIS]** El dossier tiene que reportar qué residuo ocupa la posición equivalente a Asp146 en las 66 SCLY-like algales. Si está conservado como Asp, es el argumento estructural más fuerte a favor de especificidad por Sec. Si no es Asp, el dato **no es informativo** en ninguna dirección: la SclA bacteriana tiene His en esa posición y aun así prefiere Sec (Johnstone et al. 2021). Hay que reportarlo en los dos casos; hoy no se menciona.
 - En la bacteria *Enterococcus faecalis* (SclA), el residuo análogo (His100) **no** es necesario para la especificidad (Johnstone et al. 2021, Biochimie 182:166, [doi:10.1016/j.biochi.2021.01.002](https://doi.org/10.1016/j.biochi.2021.01.002)). El mecanismo de discriminación no es universal.
-- Las mutantes Cys→Ala de CSD, CsdB e IscS pierden casi toda la actividad sobre Cys, pero mucho menos sobre Sec (Mihara et al. 2000, J Biochem 127:559, [doi:10.1093/oxfordjournals.jbchem.a022641](https://doi.org/10.1093/oxfordjournals.jbchem.a022641)). En consecuencia, la competencia geométrica de la Cys para atacar al Se (§2.11) no predice especificidad por Sec.
+- Las mutantes Cys→Ala de CSD, CsdB e IscS pierden casi toda la actividad sobre Cys, pero mucho menos sobre Sec (Mihara et al. 2000, J Biochem 127:559, [doi:10.1093/oxfordjournals.jbchem.a022641](https://doi.org/10.1093/oxfordjournals.jbchem.a022641)). Ojo: en la SCL de rata, en cambio, la Cys375 sí es esencial (Omi et al. 2010). En las NifS-like bacterianas, entonces, la competencia geométrica de la Cys para atacar al Se (§2.11) no predice especificidad por Sec.
 - El subsitio "Asn25 de rata" del §2.11 se mantiene como observación, pero subordinado a Asp146.
 
 ---
@@ -124,24 +161,20 @@ El TM-score 0,99 entre el modelo de SCLY humana y el cristal de rata (3A9Z) es t
 
 ---
 
-## 2.8 — Firma invariante (reformulado, D3)
+## 2.8 — Firma invariante (reformulado, D3; actualizado en la ronda 2)
 
-**[REFORMULADO]** Entropía 0,000 en G, C e H sobre 66 secuencias. Esto es esperable para residuos catalíticos, y es un resultado sólo si **la pertenencia al clado se definió sin mirar la His**.
+**[REFORMULADO]** La tabla de herramientas del original (§3) dice: "Bucle catalítico — criterio primario de asignación de familia". Entonces la entropía 0,000 en la His es **verdadera por construcción** y **se saca como resultado**. Queda como dato descriptivo: G, C e H conservadas en las 66 secuencias con bucle.
 
-**[PENDIENTE-DATOS]** Hay que agregar la tabla de contingencia:
+Lo publicable es la prueba **independiente** del bucle:
 
 | | His en +1 | Otra en +1 |
 |---|---|---|
-| Clado SCLY-like del árbol (definido por bipartición) | ? | ? |
+| Clado SCLY-like **definido sólo por la bipartición del árbol** | ? | ? |
 | NFS1 + NFS2 + 301 no asignadas | ? | ? |
 
-Si la fila de arriba es 66/0 y la de abajo ~0/551, la His es **diagnóstica** de forma independiente del árbol. Ése es el resultado que se puede publicar, no la entropía.
-
-Hay que aclarar en Métodos cuál fue el criterio de pertenencia. Si fue el bucle, la entropía es circular y se saca.
+**[PENDIENTE-DATOS]** Sale de `candidatos_desulfurasas.csv` + el árbol. Si da ~66/0 contra ~0/551, la His es diagnóstica sin circularidad.
 
 Se elimina "ni una sola sustitución en mil millones de años": es retórica.
-
----
 
 ## 2.9 — Distribución y pérdidas (correcciones, D2, D10)
 
@@ -202,11 +235,11 @@ TargetP: 47 OTHER, 5 SP, 4 mTP, 4 cTP. SignalP: 59/60 sin péptido señal. DeepT
 **[REFORMULADO] Conclusión.**
 - *Estos predictores no resuelven la localización del clado en algas.*
 - La mayoría de las secuencias no muestran señal plastidial fuerte (mediana 0,14).
-- En prasinofitas y clorofíceas, un tercio de las secuencias tiene P(plástido) > 0,5. Los controles muestran que, en algas verdes, los predictores **subestiman** el plástido: un falso negativo y ningún falso positivo.
+- En Chlorophyta, 10/31 secuencias (32 %) tienen P(plástido) > 0,5; las otras 3 de las 13 son *Klebsormidium*, *Diacronema* y *Pseudo-nitzschia*. Los predictores fallaron 1 de 3 controles plastidiales de algas verdes (falso negativo). Con n tan chico no se puede estimar el sentido del sesgo: el resultado es **indeterminado**, no "probablemente plastidial".
 - La afirmación "no es plastidial" **se retira** del §7.
 
 **[REFORMULADO] Algas con plástido secundario.** En diatomeas, haptofitas, criptofitas y dinoflagelados, la importación al plástido usa una presecuencia bipartita (péptido señal + péptido de tránsito). Ni DeepLoc ni TargetP (modo Plant) están hechos para eso.
-- Las 5 predicciones "SP" de TargetP son 3 diatomeas, 1 haptofita y *Klebsormidium*. En las cuatro de plástido secundario, un SP es **compatible con** destino plastidial, no evidencia en contra.
+- Las 5 predicciones "SP" de TargetP son 3 diatomeas (2 *Cylindrotheca*, 1 *Fistulifera*), 1 haptofita (*Diacronema*) y *Chara braunii* (A0A388KLW8). En las cuatro de plástido secundario, un SP es **compatible con** destino plastidial, no evidencia en contra.
 - **[PENDIENTE-ANÁLISIS]** Correr ASAFind o HECTAR en Stramenopila/Haptophyta/Cryptophyta y PredAlgo en Chlorophyta, y agregar controles citosólicos algales.
 
 ---
@@ -217,11 +250,11 @@ TargetP: 47 OTHER, 5 SP, 4 mTP, 4 cTP. SignalP: 59/60 sin péptido señal. DeepT
 - La definición del propio texto es "conservada en ambas familias (H ≤ 0,5) con consenso distinto". Las posiciones N431 y S159 tienen "—" para NFS, así que **no la cumplen**. Son **4 posiciones discriminantes**, las 4 a menos de 8 Å del cofactor. N431 y S159 pasan a "conservadas sólo en SCLY-like".
 - **[PENDIENTE-DATOS]** El texto agrupa NFS1+NFS2 como una "familia" y a la vez exige "H ≤ 0,5 en las dos". Hay que aclarar si el criterio se aplicó a NFS1 y a NFS2 por separado o al pool.
 
-**[CORREGIDO] Test de enriquecimiento correcto.**
-- Lo que hay que preguntar es si las discriminantes caen cerca del cofactor más de lo esperado por azar.
-- 46 de 348 posiciones (13,2 %) están a < 8 Å.
-- P(≥ 4 de 4 | p = 0,132) = 0,132⁴ ≈ **3 × 10⁻⁴** (binomial, una cola). Con la definición vieja de 6 posiciones: P(≥ 4 de 6) ≈ 0,004.
-- La salvedad: las posiciones vecinas en la estructura no son independientes. Si se puede, reemplazar por una permutación que preserve la estructura, por ejemplo rotando la asignación sobre la superficie.
+**[REFORMULADO] Test de enriquecimiento (corregido en la ronda 2).**
+- La pregunta es si las discriminantes caen cerca del cofactor más de lo esperado por azar. La versión de la ronda 1 usaba como base el 13,2 % de *todas* las posiciones (46/348) a < 8 Å, y daba P(4/4) ≈ 3 × 10⁻⁴.
+- **Esa base está mal.** Para ser discriminante, una posición tiene que estar conservada en las dos familias, y las posiciones conservadas ya se concentran cerca del cofactor: la conservación mediana es 0,924 a < 8 Å contra 0,363 a ≥ 15 Å. La base correcta es la fracción de posiciones a < 8 Å **entre las conservadas en ambas familias** (H ≤ 0,5 en SCLY-like y en NFS). **[PENDIENTE-DATOS]** Sale de `conservacion_scly_por_posicion.csv` + distancias.
+- **H462 se excluye del test.** Es la His del bucle, contigua a la Cys catalítica: está cerca del cofactor por construcción y, si el bucle se usó para asignar familia, es circular. Además, su condición de "discriminante" depende del residuo en +1 de NFS2, que está pendiente (§2.6).
+- Con las 3 restantes (G197, A232, T330) y la base condicional, el test puede no ser significativo. Si es así, se reporta descriptivamente.
 
 **[REFORMULADO] Spearman ρ = −0,54.** Que los residuos cercanos al cofactor estén más conservados es una propiedad general de las enzimas, no un hallazgo sobre SCLY-like. El p = 2 × 10⁻²⁷ trata 348 posiciones autocorrelacionadas como independientes, así que se reporta ρ sin p o con p por permutación. **Se saca del §7.**
 
@@ -275,7 +308,7 @@ Las 38 especies comparten ramas internas, así que los pares no son independient
 ## 6. Limitaciones (lista actualizada)
 
 1. Ausencia en proteomas ≠ ausencia en genomas (sin cambio).
-2. **Localización no resuelta.** Los predictores fallan sobre todo en *plástido* en algas verdes (controles: DeepLoc 1/2, TargetP 0/2). 22 % del clado (10/31 Chlorophyta) tiene P(plástido) > 0,5. En algas con plástido secundario se usaron predictores no adecuados.
+2. **Localización no resuelta.** Los predictores fallan sobre todo en *plástido* en algas verdes (controles: DeepLoc 1/2, TargetP 0/2). 13/60 (22 %) del clado, y 10/31 (32 %) de Chlorophyta, tienen P(plástido) > 0,5. En algas con plástido secundario se usaron predictores no adecuados.
 3. Los bucles de AlphaFold no sostienen distancias (sin cambio).
 4. Especificidad Cys/Sec no resuelta. No se evaluó el equivalente de Asp146.
 5. Asociación con la maquinaria Sec: pseudorreplicación (sin cambio).
@@ -296,7 +329,7 @@ Las 38 especies comparten ramas internas, así que los pares no son independient
 | Existe en algas un clado de clase V distinto de NFS1 y NFS2 | **Sólido**, con la salvedad de que el árbol es aproximado. Confirmar con IQ-TREE/UFBoot |
 | La His en +1 de la Cys catalítica es diagnóstica | **Pendiente** de la tabla de contingencia del §2.8 |
 | G, C e H invariantes en 66 secuencias | **Sólido como dato**; trivial si la pertenencia se definió por el bucle |
-| Clado hermano de la SCLY humana | **Sólido como topología** (SH 0,96); "ortólogo" requiere más muestreo |
+| Clado hermano de la SCLY humana | **Provisorio**: el 0,96 es el soporte del clado *con* la humana; falta reportar el soporte de la bipartición sólo-algal, y con un único metazoo y raíz en el grupo II la topología no está cerrada |
 | PNW80545.1 está mal anotado como NFS2 | **Sólido** |
 | PABB004 tiene los tres genes | **Sólido** |
 | El ORF de 3383 aa es quimérico y la estructura 3' curada es correcta | **Sólido**: CD-Search, sintenia con NREL y 29 contra 0 lecturas |
@@ -305,7 +338,7 @@ Las 38 especies comparten ramas internas, así que los pares no son independient
 | No es plastidial | **Retirado**: los predictores fallan justamente en plástido en algas verdes |
 | Citosólica y/o mitocondrial | **No resuelto** |
 | NFS1 está bajo mayor restricción | **Descriptivo**: confundido con profundidad del clado |
-| Las discriminantes están cerca del cofactor | **Apoyado**: 4/4 a < 8 Å, binomial p ≈ 3 × 10⁻⁴, con la salvedad de autocorrelación |
+| Las discriminantes están cerca del cofactor | **Pendiente**: el test binomial usa una base incorrecta (ver §2.12) y H462 entra por construcción |
 | Dos pérdidas independientes | **No resuelto**: sin Zygnematophyceae ni glaucofitas |
 | Pérdida ligada al selenoproteoma | Hipótesis |
 | Actividad sobre Sec | No demostrado. Falta como mínimo el análisis de Asp146 |

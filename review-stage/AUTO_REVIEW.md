@@ -26,3 +26,24 @@
 ### Estado
 - Sigue a la ronda 2.
 
+## Ronda 2 (2026-10-12)
+
+### Evaluación
+- Score: **5/10** · Veredicto: **not ready**
+- Todos los números del CSV y las 5 citas nuevas fueron verificados por el revisor de forma independiente.
+- Problemas nuevos: test de enriquecimiento con base incorrecta y H462 circular (N1); secciones originales sin tocar que contradicen la revisión (N2); errores chicos en §2.10/§6 (N3); +1 de NFS2 pendiente pero usado (N4); circularidad ya resoluble por el propio texto (N5); sobrecorrección "subestiman plástido" (N6); marco de Asp146 contradictorio con Johnstone 2021 (N7); "sólido como topología" y 66/56 contra 65/55 (N8).
+- Respuesta completa: [`ronda2_revisor.md`](ronda2_revisor.md)
+
+### Acciones
+- N1: test reformulado con base condicional; H462 excluido; §7 bajado a "Pendiente".
+- N2: nueva sección "Secciones del original que quedan reemplazadas" con la §4 (tabla maestra) reescrita entera; §2.4/§5.1 "artefacto" pasa a "no interpretable"; §3 TargetP 3 fallos.
+- N3: SP de *Chara*; 13/60 (22 %) y 10/31 (32 %); sin "prasinofitas y clorofíceas".
+- N4/N5: §2.8 reescrita (la entropía sale como resultado; queda la tabla de contingencia como test).
+- N6: localización "indeterminada".
+- N7: Asp no conservado pasa a "no informativo".
+- N8: hermano de humana "Provisorio"; §1.5 dice 65/55 (+HText = 66/56).
+- Se agregó la nota de que la proteína curada no es localizable hasta resolver el 5'.
+
+### Estado
+- Sigue a la ronda 3.
+
